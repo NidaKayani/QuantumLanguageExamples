@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 01_text_elements/03: Strong, em, b, i, u and s -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Strong, em, b, i, u and s</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .card { background: #fff; border-radius: 12px; padding: 1.5rem; box-shadow: 0 1px 3px rgb(0 0 0 / 0.12); }
+    .card li { margin: 0.4rem 0; }
+    mark { background: #fde68a; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Strong, em, b, i, u and s</h1>
+    <p class="lead">Meaningful emphasis versus purely visual styling.</p>
+    <section class="card">
+      <ul>
+        <li><strong>strong</strong>: this matters, read it first.</li>
+        <li><em>em</em>: stress that changes the meaning of a sentence.</li>
+        <li><b>b</b>: keywords drawn out without extra importance.</li>
+        <li><i>i</i>: a <i lang="la">terminus technicus</i> or a thought.</li>
+        <li><u>u</u>: an unarticulated annotation, like a <u>mispeled</u> word.</li>
+        <li><s>s</s>: no longer accurate, like a <s>$40</s> price.</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

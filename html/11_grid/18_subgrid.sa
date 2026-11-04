@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 11_grid/18: Subgrid -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Subgrid</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: 1rem; }
+    .card { display: grid; grid-row: span 3; grid-template-rows: subgrid; gap: 0.5rem; background: #fff; border-radius: 12px; padding: 1rem; }
+    .card h2 { margin: 0; font-size: 1.1rem; }
+    .card p { margin: 0; color: #475569; }
+    .card a { justify-self: start; background: #2563eb; color: #fff; padding: 0.4rem 0.9rem; border-radius: 8px; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Subgrid</h1>
+    <p class="lead">Cards share their parent's rows, so titles and buttons line up.</p>
+    <div class="cards">
+      <article class="card"><h2>Short</h2><p>A line.</p><a href="#a">Open</a></article>
+      <article class="card"><h2>A much longer title that wraps</h2><p>Some more text that runs to a second line or a third.</p><a href="#b">Open</a></article>
+      <article class="card"><h2>Medium title</h2><p>Text.</p><a href="#c">Open</a></article>
+    </div>
+  </main>
+</body>
+</html>

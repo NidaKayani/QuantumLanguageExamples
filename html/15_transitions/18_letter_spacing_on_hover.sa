@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 15_transitions/18: Letter spacing on hover -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Letter spacing on hover</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .word { font-size: 2rem; font-weight: 800; text-transform: uppercase; letter-spacing: 0.05em; transition: letter-spacing 0.4s ease, color 0.4s; cursor: default; }
+    .word:hover { letter-spacing: 0.35em; color: #ea580c; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Letter spacing on hover</h1>
+    <p class="lead">Text that breathes out when hovered.</p>
+    <p class="word">Breathe</p>
+  </main>
+</body>
+</html>

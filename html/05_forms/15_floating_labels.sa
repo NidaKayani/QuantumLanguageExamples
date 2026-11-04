@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 05_forms/15: Floating labels -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Floating labels</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .float { position: relative; max-width: 22rem; margin-bottom: 1.25rem; }
+    .float input { width: 100%; padding: 1.3rem 0.8rem 0.5rem; border: 1px solid #94a3b8; border-radius: 8px; font: inherit; }
+    .float label { position: absolute; left: 0.8rem; top: 0.95rem; color: #64748b; pointer-events: none; transition: all 0.15s ease; }
+    .float input:focus + label, .float input:not(:placeholder-shown) + label { top: 0.3rem; font-size: 0.75rem; color: #2563eb; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Floating labels</h1>
+    <p class="lead">Labels that move above the field with :placeholder-shown.</p>
+    <form action="#">
+      <div class="float"><input id="fn" placeholder=" "><label for="fn">First name</label></div>
+      <div class="float"><input id="ln" placeholder=" "><label for="ln">Last name</label></div>
+    </form>
+  </main>
+</body>
+</html>

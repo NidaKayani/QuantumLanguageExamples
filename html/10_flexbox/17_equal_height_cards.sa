@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 10_flexbox/17: Equal-height cards -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Equal-height cards</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .cards { display: flex; gap: 1rem; flex-wrap: wrap; }
+    .card { flex: 1 1 14rem; display: flex; flex-direction: column; background: #fff; border-radius: 12px; padding: 1.25rem; box-shadow: 0 2px 8px rgb(0 0 0 / 0.08); }
+    .card p { flex: 1; }
+    .card a { align-self: flex-start; background: #0f172a; color: #fff; padding: 0.5rem 1rem; border-radius: 8px; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Equal-height cards</h1>
+    <p class="lead">Cards in a row stretch to the tallest, buttons pinned to the bottom.</p>
+    <div class="cards">
+      <article class="card"><h2>Starter</h2><p>Short text.</p><a href="#s">Choose</a></article>
+      <article class="card"><h2>Growth</h2><p>A much longer description that wraps onto several lines and makes this card taller than the others in the row.</p><a href="#g">Choose</a></article>
+      <article class="card"><h2>Scale</h2><p>Medium length text here.</p><a href="#c">Choose</a></article>
+    </div>
+  </main>
+</body>
+</html>

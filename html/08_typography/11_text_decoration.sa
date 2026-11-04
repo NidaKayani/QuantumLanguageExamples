@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 08_typography/11: Text decoration -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Text decoration</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .td p { font-size: 1.3rem; margin: 0.8rem 0; }
+    .a { text-decoration: underline; text-decoration-color: #ef4444; text-decoration-thickness: 3px; }
+    .b { text-decoration-line: underline; text-decoration-style: wavy; text-decoration-color: #8b5cf6; }
+    .c { text-decoration: underline dotted #0ea5e9; text-underline-offset: 6px; }
+    .d { text-decoration: line-through double #64748b; }
+    .e { text-decoration-line: overline underline; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Text decoration</h1>
+    <p class="lead">Underlines with colour, style, thickness and offset.</p>
+    <div class="td">
+      <p class="a">thick red underline</p>
+      <p class="b">wavy spelling-style underline</p>
+      <p class="c">dotted underline with an offset</p>
+      <p class="d">double strike-through</p>
+      <p class="e">overline and underline</p>
+    </div>
+  </main>
+</body>
+</html>

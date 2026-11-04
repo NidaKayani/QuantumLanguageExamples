@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 15_transitions/16: Underline that slides in -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Underline that slides in</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .links a { position: relative; margin-right: 1.5rem; color: #0f172a; text-decoration: none; font-weight: 600; }
+    .links a::after { content: ""; position: absolute; left: 0; bottom: -3px; width: 0; height: 3px; background: #0ea5e9; transition: width 0.3s ease; }
+    .links a:hover::after, .links a:focus-visible::after { width: 100%; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Underline that slides in</h1>
+    <p class="lead">A line that grows under a link on hover.</p>
+    <nav class="links" aria-label="Demo"><a href="#a">Work</a><a href="#b">About</a><a href="#c">Contact</a></nav>
+  </main>
+</body>
+</html>

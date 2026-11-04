@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 04_tables/18: Train timetable -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Train timetable</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    table { border-collapse: collapse; width: 100%; background: #fff; }
+    th, td { padding: 0.6rem 0.9rem; border-bottom: 1px solid #e2e8f0; text-align: left; }
+    th { background: #f8fafc; font-weight: 600; }
+    .ok { color: #16a34a; } .late { color: #d97706; } .cancelled { color: #dc2626; text-decoration: line-through; }
+    td:first-child { font-variant-numeric: tabular-nums; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Train timetable</h1>
+    <p class="lead">Departures with status colours.</p>
+    <table>
+      <thead><tr><th>Time</th><th>Destination</th><th>Platform</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td>08:05</td><td>Brighton</td><td>4</td><td class="ok">On time</td></tr>
+        <tr><td>08:12</td><td>Cambridge</td><td>9</td><td class="late">Delayed 6 min</td></tr>
+        <tr><td>08:20</td><td>Oxford</td><td>2</td><td class="cancelled">Cancelled</td></tr>
+        <tr><td>08:31</td><td>Bristol</td><td>6</td><td class="ok">On time</td></tr>
+      </tbody>
+    </table>
+  </main>
+</body>
+</html>

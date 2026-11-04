@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 07_colors/12: currentcolor -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>currentcolor</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .badges { display: flex; gap: 1rem; }
+    .badge { color: #059669; border: 2px solid currentcolor; padding: 0.4rem 0.9rem; border-radius: 999px; display: inline-flex; gap: 0.4rem; align-items: center; }
+    .badge svg { width: 1rem; height: 1rem; fill: currentcolor; }
+    .warn { color: #d97706; } .bad { color: #dc2626; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>currentcolor</h1>
+    <p class="lead">Borders and icons that follow the text colour automatically.</p>
+    <div class="badges">
+      <span class="badge"><svg viewBox="0 0 10 10" aria-hidden="true"><circle cx="5" cy="5" r="5"/></svg>Online</span>
+      <span class="badge warn"><svg viewBox="0 0 10 10" aria-hidden="true"><circle cx="5" cy="5" r="5"/></svg>Away</span>
+      <span class="badge bad"><svg viewBox="0 0 10 10" aria-hidden="true"><circle cx="5" cy="5" r="5"/></svg>Offline</span>
+    </div>
+  </main>
+</body>
+</html>

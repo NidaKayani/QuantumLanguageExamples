@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 22_media_svg/07: SVG text -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SVG text</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .art { background: #fff; border-radius: 16px; padding: 1rem; } .art svg { display: block; width: 100%; max-width: 26rem; height: auto; margin: 0 auto; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>SVG text</h1>
+    <p class="lead">Text in SVG, on a curve with textPath.</p>
+    <div class="art"><svg viewBox="0 0 400 220" role="img" aria-label="Text on a curve">
+      <defs><path id="arc" d="M40 180 A 160 160 0 0 1 360 180"/></defs>
+      <text font-size="26" font-weight="700" fill="#7c3aed"><textPath href="#arc" startOffset="50%" text-anchor="middle">Quantum compiles your pages</textPath></text>
+      <text x="200" y="210" text-anchor="middle" font-size="16" fill="#64748b">SVG text stays selectable</text>
+    </svg></div>
+  </main>
+</body>
+</html>

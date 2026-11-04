@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 22_media_svg/16: object-fit gallery -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>object-fit gallery</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .fits { display: grid; grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr)); gap: 1rem; }
+    .fits figure { margin: 0; }
+    .fits img { width: 100%; height: 9rem; background: #e2e8f0; border-radius: 10px; }
+    .fits figcaption { text-align: center; font-family: ui-monospace, monospace; font-size: 0.85rem; }
+    .f-cover { object-fit: cover; }
+    .f-contain { object-fit: contain; }
+    .f-fill { object-fit: fill; }
+    .f-none { object-fit: none; }
+    .f-scale-down { object-fit: scale-down; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>object-fit gallery</h1>
+    <p class="lead">cover, contain, fill and none on the same picture.</p>
+    <div class="fits">
+      <figure><img class="f-cover" src="https://picsum.photos/seed/fit/600/300" alt="The same wide photo" width="600" height="300"><figcaption>cover</figcaption></figure>
+      <figure><img class="f-contain" src="https://picsum.photos/seed/fit/600/300" alt="The same wide photo" width="600" height="300"><figcaption>contain</figcaption></figure>
+      <figure><img class="f-fill" src="https://picsum.photos/seed/fit/600/300" alt="The same wide photo" width="600" height="300"><figcaption>fill</figcaption></figure>
+      <figure><img class="f-none" src="https://picsum.photos/seed/fit/600/300" alt="The same wide photo" width="600" height="300"><figcaption>none</figcaption></figure>
+      <figure><img class="f-scale-down" src="https://picsum.photos/seed/fit/600/300" alt="The same wide photo" width="600" height="300"><figcaption>scale-down</figcaption></figure>
+    </div>
+  </main>
+</body>
+</html>

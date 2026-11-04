@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 20_components/19: Key-value list -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Key-value list</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .kv { display: grid; grid-template-columns: max-content 1fr; max-width: 28rem; margin: 0; background: #fff; border-radius: 14px; overflow: hidden; }
+    .kv dt, .kv dd { margin: 0; padding: 0.75rem 1rem; border-bottom: 1px solid #f1f5f9; }
+    .kv dt { color: #64748b; }
+    .kv dd { font-weight: 600; text-align: right; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Key-value list</h1>
+    <p class="lead">A definition list styled as a settings summary.</p>
+    <dl class="kv"><dt>Plan</dt><dd>Pro</dd><dt>Renews</dt><dd>1 Dec 2026</dd><dt>Seats</dt><dd>5 of 10</dd><dt>Storage</dt><dd>38 GB</dd></dl>
+  </main>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 22_media_svg/15: Drawing a line -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Drawing a line</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .art { background: #fff; border-radius: 16px; padding: 1rem; } .art svg { display: block; width: 100%; max-width: 26rem; height: auto; margin: 0 auto; }
+    .draw { stroke-dasharray: 900; stroke-dashoffset: 900; animation: draw 3s ease forwards infinite; }
+    @keyframes draw { to { stroke-dashoffset: 0; } }
+    @media (prefers-reduced-motion: reduce) { .draw { animation: none; stroke-dashoffset: 0; } }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Drawing a line</h1>
+    <p class="lead">stroke-dasharray and stroke-dashoffset draw a path on screen.</p>
+    <div class="art"><svg viewBox="0 0 400 200" role="img" aria-label="A signature being drawn">
+      <path class="draw" d="M20 140 C 60 40, 100 40, 120 120 S 180 180, 210 90 S 290 30, 380 120" fill="none" stroke="#2563eb" stroke-width="6" stroke-linecap="round"/>
+    </svg></div>
+  </main>
+</body>
+</html>

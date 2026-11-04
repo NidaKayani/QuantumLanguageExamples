@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 08_typography/12: Text shadow effects -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Text shadow effects</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .fx { display: grid; gap: 1rem; }
+    .fx p { font-size: 2.5rem; font-weight: 800; margin: 0; padding: 1rem; border-radius: 12px; }
+    .glow { background: #0f172a; color: #fff; text-shadow: 0 0 6px #22d3ee, 0 0 18px #22d3ee; }
+    .emboss { background: #cbd5e1; color: #cbd5e1; text-shadow: -1px -1px 1px #fff, 1px 1px 1px #64748b; }
+    .outline { color: #fff; text-shadow: -2px -2px 0 #111, 2px -2px 0 #111, -2px 2px 0 #111, 2px 2px 0 #111; }
+    .long { color: #f97316; text-shadow: 1px 1px #c2410c, 2px 2px #c2410c, 3px 3px #c2410c, 4px 4px #c2410c, 5px 5px #c2410c; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Text shadow effects</h1>
+    <p class="lead">Glow, emboss, outline and long shadows.</p>
+    <div class="fx">
+      <p class="glow">Neon glow</p>
+      <p class="emboss">Embossed</p>
+      <p class="outline">Outlined</p>
+      <p class="long">Long shadow</p>
+    </div>
+  </main>
+</body>
+</html>

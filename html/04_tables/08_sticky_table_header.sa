@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 04_tables/08: Sticky table header -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sticky table header</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    table { border-collapse: collapse; width: 100%; background: #fff; }
+    th, td { padding: 0.6rem 0.9rem; border-bottom: 1px solid #e2e8f0; text-align: left; }
+    th { background: #f8fafc; font-weight: 600; }
+    .scroll { max-height: 16rem; overflow-y: auto; border-radius: 8px; border: 1px solid #e2e8f0; }
+    thead th { position: sticky; top: 0; background: #1e293b; color: #fff; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Sticky table header</h1>
+    <p class="lead">The header row stays visible while the table scrolls.</p>
+    <div class="scroll">
+      <table>
+        <thead><tr><th>#</th><th>Square</th><th>Cube</th></tr></thead>
+        <tbody>
+          <tr><td>1</td><td>1</td><td>1</td></tr>
+          <tr><td>2</td><td>4</td><td>8</td></tr>
+          <tr><td>3</td><td>9</td><td>27</td></tr>
+          <tr><td>4</td><td>16</td><td>64</td></tr>
+          <tr><td>5</td><td>25</td><td>125</td></tr>
+          <tr><td>6</td><td>36</td><td>216</td></tr>
+          <tr><td>7</td><td>49</td><td>343</td></tr>
+          <tr><td>8</td><td>64</td><td>512</td></tr>
+          <tr><td>9</td><td>81</td><td>729</td></tr>
+          <tr><td>10</td><td>100</td><td>1000</td></tr>
+          <tr><td>11</td><td>121</td><td>1331</td></tr>
+          <tr><td>12</td><td>144</td><td>1728</td></tr>
+          <tr><td>13</td><td>169</td><td>2197</td></tr>
+          <tr><td>14</td><td>196</td><td>2744</td></tr>
+          <tr><td>15</td><td>225</td><td>3375</td></tr>
+          <tr><td>16</td><td>256</td><td>4096</td></tr>
+          <tr><td>17</td><td>289</td><td>4913</td></tr>
+          <tr><td>18</td><td>324</td><td>5832</td></tr>
+          <tr><td>19</td><td>361</td><td>6859</td></tr>
+          <tr><td>20</td><td>400</td><td>8000</td></tr>
+          <tr><td>21</td><td>441</td><td>9261</td></tr>
+          <tr><td>22</td><td>484</td><td>10648</td></tr>
+          <tr><td>23</td><td>529</td><td>12167</td></tr>
+          <tr><td>24</td><td>576</td><td>13824</td></tr>
+          <tr><td>25</td><td>625</td><td>15625</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </main>
+</body>
+</html>

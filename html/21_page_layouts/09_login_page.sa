@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 21_page_layouts/09: Login page -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Login page</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .screen { min-height: 75vh; display: grid; place-items: center; border-radius: 20px; background: linear-gradient(135deg, #312e81, #7c3aed); padding: 1rem; }
+    .card { width: min(24rem, 100%); background: #fff; border-radius: 18px; padding: 2rem; }
+    .card label { display: block; font-weight: 600; margin-top: 1rem; }
+    .card input { width: 100%; padding: 0.7rem; margin-top: 0.3rem; border: 1px solid #cbd5e1; border-radius: 10px; font: inherit; }
+    .card button { width: 100%; margin-top: 1.5rem; padding: 0.8rem; border: 0; border-radius: 10px; background: #4f46e5; color: #fff; font: inherit; font-weight: 700; }
+    .card p { text-align: center; color: #64748b; font-size: 0.9rem; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Login page</h1>
+    <p class="lead">A centred sign-in card on a gradient.</p>
+    <div class="screen">
+      <form class="card" action="#" method="post">
+        <h2>Welcome back</h2>
+        <label for="em">Email</label><input id="em" type="email" autocomplete="email" required>
+        <label for="pa">Password</label><input id="pa" type="password" autocomplete="current-password" required>
+        <button type="submit">Sign in</button>
+        <p>No account? <a href="#signup">Create one</a></p>
+      </form>
+    </div>
+  </main>
+</body>
+</html>

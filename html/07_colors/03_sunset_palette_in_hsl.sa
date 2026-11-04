@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 07_colors/03: Sunset palette in hsl -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sunset palette in hsl</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .swatches { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr)); gap: 0.5rem; }
+    .swatches li { padding: 1.25rem 0.75rem; border-radius: 10px; }
+    .swatches strong, .swatches code { display: block; }
+    .swatches code { font-size: 0.75rem; opacity: 0.85; }
+    .s100 { background: hsl(18 30% 95%); color: #111827; }
+    .s200 { background: hsl(18 45% 88%); color: #111827; }
+    .s300 { background: hsl(18 55% 78%); color: #111827; }
+    .s400 { background: hsl(18 62% 66%); color: #111827; }
+    .s500 { background: hsl(18 68% 55%); color: #ffffff; }
+    .s600 { background: hsl(18 70% 45%); color: #ffffff; }
+    .s700 { background: hsl(18 70% 36%); color: #ffffff; }
+    .s800 { background: hsl(18 68% 28%); color: #ffffff; }
+    .s900 { background: hsl(18 65% 20%); color: #ffffff; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Sunset palette in hsl</h1>
+    <p class="lead">Nine shades of hue 18&deg;, written in hsl notation.</p>
+    <ul class="swatches">
+      <li class="s100"><strong>100</strong><code>hsl(18 30% 95%)</code></li>
+      <li class="s200"><strong>200</strong><code>hsl(18 45% 88%)</code></li>
+      <li class="s300"><strong>300</strong><code>hsl(18 55% 78%)</code></li>
+      <li class="s400"><strong>400</strong><code>hsl(18 62% 66%)</code></li>
+      <li class="s500"><strong>500</strong><code>hsl(18 68% 55%)</code></li>
+      <li class="s600"><strong>600</strong><code>hsl(18 70% 45%)</code></li>
+      <li class="s700"><strong>700</strong><code>hsl(18 70% 36%)</code></li>
+      <li class="s800"><strong>800</strong><code>hsl(18 68% 28%)</code></li>
+      <li class="s900"><strong>900</strong><code>hsl(18 65% 20%)</code></li>
+    </ul>
+  </main>
+</body>
+</html>

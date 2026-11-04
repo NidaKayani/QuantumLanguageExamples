@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 11_grid/12: Overlapping items -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Overlapping items</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .hero { display: grid; border-radius: 16px; overflow: hidden; }
+    .hero > * { grid-area: 1 / 1; }
+    .hero .art { min-height: 16rem; background: linear-gradient(135deg, #1d4ed8, #9333ea); }
+    .hero .text { align-self: end; padding: 1.5rem; color: #fff; background: linear-gradient(transparent, rgb(0 0 0 / 0.6)); }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Overlapping items</h1>
+    <p class="lead">Two items placed in the same cell stack on top of each other.</p>
+    <div class="hero">
+      <div class="art"></div>
+      <div class="text"><h2>Overlap</h2><p>Both children sit in row 1, column 1.</p></div>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 17_transforms/16: Layered depth -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Layered depth</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .scene { perspective: 900px; }
+    .stack { position: relative; width: 14rem; height: 9rem; margin: 3rem auto; transform-style: preserve-3d; transform: rotateX(50deg) rotateZ(-30deg); }
+    .stack div { position: absolute; inset: 0; border-radius: 12px; opacity: 0.85; }
+    .l1 { background: #1e40af; transform: translateZ(0); }
+    .l2 { background: #2563eb; transform: translateZ(2rem); }
+    .l3 { background: #60a5fa; transform: translateZ(4rem); }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Layered depth</h1>
+    <p class="lead">translateZ separates layers inside one 3D scene.</p>
+    <div class="scene"><div class="stack"><div class="l1"></div><div class="l2"></div><div class="l3"></div></div></div>
+  </main>
+</body>
+</html>

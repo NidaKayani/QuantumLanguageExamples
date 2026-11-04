@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 22_media_svg/13: SVG patterns -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SVG patterns</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .art { background: #fff; border-radius: 16px; padding: 1rem; } .art svg { display: block; width: 100%; max-width: 26rem; height: auto; margin: 0 auto; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>SVG patterns</h1>
+    <p class="lead">A pattern element tiling a shape.</p>
+    <div class="art"><svg viewBox="0 0 400 200" role="img" aria-label="A patterned banner">
+      <defs><pattern id="dots" width="20" height="20" patternUnits="userSpaceOnUse"><circle cx="10" cy="10" r="4" fill="#f472b6"/></pattern></defs>
+      <rect width="400" height="200" rx="20" fill="#fdf2f8"/>
+      <rect width="400" height="200" rx="20" fill="url(#dots)"/>
+    </svg></div>
+  </main>
+</body>
+</html>

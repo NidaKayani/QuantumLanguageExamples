@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 14_pseudo_elements/14: Custom checkboxes -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Custom checkboxes</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .check { display: flex; align-items: center; gap: 0.6rem; margin: 0.5rem 0; cursor: pointer; }
+    .check input { position: absolute; opacity: 0; }
+    .check span::before { content: ""; display: inline-block; width: 1.3rem; height: 1.3rem; margin-right: 0.6rem; vertical-align: -0.3rem; border: 2px solid #64748b; border-radius: 6px; background: #fff; }
+    .check input:checked + span::before { content: "\2713"; color: #fff; background: #0ea5e9; border-color: #0ea5e9; text-align: center; line-height: 1.2rem; font-weight: 800; }
+    .check input:focus-visible + span::before { outline: 3px solid #fbbf24; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Custom checkboxes</h1>
+    <p class="lead">A hidden native checkbox and a drawn box with ::before.</p>
+    <label class="check"><input type="checkbox" checked><span>Email me updates</span></label>
+    <label class="check"><input type="checkbox"><span>Remember me</span></label>
+  </main>
+</body>
+</html>

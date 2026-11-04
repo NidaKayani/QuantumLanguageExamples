@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 06_box_model/08: Border radius shapes -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Border radius shapes</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .shapes { display: flex; flex-wrap: wrap; gap: 1.5rem; align-items: center; }
+    .shapes div { width: 7rem; height: 7rem; background: linear-gradient(135deg, #f472b6, #8b5cf6); }
+    .rounded { border-radius: 16px; }
+    .pill { height: 3.5rem; border-radius: 999px; }
+    .circle { border-radius: 50%; }
+    .leaf { border-radius: 0 70% 0 70%; }
+    .blob { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Border radius shapes</h1>
+    <p class="lead">Pills, circles, leaves and blobs from border-radius.</p>
+    <div class="shapes">
+      <div class="rounded"></div><div class="pill"></div><div class="circle"></div><div class="leaf"></div><div class="blob"></div>
+    </div>
+  </main>
+</body>
+</html>

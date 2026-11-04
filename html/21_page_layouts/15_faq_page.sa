@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 21_page_layouts/15: FAQ page -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>FAQ page</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .site-header { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; }
+    .site-header nav a { margin-left: 1.25rem; color: #334155; text-decoration: none; }
+    .logo { font-weight: 800; font-size: 1.2rem; color: #0f172a; text-decoration: none; }
+    .site-footer { margin-top: 3rem; padding: 1.5rem 0; border-top: 1px solid #e2e8f0; color: #64748b; font-size: 0.9rem; }
+    .faq { max-width: 44rem; margin: 0 auto; }
+    .faq h3 { margin-top: 2rem; color: #4f46e5; }
+    .faq details { background: #fff; border-radius: 12px; padding: 0.25rem 1rem; margin: 0.5rem 0; }
+    .faq summary { cursor: pointer; font-weight: 700; padding: 0.75rem 0; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>FAQ page</h1>
+    <p class="lead">Questions grouped with details elements.</p>
+    <header class="site-header"><a class="logo" href="#top">Quantum</a><nav aria-label="Main"><a href="#features">Features</a><a href="#pricing">Pricing</a><a href="#docs">Docs</a></nav></header>
+    <section class="faq">
+      <h2>Frequently asked questions</h2>
+      <h3>Account</h3>
+      <details><summary>How do I reset my password?</summary><p>Use the link on the sign-in page.</p></details>
+      <details><summary>Can I change my email?</summary><p>Yes, in Settings.</p></details>
+      <h3>Billing</h3>
+      <details><summary>Which cards do you accept?</summary><p>Visa, Mastercard and UnionPay.</p></details>
+      <details><summary>Can I get a refund?</summary><p>Within 30 days, no questions asked.</p></details>
+    </section>
+    <footer class="site-footer"><p>&copy; 2026 Quantum Logics Labs. Made with HTML and CSS.</p></footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 09_backgrounds_gradients/13: Layered backgrounds -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Layered backgrounds</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .layers { height: 20rem; border-radius: 16px; color: #fff; display: grid; place-items: center; font-size: 2rem; font-weight: 800;
+      background:
+        linear-gradient(rgb(15 23 42 / 0.55), rgb(15 23 42 / 0.55)),
+        radial-gradient(circle at 20% 30%, #f472b6 0 15%, transparent 16%),
+        radial-gradient(circle at 75% 60%, #38bdf8 0 20%, transparent 21%),
+        linear-gradient(135deg, #4c1d95, #be185d); }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Layered backgrounds</h1>
+    <p class="lead">Several backgrounds stacked in one declaration.</p>
+    <div class="layers">Layered</div>
+  </main>
+</body>
+</html>

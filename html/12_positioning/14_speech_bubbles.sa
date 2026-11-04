@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 12_positioning/14: Speech bubbles -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Speech bubbles</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .chat { display: flex; flex-direction: column; gap: 1.25rem; max-width: 28rem; }
+    .bubble { position: relative; padding: 0.75rem 1rem; border-radius: 14px; max-width: 80%; }
+    .them { background: #e2e8f0; align-self: flex-start; }
+    .me { background: #2563eb; color: #fff; align-self: flex-end; }
+    .bubble::after { content: ""; position: absolute; bottom: -8px; border: 8px solid transparent; border-bottom: 0; }
+    .them::after { left: 14px; border-top-color: #e2e8f0; }
+    .me::after { right: 14px; border-top-color: #2563eb; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Speech bubbles</h1>
+    <p class="lead">A pseudo-element tail positioned under each bubble.</p>
+    <div class="chat">
+      <p class="bubble them">Did you finish the layout?</p>
+      <p class="bubble me">Yes! Grid for the page, flexbox for the cards.</p>
+      <p class="bubble them">Nice.</p>
+    </div>
+  </main>
+</body>
+</html>

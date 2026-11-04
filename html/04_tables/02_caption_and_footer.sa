@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 04_tables/02: Caption and footer -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Caption and footer</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    table { border-collapse: collapse; width: 100%; background: #fff; }
+    th, td { padding: 0.6rem 0.9rem; border-bottom: 1px solid #e2e8f0; text-align: left; }
+    th { background: #f8fafc; font-weight: 600; }
+    caption { caption-side: top; text-align: left; font-weight: 700; padding-bottom: 0.5rem; }
+    tfoot td { font-weight: 700; border-top: 2px solid #334155; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Caption and footer</h1>
+    <p class="lead">caption titles a table; tfoot sums it up.</p>
+    <table>
+      <caption>Quarterly sales (units)</caption>
+      <thead><tr><th>Quarter</th><th>North</th><th>South</th></tr></thead>
+      <tbody>
+        <tr><td>Q1</td><td>120</td><td>95</td></tr>
+        <tr><td>Q2</td><td>150</td><td>110</td></tr>
+        <tr><td>Q3</td><td>170</td><td>140</td></tr>
+      </tbody>
+      <tfoot><tr><td>Total</td><td>440</td><td>345</td></tr></tfoot>
+    </table>
+  </main>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 03_links_navigation/01: Link states -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Link states</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .card { background: #fff; border-radius: 12px; padding: 1.5rem; box-shadow: 0 1px 3px rgb(0 0 0 / 0.12); }
+    a:link { color: #2563eb; }
+    a:visited { color: #7c3aed; }
+    a:hover { color: #1e40af; text-decoration-thickness: 3px; }
+    a:focus-visible { outline: 3px solid #f59e0b; outline-offset: 2px; }
+    a:active { color: #dc2626; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Link states</h1>
+    <p class="lead">Styling :link, :visited, :hover, :focus-visible and :active.</p>
+    <section class="card">
+      <p>Read the <a href="#guide">getting started guide</a> or browse the
+      <a href="#reference">reference</a>. Hover, focus and click the links.</p>
+    </section>
+  </main>
+</body>
+</html>

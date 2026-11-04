@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 19_custom_properties/02: Forest theme -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Forest theme</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    :root {
+      --accent: #25b154;
+      --on-accent: #ffffff;
+      --surface: #f8fcf9;
+      --soft: #def7e7;
+      --text: #193422;
+      --line: #cde4d5;
+      --radius: 2rem;
+    }
+    .ui { background: var(--surface); color: var(--text); padding: 1.5rem; border-radius: var(--radius); border: 1px solid var(--line); }
+    .ui h2 { color: var(--accent); margin-top: 0; }
+    .ui .btn { display: inline-block; padding: 0.6rem 1.2rem; border-radius: calc(var(--radius) / 2); background: var(--accent); color: var(--on-accent); text-decoration: none; font-weight: 700; }
+    .ui .alert { margin: 1rem 0; padding: 0.75rem 1rem; border-radius: calc(var(--radius) / 2); background: var(--soft); border-left: 5px solid var(--accent); }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Forest theme</h1>
+    <p class="lead">A theme defined once with custom properties, hue 140&deg;.</p>
+    <section class="ui">
+      <h2>Forest theme</h2>
+      <p>Every colour on this card comes from a custom property on :root.</p>
+      <p class="alert">Change --accent and the whole card follows.</p>
+      <a class="btn" href="#go">Primary action</a>
+    </section>
+  </main>
+</body>
+</html>

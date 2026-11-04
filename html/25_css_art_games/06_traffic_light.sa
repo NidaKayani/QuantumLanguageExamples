@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 25_css_art_games/06: Traffic light -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Traffic light</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .light { display: grid; gap: 0.8rem; width: 6rem; padding: 0.9rem; background: #111827; border-radius: 16px; }
+    .light span { aspect-ratio: 1; border-radius: 50%; opacity: 0.25; animation: 6s infinite step-end; }
+    .red { background: #ef4444; animation-name: red; } .amber { background: #f59e0b; animation-name: amber; } .green { background: #22c55e; animation-name: green; }
+    @keyframes red { 0% { opacity: 1; } 40% { opacity: 0.25; } }
+    @keyframes amber { 0% { opacity: 0.25; } 40% { opacity: 1; } 55% { opacity: 0.25; } }
+    @keyframes green { 0% { opacity: 0.25; } 55% { opacity: 1; } }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Traffic light</h1>
+    <p class="lead">Three lamps lit in turn by an animation.</p>
+    <div class="light" role="img" aria-label="A traffic light"><span class="red"></span><span class="amber"></span><span class="green"></span></div>
+  </main>
+</body>
+</html>

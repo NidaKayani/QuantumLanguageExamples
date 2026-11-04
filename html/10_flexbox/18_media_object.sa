@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 10_flexbox/18: Media object -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Media object</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .media { display: flex; gap: 1rem; align-items: flex-start; background: #fff; padding: 1rem; border-radius: 12px; max-width: 36rem; }
+    .avatar { flex: none; width: 4rem; height: 4rem; border-radius: 50%; background: linear-gradient(135deg, #22d3ee, #6366f1); }
+    .media h2 { margin: 0 0 0.25rem; font-size: 1.1rem; }
+    .media p { margin: 0; color: #475569; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Media object</h1>
+    <p class="lead">An image beside text that wraps independently.</p>
+    <article class="media">
+      <div class="avatar" role="img" aria-label="Avatar"></div>
+      <div><h2>Sam commented</h2><p>Flexbox keeps the avatar a fixed size while the comment text takes the rest of the row and wraps as needed.</p></div>
+    </article>
+  </main>
+</body>
+</html>

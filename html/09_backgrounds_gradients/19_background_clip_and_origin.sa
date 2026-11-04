@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 09_backgrounds_gradients/19: Background clip and origin -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Background clip and origin</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr)); gap: 1rem; }
+    .tiles div { height: 9rem; border-radius: 12px; display: flex; align-items: flex-end; padding: 0.6rem; font-size: 0.8rem; font-weight: 600; color: #fff; text-shadow: 0 1px 2px rgb(0 0 0 / 0.5); }
+    .clip { padding: 1.25rem; border: 10px dashed rgb(15 23 42 / 0.5); background: linear-gradient(135deg, #f59e0b, #db2777); }
+    .b { background-clip: border-box; }
+    .p { background-clip: padding-box; }
+    .c { background-clip: content-box; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Background clip and origin</h1>
+    <p class="lead">Which box the background paints: border, padding or content.</p>
+    <div class="tiles">
+      <div class="clip b">border-box</div><div class="clip p">padding-box</div><div class="clip c">content-box</div>
+    </div>
+  </main>
+</body>
+</html>

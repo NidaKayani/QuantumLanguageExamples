@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 17_transforms/04: skew -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>skew</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .row { display: flex; flex-wrap: wrap; gap: 2.5rem; padding: 2rem; background: #fff; border-radius: 14px; }
+    .row div { width: 6rem; height: 6rem; display: grid; place-items: center; border-radius: 10px; background: #a78bfa; color: #fff; font-size: 0.75rem; font-weight: 700; text-align: center; }
+    .k1 { transform: skewX(20deg); } .k2 { transform: skewY(15deg); } .k3 { transform: skew(-15deg, 10deg); }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>skew</h1>
+    <p class="lead">Slanting shapes along each axis.</p>
+    <div class="row"><div class="k1">skewX 20deg</div><div class="k2">skewY 15deg</div><div class="k3">skew -15, 10</div></div>
+  </main>
+</body>
+</html>

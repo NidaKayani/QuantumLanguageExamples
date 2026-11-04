@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 02_lists/20: Menu with dotted leaders -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Menu with dotted leaders</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .card { background: #fff; border-radius: 12px; padding: 1.5rem; box-shadow: 0 1px 3px rgb(0 0 0 / 0.12); }
+    .menu { list-style: none; padding: 0; max-width: 26rem; }
+    .menu li { display: flex; align-items: baseline; gap: 0.5rem; margin: 0.6rem 0; }
+    .menu li::after { content: ""; order: 1; flex: 1; border-bottom: 2px dotted #94a3b8; }
+    .menu .price { order: 2; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Menu with dotted leaders</h1>
+    <p class="lead">Dish names and prices joined by a row of dots.</p>
+    <section class="card">
+      <h2>Breakfast</h2>
+      <ul class="menu">
+        <li><span>Pancakes</span><span class="price">$6.50</span></li>
+        <li><span>Avocado toast</span><span class="price">$8.00</span></li>
+        <li><span>Granola bowl</span><span class="price">$5.75</span></li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

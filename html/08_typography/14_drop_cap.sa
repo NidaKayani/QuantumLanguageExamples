@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 08_typography/14: Drop cap -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Drop cap</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .article { max-width: 40rem; font-family: Georgia, serif; font-size: 1.1rem; background: #fffbeb; padding: 1.5rem; border-radius: 12px; }
+    .article p:first-of-type::first-letter { float: left; font-size: 4.2rem; line-height: 0.85; padding: 0.3rem 0.5rem 0 0; color: #b45309; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Drop cap</h1>
+    <p class="lead">::first-letter enlarges the opening letter of an article.</p>
+    <article class="article">
+      <p>Once upon a time, in a land of tags and attributes, a humble paragraph wished to look grand. A designer gave it a
+      drop cap, and every reader since has paused at its first letter.</p>
+    </article>
+  </main>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 15_transitions/20: Accordion height -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accordion height</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .acc { width: 26rem; background: #fff; border-radius: 12px; overflow: hidden; }
+    .acc label { display: block; padding: 1rem; font-weight: 700; cursor: pointer; background: #f1f5f9; }
+    .acc input { position: absolute; opacity: 0; }
+    .panel { display: grid; grid-template-rows: 0fr; transition: grid-template-rows 0.35s ease; }
+    .panel > div { overflow: hidden; padding: 0 1rem; }
+    .acc input:checked ~ .panel { grid-template-rows: 1fr; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Accordion height</h1>
+    <p class="lead">grid-template-rows transitions from 0fr to 1fr for a smooth open.</p>
+    <div class="acc">
+      <input type="checkbox" id="open">
+      <label for="open">Click to expand</label>
+      <div class="panel"><div><p>The panel's row grows from 0fr to 1fr, so the height animates without knowing it in advance.</p></div></div>
+    </div>
+  </main>
+</body>
+</html>

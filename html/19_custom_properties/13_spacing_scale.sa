@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 19_custom_properties/13: Spacing scale -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Spacing scale</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    :root { --space: 0.5rem; }
+    .scale div { height: 1.5rem; margin: 0.5rem 0; background: #34d399; border-radius: 4px; }
+    .x1 { width: calc(var(--space) * 4); } .x2 { width: calc(var(--space) * 8); } .x3 { width: calc(var(--space) * 16); } .x4 { width: calc(var(--space) * 32); }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Spacing scale</h1>
+    <p class="lead">One base value and calc() produce a whole spacing scale.</p>
+    <div class="scale"><div class="x1"></div><div class="x2"></div><div class="x3"></div><div class="x4"></div></div>
+  </main>
+</body>
+</html>

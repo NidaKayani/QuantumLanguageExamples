@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 16_animations/11: Wave dots loader -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Wave dots loader</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .dots { display: flex; gap: 0.5rem; }
+    .dots span { width: 1rem; height: 1rem; border-radius: 50%; background: #8b5cf6; animation: wave 1s ease-in-out infinite; }
+    .dots span:nth-child(2) { animation-delay: 0.15s; }
+    .dots span:nth-child(3) { animation-delay: 0.3s; }
+    @keyframes wave { 0%, 60%, 100% { transform: translateY(0); } 30% { transform: translateY(-1rem); } }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms; animation-iteration-count: 1; } }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Wave dots loader</h1>
+    <p class="lead">Three dots rising in turn with animation-delay.</p>
+    <div class="dots" role="status" aria-label="Loading"><span></span><span></span><span></span></div>
+  </main>
+</body>
+</html>

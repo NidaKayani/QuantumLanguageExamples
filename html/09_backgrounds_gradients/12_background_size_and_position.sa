@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 09_backgrounds_gradients/12: Background size and position -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Background size and position</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr)); gap: 1rem; }
+    .tiles div { height: 9rem; border-radius: 12px; display: flex; align-items: flex-end; padding: 0.6rem; font-size: 0.8rem; font-weight: 600; color: #fff; text-shadow: 0 1px 2px rgb(0 0 0 / 0.5); }
+    .img { background-color: #0f172a; background-image: radial-gradient(circle, #fbbf24 30%, #f97316 31% 45%, transparent 46%); background-repeat: no-repeat; }
+    .cover { background-size: cover; background-position: center; }
+    .contain { background-size: contain; background-position: center; }
+    .small { background-size: 4rem 4rem; background-position: right 1rem bottom 1rem; }
+    .repeat { background-size: 3rem 3rem; background-repeat: repeat; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Background size and position</h1>
+    <p class="lead">cover, contain and fixed sizes for a background image.</p>
+    <div class="tiles">
+      <div class="img cover">cover</div><div class="img contain">contain</div><div class="img small">4rem, bottom right</div><div class="img repeat">repeat</div>
+    </div>
+  </main>
+</body>
+</html>

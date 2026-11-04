@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 12_positioning/20: Cookie banner -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cookie banner</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .cookies { position: fixed; left: 1rem; right: 1rem; bottom: 1rem; z-index: 100; display: flex; flex-wrap: wrap; gap: 1rem; align-items: center; justify-content: space-between; padding: 1rem 1.25rem; background: #1e293b; color: #e2e8f0; border-radius: 14px; box-shadow: 0 10px 30px rgb(0 0 0 / 0.3); }
+    .cookies p { margin: 0; }
+    .cookies button { border: 0; border-radius: 8px; padding: 0.55rem 1.1rem; font: inherit; font-weight: 700; cursor: pointer; background: #facc15; color: #1e293b; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Cookie banner</h1>
+    <p class="lead">A fixed bar along the bottom of the viewport.</p>
+    <p>Page content goes here.</p>
+    <div class="cookies" role="region" aria-label="Cookie notice">
+      <p>We use one cookie to remember your theme.</p>
+      <button type="button">OK</button>
+    </div>
+  </main>
+</body>
+</html>

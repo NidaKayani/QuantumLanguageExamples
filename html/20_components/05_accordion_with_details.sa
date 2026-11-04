@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 20_components/05: Accordion with details -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accordion with details</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .faq details { background: #fff; border-radius: 12px; margin: 0.6rem 0; padding: 0 1rem; box-shadow: 0 1px 4px rgb(0 0 0 / 0.06); }
+    .faq summary { cursor: pointer; padding: 1rem 0; font-weight: 700; list-style: none; display: flex; justify-content: space-between; }
+    .faq summary::after { content: "+"; font-size: 1.3rem; line-height: 1; }
+    .faq details[open] summary::after { content: "\2212"; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq p { margin: 0 0 1rem; color: #475569; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Accordion with details</h1>
+    <p class="lead">Native details and summary, restyled.</p>
+    <div class="faq">
+      <details open><summary>What is Quantum?</summary><p>A language whose compiler also checks and compiles HTML and CSS.</p></details>
+      <details><summary>Does it need a browser?</summary><p>No: pages are compiled to the document a browser would build.</p></details>
+      <details><summary>Is it free?</summary><p>Yes.</p></details>
+    </div>
+  </main>
+</body>
+</html>

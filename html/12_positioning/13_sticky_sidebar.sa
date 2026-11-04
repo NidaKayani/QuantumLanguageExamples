@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 12_positioning/13: Sticky sidebar -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sticky sidebar</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .wrap { display: grid; grid-template-columns: 1fr 14rem; gap: 2rem; align-items: start; }
+    .aside { position: sticky; top: 1rem; background: #fff; border-radius: 12px; padding: 1rem; }
+    .article p { height: 12rem; background: #fff; border-radius: 12px; padding: 1rem; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Sticky sidebar</h1>
+    <p class="lead">A sidebar that follows the reader down a long article.</p>
+    <div class="wrap">
+      <article class="article"><p>Section one</p><p>Section two</p><p>Section three</p><p>Section four</p><p>Section five</p></article>
+      <aside class="aside"><h2>On this page</h2><p>Stays in view.</p></aside>
+    </div>
+  </main>
+</body>
+</html>

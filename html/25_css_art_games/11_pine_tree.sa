@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 25_css_art_games/11: Pine tree -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pine tree</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .tree { display: flex; flex-direction: column; align-items: center; }
+    .tree span { width: 0; height: 0; border-left: solid transparent; border-right: solid transparent; border-bottom: solid #15803d; margin-top: -2rem; }
+    .t1 { border-width: 0 3rem 4rem; margin-top: 0; } .t2 { border-width: 0 4.5rem 5rem; } .t3 { border-width: 0 6rem 6rem; }
+    .trunk { width: 2rem; height: 2.5rem; background: #78350f; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Pine tree</h1>
+    <p class="lead">Stacked triangles from borders and a trunk.</p>
+    <div class="tree" role="img" aria-label="A pine tree"><span class="t1"></span><span class="t2"></span><span class="t3"></span><div class="trunk"></div></div>
+  </main>
+</body>
+</html>

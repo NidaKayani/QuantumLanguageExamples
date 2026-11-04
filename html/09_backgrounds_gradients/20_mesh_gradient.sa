@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 09_backgrounds_gradients/20: Mesh gradient -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mesh gradient</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .mesh { height: 22rem; border-radius: 20px;
+      background:
+        radial-gradient(at 15% 20%, #f0abfc 0, transparent 50%),
+        radial-gradient(at 85% 15%, #93c5fd 0, transparent 50%),
+        radial-gradient(at 70% 85%, #86efac 0, transparent 50%),
+        radial-gradient(at 20% 80%, #fde68a 0, transparent 50%),
+        #ffffff; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Mesh gradient</h1>
+    <p class="lead">Overlapping radial gradients make a soft mesh of colour.</p>
+    <div class="mesh" role="img" aria-label="A soft mesh of pastel colours"></div>
+  </main>
+</body>
+</html>

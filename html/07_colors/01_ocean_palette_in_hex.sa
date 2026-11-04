@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 07_colors/01: Ocean palette in hex -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ocean palette in hex</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .swatches { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr)); gap: 0.5rem; }
+    .swatches li { padding: 1.25rem 0.75rem; border-radius: 10px; }
+    .swatches strong, .swatches code { display: block; }
+    .swatches code { font-size: 0.75rem; opacity: 0.85; }
+    .s100 { background: #eef3f6; color: #111827; }
+    .s200 { background: #d3e3ee; color: #111827; }
+    .s300 { background: #a8cce6; color: #111827; }
+    .s400 { background: #73b1de; color: #111827; }
+    .s500 { background: #3e99da; color: #ffffff; }
+    .s600 { background: #2280c3; color: #ffffff; }
+    .s700 { background: #1c679c; color: #ffffff; }
+    .s800 { background: #174f78; color: #ffffff; }
+    .s900 { background: #123954; color: #ffffff; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Ocean palette in hex</h1>
+    <p class="lead">Nine shades of hue 205&deg;, written in hex notation.</p>
+    <ul class="swatches">
+      <li class="s100"><strong>100</strong><code>#eef3f6</code></li>
+      <li class="s200"><strong>200</strong><code>#d3e3ee</code></li>
+      <li class="s300"><strong>300</strong><code>#a8cce6</code></li>
+      <li class="s400"><strong>400</strong><code>#73b1de</code></li>
+      <li class="s500"><strong>500</strong><code>#3e99da</code></li>
+      <li class="s600"><strong>600</strong><code>#2280c3</code></li>
+      <li class="s700"><strong>700</strong><code>#1c679c</code></li>
+      <li class="s800"><strong>800</strong><code>#174f78</code></li>
+      <li class="s900"><strong>900</strong><code>#123954</code></li>
+    </ul>
+  </main>
+</body>
+</html>

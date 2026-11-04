@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 12_positioning/05: Stacking with z-index -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stacking with z-index</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .stage { position: relative; min-height: 14rem; background: #f1f5f9; border: 2px dashed #94a3b8; border-radius: 12px; padding: 1rem; }
+    .card { position: absolute; width: 9rem; height: 7rem; border-radius: 10px; padding: 0.5rem; color: #fff; font-weight: 700; box-shadow: 0 4px 12px rgb(0 0 0 / 0.2); }
+    .z1 { z-index: 1; left: 2rem; top: 2rem; background: #6366f1; }
+    .z2 { z-index: 2; left: 6rem; top: 4rem; background: #ec4899; }
+    .z3 { z-index: 3; left: 10rem; top: 1.5rem; background: #14b8a6; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Stacking with z-index</h1>
+    <p class="lead">Higher z-index values paint on top.</p>
+    <div class="stage"><div class="card z3">z-index: 3</div><div class="card z1">z-index: 1</div><div class="card z2">z-index: 2</div></div>
+  </main>
+</body>
+</html>

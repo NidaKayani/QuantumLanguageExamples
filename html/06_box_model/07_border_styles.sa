@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 06_box_model/07: Border styles -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Border styles</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .styles { display: grid; grid-template-columns: repeat(auto-fill, minmax(10rem, 1fr)); gap: 1rem; }
+    .styles div { padding: 1.25rem; text-align: center; border-width: 6px; border-color: #0891b2; background: #fff; }
+    .solid { border-style: solid; }
+    .dashed { border-style: dashed; }
+    .dotted { border-style: dotted; }
+    .double { border-style: double; }
+    .groove { border-style: groove; }
+    .ridge { border-style: ridge; }
+    .inset { border-style: inset; }
+    .outset { border-style: outset; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Border styles</h1>
+    <p class="lead">The border-style keywords side by side.</p>
+    <div class="styles">
+      <div class="solid">solid</div>
+      <div class="dashed">dashed</div>
+      <div class="dotted">dotted</div>
+      <div class="double">double</div>
+      <div class="groove">groove</div>
+      <div class="ridge">ridge</div>
+      <div class="inset">inset</div>
+      <div class="outset">outset</div>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 11_grid/16: Calendar grid -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calendar grid</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .month { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; max-width: 30rem; }
+    .month div { aspect-ratio: 1; display: grid; place-items: center; background: #fff; border-radius: 8px; }
+    .month .head { background: transparent; font-weight: 700; color: #64748b; }
+    .month .blank { background: transparent; }
+    .month div:nth-child(7n), .month div:nth-child(7n-1) { color: #dc2626; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Calendar grid</h1>
+    <p class="lead">December 2026 as a seven-column grid.</p>
+    <div class="month">
+      <div class="head">Mo</div><div class="head">Tu</div><div class="head">We</div><div class="head">Th</div><div class="head">Fr</div><div class="head">Sa</div><div class="head">Su</div>
+      <div class="blank"></div><div>1</div><div>2</div><div>3</div><div>4</div><div>5</div><div>6</div><div>7</div><div>8</div><div>9</div><div>10</div><div>11</div><div>12</div><div>13</div><div>14</div><div>15</div><div>16</div><div>17</div><div>18</div><div>19</div><div>20</div><div>21</div><div>22</div><div>23</div><div>24</div><div>25</div><div>26</div><div>27</div><div>28</div><div>29</div><div>30</div><div>31</div><div class="blank"></div><div class="blank"></div><div class="blank"></div>
+    </div>
+  </main>
+</body>
+</html>

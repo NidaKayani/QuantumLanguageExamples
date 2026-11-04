@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 14_pseudo_elements/15: Arrow links -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Arrow links</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .arrow { color: #0f172a; font-weight: 700; text-decoration: none; }
+    .arrow::after { content: "\2192"; display: inline-block; margin-left: 0.4rem; transition: transform 0.2s; }
+    .arrow:hover::after { transform: translateX(0.3rem); }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Arrow links</h1>
+    <p class="lead">An arrow that moves on hover, made with ::after.</p>
+    <p><a class="arrow" href="#more">Read the full story</a></p>
+    <p><a class="arrow" href="#docs">Browse the documentation</a></p>
+  </main>
+</body>
+</html>

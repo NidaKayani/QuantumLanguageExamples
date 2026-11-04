@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 11_grid/14: Dashboard layout -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dashboard layout</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .dash { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: minmax(6rem, auto); gap: 1rem; }
+    .dash > * { background: #fff; border-radius: 12px; padding: 1rem; box-shadow: 0 1px 4px rgb(0 0 0 / 0.08); }
+    .dash strong { display: block; font-size: 1.8rem; }
+    .chart { grid-column: span 3; grid-row: span 2; }
+    .list { grid-row: span 2; }
+    .bars { display: flex; align-items: flex-end; gap: 0.4rem; height: 9rem; }
+    .bars span { flex: 1; background: #6366f1; border-radius: 4px 4px 0 0; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Dashboard layout</h1>
+    <p class="lead">Stat cards and panels of different sizes.</p>
+    <div class="dash">
+      <div>Users<strong>8,420</strong></div><div>Sales<strong>$12.9k</strong></div><div>Orders<strong>342</strong></div><div>Refunds<strong>7</strong></div>
+      <div class="chart"><h2>Weekly visits</h2><div class="bars"><span style="height: 40%"></span><span style="height: 65%"></span><span style="height: 50%"></span><span style="height: 80%"></span><span style="height: 95%"></span><span style="height: 70%"></span><span style="height: 55%"></span></div></div>
+      <div class="list"><h2>Top pages</h2><ol><li>/docs</li><li>/blog</li><li>/pricing</li></ol></div>
+    </div>
+  </main>
+</body>
+</html>

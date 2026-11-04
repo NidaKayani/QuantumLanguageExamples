@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 23_semantics_accessibility/19: Figure with long description -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Figure with long description</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .panel { background: #fff; border-radius: 14px; padding: 1.25rem 1.5rem; margin-bottom: 1rem; }
+    .chart { display: flex; align-items: flex-end; gap: 0.5rem; height: 8rem; }
+    .chart span { flex: 1; background: #8b5cf6; border-radius: 6px 6px 0 0; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Figure with long description</h1>
+    <p class="lead">aria-describedby links a chart to a text summary.</p>
+    <figure class="panel" aria-describedby="chart-desc">
+      <div class="chart" aria-hidden="true"><span style="height: 30%"></span><span style="height: 60%"></span><span style="height: 90%"></span></div>
+      <figcaption>Visitors per year</figcaption>
+      <p id="chart-desc">Visitors tripled in three years: 3,000, then 6,000, then 9,000.</p>
+    </figure>
+  </main>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 04_tables/03: Zebra stripes -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Zebra stripes</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    table { border-collapse: collapse; width: 100%; background: #fff; }
+    th, td { padding: 0.6rem 0.9rem; border-bottom: 1px solid #e2e8f0; text-align: left; }
+    th { background: #f8fafc; font-weight: 600; }
+    tbody tr:nth-child(even) { background: #f1f5f9; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Zebra stripes</h1>
+    <p class="lead">:nth-child(even) shades every other row.</p>
+    <table>
+      <thead><tr><th>Name</th><th>Known as</th><th>Born</th></tr></thead>
+      <tbody>
+        <tr><td>Ada Lovelace</td><td>Mathematician</td><td>1815</td></tr>
+        <tr><td>Alan Turing</td><td>Computer scientist</td><td>1912</td></tr>
+        <tr><td>Grace Hopper</td><td>Rear admiral</td><td>1906</td></tr>
+        <tr><td>Margaret Hamilton</td><td>Engineer</td><td>1936</td></tr>
+        <tr><td>Tim Berners-Lee</td><td>Inventor of the Web</td><td>1955</td></tr>
+      </tbody>
+    </table>
+  </main>
+</body>
+</html>

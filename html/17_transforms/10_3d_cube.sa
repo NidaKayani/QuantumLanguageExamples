@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 17_transforms/10: 3D cube -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>3D cube</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .scene { width: 8rem; height: 8rem; margin: 4rem auto; perspective: 700px; }
+    .cube { position: relative; width: 100%; height: 100%; transform-style: preserve-3d; transform: rotateX(-25deg) rotateY(35deg); }
+    .cube div { position: absolute; inset: 0; display: grid; place-items: center; border: 2px solid rgb(255 255 255 / 0.7); color: #fff; font-weight: 700; opacity: 0.9; }
+    .front { transform: translateZ(4rem); background: #2d9bd2; }
+    .back { transform: rotateY(180deg) translateZ(4rem); background: #642dd2; }
+    .right { transform: rotateY(90deg) translateZ(4rem); background: #d22d9b; }
+    .left { transform: rotateY(-90deg) translateZ(4rem); background: #d2642d; }
+    .top { transform: rotateX(90deg) translateZ(4rem); background: #9bd22d; }
+    .bottom { transform: rotateX(-90deg) translateZ(4rem); background: #2dd264; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>3D cube</h1>
+    <p class="lead">Six faces placed with rotate and translateZ.</p>
+    <div class="scene"><div class="cube"><div class="front">front</div><div class="back">back</div><div class="right">right</div><div class="left">left</div><div class="top">top</div><div class="bottom">bottom</div></div></div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 01_text_elements/04: Blockquote, q and cite -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blockquote, q and cite</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .card { background: #fff; border-radius: 12px; padding: 1.5rem; box-shadow: 0 1px 3px rgb(0 0 0 / 0.12); }
+    blockquote {
+      margin: 1rem 0;
+      padding: 0.75rem 1.25rem;
+      border-left: 4px solid #3b82f6;
+      background: #eff6ff;
+      font-size: 1.15rem;
+    }
+    blockquote footer { margin-top: 0.5rem; font-size: 0.9rem; color: #52606d; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Blockquote, q and cite</h1>
+    <p class="lead">Quoting other people properly.</p>
+    <section class="card">
+      <blockquote cite="https://www.w3.org/People/Berners-Lee/">
+        <p>The Web does not just connect machines, it connects people.</p>
+        <footer>&mdash; <cite>Tim Berners-Lee</cite></footer>
+      </blockquote>
+      <p>As the saying goes, <q>simple things should be simple</q>.</p>
+    </section>
+  </main>
+</body>
+</html>

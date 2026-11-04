@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 16_animations/18: Ticking clock -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ticking clock</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .clock { position: relative; width: 12rem; height: 12rem; border-radius: 50%; background: #fff; border: 6px solid #0f172a; }
+    .hand { position: absolute; left: 50%; bottom: 50%; width: 4px; margin-left: -2px; background: #0f172a; transform-origin: bottom center; border-radius: 2px; }
+    .minute { height: 4.5rem; animation: turn 60s linear infinite; }
+    .second { height: 5rem; width: 2px; margin-left: -1px; background: #dc2626; animation: turn 60s steps(60) infinite; }
+    @keyframes turn { to { transform: rotate(360deg); } }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms; animation-iteration-count: 1; } }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Ticking clock</h1>
+    <p class="lead">Hands driven by steps() timing.</p>
+    <div class="clock" role="img" aria-label="A clock"><div class="hand minute"></div><div class="hand second"></div></div>
+  </main>
+</body>
+</html>

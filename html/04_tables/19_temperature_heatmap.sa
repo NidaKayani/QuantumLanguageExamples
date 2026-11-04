@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 04_tables/19: Temperature heatmap -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Temperature heatmap</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    table { border-collapse: collapse; }
+    th, td { padding: 0.5rem; text-align: center; }
+    td { width: 2.8rem; color: #0f172a; font-weight: 600; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Temperature heatmap</h1>
+    <p class="lead">Average temperatures (&deg;C), coloured from cold blue to hot red.</p>
+    <table>
+      <thead><tr><th>City</th><th>Jan</th><th>Feb</th><th>Mar</th><th>Apr</th><th>May</th><th>Jun</th><th>Jul</th><th>Aug</th><th>Sep</th><th>Oct</th><th>Nov</th><th>Dec</th></tr></thead>
+      <tbody>
+        <tr><th>London</th><td style="background: #55e78d">4</td><td style="background: #55e772">6</td><td style="background: #60e755">9</td><td style="background: #96e755">13</td><td style="background: #cbe755">17</td><td style="background: #e7db55">20</td><td style="background: #e7c055">22</td><td style="background: #e7cd55">21</td><td style="background: #d8e755">18</td><td style="background: #96e755">13</td><td style="background: #55e758">8</td><td style="background: #55e780">5</td></tr>
+        <tr><th>Rome</th><td style="background: #6ee755">10</td><td style="background: #7be755">11</td><td style="background: #a3e755">14</td><td style="background: #cbe755">17</td><td style="background: #e7cd55">21</td><td style="background: #e79855">25</td><td style="background: #e77055">28</td><td style="background: #e77055">28</td><td style="background: #e7a555">24</td><td style="background: #e6e755">19</td><td style="background: #a3e755">14</td><td style="background: #7be755">11</td></tr>
+        <tr><th>Moscow</th><td style="background: #55a1e7">-8</td><td style="background: #55bbe7">-6</td><td style="background: #55e7c2">0</td><td style="background: #55e758">8</td><td style="background: #b0e755">15</td><td style="background: #e6e755">19</td><td style="background: #e7c055">22</td><td style="background: #e7db55">20</td><td style="background: #a3e755">14</td><td style="background: #55e765">7</td><td style="background: #55e7d0">-1</td><td style="background: #55bbe7">-6</td></tr>
+        <tr><th>Singapore</th><td style="background: #e78b55">26</td><td style="background: #e77d55">27</td><td style="background: #e77055">28</td><td style="background: #e76355">29</td><td style="background: #e76355">29</td><td style="background: #e77055">28</td><td style="background: #e77d55">27</td><td style="background: #e77d55">27</td><td style="background: #e77d55">27</td><td style="background: #e77d55">27</td><td style="background: #e77d55">27</td><td style="background: #e78b55">26</td></tr>
+      </tbody>
+    </table>
+  </main>
+</body>
+</html>

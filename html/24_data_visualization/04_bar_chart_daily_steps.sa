@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 24_data_visualization/04: Bar chart: Daily steps -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bar chart: Daily steps</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .chart { list-style: none; padding: 1.25rem; background: #fff; border-radius: 16px; }
+    .chart li { display: grid; grid-template-columns: 7rem 1fr 4rem; align-items: center; gap: 0.75rem; margin: 0.5rem 0; }
+    .bar { height: 1.4rem; width: var(--w); border-radius: 0 6px 6px 0; background: linear-gradient(90deg, #6366f1, #a855f7); }
+    .value { font-variant-numeric: tabular-nums; text-align: right; color: #475569; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Bar chart: Daily steps</h1>
+    <p class="lead">Horizontal bars sized by a custom property per row.</p>
+    <ul class="chart" aria-label="Daily steps">
+      <li><span class="label">Mon</span><span class="bar" style="--w: 57.6%"></span><span class="value">7,200</span></li>
+      <li><span class="label">Tue</span><span class="bar" style="--w: 72.8%"></span><span class="value">9,100</span></li>
+      <li><span class="label">Wed</span><span class="bar" style="--w: 43.2%"></span><span class="value">5,400</span></li>
+      <li><span class="label">Thu</span><span class="bar" style="--w: 89.6%"></span><span class="value">11,200</span></li>
+      <li><span class="label">Fri</span><span class="bar" style="--w: 66.4%"></span><span class="value">8,300</span></li>
+      <li><span class="label">Sat</span><span class="bar" style="--w: 100.0%"></span><span class="value">12,500</span></li>
+      <li><span class="label">Sun</span><span class="bar" style="--w: 32.8%"></span><span class="value">4,100</span></li>
+    </ul>
+  </main>
+</body>
+</html>

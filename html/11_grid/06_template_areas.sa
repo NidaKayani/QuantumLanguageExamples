@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 11_grid/06: Template areas -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Template areas</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .layout { display: grid; gap: 0.5rem; min-height: 22rem;
+      grid-template-columns: 12rem 1fr;
+      grid-template-rows: auto 1fr auto;
+      grid-template-areas: "head head" "side main" "foot foot"; }
+    .layout > * { padding: 1rem; border-radius: 8px; color: #fff; font-weight: 600; }
+    .layout header { grid-area: head; background: #7c3aed; }
+    .layout aside { grid-area: side; background: #2563eb; }
+    .layout main { grid-area: main; background: #0891b2; }
+    .layout footer { grid-area: foot; background: #475569; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Template areas</h1>
+    <p class="lead">Named areas draw the layout as ASCII art.</p>
+    <div class="layout">
+      <header>header</header>
+      <aside>aside</aside>
+      <main>main</main>
+      <footer>footer</footer>
+    </div>
+  </main>
+</body>
+</html>

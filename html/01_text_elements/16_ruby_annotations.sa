@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 01_text_elements/16: Ruby annotations -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ruby annotations</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .card { background: #fff; border-radius: 12px; padding: 1.5rem; box-shadow: 0 1px 3px rgb(0 0 0 / 0.12); }
+    .big { font-size: 2.5rem; }
+    rt { font-size: 0.4em; color: #dc2626; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Ruby annotations</h1>
+    <p class="lead">ruby puts pronunciation guides above East Asian text.</p>
+    <section class="card">
+      <p class="big" lang="ja"><ruby>漢<rp>(</rp><rt>kan</rt><rp>)</rp>字<rp>(</rp><rt>ji</rt><rp>)</rp></ruby></p>
+      <p class="big" lang="zh"><ruby>北京<rp>(</rp><rt>Běijīng</rt><rp>)</rp></ruby></p>
+    </section>
+  </main>
+</body>
+</html>

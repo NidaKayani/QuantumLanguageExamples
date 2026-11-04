@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 18_responsive/06: Container queries -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Container queries</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .slot { container-type: inline-size; margin-bottom: 1rem; }
+    .narrow { width: 18rem; } .roomy { width: 100%; max-width: 44rem; }
+    .card { display: grid; gap: 1rem; background: #fff; border-radius: 14px; padding: 1rem; }
+    .card .img { height: 7rem; border-radius: 10px; background: linear-gradient(135deg, #f97316, #db2777); }
+    @container (min-width: 30rem) { .card { grid-template-columns: 12rem 1fr; align-items: center; } }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Container queries</h1>
+    <p class="lead">A card that changes layout by the width of its container, not the screen.</p>
+    <div class="slot narrow"><article class="card"><div class="img"></div><p>In a narrow slot the image sits on top.</p></article></div>
+    <div class="slot roomy"><article class="card"><div class="img"></div><p>In a roomy slot the same card puts the image beside the text.</p></article></div>
+  </main>
+</body>
+</html>

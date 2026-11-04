@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 03_links_navigation/07: Pagination -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pagination</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .pages { display: flex; gap: 0.35rem; list-style: none; padding: 0; }
+    .pages a { display: grid; place-items: center; min-width: 2.5rem; height: 2.5rem; border-radius: 8px; border: 1px solid #cbd5e1; color: #334155; text-decoration: none; background: #fff; }
+    .pages a:hover { border-color: #3b82f6; }
+    .pages a[aria-current] { background: #3b82f6; border-color: #3b82f6; color: #fff; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Pagination</h1>
+    <p class="lead">Page numbers with previous and next links.</p>
+    <nav aria-label="Pages">
+      <ul class="pages">
+        <li><a href="#p1">&laquo;</a></li>
+        <li><a href="#p1">1</a></li>
+        <li><a href="#p2" aria-current="page">2</a></li>
+        <li><a href="#p3">3</a></li>
+        <li><a href="#p4">4</a></li>
+        <li><a href="#p3">&raquo;</a></li>
+      </ul>
+    </nav>
+  </main>
+</body>
+</html>

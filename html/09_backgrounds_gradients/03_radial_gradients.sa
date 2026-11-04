@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 09_backgrounds_gradients/03: Radial gradients -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Radial gradients</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr)); gap: 1rem; }
+    .tiles div { height: 9rem; border-radius: 12px; display: flex; align-items: flex-end; padding: 0.6rem; font-size: 0.8rem; font-weight: 600; color: #fff; text-shadow: 0 1px 2px rgb(0 0 0 / 0.5); }
+    .r1 { background: radial-gradient(circle, #fde047, #f97316, #7f1d1d); }
+    .r2 { background: radial-gradient(ellipse at top left, #67e8f9, #1e3a8a); }
+    .r3 { background: radial-gradient(circle at 70% 30%, #fff 0 8%, #60a5fa 9% 40%, #1e40af); }
+    .r4 { background: radial-gradient(closest-side, #f0abfc, #a21caf 70%, #4a044e); }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Radial gradients</h1>
+    <p class="lead">Circles and ellipses spreading from a point.</p>
+    <div class="tiles">
+      <div class="r1">circle</div><div class="r2">ellipse at top left</div><div class="r3">a shiny ball</div><div class="r4">closest-side</div>
+    </div>
+  </main>
+</body>
+</html>

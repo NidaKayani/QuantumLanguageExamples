@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 13_selectors/20: :first-of-type and :last-of-type -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>:first-of-type and :last-of-type</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .post { background: #fff; padding: 1rem 1.5rem; border-radius: 12px; }
+    .post p:first-of-type { font-size: 1.2rem; color: #0f172a; }
+    .post p:last-of-type { color: #64748b; font-style: italic; }
+    .post h2:first-of-type { margin-top: 0; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>:first-of-type and :last-of-type</h1>
+    <p class="lead">The first and last element of each kind among siblings.</p>
+    <article class="post">
+      <h2>Article</h2>
+      <p>First paragraph: larger.</p>
+      <p>A middle paragraph.</p>
+      <h2>Second heading</h2>
+      <p>Last paragraph: grey and italic.</p>
+    </article>
+  </main>
+</body>
+</html>

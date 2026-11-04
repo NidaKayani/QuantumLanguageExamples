@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 18_responsive/20: Responsive typography scale -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Responsive typography scale</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    :root { --ratio: 1.2; }
+    @media (min-width: 48rem) { :root { --ratio: 1.333; } }
+    h2 { font-size: calc(1rem * var(--ratio) * var(--ratio) * var(--ratio)); margin: 0.3rem 0; }
+    h3 { font-size: calc(1rem * var(--ratio) * var(--ratio)); margin: 0.3rem 0; }
+    h4 { font-size: calc(1rem * var(--ratio)); margin: 0.3rem 0; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Responsive typography scale</h1>
+    <p class="lead">Headings use a larger ratio on wide screens.</p>
+    <h2>Heading two</h2><h3>Heading three</h3><h4>Heading four</h4><p>Body text stays at 1rem.</p>
+  </main>
+</body>
+</html>

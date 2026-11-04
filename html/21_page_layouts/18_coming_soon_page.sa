@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 21_page_layouts/18: Coming soon page -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Coming soon page</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .soon { min-height: 75vh; display: grid; place-items: center; text-align: center; border-radius: 20px; color: #fff; background: radial-gradient(circle at 30% 20%, #1e40af, #0f172a 70%); padding: 2rem; }
+    .soon h2 { font-size: clamp(2rem, 6vw, 4rem); margin: 0; }
+    .count { display: flex; gap: 1rem; justify-content: center; margin: 2rem 0; }
+    .count div { background: rgb(255 255 255 / 0.1); border-radius: 14px; padding: 1rem; min-width: 5rem; }
+    .count strong { display: block; font-size: 2rem; }
+    .soon form { display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; }
+    .soon input { padding: 0.7rem 1rem; border-radius: 10px; border: 0; font: inherit; }
+    .soon button { padding: 0.7rem 1.2rem; border-radius: 10px; border: 0; background: #facc15; font: inherit; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Coming soon page</h1>
+    <p class="lead">A countdown-style holding page.</p>
+    <section class="soon"><div>
+      <h2>Something new is coming</h2>
+      <div class="count"><div><strong>12</strong>days</div><div><strong>08</strong>hours</div><div><strong>45</strong>minutes</div></div>
+      <form action="#"><input type="email" aria-label="Email" placeholder="Email me when it launches"><button type="submit">Notify me</button></form>
+    </div></section>
+  </main>
+</body>
+</html>

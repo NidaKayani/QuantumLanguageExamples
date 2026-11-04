@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 21_page_layouts/11: Restaurant menu -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Restaurant menu</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .menu { max-width: 34rem; margin: 0 auto; background: #fffbeb; padding: 2rem; border-radius: 18px; font-family: Georgia, serif; }
+    .menu h2 { text-align: center; letter-spacing: 0.2em; text-transform: uppercase; }
+    .menu h3 { color: #b45309; border-bottom: 1px solid #fcd34d; }
+    .menu ul { list-style: none; padding: 0; }
+    .menu li { display: flex; gap: 0.5rem; margin: 0.6rem 0; }
+    .menu li::after { content: ""; flex: 1; order: 1; border-bottom: 2px dotted #d6d3d1; margin-bottom: 0.35rem; }
+    .menu li span:last-child { order: 2; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Restaurant menu</h1>
+    <p class="lead">Sections of dishes with dotted price leaders.</p>
+    <section class="menu"><h2>Spice Garden</h2>
+      <h3>Starters</h3><ul><li><span>Lentil soup</span><span>$4.50</span></li><li><span>Garlic bread</span><span>$3.00</span></li></ul>
+      <h3>Mains</h3><ul><li><span>Chicken karahi</span><span>$12.00</span></li><li><span>Vegetable biryani</span><span>$10.50</span></li><li><span>Grilled fish</span><span>$14.00</span></li></ul>
+      <h3>Desserts</h3><ul><li><span>Kheer</span><span>$4.00</span></li><li><span>Gulab jamun</span><span>$4.50</span></li></ul>
+    </section>
+  </main>
+</body>
+</html>

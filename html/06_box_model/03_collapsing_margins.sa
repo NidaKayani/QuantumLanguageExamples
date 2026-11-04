@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 06_box_model/03: Collapsing margins -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Collapsing margins</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .stack div { background: #fecaca; margin: 2rem 0; padding: 0.5rem 1rem; }
+    .flow { display: flow-root; background: #f1f5f9; }
+    .gap div { margin: 2rem 0; padding: 0.5rem 1rem; background: #bbf7d0; }
+    .gap { display: flex; flex-direction: column; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Collapsing margins</h1>
+    <p class="lead">Vertical margins between blocks overlap instead of adding up.</p>
+    <section class="flow stack"><div>margin: 2rem</div><div>margin: 2rem &mdash; the gap is 2rem, not 4rem</div></section>
+    <section class="gap"><div>In a flex column</div><div>margins do not collapse</div></section>
+  </main>
+</body>
+</html>

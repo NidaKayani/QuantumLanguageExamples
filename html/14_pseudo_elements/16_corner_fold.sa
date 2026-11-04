@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 14_pseudo_elements/16: Corner fold -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Corner fold</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .note { position: relative; width: 18rem; padding: 1.5rem; background: #fef9c3; border-radius: 4px; }
+    .note::before { content: ""; position: absolute; top: 0; right: 0; border-width: 0 2rem 2rem 0; border-style: solid; border-color: #f5f7fa #f5f7fa #eab308 #eab308; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Corner fold</h1>
+    <p class="lead">A folded page corner from a ::before triangle.</p>
+    <div class="note"><p>A sticky note with a folded corner.</p></div>
+  </main>
+</body>
+</html>

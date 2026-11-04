@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 03_links_navigation/16: Table of contents -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Table of contents</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .card { background: #fff; border-radius: 12px; padding: 1.5rem; box-shadow: 0 1px 3px rgb(0 0 0 / 0.12); }
+    .toc { counter-reset: sec; list-style: none; padding: 0; }
+    .toc li { counter-increment: sec; }
+    .toc a::before { content: counter(sec) ". "; color: #94a3b8; }
+    .toc a { color: #2563eb; text-decoration: none; line-height: 2; }
+    section h2 { scroll-margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Table of contents</h1>
+    <p class="lead">In-page anchors to the sections below.</p>
+    <nav class="card" aria-label="Contents">
+      <ol class="toc">
+        <li><a href="#intro">Introduction</a></li>
+        <li><a href="#setup">Setup</a></li>
+        <li><a href="#usage">Usage</a></li>
+      </ol>
+    </nav>
+    <section><h2 id="intro">Introduction</h2><p>What this guide covers.</p></section>
+    <section><h2 id="setup">Setup</h2><p>How to install the tools.</p></section>
+    <section><h2 id="usage">Usage</h2><p>How to use them day to day.</p></section>
+  </main>
+</body>
+</html>

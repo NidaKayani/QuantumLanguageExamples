@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 09_backgrounds_gradients/14: Fixed background -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fixed background</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .panel { height: 16rem; margin: 2rem 0; border-radius: 16px; display: grid; place-items: center; color: #fff; font-size: 1.8rem; font-weight: 800;
+      background: repeating-linear-gradient(45deg, #1e3a8a 0 2rem, #1d4ed8 2rem 4rem); background-attachment: fixed; }
+    .spacer { height: 60vh; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Fixed background</h1>
+    <p class="lead">background-attachment: fixed for a parallax-like panel.</p>
+    <div class="spacer"><p>Scroll the page and watch the stripes stay put.</p></div>
+    <div class="panel">background-attachment: fixed</div>
+    <div class="spacer"></div>
+  </main>
+</body>
+</html>

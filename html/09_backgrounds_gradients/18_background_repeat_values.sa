@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 09_backgrounds_gradients/18: Background repeat values -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Background repeat values</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr)); gap: 1rem; }
+    .tiles div { height: 9rem; border-radius: 12px; display: flex; align-items: flex-end; padding: 0.6rem; font-size: 0.8rem; font-weight: 600; color: #fff; text-shadow: 0 1px 2px rgb(0 0 0 / 0.5); }
+    .dot { background-color: #ecfeff; background-image: radial-gradient(circle, #0891b2 40%, transparent 42%); background-size: 2.2rem 2.2rem; color: #0f172a; text-shadow: none; }
+    .rx { background-repeat: repeat-x; }
+    .ry { background-repeat: repeat-y; }
+    .sp { background-repeat: space; }
+    .ro { background-repeat: round; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Background repeat values</h1>
+    <p class="lead">repeat, repeat-x, space and round tile a small image.</p>
+    <div class="tiles">
+      <div class="dot rx">repeat-x</div><div class="dot ry">repeat-y</div><div class="dot sp">space</div><div class="dot ro">round</div>
+    </div>
+  </main>
+</body>
+</html>

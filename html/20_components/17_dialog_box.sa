@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 20_components/17: Dialog box -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dialog box</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    dialog { position: static; display: block; max-width: 24rem; border: 0; border-radius: 16px; padding: 1.5rem; box-shadow: 0 20px 50px rgb(0 0 0 / 0.2); }
+    dialog h2 { margin-top: 0; }
+    dialog menu { display: flex; justify-content: flex-end; gap: 0.5rem; padding: 0; margin: 1.5rem 0 0; }
+    dialog button { padding: 0.55rem 1rem; border-radius: 8px; border: 1px solid #cbd5e1; background: #fff; font: inherit; cursor: pointer; }
+    dialog button.go { background: #dc2626; border-color: #dc2626; color: #fff; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Dialog box</h1>
+    <p class="lead">The native dialog element, shown open.</p>
+    <dialog open aria-labelledby="d-title">
+      <h2 id="d-title">Delete this file?</h2>
+      <p>This cannot be undone.</p>
+      <form method="dialog"><menu><button value="cancel">Cancel</button><button class="go" value="ok">Delete</button></menu></form>
+    </dialog>
+  </main>
+</body>
+</html>

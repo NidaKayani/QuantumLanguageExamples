@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 07_colors/19: System colours -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>System colours</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .system { color-scheme: light dark; background: Canvas; color: CanvasText; border: 2px solid ButtonBorder; border-radius: 12px; padding: 1.5rem; }
+    .system a { color: LinkText; }
+    .system button { background: ButtonFace; color: ButtonText; border: 1px solid ButtonBorder; padding: 0.5rem 1rem; }
+    .system mark { background: Mark; color: MarkText; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>System colours</h1>
+    <p class="lead">Canvas, CanvasText and friends follow the user's colour scheme.</p>
+    <section class="system">
+      <p>This panel uses system colours: switch your operating system to dark mode and it follows.</p>
+      <p><a href="#x">A link</a> and <mark>marked text</mark>.</p>
+      <button type="button">A button</button>
+    </section>
+  </main>
+</body>
+</html>

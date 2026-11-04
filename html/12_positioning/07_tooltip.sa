@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 12_positioning/07: Tooltip -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tooltip</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .tip { position: relative; display: inline-block; margin-top: 4rem; }
+    .tip button { padding: 0.5rem 1rem; border-radius: 8px; border: 1px solid #94a3b8; background: #fff; font: inherit; }
+    .tip [role="tooltip"] { position: absolute; bottom: calc(100% + 0.6rem); left: 50%; transform: translateX(-50%); white-space: nowrap; background: #0f172a; color: #fff; padding: 0.4rem 0.7rem; border-radius: 6px; font-size: 0.85rem; opacity: 0; transition: opacity 0.15s; pointer-events: none; }
+    .tip [role="tooltip"]::after { content: ""; position: absolute; top: 100%; left: 50%; margin-left: -6px; border: 6px solid transparent; border-top-color: #0f172a; }
+    .tip:hover [role="tooltip"], .tip:focus-within [role="tooltip"] { opacity: 1; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Tooltip</h1>
+    <p class="lead">A tip positioned above its trigger, shown on hover and focus.</p>
+    <span class="tip"><button type="button" aria-describedby="t1">Hover me</button><span role="tooltip" id="t1">Saved 2 minutes ago</span></span>
+  </main>
+</body>
+</html>

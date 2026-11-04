@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 03_links_navigation/02: External link marker -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>External link marker</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .card { background: #fff; border-radius: 12px; padding: 1.5rem; box-shadow: 0 1px 3px rgb(0 0 0 / 0.12); }
+    a[href^="http"]::after { content: " \2197"; font-size: 0.8em; }
+    a { color: #0f766e; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>External link marker</h1>
+    <p class="lead">An arrow after links that leave the site.</p>
+    <section class="card">
+      <ul>
+        <li><a href="#local">A page on this site</a></li>
+        <li><a href="https://developer.mozilla.org/">MDN Web Docs</a></li>
+        <li><a href="https://www.w3.org/">The W3C</a></li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

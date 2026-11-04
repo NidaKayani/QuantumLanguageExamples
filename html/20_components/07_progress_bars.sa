@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 20_components/07: Progress bars -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Progress bars</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .bars label { display: block; margin-top: 0.75rem; font-weight: 600; }
+    progress, meter { width: 100%; max-width: 28rem; height: 1rem; }
+    progress { accent-color: #6366f1; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Progress bars</h1>
+    <p class="lead">progress and meter, styled.</p>
+    <div class="bars">
+      <label for="up">Upload 72%</label><progress id="up" value="72" max="100">72%</progress>
+      <label for="disk">Disk usage</label><meter id="disk" min="0" max="100" low="60" high="85" optimum="20" value="78">78%</meter>
+    </div>
+  </main>
+</body>
+</html>

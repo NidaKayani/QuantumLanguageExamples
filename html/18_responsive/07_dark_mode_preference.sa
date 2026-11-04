@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 18_responsive/07: Dark mode preference -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dark mode preference</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    :root { --bg: #ffffff; --fg: #0f172a; --accent: #2563eb; color-scheme: light dark; }
+    @media (prefers-color-scheme: dark) { :root { --bg: #0f172a; --fg: #e2e8f0; --accent: #60a5fa; } }
+    .themed { background: var(--bg); color: var(--fg); padding: 2rem; border-radius: 16px; border: 1px solid var(--accent); }
+    .themed a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Dark mode preference</h1>
+    <p class="lead">prefers-color-scheme switches the palette automatically.</p>
+    <section class="themed"><h2>Follows your system</h2><p>Switch your operating system between light and dark. <a href="#x">Links</a> follow too.</p></section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 11_grid/11: Aligning grid items -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aligning grid items</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .grid { display: grid; grid-template-columns: repeat(3, 1fr); grid-auto-rows: 7rem; gap: 0.5rem; justify-items: center; align-items: center; }
+    .grid div { background: #e0f2fe; outline: 1px dashed #0284c7; padding: 0.5rem 1rem; border-radius: 6px; }
+    .grid div:nth-child(2) { justify-self: start; align-self: start; }
+    .grid div:nth-child(6) { place-self: end; }
+    .grid div:nth-child(5) { justify-self: stretch; align-self: stretch; text-align: center; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Aligning grid items</h1>
+    <p class="lead">justify-items, align-items and place-self inside cells.</p>
+    <div class="grid">
+      <div>center</div><div>start start</div><div>center</div><div>center</div><div>stretch</div><div>end end</div>
+    </div>
+  </main>
+</body>
+</html>

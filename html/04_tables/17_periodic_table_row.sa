@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 04_tables/17: Periodic table row -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Periodic table row</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    table { border-collapse: separate; border-spacing: 4px; }
+    td { width: 5.5rem; height: 5.5rem; border-radius: 8px; text-align: center; vertical-align: middle; }
+    td small, td strong, td span { display: block; }
+    td strong { font-size: 1.6rem; }
+    td span { font-size: 0.7rem; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Periodic table row</h1>
+    <p class="lead">The first ten elements as table cells with inline styles.</p>
+    <table>
+      <tr><td style="background: #fde68a"><small>1</small><strong>H</strong><span>Hydrogen</span></td><td style="background: #c7d2fe"><small>2</small><strong>He</strong><span>Helium</span></td><td style="background: #fecaca"><small>3</small><strong>Li</strong><span>Lithium</span></td><td style="background: #fed7aa"><small>4</small><strong>Be</strong><span>Beryllium</span></td><td style="background: #bbf7d0"><small>5</small><strong>B</strong><span>Boron</span></td><td style="background: #bbf7d0"><small>6</small><strong>C</strong><span>Carbon</span></td><td style="background: #bbf7d0"><small>7</small><strong>N</strong><span>Nitrogen</span></td><td style="background: #bbf7d0"><small>8</small><strong>O</strong><span>Oxygen</span></td><td style="background: #fde68a"><small>9</small><strong>F</strong><span>Fluorine</span></td><td style="background: #c7d2fe"><small>10</small><strong>Ne</strong><span>Neon</span></td></tr>
+    </table>
+  </main>
+</body>
+</html>

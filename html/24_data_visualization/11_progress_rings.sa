@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 24_data_visualization/11: Progress rings -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Progress rings</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .rings { display: flex; gap: 1.5rem; flex-wrap: wrap; }
+    .ring { --p: 50; width: 7rem; height: 7rem; border-radius: 50%; display: grid; place-items: center; position: relative; background: conic-gradient(var(--c) calc(var(--p) * 1%), #e2e8f0 0); }
+    .ring::before { content: ""; position: absolute; inset: 0.7rem; border-radius: 50%; background: #fff; }
+    .ring span { position: relative; font-weight: 800; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Progress rings</h1>
+    <p class="lead">Several rings driven by one --p property each.</p>
+    <div class="rings">
+      <div class="ring" style="--p: 92; --c: #22c55e" role="img" aria-label="Tests 92 percent"><span>92%</span></div>
+      <div class="ring" style="--p: 67; --c: #3b82f6" role="img" aria-label="Coverage 67 percent"><span>67%</span></div>
+      <div class="ring" style="--p: 40; --c: #f59e0b" role="img" aria-label="Docs 40 percent"><span>40%</span></div>
+      <div class="ring" style="--p: 15; --c: #ef4444" role="img" aria-label="Budget 15 percent"><span>15%</span></div>
+    </div>
+  </main>
+</body>
+</html>

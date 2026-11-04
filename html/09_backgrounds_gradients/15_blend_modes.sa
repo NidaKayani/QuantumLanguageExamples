@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 09_backgrounds_gradients/15: Blend modes -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blend modes</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr)); gap: 1rem; }
+    .tiles div { height: 9rem; border-radius: 12px; display: flex; align-items: flex-end; padding: 0.6rem; font-size: 0.8rem; font-weight: 600; color: #fff; text-shadow: 0 1px 2px rgb(0 0 0 / 0.5); }
+    .blend { background: repeating-linear-gradient(45deg, #fff 0 10px, #000 10px 20px), #e11d48; }
+    .multiply { background-blend-mode: multiply; }
+    .screen { background-blend-mode: screen; }
+    .overlay { background-blend-mode: overlay; }
+    .difference { background-blend-mode: difference; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Blend modes</h1>
+    <p class="lead">background-blend-mode mixes a colour with a pattern.</p>
+    <div class="tiles">
+      <div class="blend multiply">multiply</div><div class="blend screen">screen</div><div class="blend overlay">overlay</div><div class="blend difference">difference</div>
+    </div>
+  </main>
+</body>
+</html>

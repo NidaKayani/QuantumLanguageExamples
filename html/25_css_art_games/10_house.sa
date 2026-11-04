@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 25_css_art_games/10: House -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>House</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .house { position: relative; width: 14rem; height: 14rem; }
+    .roof { position: absolute; left: 0; top: 0; width: 0; height: 0; border-left: 7rem solid transparent; border-right: 7rem solid transparent; border-bottom: 5rem solid #b91c1c; }
+    .walls { position: absolute; left: 1.5rem; right: 1.5rem; top: 5rem; bottom: 0; background: #fde68a; }
+    .door { position: absolute; left: 4.5rem; bottom: 0; width: 2rem; height: 3.5rem; background: #78350f; border-radius: 0.5rem 0.5rem 0 0; }
+    .window { position: absolute; top: 2rem; width: 2rem; height: 2rem; background: #93c5fd; border: 3px solid #fff; }
+    .w1 { left: 1.5rem; } .w2 { right: 1.5rem; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>House</h1>
+    <p class="lead">A house from a square, a triangle and rectangles.</p>
+    <div class="house" role="img" aria-label="A house"><div class="roof"></div><div class="walls"><div class="window w1"></div><div class="window w2"></div><div class="door"></div></div></div>
+  </main>
+</body>
+</html>

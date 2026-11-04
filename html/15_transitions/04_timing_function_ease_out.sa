@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 15_transitions/04: Timing function ease-out -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Timing function ease-out</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .track { position: relative; height: 3rem; margin: 0.6rem 0; background: #e2e8f0; border-radius: 999px; }
+    .dot { position: absolute; left: 0.25rem; top: 0.25rem; width: 2.5rem; height: 2.5rem; border-radius: 50%; background: #6366f1; transition: left 1.2s; }
+    .lane:hover .dot { left: calc(100% - 2.75rem); }
+    .lane { padding: 0.5rem 0; }
+    .lane span { font-family: ui-monospace, monospace; font-size: 0.85rem; }
+    .dot { transition-timing-function: ease-out; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Timing function ease-out</h1>
+    <p class="lead">transition-timing-function: ease-out. Hover the track.</p>
+    <div class="lane"><span>ease-out</span><div class="track"><div class="dot"></div></div></div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 22_media_svg/05: SVG paths -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SVG paths</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .art { background: #fff; border-radius: 16px; padding: 1rem; } .art svg { display: block; width: 100%; max-width: 26rem; height: auto; margin: 0 auto; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>SVG paths</h1>
+    <p class="lead">A heart and a wave drawn with path commands.</p>
+    <div class="art"><svg viewBox="0 0 400 200" role="img" aria-label="A heart and a wave">
+      <path d="M100 170 C 20 110, 30 40, 100 70 C 170 40, 180 110, 100 170 Z" fill="#e11d48"/>
+      <path d="M200 120 Q 240 60 280 120 T 360 120" fill="none" stroke="#0ea5e9" stroke-width="8" stroke-linecap="round"/>
+    </svg></div>
+  </main>
+</body>
+</html>

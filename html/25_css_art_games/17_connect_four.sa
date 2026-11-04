@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 25_css_art_games/17: Connect four -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Connect four</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .c4 { display: grid; grid-template-columns: repeat(7, 3rem); gap: 0.5rem; padding: 0.75rem; background: #1d4ed8; border-radius: 14px; width: max-content; }
+    .c4 span { width: 3rem; height: 3rem; border-radius: 50%; box-shadow: inset 0 3px 6px rgb(0 0 0 / 0.35); }
+    .e { background: #f5f7fa; } .r { background: #ef4444; } .y { background: #facc15; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Connect four</h1>
+    <p class="lead">A 7 by 6 board with discs from a short game.</p>
+    <div class="c4" role="img" aria-label="A game of connect four"><span class="e"></span><span class="e"></span><span class="e"></span><span class="e"></span><span class="e"></span><span class="e"></span><span class="e"></span><span class="e"></span><span class="e"></span><span class="e"></span><span class="e"></span><span class="e"></span><span class="e"></span><span class="e"></span><span class="e"></span><span class="e"></span><span class="e"></span><span class="e"></span><span class="e"></span><span class="e"></span><span class="e"></span><span class="e"></span><span class="e"></span><span class="e"></span><span class="r"></span><span class="e"></span><span class="e"></span><span class="e"></span><span class="e"></span><span class="e"></span><span class="e"></span><span class="y"></span><span class="r"></span><span class="e"></span><span class="e"></span><span class="e"></span><span class="y"></span><span class="r"></span><span class="r"></span><span class="y"></span><span class="y"></span><span class="e"></span></div>
+  </main>
+</body>
+</html>

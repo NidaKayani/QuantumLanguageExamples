@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 16_animations/16: Orbit -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Orbit</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .system { position: relative; width: 14rem; height: 14rem; display: grid; place-items: center; }
+    .planet { width: 4rem; height: 4rem; border-radius: 50%; background: radial-gradient(circle at 30% 30%, #93c5fd, #1d4ed8); }
+    .path { position: absolute; inset: 0; border: 1px dashed #94a3b8; border-radius: 50%; animation: orbit 5s linear infinite; }
+    .moon { position: absolute; top: -0.75rem; left: 50%; width: 1.5rem; height: 1.5rem; margin-left: -0.75rem; border-radius: 50%; background: #cbd5e1; }
+    @keyframes orbit { to { transform: rotate(360deg); } }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: 0.01ms; animation-iteration-count: 1; } }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Orbit</h1>
+    <p class="lead">A moon orbiting a planet with a rotated wrapper.</p>
+    <div class="system"><div class="planet"></div><div class="path"><div class="moon"></div></div></div>
+  </main>
+</body>
+</html>

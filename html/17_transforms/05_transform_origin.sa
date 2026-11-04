@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 17_transforms/05: transform-origin -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>transform-origin</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .row { display: flex; flex-wrap: wrap; gap: 2.5rem; padding: 2rem; background: #fff; border-radius: 14px; }
+    .row div { width: 6rem; height: 6rem; display: grid; place-items: center; border-radius: 10px; background: #a78bfa; color: #fff; font-size: 0.75rem; font-weight: 700; text-align: center; }
+    .row div { transform: rotate(30deg); outline: 2px dashed #c4b5fd; outline-offset: 0; }
+    .o0 { transform-origin: center; }
+    .o1 { transform-origin: top left; }
+    .o2 { transform-origin: bottom right; }
+    .o3 { transform-origin: 50% 0; }
+    .o4 { transform-origin: 0 100%; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>transform-origin</h1>
+    <p class="lead">Rotating 30deg around different points.</p>
+    <div class="row"><div class="o0">center</div><div class="o1">top left</div><div class="o2">bottom right</div><div class="o3">50% 0</div><div class="o4">0 100%</div></div>
+  </main>
+</body>
+</html>

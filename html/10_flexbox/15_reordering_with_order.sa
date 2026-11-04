@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 10_flexbox/15: Reordering with order -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reordering with order</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .row { display: flex; gap: 0.5rem; background: #e0e7ff; padding: 0.5rem; border-radius: 10px; min-height: 8rem; }
+    .row div { background: #6366f1; color: #fff; padding: 0.75rem 1rem; border-radius: 8px; font-weight: 600; }
+    .first { order: -1; background: #ec4899; }
+    .last { order: 99; background: #10b981; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Reordering with order</h1>
+    <p class="lead">order changes the visual order without touching the HTML.</p>
+    <div class="row"><div>One</div><div class="last">Two (order: 99)</div><div>Three</div><div class="first">Four (order: -1)</div></div>
+  </main>
+</body>
+</html>

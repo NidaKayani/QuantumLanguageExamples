@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 03_links_navigation/09: Footer link columns -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Footer link columns</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .footer { display: grid; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); gap: 2rem; background: #0f172a; color: #94a3b8; padding: 2rem; border-radius: 12px; }
+    .footer h2 { color: #fff; font-size: 1rem; margin: 0 0 0.75rem; }
+    .footer ul { list-style: none; padding: 0; margin: 0; }
+    .footer a { color: #94a3b8; text-decoration: none; line-height: 2; }
+    .footer a:hover { color: #fff; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Footer link columns</h1>
+    <p class="lead">Groups of links at the bottom of a site.</p>
+    <footer class="footer">
+      <div><h2>Product</h2><ul><li><a href="#f">Features</a></li><li><a href="#p">Pricing</a></li><li><a href="#c">Changelog</a></li></ul></div>
+      <div><h2>Learn</h2><ul><li><a href="#d">Docs</a></li><li><a href="#t">Tutorials</a></li><li><a href="#e">Examples</a></li></ul></div>
+      <div><h2>Company</h2><ul><li><a href="#a">About</a></li><li><a href="#j">Jobs</a></li><li><a href="#k">Contact</a></li></ul></div>
+    </footer>
+  </main>
+</body>
+</html>

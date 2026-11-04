@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 20_components/16: Empty state -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Empty state</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .empty { max-width: 26rem; margin: 2rem auto; text-align: center; padding: 2.5rem 2rem; border: 2px dashed #cbd5e1; border-radius: 20px; background: #fff; }
+    .empty .icon { font-size: 3rem; }
+    .empty a { display: inline-block; margin-top: 0.5rem; padding: 0.6rem 1.2rem; border-radius: 10px; background: #0f172a; color: #fff; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Empty state</h1>
+    <p class="lead">A friendly message when there is nothing to show yet.</p>
+    <section class="empty"><div class="icon" aria-hidden="true">&#128237;</div><h2>No messages yet</h2><p>When someone writes to you, it shows up here.</p><a href="#compose">Write a message</a></section>
+  </main>
+</body>
+</html>

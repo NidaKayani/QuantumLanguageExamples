@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 08_typography/08: Line height -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Line height</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .lh { display: grid; grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr)); gap: 1rem; }
+    .lh p { background: #fff; padding: 1rem; border-radius: 8px; margin: 0; }
+    .lh1 { line-height: 1; } .lh2 { line-height: 1.3; } .lh3 { line-height: 1.6; } .lh4 { line-height: 2; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Line height</h1>
+    <p class="lead">The same paragraph at four line heights.</p>
+    <div class="lh">
+      <p class="lh1"><strong>1</strong><br>Tight lines are hard to read in long paragraphs of body text.</p>
+      <p class="lh2"><strong>1.3</strong><br>Tight lines are hard to read in long paragraphs of body text.</p>
+      <p class="lh3"><strong>1.6</strong><br>Tight lines are hard to read in long paragraphs of body text.</p>
+      <p class="lh4"><strong>2</strong><br>Tight lines are hard to read in long paragraphs of body text.</p>
+    </div>
+  </main>
+</body>
+</html>

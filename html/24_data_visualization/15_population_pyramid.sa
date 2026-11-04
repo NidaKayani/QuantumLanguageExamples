@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 24_data_visualization/15: Population pyramid -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Population pyramid</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .pyr { display: grid; grid-template-columns: 1fr 4rem 1fr; gap: 0.3rem 0.5rem; align-items: center; background: #fff; border-radius: 16px; padding: 1.25rem; }
+    .m { justify-self: end; height: 1.3rem; background: #3b82f6; border-radius: 6px 0 0 6px; }
+    .f { height: 1.3rem; background: #ec4899; border-radius: 0 6px 6px 0; }
+    .age { text-align: center; font-size: 0.85rem; color: #475569; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Population pyramid</h1>
+    <p class="lead">Two-sided bars for men and women by age group.</p>
+    <div class="pyr" role="img" aria-label="A young population">
+      <span class="m" style="width: 12%"></span><span class="age">70+</span><span class="f" style="width: 18%"></span>
+      <span class="m" style="width: 21%"></span><span class="age">60-69</span><span class="f" style="width: 24%"></span>
+      <span class="m" style="width: 30%"></span><span class="age">50-59</span><span class="f" style="width: 30%"></span>
+      <span class="m" style="width: 39%"></span><span class="age">40-49</span><span class="f" style="width: 36%"></span>
+      <span class="m" style="width: 48%"></span><span class="age">30-39</span><span class="f" style="width: 45%"></span>
+      <span class="m" style="width: 57%"></span><span class="age">20-29</span><span class="f" style="width: 54%"></span>
+      <span class="m" style="width: 93%"></span><span class="age">0-19</span><span class="f" style="width: 93%"></span>
+    </div>
+  </main>
+</body>
+</html>

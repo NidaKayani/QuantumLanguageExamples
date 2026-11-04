@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 07_colors/15: Readable text on colour -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Readable text on colour</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .chips { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .chips span { padding: 0.75rem 1.25rem; border-radius: 8px; font-weight: 600; }
+    .h0 { background: #e83030; color: #ffffff; }
+    .h30 { background: #e88c30; color: #111827; }
+    .h60 { background: #e8e830; color: #111827; }
+    .h90 { background: #8ce830; color: #111827; }
+    .h120 { background: #30e830; color: #111827; }
+    .h150 { background: #30e88c; color: #111827; }
+    .h180 { background: #30e8e8; color: #111827; }
+    .h210 { background: #308ce8; color: #ffffff; }
+    .h240 { background: #3030e8; color: #ffffff; }
+    .h270 { background: #8c30e8; color: #ffffff; }
+    .h300 { background: #e830e8; color: #ffffff; }
+    .h330 { background: #e8308c; color: #ffffff; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Readable text on colour</h1>
+    <p class="lead">Choosing dark or light text for each background.</p>
+    <div class="chips">
+      <span class="h0">hue 0</span>
+      <span class="h30">hue 30</span>
+      <span class="h60">hue 60</span>
+      <span class="h90">hue 90</span>
+      <span class="h120">hue 120</span>
+      <span class="h150">hue 150</span>
+      <span class="h180">hue 180</span>
+      <span class="h210">hue 210</span>
+      <span class="h240">hue 240</span>
+      <span class="h270">hue 270</span>
+      <span class="h300">hue 300</span>
+      <span class="h330">hue 330</span>
+    </div>
+  </main>
+</body>
+</html>

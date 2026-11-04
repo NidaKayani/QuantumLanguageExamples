@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 24_data_visualization/19: Gantt chart -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gantt chart</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .gantt { display: grid; grid-template-columns: 7rem repeat(13, 1fr); row-gap: 0.5rem; background: #fff; border-radius: 16px; padding: 1rem; }
+    .gantt .week { font-size: 0.7rem; color: #94a3b8; text-align: center; }
+    .gantt .task { font-weight: 600; grid-column: 1; }
+    .gantt .bar { height: 1.6rem; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Gantt chart</h1>
+    <p class="lead">Tasks placed on a 13-week grid by start and length.</p>
+    <div class="gantt" role="img" aria-label="Project plan over 13 weeks">
+      <span></span><span class="week">W1</span><span class="week">W2</span><span class="week">W3</span><span class="week">W4</span><span class="week">W5</span><span class="week">W6</span><span class="week">W7</span><span class="week">W8</span><span class="week">W9</span><span class="week">W10</span><span class="week">W11</span><span class="week">W12</span><span class="week">W13</span>
+      <span class="task">Research</span><span class="bar" style="grid-column: 2 / span 3; background: #6366f1"></span>
+      <span class="task">Design</span><span class="bar" style="grid-column: 4 / span 4; background: #ec4899"></span>
+      <span class="task">Build</span><span class="bar" style="grid-column: 7 / span 6; background: #f59e0b"></span>
+      <span class="task">Test</span><span class="bar" style="grid-column: 11 / span 3; background: #10b981"></span>
+      <span class="task">Launch</span><span class="bar" style="grid-column: 14 / span 1; background: #ef4444"></span>
+    </div>
+  </main>
+</body>
+</html>

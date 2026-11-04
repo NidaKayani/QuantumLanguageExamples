@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 24_data_visualization/05: Bar chart: Coffee per office -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bar chart: Coffee per office</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .chart { list-style: none; padding: 1.25rem; background: #fff; border-radius: 16px; }
+    .chart li { display: grid; grid-template-columns: 7rem 1fr 4rem; align-items: center; gap: 0.75rem; margin: 0.5rem 0; }
+    .bar { height: 1.4rem; width: var(--w); border-radius: 0 6px 6px 0; background: linear-gradient(90deg, #6366f1, #a855f7); }
+    .value { font-variant-numeric: tabular-nums; text-align: right; color: #475569; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Bar chart: Coffee per office</h1>
+    <p class="lead">Horizontal bars sized by a custom property per row.</p>
+    <ul class="chart" aria-label="Coffee per office">
+      <li><span class="label">Lahore</span><span class="bar" style="--w: 80.0%"></span><span class="value">120</span></li>
+      <li><span class="label">Karachi</span><span class="bar" style="--w: 100.0%"></span><span class="value">150</span></li>
+      <li><span class="label">Islamabad</span><span class="bar" style="--w: 60.0%"></span><span class="value">90</span></li>
+      <li><span class="label">Peshawar</span><span class="bar" style="--w: 40.0%"></span><span class="value">60</span></li>
+    </ul>
+  </main>
+</body>
+</html>

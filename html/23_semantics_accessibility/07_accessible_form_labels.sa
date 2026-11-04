@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 23_semantics_accessibility/07: Accessible form labels -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accessible form labels</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .panel { background: #fff; border-radius: 14px; padding: 1.25rem 1.5rem; margin-bottom: 1rem; }
+    .panel label { display: block; margin-top: 0.75rem; font-weight: 600; }
+    .panel input, .panel select { padding: 0.5rem; border: 1px solid #94a3b8; border-radius: 6px; font: inherit; }
+    fieldset { border: 1px solid #cbd5e1; border-radius: 10px; margin-top: 1rem; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Accessible form labels</h1>
+    <p class="lead">Every field has a label; groups use fieldset and legend.</p>
+    <form class="panel" action="#">
+      <label for="full">Full name</label><input id="full" autocomplete="name">
+      <label for="country2">Country</label><select id="country2"><option>Pakistan</option><option>India</option></select>
+      <fieldset><legend>Contact by</legend><label><input type="radio" name="by" checked> Email</label><label><input type="radio" name="by"> Phone</label></fieldset>
+    </form>
+  </main>
+</body>
+</html>

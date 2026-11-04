@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 19_custom_properties/15: Variables in gradients -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Variables in gradients</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .tile { height: 6rem; margin: 0.6rem 0; border-radius: 12px; background: linear-gradient(90deg, var(--from), var(--to)); }
+    .t1 { --from: #f43f5e; --to: #fb923c; } .t2 { --from: #22d3ee; --to: #6366f1; } .t3 { --from: #a3e635; --to: #16a34a; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Variables in gradients</h1>
+    <p class="lead">Gradient stops taken from custom properties per element.</p>
+    <div class="tile t1"></div><div class="tile t2"></div><div class="tile t3"></div>
+  </main>
+</body>
+</html>

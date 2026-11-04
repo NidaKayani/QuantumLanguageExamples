@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 12_positioning/02: Absolute inside relative -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Absolute inside relative</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .stage { position: relative; min-height: 14rem; background: #f1f5f9; border: 2px dashed #94a3b8; border-radius: 12px; padding: 1rem; }
+    .corner { position: absolute; width: 5rem; height: 5rem; border-radius: 8px; }
+    .tl { top: 0.5rem; left: 0.5rem; background: #ef4444; }
+    .tr { top: 0.5rem; right: 0.5rem; background: #f59e0b; }
+    .bl { bottom: 0.5rem; left: 0.5rem; background: #10b981; }
+    .br { bottom: 0.5rem; right: 0.5rem; background: #3b82f6; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Absolute inside relative</h1>
+    <p class="lead">An absolute box is placed against its nearest positioned ancestor.</p>
+    <div class="stage"><div class="corner tl"></div><div class="corner tr"></div><div class="corner bl"></div><div class="corner br"></div></div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 21_page_layouts/05: Admin dashboard -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Admin dashboard</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .admin { display: grid; grid-template-columns: 14rem 1fr; min-height: 30rem; background: #fff; border-radius: 16px; overflow: hidden; }
+    .admin nav { background: #0f172a; padding: 1rem; display: flex; flex-direction: column; gap: 0.25rem; }
+    .admin nav a { color: #cbd5e1; text-decoration: none; padding: 0.55rem 0.75rem; border-radius: 8px; }
+    .admin nav a[aria-current] { background: #1e293b; color: #fff; }
+    .admin main { padding: 1.5rem; }
+    .stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr)); gap: 1rem; margin-bottom: 1.5rem; }
+    .stats div { background: #f8fafc; border-radius: 12px; padding: 1rem; }
+    .stats strong { display: block; font-size: 1.6rem; }
+    table { width: 100%; border-collapse: collapse; }
+    th, td { text-align: left; padding: 0.6rem; border-bottom: 1px solid #f1f5f9; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Admin dashboard</h1>
+    <p class="lead">Sidebar, top bar, stats and a table.</p>
+    <div class="admin">
+      <nav aria-label="Admin"><a href="#d" aria-current="page">Dashboard</a><a href="#o">Orders</a><a href="#c">Customers</a><a href="#s">Settings</a></nav>
+      <main>
+        <h2>Dashboard</h2>
+        <div class="stats"><div>Revenue<strong>$48k</strong></div><div>Orders<strong>1,204</strong></div><div>Customers<strong>860</strong></div></div>
+        <table><thead><tr><th>Order</th><th>Customer</th><th>Total</th></tr></thead>
+          <tbody><tr><td>#1041</td><td>Fatima</td><td>$120</td></tr><tr><td>#1042</td><td>Omar</td><td>$64</td></tr><tr><td>#1043</td><td>Zara</td><td>$310</td></tr></tbody></table>
+      </main>
+    </div>
+  </main>
+</body>
+</html>

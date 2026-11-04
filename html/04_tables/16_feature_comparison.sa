@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 04_tables/16: Feature comparison -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Feature comparison</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    table { border-collapse: collapse; width: 100%; background: #fff; }
+    th, td { padding: 0.6rem 0.9rem; border-bottom: 1px solid #e2e8f0; text-align: left; }
+    th { background: #f8fafc; font-weight: 600; }
+    td, th { text-align: center; }
+    td:first-child, th:first-child { text-align: left; }
+    .yes { color: #16a34a; font-weight: 700; } .no { color: #dc2626; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Feature comparison</h1>
+    <p class="lead">Check marks and crosses compare plans.</p>
+    <table>
+      <thead><tr><th>Feature</th><th>Free</th><th>Pro</th><th>Team</th></tr></thead>
+      <tbody>
+        <tr><td>Projects</td><td>3</td><td>Unlimited</td><td>Unlimited</td></tr>
+        <tr><td>Custom domain</td><td class="no">&#10007;</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+        <tr><td>Analytics</td><td class="no">&#10007;</td><td class="yes">&#10003;</td><td class="yes">&#10003;</td></tr>
+        <tr><td>Shared workspaces</td><td class="no">&#10007;</td><td class="no">&#10007;</td><td class="yes">&#10003;</td></tr>
+      </tbody>
+    </table>
+  </main>
+</body>
+</html>

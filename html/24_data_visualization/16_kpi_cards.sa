@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 24_data_visualization/16: KPI cards -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>KPI cards</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr)); gap: 1rem; }
+    .kpi { background: #fff; border-radius: 14px; padding: 1rem 1.25rem; }
+    .kpi strong { display: block; font-size: 1.9rem; }
+    .up { color: #16a34a; } .down { color: #dc2626; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>KPI cards</h1>
+    <p class="lead">Numbers with trend arrows coloured by direction.</p>
+    <div class="kpis">
+      <div class="kpi">Visitors<strong>24.3k</strong><span class="up">&#9650; 12%</span></div>
+      <div class="kpi">Bounce rate<strong>38%</strong><span class="down">&#9660; 4%</span></div>
+      <div class="kpi">Sign-ups<strong>1,082</strong><span class="up">&#9650; 9%</span></div>
+    </div>
+  </main>
+</body>
+</html>

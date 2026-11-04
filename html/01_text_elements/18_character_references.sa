@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 01_text_elements/18: Character references -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Character references</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .card { background: #fff; border-radius: 12px; padding: 1.5rem; box-shadow: 0 1px 3px rgb(0 0 0 / 0.12); }
+    .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr)); gap: 0.75rem; }
+    .grid div { background: #f8fafc; border-radius: 8px; padding: 0.75rem; text-align: center; }
+    .grid span { display: block; font-size: 2rem; }
+    .grid code { font-size: 0.8rem; color: #64748b; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Character references</h1>
+    <p class="lead">Named and numeric references for characters that are hard to type.</p>
+    <section class="card grid">
+      <div><span>&copy;</span><code>&amp;copy;</code></div>
+      <div><span>&trade;</span><code>&amp;trade;</code></div>
+      <div><span>&euro;</span><code>&amp;euro;</code></div>
+      <div><span>&hearts;</span><code>&amp;hearts;</code></div>
+      <div><span>&rarr;</span><code>&amp;rarr;</code></div>
+      <div><span>&frac34;</span><code>&amp;frac34;</code></div>
+      <div><span>&#9731;</span><code>&amp;#9731;</code></div>
+      <div><span>&#x1F680;</span><code>&amp;#x1F680;</code></div>
+    </section>
+  </main>
+</body>
+</html>

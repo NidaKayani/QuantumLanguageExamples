@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 25_css_art_games/05: Piano keyboard -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Piano keyboard</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .piano { position: relative; width: max-content; padding: 0.75rem; background: #1e293b; border-radius: 12px; }
+    .piano ul { display: flex; margin: 0; padding: 0; list-style: none; }
+    .piano li { width: 3rem; height: 11rem; background: #fff; border: 1px solid #94a3b8; border-radius: 0 0 6px 6px; }
+    .piano li:active { background: #e2e8f0; }
+    .piano span { position: absolute; top: 0.75rem; width: 1.8rem; height: 7rem; margin-left: 0.75rem; background: #0f172a; border-radius: 0 0 4px 4px; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Piano keyboard</h1>
+    <p class="lead">Two octaves of white keys with black keys on top.</p>
+    <div class="piano" role="img" aria-label="A piano keyboard"><ul><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li></ul><span style="left: 2.10rem"></span><span style="left: 5.10rem"></span><span style="left: 11.10rem"></span><span style="left: 14.10rem"></span><span style="left: 17.10rem"></span><span style="left: 23.10rem"></span><span style="left: 26.10rem"></span><span style="left: 32.10rem"></span><span style="left: 35.10rem"></span><span style="left: 38.10rem"></span></div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 03_links_navigation/13: Animated underline links -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Animated underline links</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .fancy a { position: relative; color: #0f172a; text-decoration: none; margin-right: 1.5rem; font-weight: 600; }
+    .fancy a::after { content: ""; position: absolute; left: 0; bottom: -4px; width: 100%; height: 2px; background: #ec4899; transform: scaleX(0); transform-origin: left; transition: transform 0.25s ease; }
+    .fancy a:hover::after, .fancy a:focus-visible::after { transform: scaleX(1); }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Animated underline links</h1>
+    <p class="lead">An underline that grows from the left on hover.</p>
+    <nav class="fancy" aria-label="Main">
+        <a href="#home" aria-current="page">Home</a>
+        <a href="#docs">Docs</a>
+        <a href="#examples">Examples</a>
+        <a href="#blog">Blog</a>
+        <a href="#about">About</a>
+    </nav>
+  </main>
+</body>
+</html>

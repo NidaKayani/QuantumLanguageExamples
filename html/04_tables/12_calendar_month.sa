@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 04_tables/12: Calendar month -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Calendar month</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    table { border-collapse: collapse; background: #fff; border-radius: 12px; overflow: hidden; }
+    caption { font-size: 1.25rem; font-weight: 700; padding: 0.75rem; }
+    th { padding: 0.5rem; color: #64748b; font-weight: 600; }
+    td { width: 3rem; height: 3rem; text-align: center; border: 1px solid #f1f5f9; }
+    td:empty { background: #f8fafc; }
+    td:nth-child(6), td:nth-child(7) { color: #dc2626; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Calendar month</h1>
+    <p class="lead">November 2026, laid out as a table.</p>
+    <table>
+      <caption>November 2026</caption>
+      <thead><tr><th>Mo</th><th>Tu</th><th>We</th><th>Th</th><th>Fr</th><th>Sa</th><th>Su</th></tr></thead>
+      <tbody>
+        <tr><td></td><td></td><td></td><td></td><td></td><td></td><td>1</td></tr>
+        <tr><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td></tr>
+        <tr><td>9</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td></tr>
+        <tr><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td><td>21</td><td>22</td></tr>
+        <tr><td>23</td><td>24</td><td>25</td><td>26</td><td>27</td><td>28</td><td>29</td></tr>
+        <tr><td>30</td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+      </tbody>
+    </table>
+  </main>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 03_links_navigation/20: Navigation with badges -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Navigation with badges</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .side { display: flex; flex-direction: column; width: 15rem; background: #fff; border-radius: 12px; padding: 0.5rem; }
+    .side a { display: flex; justify-content: space-between; align-items: center; padding: 0.6rem 0.8rem; border-radius: 8px; color: #1e293b; text-decoration: none; }
+    .side a:hover { background: #f1f5f9; }
+    .badge { min-width: 1.5rem; padding: 0 0.45rem; border-radius: 999px; background: #ef4444; color: #fff; font-size: 0.75rem; text-align: center; line-height: 1.5rem; }
+    .badge.muted { background: #e2e8f0; color: #475569; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Navigation with badges</h1>
+    <p class="lead">Counters next to links, like unread messages.</p>
+    <nav class="side" aria-label="Mail">
+      <a href="#inbox">Inbox <span class="badge">12</span></a>
+      <a href="#drafts">Drafts <span class="badge muted">3</span></a>
+      <a href="#sent">Sent</a>
+      <a href="#spam">Spam <span class="badge muted">48</span></a>
+    </nav>
+  </main>
+</body>
+</html>

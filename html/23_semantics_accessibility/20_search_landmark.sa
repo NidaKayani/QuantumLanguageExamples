@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 23_semantics_accessibility/20: Search landmark -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Search landmark</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .panel { background: #fff; border-radius: 14px; padding: 1.25rem 1.5rem; margin-bottom: 1rem; }
+    search form { display: flex; gap: 0.5rem; }
+    search input { flex: 1; padding: 0.6rem; border: 1px solid #94a3b8; border-radius: 8px; font: inherit; }
+    search button { padding: 0.6rem 1rem; border: 0; border-radius: 8px; background: #0f172a; color: #fff; font: inherit; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Search landmark</h1>
+    <p class="lead">The search element marks the site's search form.</p>
+    <search class="panel"><form action="#"><label for="site-q" class="label">Search the site</label><input id="site-q" type="search"><button type="submit">Search</button></form></search>
+  </main>
+</body>
+</html>

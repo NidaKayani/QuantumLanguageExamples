@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 08_typography/16: Ellipsis for long text -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ellipsis for long text</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .one { width: 18rem; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; background: #fff; padding: 0.5rem 0.75rem; border-radius: 8px; }
+    .three { width: 22rem; display: -webkit-box; -webkit-box-orient: vertical; -webkit-line-clamp: 3; line-clamp: 3; overflow: hidden; background: #fff; padding: 0.5rem 0.75rem; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Ellipsis for long text</h1>
+    <p class="lead">Single-line truncation, and line-clamp for several lines.</p>
+    <p class="one">This very long title will never fit on a single line in this box</p>
+    <p class="three">Three lines at most: this paragraph keeps going well past the third line so that you can see the
+    clamp in action, cutting the rest off with an ellipsis instead of growing the card taller and taller.</p>
+  </main>
+</body>
+</html>

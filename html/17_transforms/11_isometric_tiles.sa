@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 17_transforms/11: Isometric tiles -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Isometric tiles</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .iso { display: grid; grid-template-columns: repeat(3, 5rem); gap: 0.4rem; width: max-content; margin: 4rem auto; transform: rotateX(55deg) rotateZ(-45deg); }
+    .iso div { height: 5rem; border-radius: 6px; box-shadow: 6px 6px 0 rgb(0 0 0 / 0.2); }
+    .iso div:nth-child(1) { background: #47d18c; }
+    .iso div:nth-child(2) { background: #47d1af; }
+    .iso div:nth-child(3) { background: #47d1d1; }
+    .iso div:nth-child(4) { background: #47afd1; }
+    .iso div:nth-child(5) { background: #478cd1; }
+    .iso div:nth-child(6) { background: #476ad1; }
+    .iso div:nth-child(7) { background: #4747d1; }
+    .iso div:nth-child(8) { background: #6a47d1; }
+    .iso div:nth-child(9) { background: #8c47d1; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Isometric tiles</h1>
+    <p class="lead">rotate and skew combine into an isometric view.</p>
+    <div class="iso"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 17_transforms/13: Tilt on hover -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tilt on hover</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .cards { display: flex; gap: 1.5rem; perspective: 800px; }
+    .card { width: 12rem; height: 15rem; border-radius: 16px; background: linear-gradient(160deg, #fef3c7, #fcd34d); transition: transform 0.3s; box-shadow: 0 8px 20px rgb(0 0 0 / 0.1); }
+    .card:nth-child(1):hover { transform: rotateY(-12deg) rotateX(6deg); }
+    .card:nth-child(2):hover { transform: rotateX(10deg); }
+    .card:nth-child(3):hover { transform: rotateY(12deg) rotateX(6deg); }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Tilt on hover</h1>
+    <p class="lead">A slight 3D tilt toward the pointer.</p>
+    <div class="cards"><div class="card"></div><div class="card"></div><div class="card"></div></div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 21_page_layouts/16: Contact page -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact page</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .site-header { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; }
+    .site-header nav a { margin-left: 1.25rem; color: #334155; text-decoration: none; }
+    .logo { font-weight: 800; font-size: 1.2rem; color: #0f172a; text-decoration: none; }
+    .site-footer { margin-top: 3rem; padding: 1.5rem 0; border-top: 1px solid #e2e8f0; color: #64748b; font-size: 0.9rem; }
+    .contact { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 2rem; }
+    .map { min-height: 16rem; border-radius: 16px; background: repeating-linear-gradient(0deg, #dbeafe 0 2px, transparent 2px 30px), repeating-linear-gradient(90deg, #dbeafe 0 2px, #eff6ff 2px 30px); position: relative; }
+    .map::after { content: "\1F4CD"; position: absolute; left: 45%; top: 40%; font-size: 2.5rem; }
+    .contact form { display: grid; gap: 0.75rem; }
+    .contact input, .contact textarea { padding: 0.7rem; border: 1px solid #cbd5e1; border-radius: 10px; font: inherit; }
+    .contact button { padding: 0.8rem; border: 0; border-radius: 10px; background: #0f172a; color: #fff; font: inherit; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Contact page</h1>
+    <p class="lead">Address, map placeholder and a contact form.</p>
+    <header class="site-header"><a class="logo" href="#top">Quantum</a><nav aria-label="Main"><a href="#features">Features</a><a href="#pricing">Pricing</a><a href="#docs">Docs</a></nav></header>
+    <section class="contact">
+      <div><h2>Visit us</h2><address>12 Mall Road<br>Lahore 54000<br><a href="tel:+924200000">+92 42 0000 000</a></address><div class="map" role="img" aria-label="Map of our location"></div></div>
+      <form action="#" method="post"><h2>Write to us</h2>
+        <label for="cn">Name</label><input id="cn" required>
+        <label for="ce">Email</label><input id="ce" type="email" required>
+        <label for="cm">Message</label><textarea id="cm" rows="5" required></textarea>
+        <button type="submit">Send message</button>
+      </form>
+    </section>
+    <footer class="site-footer"><p>&copy; 2026 Quantum Logics Labs. Made with HTML and CSS.</p></footer>
+  </main>
+</body>
+</html>

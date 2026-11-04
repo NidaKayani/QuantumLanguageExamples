@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 19_custom_properties/18: Registered custom property -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Registered custom property</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    @property --fill { syntax: "<percentage>"; inherits: false; initial-value: 0%; }
+    .meter { width: 22rem; height: 1.5rem; border-radius: 999px; background: linear-gradient(90deg, #22c55e var(--fill), #e2e8f0 var(--fill)); transition: --fill 1s ease; }
+    .meter:hover { --fill: 80%; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Registered custom property</h1>
+    <p class="lead">@property gives a variable a type, so it can animate.</p>
+    <p>Hover the meter:</p><div class="meter" role="img" aria-label="A meter that fills on hover"></div>
+  </main>
+</body>
+</html>

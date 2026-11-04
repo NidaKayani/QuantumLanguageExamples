@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 18_responsive/05: Aspect ratio boxes -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aspect ratio boxes</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .ratios { display: grid; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); gap: 1rem; }
+    .ratios div { display: grid; place-items: center; border-radius: 12px; background: #c7d2fe; font-weight: 700; }
+    .wide { aspect-ratio: 16 / 9; } .square { aspect-ratio: 1; } .tall { aspect-ratio: 3 / 4; } .cinema { aspect-ratio: 21 / 9; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Aspect ratio boxes</h1>
+    <p class="lead">aspect-ratio keeps videos and cards in proportion.</p>
+    <div class="ratios"><div class="wide">16:9</div><div class="square">1:1</div><div class="tall">3:4</div><div class="cinema">21:9</div></div>
+  </main>
+</body>
+</html>
