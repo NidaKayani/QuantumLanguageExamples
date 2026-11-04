@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 15_transitions/10: Grow on hover -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grow on hover</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .tiles { display: flex; gap: 1rem; }
+    .tile { width: 8rem; height: 8rem; border-radius: 16px; background: linear-gradient(135deg, #fb7185, #f59e0b); transition: transform 0.25s ease; }
+    .tile:hover { transform: scale(1.12); }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Grow on hover</h1>
+    <p class="lead">transform: scale with a short transition.</p>
+    <div class="tiles"><div class="tile"></div><div class="tile"></div><div class="tile"></div></div>
+  </main>
+</body>
+</html>

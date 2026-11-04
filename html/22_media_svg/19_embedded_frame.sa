@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 22_media_svg/19: Embedded frame -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Embedded frame</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    iframe { display: block; width: 100%; max-width: 40rem; aspect-ratio: 16 / 9; height: auto; border: 0; border-radius: 14px; background: #0f172a; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Embedded frame</h1>
+    <p class="lead">An iframe with a title and lazy loading.</p>
+    <iframe src="https://www.openstreetmap.org/export/embed.html?bbox=74.30%2C31.52%2C74.36%2C31.57" title="Map of central Lahore" loading="lazy"></iframe>
+  </main>
+</body>
+</html>

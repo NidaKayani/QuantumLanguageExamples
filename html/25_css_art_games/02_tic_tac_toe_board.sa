@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 25_css_art_games/02: Tic-tac-toe board -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tic-tac-toe board</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .ttt { display: grid; grid-template-columns: repeat(3, 5rem); grid-template-rows: repeat(3, 5rem); gap: 6px; background: #334155; width: max-content; border-radius: 12px; overflow: hidden; }
+    .ttt div { background: #f8fafc; display: grid; place-items: center; font-size: 3rem; font-weight: 900; }
+    .x { color: #e11d48; } .o { color: #2563eb; }
+    .win { background: #dcfce7; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Tic-tac-toe board</h1>
+    <p class="lead">A 3 by 3 grid with drawn X and O marks.</p>
+    <div class="ttt" role="img" aria-label="X wins on the diagonal">
+      <div class="x win">X</div><div class="o">O</div><div></div>
+      <div class="o">O</div><div class="x win">X</div><div></div>
+      <div></div><div class="o">O</div><div class="x win">X</div>
+    </div>
+  </main>
+</body>
+</html>

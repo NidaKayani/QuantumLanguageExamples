@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 12_positioning/15: Corner labels -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Corner labels</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .product { position: relative; width: 16rem; height: 18rem; border-radius: 16px; background: linear-gradient(160deg, #fef3c7, #fde68a); }
+    .product span { position: absolute; padding: 0.25rem 0.6rem; border-radius: 6px; font-size: 0.8rem; font-weight: 700; }
+    .sale { top: 0.75rem; left: 0.75rem; background: #dc2626; color: #fff; }
+    .eco { top: 0.75rem; right: 0.75rem; background: #16a34a; color: #fff; }
+    .price { bottom: 0.75rem; right: 0.75rem; background: #0f172a; color: #fff; font-size: 1.1rem; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Corner labels</h1>
+    <p class="lead">Labels pinned to each corner of a product card.</p>
+    <div class="product"><span class="sale">-20%</span><span class="eco">Eco</span><span class="price">$39</span></div>
+  </main>
+</body>
+</html>

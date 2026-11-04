@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 25_css_art_games/07: Smiley face -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Smiley face</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .face { position: relative; width: 12rem; height: 12rem; border-radius: 50%; background: radial-gradient(circle at 35% 30%, #fef08a, #facc15 60%, #eab308); }
+    .eye { position: absolute; top: 3.5rem; width: 1.4rem; height: 2rem; border-radius: 50%; background: #422006; }
+    .left { left: 3.4rem; } .right { right: 3.4rem; }
+    .mouth { position: absolute; left: 3rem; right: 3rem; bottom: 2.6rem; height: 3rem; border: 0.6rem solid #422006; border-top: 0; border-radius: 0 0 6rem 6rem; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Smiley face</h1>
+    <p class="lead">Circles and a border-radius mouth.</p>
+    <div class="face" role="img" aria-label="A smiling face"><span class="eye left"></span><span class="eye right"></span><span class="mouth"></span></div>
+  </main>
+</body>
+</html>

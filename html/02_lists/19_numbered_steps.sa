@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 02_lists/19: Numbered steps -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Numbered steps</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .card { background: #fff; border-radius: 12px; padding: 1.5rem; box-shadow: 0 1px 3px rgb(0 0 0 / 0.12); }
+    .steps { list-style: none; padding: 0; counter-reset: step; }
+    .steps li { counter-increment: step; display: flex; gap: 1rem; align-items: center; margin: 0.75rem 0; }
+    .steps li::before {
+      content: counter(step);
+      display: grid;
+      place-items: center;
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      background: #0ea5e9;
+      color: #fff;
+      font-weight: 700;
+    }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Numbered steps</h1>
+    <p class="lead">Big step numbers from a counter.</p>
+    <section class="card">
+      <ol class="steps">
+        <li>Create an account</li>
+        <li>Pick a template</li>
+        <li>Publish your page</li>
+      </ol>
+    </section>
+  </main>
+</body>
+</html>

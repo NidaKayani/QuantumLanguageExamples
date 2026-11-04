@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 20_components/02: Cards -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Cards</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 1.25rem; }
+    .card { background: #fff; border-radius: 16px; overflow: hidden; box-shadow: 0 4px 14px rgb(0 0 0 / 0.08); }
+    .card img { display: block; width: 100%; height: 9rem; object-fit: cover; }
+    .card div { padding: 1rem 1.25rem 1.25rem; }
+    .card h2 { margin: 0 0 0.4rem; font-size: 1.15rem; }
+    .card a { color: #2563eb; font-weight: 600; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Cards</h1>
+    <p class="lead">Image, title, text and action in a card.</p>
+    <div class="cards">
+      <article class="card"><img src="https://picsum.photos/seed/card0/600/300" alt="Mountain peaks" width="600" height="300"><div><h2>Mountains</h2><p>Trails above the clouds.</p><a href="#mountains">Read more &rarr;</a></div></article>
+      <article class="card"><img src="https://picsum.photos/seed/card1/600/300" alt="A rocky coast" width="600" height="300"><div><h2>Coastline</h2><p>Cliffs, coves and lighthouses.</p><a href="#coastline">Read more &rarr;</a></div></article>
+      <article class="card"><img src="https://picsum.photos/seed/card2/600/300" alt="A city at night" width="600" height="300"><div><h2>City lights</h2><p>A night walk downtown.</p><a href="#city-lights">Read more &rarr;</a></div></article>
+    </div>
+  </main>
+</body>
+</html>

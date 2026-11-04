@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 12_positioning/17: Stacked avatars -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stacked avatars</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .avatars { display: flex; }
+    .avatars span { width: 3rem; height: 3rem; border-radius: 50%; border: 3px solid #fff; margin-left: -0.75rem; display: grid; place-items: center; color: #fff; font-weight: 700; position: relative; }
+    .avatars span:first-child { margin-left: 0; }
+    .avatars span:nth-child(1) { background: #2d9bd2; z-index: 10; }
+    .avatars span:nth-child(2) { background: #2d2dd2; z-index: 9; }
+    .avatars span:nth-child(3) { background: #9b2dd2; z-index: 8; }
+    .avatars span:nth-child(4) { background: #d22d9b; z-index: 7; }
+    .avatars span:nth-child(5) { background: #d22d2d; z-index: 6; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Stacked avatars</h1>
+    <p class="lead">Overlapping circles with negative margins and z-index.</p>
+    <div class="avatars"><span>AL</span><span>AT</span><span>GH</span><span>MH</span><span>+3</span></div>
+  </main>
+</body>
+</html>

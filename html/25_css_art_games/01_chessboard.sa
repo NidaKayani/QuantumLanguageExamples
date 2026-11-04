@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 25_css_art_games/01: Chessboard -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chessboard</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .board { display: grid; grid-template-columns: repeat(8, 3rem); width: max-content; border: 6px solid #78350f; }
+    .board div { width: 3rem; height: 3rem; display: grid; place-items: center; font-size: 2.1rem; background: #fde68a; }
+    .board div:nth-child(16n+2), .board div:nth-child(16n+4), .board div:nth-child(16n+6), .board div:nth-child(16n+8),
+    .board div:nth-child(16n+9), .board div:nth-child(16n+11), .board div:nth-child(16n+13), .board div:nth-child(16n+15) { background: #b45309; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Chessboard</h1>
+    <p class="lead">An 8 by 8 board with :nth-child colouring and Unicode pieces.</p>
+    <div class="board" role="img" aria-label="A chessboard in the starting position">
+      <div>&#9820;</div><div>&#9822;</div><div>&#9821;</div><div>&#9819;</div><div>&#9818;</div><div>&#9821;</div><div>&#9822;</div><div>&#9820;</div>
+      <div>&#9823;</div><div>&#9823;</div><div>&#9823;</div><div>&#9823;</div><div>&#9823;</div><div>&#9823;</div><div>&#9823;</div><div>&#9823;</div>
+      <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+      <div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div>
+      <div>&#9817;</div><div>&#9817;</div><div>&#9817;</div><div>&#9817;</div><div>&#9817;</div><div>&#9817;</div><div>&#9817;</div><div>&#9817;</div>
+      <div>&#9814;</div><div>&#9816;</div><div>&#9815;</div><div>&#9813;</div><div>&#9812;</div><div>&#9815;</div><div>&#9816;</div><div>&#9814;</div>
+    </div>
+  </main>
+</body>
+</html>

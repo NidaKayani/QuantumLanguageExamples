@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 12_positioning/12: Modal with :target -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Modal with :target</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .modal { position: fixed; inset: 0; display: none; place-items: center; background: rgb(15 23 42 / 0.6); }
+    .modal:target { display: grid; }
+    .dialog { position: relative; width: min(26rem, 90vw); background: #fff; border-radius: 16px; padding: 1.5rem; }
+    .close { position: absolute; top: 0.75rem; right: 1rem; text-decoration: none; color: #64748b; font-size: 1.5rem; }
+    .open { display: inline-block; padding: 0.6rem 1.2rem; background: #2563eb; color: #fff; border-radius: 8px; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Modal with :target</h1>
+    <p class="lead">A dialog shown when the URL fragment points at it.</p>
+    <a class="open" href="#hello">Open the modal</a>
+    <div class="modal" id="hello">
+      <div class="dialog" role="dialog" aria-labelledby="hello-title">
+        <a class="close" href="#" aria-label="Close">&times;</a>
+        <h2 id="hello-title">Hello!</h2>
+        <p>This modal opens through the :target pseudo-class.</p>
+      </div>
+    </div>
+  </main>
+</body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 06_box_model/02: box-sizing compared -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>box-sizing compared</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .sample { width: 16rem; padding: 1.5rem; border: 6px solid #7c3aed; background: #ede9fe; margin-bottom: 1rem; }
+    .content-box { box-sizing: content-box; }
+    .border-box { box-sizing: border-box; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>box-sizing compared</h1>
+    <p class="lead">Both boxes are 16rem wide; only border-box keeps that size with padding.</p>
+    <div class="sample content-box">content-box: 16rem + padding + border</div>
+    <div class="sample border-box">border-box: exactly 16rem</div>
+  </main>
+</body>
+</html>

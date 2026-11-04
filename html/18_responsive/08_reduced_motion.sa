@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 18_responsive/08: Reduced motion -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Reduced motion</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .spin { width: 4rem; height: 4rem; border-radius: 12px; background: #8b5cf6; animation: spin 2s linear infinite; }
+    @keyframes spin { to { transform: rotate(360deg); } }
+    @media (prefers-reduced-motion: reduce) { .spin { animation: none; } .note::after { content: " (motion is reduced on this device)"; } }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Reduced motion</h1>
+    <p class="lead">Animations that turn off for people who ask for less motion.</p>
+    <div class="spin" role="img" aria-label="A spinning square"></div><p class="note">This square spins unless you prefer reduced motion</p>
+  </main>
+</body>
+</html>

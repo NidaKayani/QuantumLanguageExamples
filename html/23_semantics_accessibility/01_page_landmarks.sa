@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 23_semantics_accessibility/01: Page landmarks -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page landmarks</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .page { display: grid; gap: 0.5rem; grid-template-columns: 1fr 12rem; }
+    .page > * { padding: 1rem; border-radius: 10px; border: 2px dashed; }
+    .page header, .page footer { grid-column: 1 / -1; }
+    .page header { border-color: #4f46e5; } .page nav { border-color: #0ea5e9; grid-column: 1 / -1; }
+    .page main { border-color: #16a34a; } .page aside { border-color: #f59e0b; } .page footer { border-color: #64748b; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Page landmarks</h1>
+    <p class="lead">header, nav, main, aside and footer give a page its regions.</p>
+    <div class="page">
+      <header>&lt;header&gt; site title</header>
+      <nav aria-label="Main">&lt;nav&gt; main links</nav>
+      <main>&lt;main&gt; the page's unique content</main>
+      <aside>&lt;aside&gt; related links</aside>
+      <footer>&lt;footer&gt; copyright</footer>
+    </div>
+  </main>
+</body>
+</html>

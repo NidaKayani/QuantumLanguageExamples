@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 04_tables/14: League standings -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>League standings</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    table { border-collapse: collapse; width: 100%; background: #fff; }
+    th, td { padding: 0.6rem 0.9rem; border-bottom: 1px solid #e2e8f0; text-align: left; }
+    th { background: #f8fafc; font-weight: 600; }
+    td:nth-child(n+3), th:nth-child(n+3) { text-align: center; }
+    tbody tr:first-child { background: #ecfdf5; }
+    tbody tr:last-child { background: #fef2f2; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>League standings</h1>
+    <p class="lead">Points computed as 3 per win and 1 per draw.</p>
+    <table>
+      <thead><tr><th>#</th><th>Team</th><th>W</th><th>L</th><th>D</th><th>Pts</th></tr></thead>
+      <tbody>
+        <tr><td>1</td><td>Falcons</td><td>9</td><td>1</td><td>2</td><td><strong>29</strong></td></tr>
+        <tr><td>2</td><td>Comets</td><td>8</td><td>2</td><td>2</td><td><strong>26</strong></td></tr>
+        <tr><td>3</td><td>Rovers</td><td>6</td><td>3</td><td>3</td><td><strong>21</strong></td></tr>
+        <tr><td>4</td><td>Tigers</td><td>4</td><td>5</td><td>3</td><td><strong>15</strong></td></tr>
+        <tr><td>5</td><td>Owls</td><td>2</td><td>8</td><td>2</td><td><strong>8</strong></td></tr>
+      </tbody>
+    </table>
+  </main>
+</body>
+</html>

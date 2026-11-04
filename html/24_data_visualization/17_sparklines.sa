@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 24_data_visualization/17: Sparklines -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sparklines</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .spark { display: flex; align-items: center; gap: 0.75rem; background: #fff; border-radius: 12px; padding: 0.75rem 1rem; width: max-content; margin: 0.5rem 0; }
+    .spark svg { width: 7rem; height: 2rem; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Sparklines</h1>
+    <p class="lead">Tiny inline charts next to numbers.</p>
+    <div class="spark">Revenue <svg viewBox="0 0 110 32" role="img" aria-label="Rising"><polyline points="0,25 12,21 24,23 36,18 48,20 60,16 72,17 84,12 96,14 108,9" fill="none" stroke="#16a34a" stroke-width="2.5"/></svg> <strong>+21%</strong></div>
+    <div class="spark">Errors <svg viewBox="0 0 110 32" role="img" aria-label="Falling"><polyline points="0,11 12,15 24,13 36,18 48,16 60,20 72,19 84,24 96,22 108,27" fill="none" stroke="#dc2626" stroke-width="2.5"/></svg> <strong>-9%</strong></div>
+  </main>
+</body>
+</html>

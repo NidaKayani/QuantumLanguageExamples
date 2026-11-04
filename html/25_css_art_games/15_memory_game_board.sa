@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 25_css_art_games/15: Memory game board -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Memory game board</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .memory { display: grid; grid-template-columns: repeat(4, 4.5rem); gap: 0.6rem; width: max-content; }
+    .memory button { height: 4.5rem; border: 0; border-radius: 12px; font-size: 2rem; cursor: pointer; background: linear-gradient(135deg, #6366f1, #8b5cf6); color: transparent; transition: transform 0.2s; }
+    .memory button:hover { transform: scale(1.05); }
+    .memory .up { background: #fff; color: inherit; box-shadow: 0 0 0 3px #6366f1 inset; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Memory game board</h1>
+    <p class="lead">Sixteen cards in a grid; two are turned face up.</p>
+    <div class="memory"><button type="button" aria-label="Card 1">&#127826;</button><button type="button" aria-label="Card 2">&#127827;</button><button type="button" class="up" aria-label="Card 3">&#127815;</button><button type="button" aria-label="Card 4">&#129373;</button><button type="button" aria-label="Card 5">&#127826;</button><button type="button" aria-label="Card 6">&#127827;</button><button type="button" aria-label="Card 7">&#127819;</button><button type="button" aria-label="Card 8">&#127822;</button><button type="button" aria-label="Card 9">&#127820;</button><button type="button" class="up" aria-label="Card 10">&#127817;</button><button type="button" aria-label="Card 11">&#127819;</button><button type="button" aria-label="Card 12">&#129373;</button><button type="button" aria-label="Card 13">&#127815;</button><button type="button" aria-label="Card 14">&#127822;</button><button type="button" aria-label="Card 15">&#127820;</button><button type="button" aria-label="Card 16">&#127817;</button></div>
+  </main>
+</body>
+</html>

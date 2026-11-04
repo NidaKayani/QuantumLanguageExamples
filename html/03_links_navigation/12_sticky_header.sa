@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 03_links_navigation/12: Sticky header -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sticky header</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .header { position: sticky; top: 0; z-index: 10; display: flex; justify-content: space-between; align-items: center; padding: 1rem 1.5rem; background: rgb(255 255 255 / 0.9); backdrop-filter: blur(8px); border-bottom: 1px solid #e2e8f0; }
+    .header a { color: #334155; text-decoration: none; margin-left: 1rem; }
+    .filler { height: 120vh; padding: 1rem; background: repeating-linear-gradient(#f8fafc 0 2rem, #eef2f7 2rem 4rem); }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Sticky header</h1>
+    <p class="lead">position: sticky keeps the header in view while the page scrolls.</p>
+    <header class="header">
+      <strong>Quantum</strong>
+      <nav aria-label="Main"><a href="#a">Guide</a><a href="#b">API</a><a href="#c">Blog</a></nav>
+    </header>
+    <div class="filler"><p>Scroll down: the header stays at the top.</p></div>
+  </main>
+</body>
+</html>

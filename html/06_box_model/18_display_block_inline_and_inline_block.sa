@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 06_box_model/18: Display block, inline and inline-block -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Display block, inline and inline-block</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .demo-line span { background: #fde68a; border: 2px solid #ca8a04; padding: 0.5rem; margin: 0.25rem; width: 8rem; }
+    .as-inline span { display: inline; }
+    .as-block span { display: block; }
+    .as-inline-block span { display: inline-block; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Display block, inline and inline-block</h1>
+    <p class="lead">How each display value places boxes in a line.</p>
+    <p class="demo-line as-inline"><span>inline</span><span>ignores width</span></p>
+    <p class="demo-line as-block"><span>block</span><span>fills the line</span></p>
+    <p class="demo-line as-inline-block"><span>inline-block</span><span>has width</span></p>
+  </main>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 11_grid/15: Magazine layout -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Magazine layout</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .mag { display: grid; grid-template-columns: 2fr 1fr 1fr; grid-template-rows: repeat(2, 11rem); gap: 1rem; }
+    .mag article { border-radius: 12px; padding: 1rem; color: #fff; display: flex; align-items: flex-end; font-weight: 700; }
+    .feature { grid-row: span 2; background: linear-gradient(160deg, #0f766e, #134e4a); font-size: 1.6rem; }
+    .s1 { background: #b45309; } .s2 { background: #7c2d12; } .s3 { background: #4338ca; } .s4 { background: #9d174d; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Magazine layout</h1>
+    <p class="lead">A feature story beside smaller stories.</p>
+    <div class="mag">
+      <article class="feature">The future of the open web</article>
+      <article class="s1">Fonts</article><article class="s2">Colour</article>
+      <article class="s3">Motion</article><article class="s4">Layout</article>
+    </div>
+  </main>
+</body>
+</html>

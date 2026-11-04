@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 02_lists/15: Nested numbering with counters -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nested numbering with counters</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .card { background: #fff; border-radius: 12px; padding: 1.5rem; box-shadow: 0 1px 3px rgb(0 0 0 / 0.12); }
+    ol { counter-reset: item; list-style: none; padding-left: 1rem; }
+    ol li { counter-increment: item; }
+    ol li::before { content: counters(item, ".") ". "; font-weight: 700; color: #7c3aed; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Nested numbering with counters</h1>
+    <p class="lead">CSS counters give 1, 1.1, 1.2 numbering.</p>
+    <section class="card">
+      <ol>
+        <li>Introduction
+          <ol>
+            <li>Goals</li>
+            <li>Audience</li>
+          </ol>
+        </li>
+        <li>Getting started
+          <ol>
+            <li>Install</li>
+            <li>First page</li>
+          </ol>
+        </li>
+      </ol>
+    </section>
+  </main>
+</body>
+</html>

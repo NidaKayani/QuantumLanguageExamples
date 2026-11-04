@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 25_css_art_games/16: Sudoku grid -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sudoku grid</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .sudoku { display: grid; grid-template-columns: repeat(9, 2.6rem); width: max-content; border: 3px solid #0f172a; background: #fff; }
+    .sudoku span { height: 2.6rem; display: grid; place-items: center; border: 1px solid #cbd5e1; font-size: 1.2rem; }
+    .sudoku .given { font-weight: 800; }
+    .sudoku span:nth-child(9n+3), .sudoku span:nth-child(9n+6) { border-right: 3px solid #0f172a; }
+    .sudoku span:nth-child(n+19):nth-child(-n+27), .sudoku span:nth-child(n+46):nth-child(-n+54) { border-bottom: 3px solid #0f172a; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Sudoku grid</h1>
+    <p class="lead">A 9 by 9 puzzle with thicker lines around each box.</p>
+    <div class="sudoku" role="img" aria-label="A sudoku puzzle"><span class="given">5</span><span class="given">3</span><span></span><span></span><span class="given">7</span><span></span><span></span><span></span><span></span><span class="given">6</span><span></span><span></span><span class="given">1</span><span class="given">9</span><span class="given">5</span><span></span><span></span><span></span><span></span><span class="given">9</span><span class="given">8</span><span></span><span></span><span></span><span></span><span class="given">6</span><span></span><span class="given">8</span><span></span><span></span><span></span><span class="given">6</span><span></span><span></span><span></span><span class="given">3</span><span class="given">4</span><span></span><span></span><span class="given">8</span><span></span><span class="given">3</span><span></span><span></span><span class="given">1</span><span class="given">7</span><span></span><span></span><span></span><span class="given">2</span><span></span><span></span><span></span><span class="given">6</span><span></span><span class="given">6</span><span></span><span></span><span></span><span></span><span class="given">2</span><span class="given">8</span><span></span><span></span><span></span><span></span><span class="given">4</span><span class="given">1</span><span class="given">9</span><span></span><span></span><span class="given">5</span><span></span><span></span><span></span><span></span><span class="given">8</span><span></span><span></span><span class="given">7</span><span class="given">9</span></div>
+  </main>
+</body>
+</html>

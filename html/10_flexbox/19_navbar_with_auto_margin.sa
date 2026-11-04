@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 10_flexbox/19: Navbar with auto margin -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Navbar with auto margin</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .bar { display: flex; align-items: center; gap: 1rem; background: #0f172a; padding: 0.75rem 1.25rem; border-radius: 12px; }
+    .bar a { color: #e2e8f0; text-decoration: none; }
+    .logo { font-weight: 800; color: #fff; }
+    .push { margin-left: auto; }
+    .cta { background: #22c55e; color: #052e16; padding: 0.4rem 0.9rem; border-radius: 8px; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Navbar with auto margin</h1>
+    <p class="lead">margin-left: auto pushes the last links to the far end.</p>
+    <nav class="bar" aria-label="Main">
+      <span class="logo">Quantum</span>
+      <a href="#docs">Docs</a>
+      <a href="#blog">Blog</a>
+      <a class="push" href="#login">Log in</a>
+      <a class="cta" href="#signup">Sign up</a>
+    </nav>
+  </main>
+</body>
+</html>

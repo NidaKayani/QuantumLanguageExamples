@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 03_links_navigation/19: Mega menu -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mega menu</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .mega { position: relative; }
+    .mega > a { display: inline-block; padding: 0.6rem 1rem; background: #0f172a; color: #fff; border-radius: 8px; text-decoration: none; }
+    .panel { display: none; position: absolute; top: 110%; left: 0; width: min(40rem, 90vw); grid-template-columns: repeat(3, 1fr); gap: 1.5rem; padding: 1.5rem; background: #fff; border-radius: 12px; box-shadow: 0 16px 40px rgb(0 0 0 / 0.15); }
+    .mega:hover .panel, .mega:focus-within .panel { display: grid; }
+    .panel h2 { font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.08em; color: #64748b; margin: 0 0 0.5rem; }
+    .panel a { display: block; color: #0f172a; text-decoration: none; padding: 0.25rem 0; }
+    .panel a:hover { color: #2563eb; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Mega menu</h1>
+    <p class="lead">A wide panel of grouped links under one menu item.</p>
+    <nav class="mega" aria-label="Products">
+      <a href="#products">Products &#9662;</a>
+      <div class="panel">
+        <div><h2>Build</h2><a href="#ide">IDE</a><a href="#cli">CLI</a><a href="#qpm">Packages</a></div>
+        <div><h2>Learn</h2><a href="#docs">Docs</a><a href="#course">Course</a><a href="#ex">Examples</a></div>
+        <div><h2>Connect</h2><a href="#forum">Forum</a><a href="#chat">Chat</a><a href="#events">Events</a></div>
+      </div>
+    </nav>
+  </main>
+</body>
+</html>

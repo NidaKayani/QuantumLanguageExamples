@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 17_transforms/08: rotateX and rotateY -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>rotateX and rotateY</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .row { display: flex; flex-wrap: wrap; gap: 2.5rem; padding: 2rem; background: #fff; border-radius: 14px; }
+    .row div { width: 6rem; height: 6rem; display: grid; place-items: center; border-radius: 10px; background: #a78bfa; color: #fff; font-size: 0.75rem; font-weight: 700; text-align: center; }
+    .row { perspective: 600px; }
+    .x { transform: rotateX(50deg); } .y { transform: rotateY(50deg); } .z { transform: rotateZ(50deg); } .xyz { transform: rotate3d(1, 1, 0, 50deg); }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>rotateX and rotateY</h1>
+    <p class="lead">Tilting in three dimensions.</p>
+    <div class="row"><div class="x">rotateX</div><div class="y">rotateY</div><div class="z">rotateZ</div><div class="xyz">rotate3d</div></div>
+  </main>
+</body>
+</html>

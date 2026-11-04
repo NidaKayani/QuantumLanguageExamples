@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 19_custom_properties/17: Component sizes -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Component sizes</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .btn { --size: 1; font-size: calc(0.9rem * var(--size)); padding: calc(0.5rem * var(--size)) calc(1rem * var(--size)); border: 0; border-radius: calc(0.5rem * var(--size)); background: #7c3aed; color: #fff; font-weight: 700; margin: 0.3rem; }
+    .sm { --size: 0.8; } .lg { --size: 1.4; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Component sizes</h1>
+    <p class="lead">Small, medium and large buttons from one --size variable.</p>
+    <button class="btn sm" type="button">Small</button><button class="btn" type="button">Medium</button><button class="btn lg" type="button">Large</button>
+  </main>
+</body>
+</html>

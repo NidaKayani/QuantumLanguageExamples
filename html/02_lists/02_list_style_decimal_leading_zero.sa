@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 02_lists/02: List style decimal-leading-zero -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>List style decimal-leading-zero</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .card { background: #fff; border-radius: 12px; padding: 1.5rem; box-shadow: 0 1px 3px rgb(0 0 0 / 0.12); }
+    .card li { margin: 0.25rem 0; }
+    .card ol { list-style-type: decimal-leading-zero; padding-left: 2.5rem; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>List style decimal-leading-zero</h1>
+    <p class="lead">list-style-type: decimal-leading-zero. Padded numbers: 01, 02, 03.</p>
+    <section class="card">
+      <ol>
+        <li>Plan the page</li>
+        <li>Write the markup</li>
+        <li>Add the styles</li>
+        <li>Test in browsers</li>
+      </ol>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 04_tables/07: Column groups -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Column groups</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    table { border-collapse: collapse; width: 100%; background: #fff; }
+    th, td { padding: 0.6rem 0.9rem; border-bottom: 1px solid #e2e8f0; text-align: left; }
+    th { background: #f8fafc; font-weight: 600; }
+    col.focus { background: #fef3c7; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Column groups</h1>
+    <p class="lead">colgroup styles whole columns.</p>
+    <table>
+      <colgroup><col><col class="focus"><col></colgroup>
+      <thead><tr><th>Plan</th><th>Storage</th><th>Price</th></tr></thead>
+      <tbody>
+        <tr><td>Free</td><td>5 GB</td><td>$0</td></tr>
+        <tr><td>Pro</td><td>200 GB</td><td>$5</td></tr>
+        <tr><td>Team</td><td>2 TB</td><td>$15</td></tr>
+      </tbody>
+    </table>
+  </main>
+</body>
+</html>

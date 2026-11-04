@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 10_flexbox/16: Perfect centring -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Perfect centring</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .stage { display: flex; justify-content: center; align-items: center; height: 18rem; background: #fef3c7; border-radius: 16px; }
+    .stage div { background: #f59e0b; color: #fff; padding: 1.5rem 2rem; border-radius: 12px; font-size: 1.4rem; font-weight: 800; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Perfect centring</h1>
+    <p class="lead">Centre anything both ways with three lines of flexbox.</p>
+    <div class="stage"><div>Centred</div></div>
+  </main>
+</body>
+</html>

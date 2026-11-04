@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 21_page_layouts/17: Team page -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Team page</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .site-header { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; }
+    .site-header nav a { margin-left: 1.25rem; color: #334155; text-decoration: none; }
+    .logo { font-weight: 800; font-size: 1.2rem; color: #0f172a; text-decoration: none; }
+    .site-footer { margin-top: 3rem; padding: 1.5rem 0; border-top: 1px solid #e2e8f0; color: #64748b; font-size: 0.9rem; }
+    .team { display: grid; grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr)); gap: 1.25rem; text-align: center; }
+    .team img { width: 8rem; height: 8rem; border-radius: 50%; object-fit: cover; }
+    .team h3 { margin: 0.5rem 0 0; }
+    .team p { margin: 0; color: #64748b; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Team page</h1>
+    <p class="lead">Photos, names and roles in a grid.</p>
+    <header class="site-header"><a class="logo" href="#top">Quantum</a><nav aria-label="Main"><a href="#features">Features</a><a href="#pricing">Pricing</a><a href="#docs">Docs</a></nav></header>
+    <h2>Meet the team</h2>
+    <section class="team">
+      <figure><img src="https://picsum.photos/seed/t0/240/240" alt="Photo of Areeba" width="240" height="240"><h3>Areeba</h3><p>Founder</p></figure>
+      <figure><img src="https://picsum.photos/seed/t1/240/240" alt="Photo of Kamran" width="240" height="240"><h3>Kamran</h3><p>Design</p></figure>
+      <figure><img src="https://picsum.photos/seed/t2/240/240" alt="Photo of Mehwish" width="240" height="240"><h3>Mehwish</h3><p>Engineering</p></figure>
+      <figure><img src="https://picsum.photos/seed/t3/240/240" alt="Photo of Tariq" width="240" height="240"><h3>Tariq</h3><p>Releases</p></figure>
+      <figure><img src="https://picsum.photos/seed/t4/240/240" alt="Photo of Hira" width="240" height="240"><h3>Hira</h3><p>Support</p></figure>
+      <figure><img src="https://picsum.photos/seed/t5/240/240" alt="Photo of Usman" width="240" height="240"><h3>Usman</h3><p>Sales</p></figure>
+    </section>
+    <footer class="site-footer"><p>&copy; 2026 Quantum Logics Labs. Made with HTML and CSS.</p></footer>
+  </main>
+</body>
+</html>

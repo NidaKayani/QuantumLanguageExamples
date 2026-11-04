@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 20_components/12: Star rating display -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Star rating display</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .stars { --rating: 0.78; font-size: 2rem; letter-spacing: 0.15rem; background: linear-gradient(90deg, #f59e0b calc(var(--rating) * 100%), #cbd5e1 0); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Star rating display</h1>
+    <p class="lead">Partial stars from a gradient and a percentage.</p>
+    <p><span class="stars" role="img" aria-label="Rated 3.9 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</span> 3.9 out of 5</p>
+  </main>
+</body>
+</html>

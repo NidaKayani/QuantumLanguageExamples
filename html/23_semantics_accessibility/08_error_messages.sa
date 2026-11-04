@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 23_semantics_accessibility/08: Error messages -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Error messages</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .panel { background: #fff; border-radius: 14px; padding: 1.25rem 1.5rem; margin-bottom: 1rem; }
+    .field input { display: block; padding: 0.55rem; border: 2px solid #dc2626; border-radius: 6px; font: inherit; }
+    .error { color: #b91c1c; font-size: 0.9rem; margin-top: 0.3rem; }
+    .field label { font-weight: 600; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Error messages</h1>
+    <p class="lead">aria-invalid and aria-describedby connect a field to its error.</p>
+    <form class="panel" action="#"><div class="field">
+      <label for="mail2">Email</label>
+      <input id="mail2" type="email" value="ada@" aria-invalid="true" aria-describedby="mail2-error">
+      <p class="error" id="mail2-error">Enter an email like name@example.com.</p>
+    </div></form>
+  </main>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 08_typography/13: Multi-column text -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Multi-column text</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .columns { columns: 3 14rem; column-gap: 2rem; column-rule: 1px solid #cbd5e1; background: #fff; padding: 1.5rem; border-radius: 12px; }
+    .columns h2 { column-span: all; margin-top: 0; }
+    .columns p { margin-top: 0; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Multi-column text</h1>
+    <p class="lead">Newspaper columns with a rule between them.</p>
+    <article class="columns">
+      <h2>Local news</h2>
+      <p>The town council approved a new bike lane on Market Street on Tuesday, after months of debate between residents and shop owners.</p>
+      <p>Work starts next spring. The plan widens the pavement, adds trees and moves parking to a side street near the station.</p>
+      <p>Supporters say the change will make the centre safer for children walking to school; critics worry about deliveries.</p>
+    </article>
+  </main>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 04_tables/10: Aligned numbers -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Aligned numbers</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    table { border-collapse: collapse; width: 100%; background: #fff; }
+    th, td { padding: 0.6rem 0.9rem; border-bottom: 1px solid #e2e8f0; text-align: left; }
+    th { background: #f8fafc; font-weight: 600; }
+    td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Aligned numbers</h1>
+    <p class="lead">Right-aligned tabular figures line up digits.</p>
+    <table>
+      <thead><tr><th>Item</th><th class="num">Qty</th><th class="num">Price</th></tr></thead>
+      <tbody>
+        <tr><td>Notebook</td><td class="num">12</td><td class="num">$3.50</td></tr>
+        <tr><td>Pen</td><td class="num">140</td><td class="num">$0.80</td></tr>
+        <tr><td>Desk lamp</td><td class="num">1</td><td class="num">$42.00</td></tr>
+      </tbody>
+    </table>
+  </main>
+</body>
+</html>

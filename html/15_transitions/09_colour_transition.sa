@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 15_transitions/09: Colour transition -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Colour transition</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .btn { display: inline-block; padding: 0.8rem 1.6rem; border: 0; border-radius: 10px; font: inherit; font-weight: 700; cursor: pointer; }
+    .btn { background: #e0e7ff; color: #3730a3; transition: background-color 0.3s, color 0.3s; }
+    .btn:hover { background: #4338ca; color: #fff; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Colour transition</h1>
+    <p class="lead">Background and text colour fade on hover.</p>
+    <button class="btn" type="button">Hover me</button>
+  </main>
+</body>
+</html>

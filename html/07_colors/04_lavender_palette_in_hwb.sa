@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 07_colors/04: Lavender palette in hwb -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Lavender palette in hwb</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .swatches { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(9rem, 1fr)); gap: 0.5rem; }
+    .swatches li { padding: 1.25rem 0.75rem; border-radius: 10px; }
+    .swatches strong, .swatches code { display: block; }
+    .swatches code { font-size: 0.75rem; opacity: 0.85; }
+    .s100 { background: hwb(265 93% 4%); color: #111827; }
+    .s200 { background: hwb(265 83% 7%); color: #111827; }
+    .s300 { background: hwb(265 66% 10%); color: #111827; }
+    .s400 { background: hwb(265 45% 13%); color: #ffffff; }
+    .s500 { background: hwb(265 24% 15%); color: #ffffff; }
+    .s600 { background: hwb(265 13% 24%); color: #ffffff; }
+    .s700 { background: hwb(265 11% 39%); color: #ffffff; }
+    .s800 { background: hwb(265 9% 53%); color: #ffffff; }
+    .s900 { background: hwb(265 7% 67%); color: #ffffff; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Lavender palette in hwb</h1>
+    <p class="lead">Nine shades of hue 265&deg;, written in hwb notation.</p>
+    <ul class="swatches">
+      <li class="s100"><strong>100</strong><code>hwb(265 93% 4%)</code></li>
+      <li class="s200"><strong>200</strong><code>hwb(265 83% 7%)</code></li>
+      <li class="s300"><strong>300</strong><code>hwb(265 66% 10%)</code></li>
+      <li class="s400"><strong>400</strong><code>hwb(265 45% 13%)</code></li>
+      <li class="s500"><strong>500</strong><code>hwb(265 24% 15%)</code></li>
+      <li class="s600"><strong>600</strong><code>hwb(265 13% 24%)</code></li>
+      <li class="s700"><strong>700</strong><code>hwb(265 11% 39%)</code></li>
+      <li class="s800"><strong>800</strong><code>hwb(265 9% 53%)</code></li>
+      <li class="s900"><strong>900</strong><code>hwb(265 7% 67%)</code></li>
+    </ul>
+  </main>
+</body>
+</html>

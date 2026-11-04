@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 14_pseudo_elements/02: Icons with ::after -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Icons with ::after</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .status { list-style: none; padding: 0; }
+    .status li { padding: 0.5rem 0; }
+    .status li::after { margin-left: 0.5rem; }
+    .ok::after { content: "\2714"; color: #16a34a; }
+    .fail::after { content: "\2716"; color: #dc2626; }
+    .wait::after { content: "\231B"; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Icons with ::after</h1>
+    <p class="lead">Status icons added after list items.</p>
+    <ul class="status">
+      <li class="ok">Build</li>
+      <li class="ok">Tests</li>
+      <li class="fail">Deploy</li>
+      <li class="wait">Review</li>
+    </ul>
+  </main>
+</body>
+</html>

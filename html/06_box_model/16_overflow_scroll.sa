@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 06_box_model/16: Overflow scroll -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Overflow scroll</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .clip { width: 16rem; height: 6rem; padding: 0.75rem; background: #fff; border: 2px solid #64748b; overflow: scroll; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Overflow scroll</h1>
+    <p class="lead">overflow: scroll on a box too small for its text.</p>
+    <div class="clip">
+      <p>This paragraph is longer than its box. With overflow set to scroll, the browser decides what happens to the
+      text that does not fit: it can spill out, be cut off, or get scroll bars.</p>
+    </div>
+  </main>
+</body>
+</html>

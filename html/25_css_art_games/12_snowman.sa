@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 25_css_art_games/12: Snowman -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Snowman</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .snowman { display: flex; flex-direction: column; align-items: center; }
+    .snowman div { border-radius: 50%; background: #fff; box-shadow: inset -8px -8px 0 #e2e8f0; }
+    .hat { width: 3.5rem; height: 3rem; background: #111827; border-radius: 4px; margin-bottom: -0.6rem; box-shadow: 0 0.6rem 0 -0.15rem #111827; z-index: 1; }
+    .head { width: 5rem; height: 5rem; position: relative; }
+    .head::after { content: ""; position: absolute; left: 2.4rem; top: 2.2rem; border-left: 1.6rem solid #f97316; border-top: 0.3rem solid transparent; border-bottom: 0.3rem solid transparent; }
+    .body { width: 7rem; height: 7rem; margin-top: -0.6rem; }
+    .base { width: 9rem; height: 9rem; margin-top: -0.8rem; }
+    .scene { background: linear-gradient(#bfdbfe, #eff6ff); border-radius: 20px; padding: 2rem; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Snowman</h1>
+    <p class="lead">Three circles, a hat and a carrot nose.</p>
+    <div class="scene"><div class="snowman" role="img" aria-label="A snowman"><span class="hat"></span><div class="head"></div><div class="body"></div><div class="base"></div></div></div>
+  </main>
+</body>
+</html>

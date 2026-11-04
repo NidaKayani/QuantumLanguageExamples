@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 21_page_layouts/13: Newsletter email -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Newsletter email</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .mail { max-width: 36rem; margin: 0 auto; background: #fff; border-radius: 12px; overflow: hidden; }
+    .mail header { background: #0f766e; color: #fff; padding: 1.5rem; text-align: center; }
+    .mail section { padding: 1.5rem; border-bottom: 1px solid #f1f5f9; }
+    .mail img { width: 100%; height: auto; border-radius: 8px; }
+    .mail .button { display: inline-block; padding: 0.7rem 1.2rem; background: #0f766e; color: #fff; border-radius: 8px; text-decoration: none; }
+    .mail footer { padding: 1rem 1.5rem; font-size: 0.8rem; color: #64748b; text-align: center; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Newsletter email</h1>
+    <p class="lead">A narrow, table-free email layout.</p>
+    <article class="mail">
+      <header><h2>The Weekly Tag</h2><p>Issue 42</p></header>
+      <section><h3>New: HTML in Quantum</h3><img src="https://picsum.photos/seed/news/700/300" alt="Code on a screen" width="700" height="300"><p>Pages now compile like programs.</p><a class="button" href="#read">Read the story</a></section>
+      <section><h3>Tip of the week</h3><p>Use <code>gap</code> instead of margins between flex items.</p></section>
+      <footer>You get this because you signed up. <a href="#unsubscribe">Unsubscribe</a></footer>
+    </article>
+  </main>
+</body>
+</html>

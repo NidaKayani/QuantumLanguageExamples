@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 02_lists/14: Custom markers -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Custom markers</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .card { background: #fff; border-radius: 12px; padding: 1.5rem; box-shadow: 0 1px 3px rgb(0 0 0 / 0.12); }
+    .card li { margin: 0.25rem 0; }
+    .card ul { list-style-type: "\2605  "; }
+    .card li::marker { color: #f59e0b; font-size: 1.2em; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Custom markers</h1>
+    <p class="lead">::marker styles the bullet itself.</p>
+    <section class="card">
+      <ul>
+        <li>Fast to load</li>
+        <li>Easy to read</li>
+        <li>Works everywhere</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

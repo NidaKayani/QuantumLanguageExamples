@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 09_backgrounds_gradients/17: Sunset sky -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sunset sky</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .sky { position: relative; height: 22rem; border-radius: 16px; overflow: hidden; background: linear-gradient(#1e1b4b, #9d174d 45%, #fb923c 70%, #fde68a); }
+    .sun { position: absolute; left: 50%; bottom: 25%; width: 8rem; height: 8rem; margin-left: -4rem; border-radius: 50%; background: radial-gradient(#fffbeb, #fcd34d 60%, #f59e0b); box-shadow: 0 0 60px #fbbf24; }
+    .sea { position: absolute; inset: auto 0 0; height: 30%; background: repeating-linear-gradient(#1e3a8a 0 6px, #1d4ed8 6px 10px); opacity: 0.9; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Sunset sky</h1>
+    <p class="lead">Stacked gradients paint a sky, a sun and the sea.</p>
+    <div class="sky" role="img" aria-label="A sunset over the sea"><div class="sun"></div><div class="sea"></div></div>
+  </main>
+</body>
+</html>

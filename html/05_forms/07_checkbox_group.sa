@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 05_forms/07: Checkbox group -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkbox group</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .form { background: #fff; padding: 1.5rem; border-radius: 12px; max-width: 28rem; box-shadow: 0 4px 16px rgb(0 0 0 / 0.08); }
+    .field { display: flex; flex-direction: column; gap: 0.35rem; margin-bottom: 1rem; }
+    label { font-weight: 600; font-size: 0.9rem; }
+    input, select, textarea { font: inherit; padding: 0.6rem 0.75rem; border: 1px solid #cbd5e1; border-radius: 8px; }
+    input:focus, select:focus, textarea:focus { outline: 2px solid #3b82f6; outline-offset: 1px; border-color: #3b82f6; }
+    button { font: inherit; padding: 0.7rem 1.25rem; border: 0; border-radius: 8px; background: #2563eb; color: #fff; font-weight: 600; cursor: pointer; }
+    button:hover { background: #1d4ed8; }
+    .choices { display: grid; grid-template-columns: repeat(2, 1fr); gap: 0.5rem; margin-bottom: 1rem; }
+    .choices label { font-weight: 400; display: flex; gap: 0.5rem; align-items: center; padding: 0.6rem; border: 1px solid #e2e8f0; border-radius: 8px; cursor: pointer; }
+    .choices label:has(input:checked) { border-color: #3b82f6; background: #eff6ff; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Checkbox group</h1>
+    <p class="lead">Several independent choices.</p>
+    <form class="form" action="#">
+      <p><strong>Toppings</strong></p>
+      <div class="choices">
+        <label><input type="checkbox" checked> Cheese</label>
+        <label><input type="checkbox"> Mushrooms</label>
+        <label><input type="checkbox" checked> Peppers</label>
+        <label><input type="checkbox"> Olives</label>
+      </div>
+      <button type="submit">Order</button>
+    </form>
+  </main>
+</body>
+</html>

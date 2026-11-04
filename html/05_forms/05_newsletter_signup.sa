@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 05_forms/05: Newsletter signup -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Newsletter signup</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .panel { background: linear-gradient(135deg, #4f46e5, #9333ea); color: #fff; padding: 2rem; border-radius: 16px; text-align: center; }
+    .panel form { display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; margin-top: 1rem; }
+    .panel input { padding: 0.75rem 1rem; border-radius: 8px; border: 0; min-width: 16rem; font: inherit; }
+    .panel button { padding: 0.75rem 1.25rem; border: 0; border-radius: 8px; background: #fbbf24; color: #1f2937; font: inherit; font-weight: 700; cursor: pointer; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Newsletter signup</h1>
+    <p class="lead">A one-field form on a coloured panel.</p>
+    <section class="panel">
+      <h2>Get the weekly digest</h2>
+      <p>One email, every Friday. No spam.</p>
+      <form action="#" method="post">
+        <input type="email" aria-label="Email address" placeholder="you@example.com" required>
+        <button type="submit">Subscribe</button>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 12_positioning/19: Centring with transform -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Centring with transform</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .stage { position: relative; min-height: 14rem; background: #f1f5f9; border: 2px dashed #94a3b8; border-radius: 12px; padding: 1rem; }
+    .stage { height: 16rem; }
+    .centre { position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); padding: 1rem 1.5rem; background: #0f172a; color: #fff; border-radius: 10px; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Centring with transform</h1>
+    <p class="lead">top and left 50%, then translate back by half the box's own size.</p>
+    <div class="stage"><div class="centre">Centred at any size</div></div>
+  </main>
+</body>
+</html>

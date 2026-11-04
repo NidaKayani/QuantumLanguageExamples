@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 13_selectors/17: :has() parent selector -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>:has() parent selector</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .cards { display: flex; gap: 1rem; }
+    .card { flex: 1; background: #fff; border-radius: 12px; padding: 1rem; border: 2px solid #e2e8f0; }
+    .card:has(img) { border-color: #8b5cf6; }
+    .card:has(.urgent) { background: #fef2f2; border-color: #ef4444; }
+    .card img { width: 100%; height: 6rem; object-fit: cover; border-radius: 8px; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>:has() parent selector</h1>
+    <p class="lead">Style a card because of what it contains.</p>
+    <div class="cards">
+      <article class="card"><h2>Plain</h2><p>Nothing special.</p></article>
+      <article class="card"><h2>With image</h2><img src="https://picsum.photos/seed/quantum/400/200" alt="A random landscape"></article>
+      <article class="card"><h2>Alert</h2><p class="urgent">Server down!</p></article>
+    </div>
+  </main>
+</body>
+</html>

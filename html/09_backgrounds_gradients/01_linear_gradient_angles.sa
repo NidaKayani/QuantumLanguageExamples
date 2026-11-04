@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 09_backgrounds_gradients/01: Linear gradient angles -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Linear gradient angles</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .tiles { display: grid; grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr)); gap: 1rem; }
+    .tiles div { height: 9rem; border-radius: 12px; display: flex; align-items: flex-end; padding: 0.6rem; font-size: 0.8rem; font-weight: 600; color: #fff; text-shadow: 0 1px 2px rgb(0 0 0 / 0.5); }
+    .a0 { background: linear-gradient(0deg, #f97316, #7c3aed); }
+    .a45 { background: linear-gradient(45deg, #f97316, #7c3aed); }
+    .a90 { background: linear-gradient(90deg, #f97316, #7c3aed); }
+    .a135 { background: linear-gradient(135deg, #f97316, #7c3aed); }
+    .a180 { background: linear-gradient(180deg, #f97316, #7c3aed); }
+    .a225 { background: linear-gradient(225deg, #f97316, #7c3aed); }
+    .a270 { background: linear-gradient(270deg, #f97316, #7c3aed); }
+    .a315 { background: linear-gradient(315deg, #f97316, #7c3aed); }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Linear gradient angles</h1>
+    <p class="lead">The same two colours at eight angles.</p>
+    <div class="tiles">
+      <div class="a0">0deg</div>
+      <div class="a45">45deg</div>
+      <div class="a90">90deg</div>
+      <div class="a135">135deg</div>
+      <div class="a180">180deg</div>
+      <div class="a225">225deg</div>
+      <div class="a270">270deg</div>
+      <div class="a315">315deg</div>
+    </div>
+  </main>
+</body>
+</html>

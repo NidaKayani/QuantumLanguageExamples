@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 08_typography/18: Vertical writing -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Vertical writing</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .vertical { display: flex; gap: 2rem; height: 16rem; }
+    .vertical p { margin: 0; padding: 1rem; background: #fff; border-radius: 8px; }
+    .rl { writing-mode: vertical-rl; }
+    .upright { writing-mode: vertical-rl; text-orientation: upright; letter-spacing: 0.2em; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Vertical writing</h1>
+    <p class="lead">writing-mode sets text in vertical lines.</p>
+    <div class="vertical">
+      <p class="rl">Vertical right to left</p>
+      <p class="upright">UPRIGHT</p>
+      <p class="rl" lang="ja">縦書きの日本語</p>
+    </div>
+  </main>
+</body>
+</html>

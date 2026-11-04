@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 12_positioning/06: Notification badge -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Notification badge</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .bell { position: relative; display: inline-grid; place-items: center; width: 3.5rem; height: 3.5rem; border-radius: 50%; background: #fff; font-size: 1.6rem; box-shadow: 0 2px 8px rgb(0 0 0 / 0.1); }
+    .count { position: absolute; top: -0.25rem; right: -0.25rem; min-width: 1.4rem; height: 1.4rem; padding: 0 0.3rem; border-radius: 999px; background: #ef4444; color: #fff; font-size: 0.75rem; font-weight: 700; display: grid; place-items: center; border: 2px solid #fff; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Notification badge</h1>
+    <p class="lead">A count pinned to the corner of an icon.</p>
+    <span class="bell" role="img" aria-label="3 notifications">&#128276;<span class="count">3</span></span>
+  </main>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 05_forms/13: Shipping address form -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shipping address form</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .form { background: #fff; padding: 1.5rem; border-radius: 12px; max-width: 28rem; box-shadow: 0 4px 16px rgb(0 0 0 / 0.08); }
+    .field { display: flex; flex-direction: column; gap: 0.35rem; margin-bottom: 1rem; }
+    label { font-weight: 600; font-size: 0.9rem; }
+    input, select, textarea { font: inherit; padding: 0.6rem 0.75rem; border: 1px solid #cbd5e1; border-radius: 8px; }
+    input:focus, select:focus, textarea:focus { outline: 2px solid #3b82f6; outline-offset: 1px; border-color: #3b82f6; }
+    button { font: inherit; padding: 0.7rem 1.25rem; border: 0; border-radius: 8px; background: #2563eb; color: #fff; font-weight: 600; cursor: pointer; }
+    button:hover { background: #1d4ed8; }
+    .form { max-width: 36rem; }
+    fieldset { border: 0; padding: 0; margin: 0; display: grid; grid-template-columns: 1fr 1fr; gap: 0 1rem; }
+    legend { font-weight: 700; margin-bottom: 1rem; }
+    .wide { grid-column: 1 / -1; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Shipping address form</h1>
+    <p class="lead">Fields laid out on a grid inside a fieldset.</p>
+    <form class="form" action="#">
+      <fieldset>
+        <legend>Shipping address</legend>
+        <div class="field wide"><label for="street">Street</label><input id="street" autocomplete="street-address"></div>
+        <div class="field"><label for="city">City</label><input id="city" autocomplete="address-level2"></div>
+        <div class="field"><label for="zip">Postcode</label><input id="zip" autocomplete="postal-code"></div>
+        <div class="field wide"><label for="country">Country</label><select id="country"><option>Pakistan</option><option>United Kingdom</option><option>United States</option></select></div>
+      </fieldset>
+    </form>
+  </main>
+</body>
+</html>

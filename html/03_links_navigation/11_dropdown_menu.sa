@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 03_links_navigation/11: Dropdown menu -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dropdown menu</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .menu { display: flex; gap: 1rem; list-style: none; padding: 0; }
+    .menu > li { position: relative; }
+    .menu a { display: block; padding: 0.5rem 0.75rem; color: #1e293b; text-decoration: none; }
+    .menu ul { display: none; position: absolute; top: 100%; left: 0; min-width: 11rem; list-style: none; padding: 0.5rem; margin: 0; background: #fff; border-radius: 8px; box-shadow: 0 10px 25px rgb(0 0 0 / 0.15); }
+    .menu li:hover > ul, .menu li:focus-within > ul { display: block; }
+    .menu ul a:hover { background: #f1f5f9; border-radius: 6px; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Dropdown menu</h1>
+    <p class="lead">A submenu that opens on hover or keyboard focus.</p>
+    <nav aria-label="Main">
+      <ul class="menu">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#learn">Learn &#9662;</a>
+          <ul>
+            <li><a href="#html">HTML</a></li>
+            <li><a href="#css">CSS</a></li>
+            <li><a href="#js">JavaScript</a></li>
+          </ul>
+        </li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </main>
+</body>
+</html>

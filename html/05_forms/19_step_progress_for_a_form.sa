@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 05_forms/19: Step progress for a form -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Step progress for a form</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .progress { display: flex; list-style: none; padding: 0; counter-reset: step; }
+    .progress li { flex: 1; text-align: center; position: relative; color: #94a3b8; counter-increment: step; }
+    .progress li::before { content: counter(step); display: grid; place-items: center; width: 2rem; height: 2rem; margin: 0 auto 0.4rem; border-radius: 50%; background: #e2e8f0; position: relative; z-index: 1; }
+    .progress li + li::after { content: ""; position: absolute; top: 1rem; left: -50%; width: 100%; height: 2px; background: #e2e8f0; }
+    .progress .done, .progress .current { color: #0f172a; }
+    .progress .done::before { background: #22c55e; color: #fff; }
+    .progress .current::before { background: #3b82f6; color: #fff; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Step progress for a form</h1>
+    <p class="lead">A step indicator above a multi-part form.</p>
+    <ol class="progress">
+      <li class="done">Account</li>
+      <li class="current">Address</li>
+      <li>Payment</li>
+      <li>Done</li>
+    </ol>
+  </main>
+</body>
+</html>

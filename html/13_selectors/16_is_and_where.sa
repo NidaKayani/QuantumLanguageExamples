@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 13_selectors/16: :is() and :where() -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>:is() and :where()</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    :is(h2, h3) span { color: #db2777; }
+    :where(.card) p { color: #475569; }
+    .card p { color: #0f766e; }
+    .card { background: #fff; border-radius: 12px; padding: 1rem; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>:is() and :where()</h1>
+    <p class="lead">Grouping selectors; :where() adds no specificity.</p>
+    <section class="card">
+      <h2>A <span>pink</span> word</h2>
+      <h3>Another <span>pink</span> word</h3>
+      <p>.card p wins over :where(.card) p, so this text is teal.</p>
+    </section>
+  </main>
+</body>
+</html>

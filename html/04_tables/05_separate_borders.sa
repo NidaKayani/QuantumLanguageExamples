@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 04_tables/05: Separate borders -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Separate borders</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    table { border-collapse: separate; border-spacing: 6px; }
+    td { background: #dbeafe; padding: 1rem; border-radius: 8px; text-align: center; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Separate borders</h1>
+    <p class="lead">border-collapse: separate with border-spacing makes tiles.</p>
+    <table>
+      <tr><td>1</td><td>2</td><td>3</td></tr>
+      <tr><td>4</td><td>5</td><td>6</td></tr>
+      <tr><td>7</td><td>8</td><td>9</td></tr>
+    </table>
+  </main>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 11_grid/01: Fixed columns -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fixed columns</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .grid { display: grid; gap: 0.5rem; }
+    .grid > * { background: #0ea5e9; color: #fff; padding: 1rem; border-radius: 8px; font-weight: 600; }
+    .grid { grid-template-columns: 8rem 12rem 6rem; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Fixed columns</h1>
+    <p class="lead">grid-template-columns with three fixed widths.</p>
+    <div class="grid">
+      <div>Item 1</div>
+      <div>Item 2</div>
+      <div>Item 3</div>
+      <div>Item 4</div>
+      <div>Item 5</div>
+      <div>Item 6</div>
+    </div>
+  </main>
+</body>
+</html>

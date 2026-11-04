@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 03_links_navigation/04: Horizontal navigation bar -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Horizontal navigation bar</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .navbar { display: flex; gap: 0.25rem; background: #1e293b; padding: 0.5rem; border-radius: 10px; }
+    .navbar a { color: #cbd5e1; text-decoration: none; padding: 0.5rem 1rem; border-radius: 6px; }
+    .navbar a:hover { background: #334155; color: #fff; }
+    .navbar a[aria-current="page"] { background: #3b82f6; color: #fff; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Horizontal navigation bar</h1>
+    <p class="lead">A row of links in a nav element.</p>
+    <nav class="navbar" aria-label="Main">
+        <a href="#home" aria-current="page">Home</a>
+        <a href="#docs">Docs</a>
+        <a href="#examples">Examples</a>
+        <a href="#blog">Blog</a>
+        <a href="#about">About</a>
+    </nav>
+  </main>
+</body>
+</html>

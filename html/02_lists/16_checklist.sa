@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 02_lists/16: Checklist -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checklist</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .card { background: #fff; border-radius: 12px; padding: 1.5rem; box-shadow: 0 1px 3px rgb(0 0 0 / 0.12); }
+    .checklist { list-style: none; padding: 0; }
+    .checklist li { padding: 0.5rem 0 0.5rem 2rem; position: relative; border-bottom: 1px solid #e2e8f0; }
+    .checklist li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0.65rem;
+      width: 1.1rem;
+      height: 1.1rem;
+      border: 2px solid #94a3b8;
+      border-radius: 4px;
+    }
+    .checklist .done { color: #94a3b8; text-decoration: line-through; }
+    .checklist .done::before { background: #22c55e; border-color: #22c55e; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Checklist</h1>
+    <p class="lead">A to-do list with check marks drawn in CSS.</p>
+    <section class="card">
+      <ul class="checklist">
+        <li class="done">Sketch the layout</li>
+        <li class="done">Choose colours</li>
+        <li>Write the content</li>
+        <li>Publish</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 01_text_elements/15: Text direction with bdi and bdo -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Text direction with bdi and bdo</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .card { background: #fff; border-radius: 12px; padding: 1.5rem; box-shadow: 0 1px 3px rgb(0 0 0 / 0.12); }
+    .rtl { direction: rtl; text-align: right; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Text direction with bdi and bdo</h1>
+    <p class="lead">Isolating and overriding the direction of text.</p>
+    <section class="card">
+      <ul>
+        <li>User <bdi>إيان</bdi>: 90 points</li>
+        <li>User <bdi>Maria</bdi>: 80 points</li>
+      </ul>
+      <p><bdo dir="rtl">This sentence runs right to left.</bdo></p>
+      <p class="rtl" lang="ar" dir="rtl">مرحبا بالعالم</p>
+    </section>
+  </main>
+</body>
+</html>

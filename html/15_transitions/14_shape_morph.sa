@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 15_transitions/14: Shape morph -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Shape morph</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .morph { width: 9rem; height: 9rem; background: #14b8a6; border-radius: 12px; transition: border-radius 0.5s, background-color 0.5s, transform 0.5s; }
+    .morph:hover { border-radius: 50%; background: #8b5cf6; transform: rotate(180deg); }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Shape morph</h1>
+    <p class="lead">border-radius transitions a square into a circle.</p>
+    <div class="morph"></div>
+  </main>
+</body>
+</html>

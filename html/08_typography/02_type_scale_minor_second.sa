@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 08_typography/02: Type scale: Minor second -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Type scale: Minor second</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .scale p { margin: 0.25rem 0; line-height: 1.2; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+    .scale span { display: inline-block; width: 5rem; font-size: 0.8rem; color: #64748b; font-family: ui-monospace, monospace; }
+    .f0 { font-size: 1rem; }
+    .f1 { font-size: 1.067rem; }
+    .f2 { font-size: 1.138rem; }
+    .f3 { font-size: 1.215rem; }
+    .f4 { font-size: 1.296rem; }
+    .f5 { font-size: 1.383rem; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Type scale: Minor second</h1>
+    <p class="lead">Each size is 1.067 times the one below it.</p>
+    <div class="scale">
+      <p class="f5"><span>1.383rem</span>Quantum type</p>
+      <p class="f4"><span>1.296rem</span>Quantum type</p>
+      <p class="f3"><span>1.215rem</span>Quantum type</p>
+      <p class="f2"><span>1.138rem</span>Quantum type</p>
+      <p class="f1"><span>1.067rem</span>Quantum type</p>
+      <p class="f0"><span>1rem</span>Quantum type</p>
+    </div>
+  </main>
+</body>
+</html>

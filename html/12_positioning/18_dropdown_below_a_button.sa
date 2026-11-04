@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 12_positioning/18: Dropdown below a button -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dropdown below a button</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .menu { position: relative; display: inline-block; }
+    .menu button { padding: 0.6rem 1rem; border-radius: 8px; border: 1px solid #cbd5e1; background: #fff; font: inherit; }
+    .menu ul { position: absolute; top: calc(100% + 0.4rem); left: 0; min-width: 12rem; margin: 0; padding: 0.4rem; list-style: none; background: #fff; border-radius: 10px; box-shadow: 0 10px 30px rgb(0 0 0 / 0.15); visibility: hidden; opacity: 0; transition: opacity 0.15s; }
+    .menu:focus-within ul { visibility: visible; opacity: 1; }
+    .menu li a { display: block; padding: 0.5rem 0.6rem; border-radius: 6px; color: #0f172a; text-decoration: none; }
+    .menu li a:hover { background: #f1f5f9; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Dropdown below a button</h1>
+    <p class="lead">An absolutely positioned list under its button.</p>
+    <div class="menu">
+      <button type="button">Options &#9662;</button>
+      <ul>
+        <li><a href="#edit">Edit</a></li>
+        <li><a href="#copy">Duplicate</a></li>
+        <li><a href="#delete">Delete</a></li>
+      </ul>
+    </div>
+  </main>
+</body>
+</html>

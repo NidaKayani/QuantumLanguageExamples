@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 11_grid/20: Nested grids -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nested grids</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .grid { display: grid; gap: 0.5rem; }
+    .grid > * { background: #0ea5e9; color: #fff; padding: 1rem; border-radius: 8px; font-weight: 600; }
+    .grid { grid-template-columns: 1fr 2fr; }
+    .inner { display: grid; grid-template-columns: repeat(3, 1fr); gap: 0.4rem; background: #082f49; }
+    .inner span { background: #38bdf8; color: #082f49; border-radius: 6px; padding: 0.5rem; text-align: center; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Nested grids</h1>
+    <p class="lead">A grid item that is itself a grid.</p>
+    <div class="grid">
+      <div>Outer 1</div>
+      <div class="inner"><span>a</span><span>b</span><span>c</span><span>d</span><span>e</span><span>f</span></div>
+    </div>
+  </main>
+</body>
+</html>

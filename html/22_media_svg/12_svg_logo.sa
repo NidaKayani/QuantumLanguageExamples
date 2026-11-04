@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 22_media_svg/12: SVG logo -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SVG logo</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .art { background: #fff; border-radius: 16px; padding: 1rem; } .art svg { display: block; width: 100%; max-width: 26rem; height: auto; margin: 0 auto; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>SVG logo</h1>
+    <p class="lead">A badge logo built from a few shapes and text.</p>
+    <div class="art"><svg viewBox="0 0 240 240" role="img" aria-label="Quantum logo">
+      <circle cx="120" cy="120" r="110" fill="#0f172a"/>
+      <ellipse cx="120" cy="120" rx="90" ry="34" fill="none" stroke="#38bdf8" stroke-width="6"/>
+      <ellipse cx="120" cy="120" rx="90" ry="34" fill="none" stroke="#a78bfa" stroke-width="6" transform="rotate(60 120 120)"/>
+      <ellipse cx="120" cy="120" rx="90" ry="34" fill="none" stroke="#f472b6" stroke-width="6" transform="rotate(-60 120 120)"/>
+      <circle cx="120" cy="120" r="14" fill="#facc15"/>
+    </svg></div>
+  </main>
+</body>
+</html>

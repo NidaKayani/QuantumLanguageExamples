@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 07_colors/18: Gradient steps between two colours -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gradient steps between two colours</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .band { height: 3.5rem; border-radius: 10px; margin-bottom: 1rem; }
+    .srgb { background: linear-gradient(in srgb to right, #22d3ee, #f43f5e); }
+    .oklch { background: linear-gradient(in oklch to right, #22d3ee, #f43f5e); }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Gradient steps between two colours</h1>
+    <p class="lead">Seven stops interpolated in oklch versus srgb.</p>
+    <p>srgb</p><div class="band srgb"></div>
+    <p>oklch</p><div class="band oklch"></div>
+  </main>
+</body>
+</html>

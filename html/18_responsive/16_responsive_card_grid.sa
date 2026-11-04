@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 18_responsive/16: Responsive card grid -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Responsive card grid</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 14rem), 1fr)); gap: 1rem; }
+    .grid article { background: #fff; border-radius: 14px; padding: 1rem; box-shadow: 0 2px 8px rgb(0 0 0 / 0.06); }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Responsive card grid</h1>
+    <p class="lead">auto-fit and minmax: no media queries needed.</p>
+    <div class="grid">
+      <article><h2>Card 1</h2><p>Columns appear as room allows.</p></article>
+      <article><h2>Card 2</h2><p>Columns appear as room allows.</p></article>
+      <article><h2>Card 3</h2><p>Columns appear as room allows.</p></article>
+      <article><h2>Card 4</h2><p>Columns appear as room allows.</p></article>
+      <article><h2>Card 5</h2><p>Columns appear as room allows.</p></article>
+      <article><h2>Card 6</h2><p>Columns appear as room allows.</p></article>
+    </div>
+  </main>
+</body>
+</html>

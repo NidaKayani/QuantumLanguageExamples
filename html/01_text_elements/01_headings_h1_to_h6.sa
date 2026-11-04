@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 01_text_elements/01: Headings h1 to h6 -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Headings h1 to h6</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .card { background: #fff; border-radius: 12px; padding: 1.5rem; box-shadow: 0 1px 3px rgb(0 0 0 / 0.12); }
+    .card h2, .card h3, .card h4, .card h5, .card h6 { margin: 0.5em 0; color: #243b53; }
+    .card h6 { text-transform: uppercase; letter-spacing: 0.08em; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Headings h1 to h6</h1>
+    <p class="lead">Six levels of headings give a page its outline.</p>
+    <section class="card">
+      <h2>Level two: a section</h2>
+      <h3>Level three: a subsection</h3>
+      <h4>Level four: a topic</h4>
+      <h5>Level five: a detail</h5>
+      <h6>Level six: a label</h6>
+    </section>
+  </main>
+</body>
+</html>

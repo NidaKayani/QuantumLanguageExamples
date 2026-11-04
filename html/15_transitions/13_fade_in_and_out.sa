@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 15_transitions/13: Fade in and out -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Fade in and out</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .area { position: relative; width: 20rem; padding: 1rem; background: #fff; border-radius: 12px; }
+    .extra { opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s; margin-top: 0.5rem; padding: 0.75rem; background: #ecfeff; border-radius: 8px; }
+    .area:hover .extra, .area:focus-within .extra { opacity: 1; visibility: visible; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Fade in and out</h1>
+    <p class="lead">opacity and visibility together, so hidden items cannot be clicked.</p>
+    <div class="area" tabindex="0"><strong>Hover or focus here</strong><p class="extra">Extra details fade in.</p></div>
+  </main>
+</body>
+</html>

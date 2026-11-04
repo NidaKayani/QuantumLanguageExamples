@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 20_components/01: Buttons -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Buttons</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .btns { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+    .btn { padding: 0.65rem 1.25rem; border-radius: 10px; border: 2px solid transparent; font: inherit; font-weight: 600; cursor: pointer; }
+    .primary { background: #2563eb; color: #fff; }
+    .secondary { background: #e2e8f0; color: #0f172a; }
+    .outline { background: transparent; border-color: #2563eb; color: #2563eb; }
+    .ghost { background: transparent; color: #2563eb; }
+    .danger { background: #dc2626; color: #fff; }
+    .btn:disabled { opacity: 0.5; cursor: not-allowed; }
+    .btn:focus-visible { outline: 3px solid #f59e0b; outline-offset: 2px; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Buttons</h1>
+    <p class="lead">Primary, secondary, outline, ghost and disabled buttons.</p>
+    <div class="btns">
+      <button class="btn primary" type="button">Primary</button>
+      <button class="btn secondary" type="button">Secondary</button>
+      <button class="btn outline" type="button">Outline</button>
+      <button class="btn ghost" type="button">Ghost</button>
+      <button class="btn danger" type="button">Delete</button>
+      <button class="btn primary" type="button" disabled>Disabled</button>
+    </div>
+  </main>
+</body>
+</html>

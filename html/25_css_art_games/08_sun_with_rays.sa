@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 25_css_art_games/08: Sun with rays -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sun with rays</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .sun { position: relative; width: 14rem; height: 14rem; }
+    .sun span { position: absolute; left: 50%; top: 0; width: 0.8rem; height: 50%; margin-left: -0.4rem; transform-origin: bottom center; }
+    .sun span::before { content: ""; display: block; height: 2.6rem; border-radius: 999px; background: #f59e0b; }
+    .sun::after { content: ""; position: absolute; inset: 3.5rem; border-radius: 50%; background: radial-gradient(#fde047, #f59e0b); box-shadow: 0 0 40px #fbbf24; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Sun with rays</h1>
+    <p class="lead">Twelve rays rotated around a centre.</p>
+    <div class="sun" role="img" aria-label="A shining sun"><span style="transform: rotate(0deg)"></span><span style="transform: rotate(30deg)"></span><span style="transform: rotate(60deg)"></span><span style="transform: rotate(90deg)"></span><span style="transform: rotate(120deg)"></span><span style="transform: rotate(150deg)"></span><span style="transform: rotate(180deg)"></span><span style="transform: rotate(210deg)"></span><span style="transform: rotate(240deg)"></span><span style="transform: rotate(270deg)"></span><span style="transform: rotate(300deg)"></span><span style="transform: rotate(330deg)"></span></div>
+  </main>
+</body>
+</html>

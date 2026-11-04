@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 06_box_model/09: Outline versus border -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Outline versus border</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .pair { display: flex; gap: 2.5rem; align-items: flex-start; }
+    .pair div { width: 10rem; padding: 1rem; background: #fef3c7; }
+    .with-border { border: 4px solid #d97706; }
+    .with-outline { outline: 4px solid #d97706; outline-offset: 6px; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Outline versus border</h1>
+    <p class="lead">An outline takes no space and can sit outside the box.</p>
+    <div class="pair"><div class="with-border">border: grows the box</div><div class="with-outline">outline: drawn outside</div></div>
+  </main>
+</body>
+</html>

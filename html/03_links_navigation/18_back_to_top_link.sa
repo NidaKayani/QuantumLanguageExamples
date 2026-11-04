@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 03_links_navigation/18: Back to top link -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Back to top link</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    html { scroll-behavior: smooth; }
+    .long { height: 150vh; background: linear-gradient(#e0f2fe, #fce7f3); border-radius: 12px; padding: 1rem; }
+    .top { position: fixed; right: 1.5rem; bottom: 1.5rem; display: grid; place-items: center; width: 3rem; height: 3rem; border-radius: 50%; background: #0f172a; color: #fff; text-decoration: none; font-size: 1.4rem; box-shadow: 0 4px 12px rgb(0 0 0 / 0.3); }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Back to top link</h1>
+    <p class="lead">A fixed link that jumps back to the start of the page.</p>
+    <div class="long" id="start"><p>Scroll down, then use the arrow in the corner.</p></div>
+    <a class="top" href="#start" aria-label="Back to top">&uarr;</a>
+  </main>
+</body>
+</html>

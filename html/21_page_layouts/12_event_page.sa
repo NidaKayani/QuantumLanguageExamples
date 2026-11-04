@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 21_page_layouts/12: Event page -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Event page</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .site-header { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; }
+    .site-header nav a { margin-left: 1.25rem; color: #334155; text-decoration: none; }
+    .logo { font-weight: 800; font-size: 1.2rem; color: #0f172a; text-decoration: none; }
+    .site-footer { margin-top: 3rem; padding: 1.5rem 0; border-top: 1px solid #e2e8f0; color: #64748b; font-size: 0.9rem; }
+    .event { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 2rem; }
+    .when { background: #fff; border-radius: 16px; padding: 1.5rem; }
+    .when strong { display: block; font-size: 1.4rem; }
+    .schedule { list-style: none; padding: 0; }
+    .schedule li { display: grid; grid-template-columns: 5rem 1fr; padding: 0.6rem 0; border-bottom: 1px solid #e2e8f0; }
+    .schedule time { font-weight: 700; color: #4f46e5; }
+    .ticket { display: inline-block; margin-top: 1rem; padding: 0.8rem 1.4rem; border-radius: 12px; background: #e11d48; color: #fff; text-decoration: none; font-weight: 700; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Event page</h1>
+    <p class="lead">Date, place, schedule and a ticket button.</p>
+    <header class="site-header"><a class="logo" href="#top">WebConf</a><nav aria-label="Main"><a href="#speakers">Speakers</a><a href="#schedule">Schedule</a><a href="#venue">Venue</a></nav></header>
+    <h2>WebConf Lahore 2026</h2>
+    <section class="event">
+      <div class="when"><strong><time datetime="2026-12-12">12 December 2026</time></strong><p>Alhamra Arts Centre, Lahore</p><a class="ticket" href="#tickets">Get tickets</a></div>
+      <ol class="schedule">
+        <li><time datetime="09:00">09:00</time><span>Doors open</span></li>
+        <li><time datetime="10:00">10:00</time><span>Keynote: the open web</span></li>
+        <li><time datetime="12:30">12:30</time><span>Lunch</span></li>
+        <li><time datetime="14:00">14:00</time><span>Workshop: modern CSS</span></li>
+      </ol>
+    </section>
+    <footer class="site-footer"><p>&copy; 2026 Quantum Logics Labs. Made with HTML and CSS.</p></footer>
+  </main>
+</body>
+</html>

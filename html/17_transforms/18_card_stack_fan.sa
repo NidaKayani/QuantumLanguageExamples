@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 17_transforms/18: Card stack fan -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Card stack fan</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .fan { position: relative; width: 8rem; height: 11rem; margin: 3rem auto 6rem; }
+    .fan div { position: absolute; inset: 0; border-radius: 12px; border: 2px solid #fff; transform-origin: bottom center; box-shadow: 0 4px 12px rgb(0 0 0 / 0.2); }
+    .fan div:nth-child(1) { transform: rotate(-30deg); background: #dd573c; }
+    .fan div:nth-child(2) { transform: rotate(-15deg); background: #dddd3c; }
+    .fan div:nth-child(3) { transform: rotate(0deg); background: #57dd3c; }
+    .fan div:nth-child(4) { transform: rotate(15deg); background: #3cdda7; }
+    .fan div:nth-child(5) { transform: rotate(30deg); background: #3c8cdd; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Card stack fan</h1>
+    <p class="lead">Cards fanned out from a shared origin.</p>
+    <div class="fan"><div></div><div></div><div></div><div></div><div></div></div>
+  </main>
+</body>
+</html>

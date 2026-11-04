@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 12_positioning/04: Sticky section headings -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sticky section headings</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .list { height: 22rem; overflow-y: auto; background: #fff; border-radius: 12px; }
+    .list h2 { position: sticky; top: 0; margin: 0; padding: 0.5rem 1rem; background: #e0e7ff; font-size: 1rem; }
+    .list p { margin: 0; padding: 0.6rem 1rem; border-bottom: 1px solid #f1f5f9; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Sticky section headings</h1>
+    <p class="lead">Headings stick to the top until the next section pushes them away.</p>
+    <div class="list">
+      <section><h2>A</h2><p>Alice</p><p>Arnold</p><p>Aster</p><p>Audrey</p></section>
+      <section><h2>B</h2><p>Blice</p><p>Brnold</p><p>Bster</p><p>Budrey</p></section>
+      <section><h2>C</h2><p>Clice</p><p>Crnold</p><p>Cster</p><p>Cudrey</p></section>
+      <section><h2>D</h2><p>Dlice</p><p>Drnold</p><p>Dster</p><p>Dudrey</p></section>
+      <section><h2>E</h2><p>Elice</p><p>Ernold</p><p>Ester</p><p>Eudrey</p></section>
+      <section><h2>F</h2><p>Flice</p><p>Frnold</p><p>Fster</p><p>Fudrey</p></section>
+    </div>
+  </main>
+</body>
+</html>

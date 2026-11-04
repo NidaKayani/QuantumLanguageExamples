@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 24_data_visualization/18: Leaderboard -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Leaderboard</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .board { list-style: none; padding: 0; counter-reset: rank; }
+    .board li { counter-increment: rank; position: relative; display: flex; justify-content: space-between; padding: 0.7rem 1rem; margin: 0.35rem 0; border-radius: 10px; background: #fff; overflow: hidden; }
+    .board li::before { content: counter(rank) ". "; font-weight: 800; margin-right: 0.5rem; }
+    .board li::after { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: var(--s); background: rgb(99 102 241 / 0.15); }
+    .board span { position: relative; flex: 1; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Leaderboard</h1>
+    <p class="lead">Ranked rows with bars behind the names.</p>
+    <ol class="board">
+      <li style="--s: 96%"><span>Ayesha</span><b>960</b></li>
+      <li style="--s: 88%"><span>Bilal</span><b>880</b></li>
+      <li style="--s: 75%"><span>Chen</span><b>750</b></li>
+      <li style="--s: 61%"><span>Dina</span><b>610</b></li>
+      <li style="--s: 43%"><span>Eli</span><b>430</b></li>
+    </ol>
+  </main>
+</body>
+</html>

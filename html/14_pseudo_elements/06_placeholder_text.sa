@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 14_pseudo_elements/06: Placeholder text -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Placeholder text</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .fields input { display: block; width: 20rem; margin: 0.5rem 0; padding: 0.7rem; border: 1px solid #cbd5e1; border-radius: 8px; font: inherit; }
+    .fields input::placeholder { color: #a78bfa; font-style: italic; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Placeholder text</h1>
+    <p class="lead">::placeholder styles the hint inside empty fields.</p>
+    <form class="fields" action="#">
+      <input aria-label="Name" placeholder="Your name">
+      <input aria-label="Email" placeholder="you@example.com">
+    </form>
+  </main>
+</body>
+</html>

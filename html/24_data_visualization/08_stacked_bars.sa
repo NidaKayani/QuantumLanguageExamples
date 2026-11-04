@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 24_data_visualization/08: Stacked bars -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Stacked bars</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .stack { display: grid; gap: 0.6rem; background: #fff; border-radius: 16px; padding: 1.25rem; }
+    .stack div { display: flex; height: 1.8rem; border-radius: 8px; overflow: hidden; }
+    .stack span { display: grid; place-items: center; color: #fff; font-size: 0.75rem; font-weight: 700; }
+    .a { background: #f97316; } .b { background: #3b82f6; } .c { background: #10b981; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Stacked bars</h1>
+    <p class="lead">Each bar split into segments that add up to 100%.</p>
+    <div class="stack" role="img" aria-label="Mobile share grows every year">
+      <p>2023</p><div><span class="a" style="width: 40%">40%</span><span class="b" style="width: 35%">35%</span><span class="c" style="width: 25%">25%</span></div>
+      <p>2024</p><div><span class="a" style="width: 30%">30%</span><span class="b" style="width: 40%">40%</span><span class="c" style="width: 30%">30%</span></div>
+      <p>2025</p><div><span class="a" style="width: 25%">25%</span><span class="b" style="width: 35%">35%</span><span class="c" style="width: 40%">40%</span></div>
+      <p>2026</p><div><span class="a" style="width: 20%">20%</span><span class="b" style="width: 30%">30%</span><span class="c" style="width: 50%">50%</span></div>
+    </div>
+  </main>
+</body>
+</html>

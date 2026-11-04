@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 06_box_model/01: The four boxes -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The four boxes</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .margin { background: #fde68a; padding: 1.5rem; display: inline-block; }
+    .border { background: #1f2937; padding: 0.75rem; }
+    .padding { background: #86efac; padding: 1.5rem; }
+    .content { background: #93c5fd; padding: 1rem 2rem; text-align: center; font-weight: 700; }
+    .legend span { display: inline-block; width: 1rem; height: 1rem; vertical-align: middle; margin: 0 0.4rem 0 1rem; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>The four boxes</h1>
+    <p class="lead">Content, padding, border and margin, each tinted.</p>
+    <div class="margin"><div class="border"><div class="padding"><div class="content">content</div></div></div></div>
+    <p class="legend"><span style="background: #fde68a"></span>margin<span style="background: #1f2937"></span>border<span style="background: #86efac"></span>padding<span style="background: #93c5fd"></span>content</p>
+  </main>
+</body>
+</html>

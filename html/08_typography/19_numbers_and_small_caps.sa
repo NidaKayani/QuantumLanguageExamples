@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 08_typography/19: Numbers and small caps -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Numbers and small caps</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .fv p { font-size: 1.3rem; margin: 0.5rem 0; font-family: Georgia, serif; }
+    .sc { font-variant-caps: small-caps; }
+    .tab { font-variant-numeric: tabular-nums; }
+    .old { font-variant-numeric: oldstyle-nums; }
+    .frac { font-variant-numeric: diagonal-fractions; }
+    .ord { font-variant-numeric: ordinal; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Numbers and small caps</h1>
+    <p class="lead">font-variant options for figures and capitals.</p>
+    <div class="fv">
+      <p class="sc">Small Caps Heading</p>
+      <p class="tab">Tabular: 111.11 / 999.99</p>
+      <p class="old">Oldstyle: 1234567890</p>
+      <p class="frac">Fractions: 1/2 3/4</p>
+      <p class="ord">Ordinals: 1st 2nd 3rd</p>
+    </div>
+  </main>
+</body>
+</html>

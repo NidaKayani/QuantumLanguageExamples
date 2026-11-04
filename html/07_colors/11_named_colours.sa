@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 07_colors/11: Named colours -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Named colours</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .named { display: grid; grid-template-columns: repeat(auto-fill, minmax(8rem, 1fr)); gap: 0.5rem; list-style: none; padding: 0; }
+    .named li { height: 5rem; border-radius: 10px; display: flex; align-items: flex-end; padding: 0.5rem; color: #fff; font-weight: 600; text-shadow: 0 1px 2px rgb(0 0 0 / 0.6); }
+    .c-tomato { background: tomato; }
+    .c-coral { background: coral; }
+    .c-gold { background: gold; }
+    .c-khaki { background: khaki; }
+    .c-olivedrab { background: olivedrab; }
+    .c-seagreen { background: seagreen; }
+    .c-teal { background: teal; }
+    .c-steelblue { background: steelblue; }
+    .c-royalblue { background: royalblue; }
+    .c-slateblue { background: slateblue; }
+    .c-orchid { background: orchid; }
+    .c-plum { background: plum; }
+    .c-hotpink { background: hotpink; }
+    .c-crimson { background: crimson; }
+    .c-sienna { background: sienna; }
+    .c-peru { background: peru; }
+    .c-tan { background: tan; }
+    .c-silver { background: silver; }
+    .c-dimgray { background: dimgray; }
+    .c-midnightblue { background: midnightblue; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Named colours</h1>
+    <p class="lead">Twenty of the 148 colour keywords CSS understands.</p>
+    <ul class="named">
+      <li class="c-tomato">tomato</li>
+      <li class="c-coral">coral</li>
+      <li class="c-gold">gold</li>
+      <li class="c-khaki">khaki</li>
+      <li class="c-olivedrab">olivedrab</li>
+      <li class="c-seagreen">seagreen</li>
+      <li class="c-teal">teal</li>
+      <li class="c-steelblue">steelblue</li>
+      <li class="c-royalblue">royalblue</li>
+      <li class="c-slateblue">slateblue</li>
+      <li class="c-orchid">orchid</li>
+      <li class="c-plum">plum</li>
+      <li class="c-hotpink">hotpink</li>
+      <li class="c-crimson">crimson</li>
+      <li class="c-sienna">sienna</li>
+      <li class="c-peru">peru</li>
+      <li class="c-tan">tan</li>
+      <li class="c-silver">silver</li>
+      <li class="c-dimgray">dimgray</li>
+      <li class="c-midnightblue">midnightblue</li>
+    </ul>
+  </main>
+</body>
+</html>

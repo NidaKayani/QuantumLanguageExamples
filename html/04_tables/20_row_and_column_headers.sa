@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 04_tables/20: Row and column headers -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Row and column headers</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    table { border-collapse: collapse; width: 100%; background: #fff; }
+    th, td { padding: 0.6rem 0.9rem; border-bottom: 1px solid #e2e8f0; text-align: left; }
+    th { background: #f8fafc; font-weight: 600; }
+    tbody th { background: #f1f5f9; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Row and column headers</h1>
+    <p class="lead">th with scope tells screen readers which cells a header labels.</p>
+    <table>
+      <caption>Opening hours</caption>
+      <thead><tr><td></td><th scope="col">Open</th><th scope="col">Close</th></tr></thead>
+      <tbody>
+        <tr><th scope="row">Weekdays</th><td>08:00</td><td>20:00</td></tr>
+        <tr><th scope="row">Saturday</th><td>09:00</td><td>18:00</td></tr>
+        <tr><th scope="row">Sunday</th><td>10:00</td><td>16:00</td></tr>
+      </tbody>
+    </table>
+  </main>
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 14_pseudo_elements/08: Tooltips from data attributes -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tooltips from data attributes</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .tip { position: relative; border-bottom: 2px dotted #6366f1; cursor: help; }
+    .tip::after { content: attr(data-tip); position: absolute; left: 0; bottom: 130%; width: max-content; max-width: 16rem; padding: 0.4rem 0.6rem; border-radius: 6px; background: #1e1b4b; color: #fff; font-size: 0.85rem; opacity: 0; transition: opacity 0.15s; pointer-events: none; }
+    .tip:hover::after, .tip:focus::after { opacity: 1; }
+    p { margin-top: 3rem; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Tooltips from data attributes</h1>
+    <p class="lead">attr() reads the tip text from the element.</p>
+    <p>Hover over <span class="tip" tabindex="0" data-tip="HyperText Markup Language">HTML</span> or
+    <span class="tip" tabindex="0" data-tip="Cascading Style Sheets">CSS</span>.</p>
+  </main>
+</body>
+</html>

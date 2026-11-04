@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 21_page_layouts/08: 404 page -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>404 page</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .lost { min-height: 70vh; display: grid; place-items: center; text-align: center; }
+    .code { font-size: clamp(5rem, 18vw, 10rem); font-weight: 900; line-height: 1; background: linear-gradient(135deg, #6366f1, #ec4899); -webkit-background-clip: text; background-clip: text; color: transparent; margin: 0; }
+    .lost a { display: inline-block; margin-top: 1rem; padding: 0.75rem 1.5rem; border-radius: 12px; background: #0f172a; color: #fff; text-decoration: none; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>404 page</h1>
+    <p class="lead">A friendly not-found page with a way back.</p>
+    <section class="lost"><div><p class="code">404</p><h2>This page wandered off</h2><p>The link may be broken, or the page may have moved.</p><a href="#home">Back to the home page</a></div></section>
+  </main>
+</body>
+</html>

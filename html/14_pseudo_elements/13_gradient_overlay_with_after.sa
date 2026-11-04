@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 14_pseudo_elements/13: Gradient overlay with ::after -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gradient overlay with ::after</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .banner { position: relative; height: 15rem; border-radius: 16px; overflow: hidden; background: linear-gradient(135deg, #34d399, #3b82f6); }
+    .banner::after { content: ""; position: absolute; inset: 0; background: linear-gradient(to top, rgb(0 0 0 / 0.7), transparent 60%); }
+    .banner h2 { position: absolute; left: 1.5rem; bottom: 1rem; margin: 0; color: #fff; z-index: 1; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Gradient overlay with ::after</h1>
+    <p class="lead">A shade over a picture so text stays readable.</p>
+    <div class="banner"><h2>Readable on any background</h2></div>
+  </main>
+</body>
+</html>

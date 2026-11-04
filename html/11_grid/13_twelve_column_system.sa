@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 11_grid/13: Twelve-column system -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Twelve-column system</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .cols { display: grid; grid-template-columns: repeat(12, 1fr); gap: 0.5rem; }
+    .cols div { background: #fda4af; padding: 0.75rem 0; text-align: center; border-radius: 6px; font-size: 0.85rem; }
+    .s12 { grid-column: span 12; } .s8 { grid-column: span 8; } .s4 { grid-column: span 4; }
+    .s6 { grid-column: span 6; } .s3 { grid-column: span 3; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Twelve-column system</h1>
+    <p class="lead">A classic 12-column grid with spans.</p>
+    <div class="cols">
+      <div class="s12">12</div>
+      <div class="s8">8</div><div class="s4">4</div>
+      <div class="s6">6</div><div class="s6">6</div>
+      <div class="s3">3</div><div class="s3">3</div><div class="s3">3</div><div class="s3">3</div>
+    </div>
+  </main>
+</body>
+</html>

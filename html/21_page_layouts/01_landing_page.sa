@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 21_page_layouts/01: Landing page -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Landing page</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .site-header { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; }
+    .site-header nav a { margin-left: 1.25rem; color: #334155; text-decoration: none; }
+    .logo { font-weight: 800; font-size: 1.2rem; color: #0f172a; text-decoration: none; }
+    .site-footer { margin-top: 3rem; padding: 1.5rem 0; border-top: 1px solid #e2e8f0; color: #64748b; font-size: 0.9rem; }
+    .hero { text-align: center; padding: 4rem 1rem; }
+    .hero h2 { font-size: clamp(2rem, 5vw, 3.5rem); margin: 0 0 1rem; line-height: 1.1; }
+    .hero p { font-size: 1.2rem; color: #475569; max-width: 36rem; margin: 0 auto 2rem; }
+    .cta { display: inline-block; padding: 0.9rem 1.8rem; border-radius: 12px; background: #4f46e5; color: #fff; font-weight: 700; text-decoration: none; }
+    .features { display: grid; grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr)); gap: 1.25rem; }
+    .features article { background: #fff; padding: 1.5rem; border-radius: 16px; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Landing page</h1>
+    <p class="lead">Hero, features and a call to action.</p>
+    <header class="site-header"><a class="logo" href="#top">Quantum</a><nav aria-label="Main"><a href="#features">Features</a><a href="#pricing">Pricing</a><a href="#docs">Docs</a></nav></header>
+    <section class="hero"><h2>Write once, run everywhere</h2><p>One compiler for Quantum, C, C++, Java, Python, JavaScript, Ruby, HTML and CSS.</p><a class="cta" href="#start">Get started free</a></section>
+    <section class="features">
+      <article><h3>Strict</h3><p>Errors reported the way the real tools report them.</p></article>
+      <article><h3>Fast</h3><p>Compiled to bytecode and run on a small VM.</p></article>
+      <article><h3>Friendly</h3><p>Typos come with a "Did you mean" hint.</p></article>
+    </section>
+    <footer class="site-footer"><p>&copy; 2026 Quantum Logics Labs. Made with HTML and CSS.</p></footer>
+  </main>
+</body>
+</html>

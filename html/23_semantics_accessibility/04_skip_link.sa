@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 23_semantics_accessibility/04: Skip link -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Skip link</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .skip { position: absolute; left: 1rem; top: 1rem; transform: translateY(-200%); padding: 0.7rem 1rem; background: #0f172a; color: #fff; border-radius: 8px; z-index: 10; }
+    .skip:focus { transform: none; }
+    .fake-nav { display: flex; gap: 1rem; margin-bottom: 1rem; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Skip link</h1>
+    <p class="lead">A link to the main content, visible when focused.</p>
+    <a class="skip" href="#main-content">Skip to main content</a>
+    <nav class="fake-nav" aria-label="Main"><a href="#1">One</a><a href="#2">Two</a><a href="#3">Three</a><a href="#4">Four</a></nav>
+    <section id="main-content" tabindex="-1"><h2>Main content</h2><p>Press Tab to reveal the skip link.</p></section>
+  </main>
+</body>
+</html>

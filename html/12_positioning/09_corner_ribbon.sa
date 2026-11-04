@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 12_positioning/09: Corner ribbon -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Corner ribbon</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .card { position: relative; overflow: hidden; width: 18rem; padding: 2rem 1.5rem; background: #fff; border-radius: 12px; box-shadow: 0 4px 16px rgb(0 0 0 / 0.1); }
+    .ribbon { position: absolute; top: 1.4rem; right: -2.6rem; width: 10rem; padding: 0.3rem 0; text-align: center; background: #dc2626; color: #fff; font-size: 0.75rem; font-weight: 800; letter-spacing: 0.1em; transform: rotate(45deg); }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Corner ribbon</h1>
+    <p class="lead">A rotated ribbon across the corner of a card.</p>
+    <div class="card"><span class="ribbon">NEW</span><h2>Pro plan</h2><p>Everything in Free, plus more.</p></div>
+  </main>
+</body>
+</html>

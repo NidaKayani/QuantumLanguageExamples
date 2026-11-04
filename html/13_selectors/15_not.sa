@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 13_selectors/15: :not() -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>:not()</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .items { display: grid; grid-template-columns: repeat(6, 1fr); gap: 0.4rem; list-style: none; padding: 0; }
+    .items li { background: #e2e8f0; padding: 0.75rem 0; text-align: center; border-radius: 8px; }
+    .items li:not(:nth-child(4n)) { background: #a5b4fc; }
+    .items li:not(.keep) { opacity: 0.85; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>:not()</h1>
+    <p class="lead">Every item except the ones that match.</p>
+    <ul class="items">
+      <li>Item 1</li>
+      <li>Item 2</li>
+      <li>Item 3</li>
+      <li class="keep">Item 4</li>
+      <li>Item 5</li>
+      <li>Item 6</li>
+      <li>Item 7</li>
+      <li>Item 8</li>
+      <li>Item 9</li>
+      <li>Item 10</li>
+      <li>Item 11</li>
+      <li>Item 12</li>
+    </ul>
+  </main>
+</body>
+</html>

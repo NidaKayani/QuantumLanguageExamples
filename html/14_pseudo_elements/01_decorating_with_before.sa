@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 14_pseudo_elements/01: Decorating with ::before -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Decorating with ::before</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .title::before { content: ""; display: inline-block; width: 0.6rem; height: 1.2em; margin-right: 0.6rem; vertical-align: -0.2em; background: linear-gradient(#f43f5e, #f97316); border-radius: 4px; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Decorating with ::before</h1>
+    <p class="lead">Generated content in front of a heading.</p>
+    <h2 class="title">Section title</h2>
+    <h2 class="title">Another section</h2>
+  </main>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 18_responsive/15: High-density screens -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>High-density screens</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .line { height: 1px; background: #0f172a; margin: 1rem 0; }
+    @media (min-resolution: 2dppx) { .line { transform: scaleY(0.5); } .dppx::after { content: " (this screen has 2x pixels or more)"; } }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>High-density screens</h1>
+    <p class="lead">resolution media queries for crisp borders on retina displays.</p>
+    <p class="dppx">A hairline divider</p><div class="line"></div>
+  </main>
+</body>
+</html>

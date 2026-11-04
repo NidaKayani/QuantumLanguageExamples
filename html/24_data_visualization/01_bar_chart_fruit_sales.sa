@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 24_data_visualization/01: Bar chart: Fruit sales -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bar chart: Fruit sales</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .chart { list-style: none; padding: 1.25rem; background: #fff; border-radius: 16px; }
+    .chart li { display: grid; grid-template-columns: 7rem 1fr 4rem; align-items: center; gap: 0.75rem; margin: 0.5rem 0; }
+    .bar { height: 1.4rem; width: var(--w); border-radius: 0 6px 6px 0; background: linear-gradient(90deg, #6366f1, #a855f7); }
+    .value { font-variant-numeric: tabular-nums; text-align: right; color: #475569; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Bar chart: Fruit sales</h1>
+    <p class="lead">Horizontal bars sized by a custom property per row.</p>
+    <ul class="chart" aria-label="Fruit sales">
+      <li><span class="label">Apples</span><span class="bar" style="--w: 100.0%"></span><span class="value">42</span></li>
+      <li><span class="label">Bananas</span><span class="bar" style="--w: 73.8%"></span><span class="value">31</span></li>
+      <li><span class="label">Cherries</span><span class="bar" style="--w: 42.9%"></span><span class="value">18</span></li>
+      <li><span class="label">Dates</span><span class="bar" style="--w: 21.4%"></span><span class="value">9</span></li>
+    </ul>
+  </main>
+</body>
+</html>

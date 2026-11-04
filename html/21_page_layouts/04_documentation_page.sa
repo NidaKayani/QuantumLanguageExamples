@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 21_page_layouts/04: Documentation page -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Documentation page</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .docs { display: grid; grid-template-columns: 13rem 1fr 11rem; gap: 2rem; align-items: start; }
+    .docs nav, .docs aside { position: sticky; top: 1rem; font-size: 0.9rem; }
+    .docs nav a, .docs aside a { display: block; padding: 0.3rem 0; color: #475569; text-decoration: none; }
+    .docs nav a[aria-current] { color: #4f46e5; font-weight: 700; }
+    .docs main { background: #fff; padding: 1.5rem 2rem; border-radius: 14px; }
+    .docs pre { background: #0f172a; color: #e2e8f0; padding: 1rem; border-radius: 10px; overflow-x: auto; }
+    @media (max-width: 60rem) { .docs { grid-template-columns: 1fr; } .docs aside { display: none; } }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Documentation page</h1>
+    <p class="lead">Sidebar navigation, content and an on-page outline.</p>
+    <div class="docs">
+      <nav aria-label="Docs"><a href="#i">Install</a><a href="#q" aria-current="page">Quick start</a><a href="#h">HTML</a><a href="#c">CSS</a></nav>
+      <main>
+        <h2 id="quick">Quick start</h2>
+        <p>Compile a page and print the document a browser would build:</p>
+        <pre><code>qrun --strict index.html style.css</code></pre>
+        <h3 id="errors">Errors</h3>
+        <p>Problems are reported with the file, line and column.</p>
+      </main>
+      <aside aria-label="On this page"><a href="#quick">Quick start</a><a href="#errors">Errors</a></aside>
+    </div>
+  </main>
+</body>
+</html>

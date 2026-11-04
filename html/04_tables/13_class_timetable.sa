@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 04_tables/13: Class timetable -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Class timetable</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    table { border-collapse: collapse; width: 100%; background: #fff; }
+    th, td { padding: 0.6rem 0.9rem; border-bottom: 1px solid #e2e8f0; text-align: left; }
+    th { background: #f8fafc; font-weight: 600; }
+    td, th { border: 1px solid #e2e8f0; text-align: center; }
+    .math { background: #dbeafe; } .art { background: #fce7f3; } .sci { background: #dcfce7; } .pe { background: #fef3c7; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Class timetable</h1>
+    <p class="lead">A school week with colour-coded subjects.</p>
+    <table>
+      <thead><tr><th>Time</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th></tr></thead>
+      <tbody>
+        <tr><th>9:00</th><td class="math">Maths</td><td class="sci">Science</td><td class="math">Maths</td><td class="art">Art</td><td class="pe">PE</td></tr>
+        <tr><th>10:00</th><td class="sci">Science</td><td class="math">Maths</td><td class="art">Art</td><td class="math">Maths</td><td class="sci">Science</td></tr>
+        <tr><th>11:00</th><td class="pe">PE</td><td class="art">Art</td><td class="sci">Science</td><td class="pe">PE</td><td class="math">Maths</td></tr>
+      </tbody>
+    </table>
+  </main>
+</body>
+</html>

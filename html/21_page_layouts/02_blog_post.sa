@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 21_page_layouts/02: Blog post -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog post</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .site-header { display: flex; justify-content: space-between; align-items: center; padding: 1rem 0; }
+    .site-header nav a { margin-left: 1.25rem; color: #334155; text-decoration: none; }
+    .logo { font-weight: 800; font-size: 1.2rem; color: #0f172a; text-decoration: none; }
+    .site-footer { margin-top: 3rem; padding: 1.5rem 0; border-top: 1px solid #e2e8f0; color: #64748b; font-size: 0.9rem; }
+    .post { max-width: 42rem; margin: 0 auto; font-size: 1.1rem; }
+    .post h2 { font-size: 2.4rem; line-height: 1.15; margin-bottom: 0.5rem; }
+    .byline { color: #64748b; font-size: 0.95rem; }
+    .post figure { margin: 2rem 0; }
+    .post img { width: 100%; height: auto; border-radius: 12px; }
+    .post figcaption { font-size: 0.9rem; color: #64748b; text-align: center; }
+    .post blockquote { border-left: 4px solid #4f46e5; margin: 1.5rem 0; padding-left: 1rem; font-style: italic; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Blog post</h1>
+    <p class="lead">A readable article with a byline and figures.</p>
+    <header class="site-header"><a class="logo" href="#top">Quantum</a><nav aria-label="Main"><a href="#features">Features</a><a href="#pricing">Pricing</a><a href="#docs">Docs</a></nav></header>
+    <article class="post">
+      <h2>Why your CSS deserves a compiler</h2>
+      <p class="byline">By <a href="#author">Sana Malik</a> &middot; <time datetime="2026-11-04">4 November 2026</time> &middot; 5 min read</p>
+      <p>Browsers forgive mistakes silently. A misspelled property is simply ignored, and you only notice when the page looks wrong.</p>
+      <figure><img src="https://picsum.photos/seed/blog/1200/600" alt="A desk with a laptop and a notebook" width="1200" height="600"><figcaption>Catching typos before they reach the browser.</figcaption></figure>
+      <blockquote><p>The best bug is the one you never ship.</p></blockquote>
+      <p>A compiler reads your stylesheet the way a validator does and tells you exactly where the problem is.</p>
+    </article>
+    <footer class="site-footer"><p>&copy; 2026 Quantum Logics Labs. Made with HTML and CSS.</p></footer>
+  </main>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 20_components/18: Search results list -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Search results list</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .results { list-style: none; padding: 0; max-width: 40rem; }
+    .results li { padding: 1rem 0; border-bottom: 1px solid #e2e8f0; }
+    .results a { font-size: 1.15rem; color: #1d4ed8; text-decoration: none; }
+    .results a:hover { text-decoration: underline; }
+    .results cite { display: block; font-style: normal; font-size: 0.85rem; color: #15803d; }
+    .results p { margin: 0.25rem 0 0; color: #475569; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Search results list</h1>
+    <p class="lead">Title, address and snippet for each result.</p>
+    <ol class="results">
+      <li><a href="#r1">CSS Grid Layout guide</a><cite>developer.mozilla.org</cite><p>A complete guide to grid tracks, areas and alignment.</p></li>
+      <li><a href="#r2">Flexbox explained</a><cite>example.com/flexbox</cite><p>Main axis, cross axis and everything in between.</p></li>
+      <li><a href="#r3">HTML validation</a><cite>validator.w3.org</cite><p>Check your markup against the HTML standard.</p></li>
+    </ol>
+  </main>
+</body>
+</html>

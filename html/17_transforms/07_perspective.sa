@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<!-- Quantum HTML + CSS example 17_transforms/07: Perspective -->
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Perspective</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; }
+    body {
+      margin: 0;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      line-height: 1.5;
+      color: #1f2933;
+      background: #f5f7fa;
+    }
+    .demo { max-width: 60rem; margin: 0 auto; padding: 2rem 1.25rem; }
+    .demo > h1 { margin: 0 0 0.25rem; font-size: 2rem; }
+    .lead { margin: 0 0 2rem; color: #52606d; }
+
+    .row { display: flex; flex-wrap: wrap; gap: 2.5rem; padding: 2rem; background: #fff; border-radius: 14px; }
+    .row div { width: 6rem; height: 6rem; display: grid; place-items: center; border-radius: 10px; background: #a78bfa; color: #fff; font-size: 0.75rem; font-weight: 700; text-align: center; }
+    .row > section { width: 8rem; height: 8rem; display: grid; place-items: center; }
+    .p1 { perspective: 200px; } .p2 { perspective: 600px; } .p3 { perspective: 2000px; }
+    .row section div { transform: rotateY(55deg); background: #60a5fa; }
+  </style>
+</head>
+<body>
+  <main class="demo">
+    <h1>Perspective</h1>
+    <p class="lead">The same 3D rotation at three viewing distances.</p>
+    <div class="row">
+      <section class="p1"><div>200px</div></section>
+      <section class="p2"><div>600px</div></section>
+      <section class="p3"><div>2000px</div></section>
+    </div>
+  </main>
+</body>
+</html>
