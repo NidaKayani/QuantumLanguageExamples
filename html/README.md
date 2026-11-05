@@ -15,8 +15,10 @@ qrun --test examples                                # run every example, these i
 ```
 
 The pages compile with no errors and no warnings. Errors are things like an
-unclosed element, an unknown property, a length with no unit or a misspelled
-pseudo-class. The test runner fails a page that has any error.
+unclosed element, misnested tags, a misspelled property, a length with no
+unit or a misspelled pseudo-class. A property name that is not close to any
+the checker knows is only a warning and is kept, since it may be newer than
+the checker's list. The test runner fails a page that has any error.
 
 ## Topics
 
