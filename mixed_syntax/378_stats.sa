@@ -1,0 +1,12 @@
+// Mixed-syntax example 378: basic statistics
+# Syntax used: C-style headers, C++, JavaScript, Python blocks
+
+data = [10, 75, 59, 92, 53]
+let s = sorted(data)
+print(f"min {min(data)}, max {max(data)}, sum {sum(data)}")
+cout << "median " << (s[floor(len(s) / 2)]) << endl
+printf("mean %.2f\n", sum(data) / len(data))
+var = 0
+for x in data:
+    var += (x - sum(data) / len(data)) ** 2
+printf("variance %.2f, std dev %.2f\n", var / len(data), sqrt(var / len(data)))

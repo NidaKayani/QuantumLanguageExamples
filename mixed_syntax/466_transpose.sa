@@ -1,0 +1,21 @@
+// Mixed-syntax example 466: transpose of a 4x4 matrix
+# Syntax used: brace blocks, C-style headers, Quantum fn, JavaScript, Python blocks
+
+fn transpose(m) {
+    let out = [];
+    for (int j = 0; j < len(m[0]); ++j) {
+        let col = []
+        for i in range(0, len(m)) {
+            col.push_back(m[i][j])
+        }
+        out.push_back(col);
+    }
+    return out
+}
+let M = [[42, 43, 14, 43], [39, 22, 44, 35], [44, 48, 13, 49], [2, 5, 49, 26]]
+let T = transpose(M)
+for row in T:
+    console.log(row)
+for row in M {
+    console.log("row sum", sum(row))
+}

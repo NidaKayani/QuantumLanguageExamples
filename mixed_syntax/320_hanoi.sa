@@ -1,0 +1,16 @@
+// Mixed-syntax example 320: Towers of Hanoi with 4 disks
+# Syntax used: C-style headers, Quantum fn, JavaScript, Python blocks, Ruby do/end
+
+fn hanoi(n, src, dst, via, moves) {
+    if n == 0
+        return
+    end
+    hanoi(n - 1, src, via, dst, moves);
+    moves.push_back(src + "->" + dst);
+    hanoi(n - 1, via, dst, src, moves);
+}
+moves = []
+hanoi(4, "A", "C", "B", moves)
+console.log(`moves: ${len(moves)}`)
+for m in moves:
+    printf("%s\n", m)

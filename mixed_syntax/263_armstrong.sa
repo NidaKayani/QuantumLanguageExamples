@@ -1,0 +1,19 @@
+// Mixed-syntax example 263: Armstrong numbers below 2000
+# Syntax used: C-style headers, C++, JavaScript, Python blocks, Ruby do/end
+
+def is_armstrong(n)
+    digits = len(str(n))
+    int s = 0
+    let m = n;
+    while m > 0:
+        s += (m % 10) ** digits
+        m = floor(m / 10)
+    return s == n
+end
+found = []
+(1...2000).each do |n|
+    if (is_armstrong(n)) {
+        found.push(n)
+    }
+end
+console.log(found)

@@ -1,0 +1,16 @@
+// Mixed-syntax example 155: removing duplicates while keeping order
+# Syntax used: C++, JavaScript, Python blocks, Ruby do/end
+
+def dedupe(xs):
+    seen = {}
+    let out = []
+    for (const auto& x : xs) {
+        if not (x in seen):
+            seen[x] = 1
+            out.push(x)
+    }
+    return out
+data = [10, 11, 4, 7, 5, 11, 3, 8, 1, 8, 9, 1, 12, 1, 10, 6, 1, 8]
+unique = dedupe(data)
+console.log(unique)
+puts "removed #{len(data) - len(unique)} duplicates"

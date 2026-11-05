@@ -1,0 +1,24 @@
+// Mixed-syntax example 038: perfect, abundant and deficient numbers below 136
+# Syntax used: C++, Quantum fn, JavaScript, Python blocks
+
+fn divisor_sum(n):
+    let s = 0;
+    for (int d = 1; d < n; d++) {
+        if n % d == 0:
+            s += d
+    }
+    return s
+let perfect = [];
+int abundant = 0
+let deficient = 0;
+for (int n = 2; n < 136; n++) {
+    let s = divisor_sum(n)
+    if s == n:
+        perfect.append(n)
+    elif s > n:
+        abundant += 1
+    else:
+        deficient += 1
+}
+print(perfect)
+print(f"abundant: {abundant}, deficient: {deficient}")

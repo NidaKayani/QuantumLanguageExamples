@@ -1,0 +1,24 @@
+// Mixed-syntax example 408: word frequency count
+# Syntax used: brace blocks, C++, JavaScript, Python blocks, Ruby do/end
+
+text = "willow jungle willow jungle quiver quiver orbit jungle quiver orbit jungle orbit jungle quiver orbit kettle jungle"
+words = text.split(" ")
+freq = {}
+let order = []
+for (const auto& w : words) {
+    if w in freq {
+        freq[w] += 1
+    } else {
+        freq[w] = 1
+        order.push_back(w);
+    }
+}
+for (const auto& w : order) {
+    cout << (w) << ": " << (freq[w]) << endl
+}
+let top = order[0]
+order.each do |w|
+    if freq[w] > freq[top]:
+        top = w
+end
+console.log(`most common: ${top} (${freq[top]})`)

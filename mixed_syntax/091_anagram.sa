@@ -1,0 +1,24 @@
+// Mixed-syntax example 091: anagram check with letter counts
+# Syntax used: arrow functions, brace blocks, C++, JavaScript, Python blocks, Ruby do/end
+
+let counts = (s) => {
+    c = []
+    (0...26).each do |i|
+        c.push(0)
+    end
+    for i in range(0, len(s)):
+        c[ord(s[i]) - 97] += 1
+    return c
+}
+const is_anagram = (a, b) => {
+    let ca = counts(a);
+    let cb = counts(b)
+    for i in range(0, 26) {
+        if ca[i] != cb[i]:
+            return "no"
+    }
+    return "yes"
+}
+for (auto p : [["apple", "paper"], ["lemon", "melon"], ["night", "thing"], ["tiger", "grit"]]) {
+    puts "#{p[0]} / #{p[1]}: #{is_anagram(p[0], p[1])}";
+}

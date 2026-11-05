@@ -1,0 +1,23 @@
+// Mixed-syntax example 317: binary conversion and bit counts
+# Syntax used: brace blocks, C-style headers, C++, Quantum fn, JavaScript, Python blocks, Ruby do/end
+
+def to_bin(n)
+    if n == 0 {
+        return "0";
+    }
+    string s = "";
+    while (n > 0) {
+        s = str(n % 2) + s;
+        n = floor(n / 2);
+    }
+    return s
+end
+fn popcount(n):
+    let c = 0
+    while (n > 0) {
+        c += n & 1;
+        n = n >> 1
+    }
+    return c
+for n in [3788, 648, 1851, 1840, 3554, 4075]:
+    print(str(n) + " = 0b" + str(to_bin(n)) + " (" + str(popcount(n)) + " ones)")

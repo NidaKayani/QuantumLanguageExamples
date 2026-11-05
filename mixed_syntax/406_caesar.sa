@@ -1,0 +1,27 @@
+// Mixed-syntax example 406: Caesar cipher with shift 20
+# Syntax used: brace blocks, C-style headers, C++, JavaScript, Python blocks, Ruby do/end
+
+def shift(text, k):
+    string out = ""
+    for (let i = 0; i < len(text); ++i) {
+        ch = text[i]
+        code = ord(ch)
+        if (code >= 97 && code <= 122) {
+            out = out + chr((code - 97 + k) % 26 + 97)
+        } else if (code >= 65 && code <= 90) {
+            out = out + chr((code - 65 + k) % 26 + 65)
+        } else {
+            out = out + ch
+        }
+    }
+    return out
+for m in ["apple ember lantern", "cloud orbit ocean", "CLOUD tiger"] {
+    let enc = shift(m, 20);
+    let dec = shift(enc, 6);
+    print(m, "->", enc);
+    if dec == m
+        puts("round trip ok")
+    else
+        cout << ("round trip FAILED") << "\n"
+    end
+}

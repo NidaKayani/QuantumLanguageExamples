@@ -1,0 +1,14 @@
+// Mixed-syntax example 275: functions returning functions
+# Syntax used: C++, Quantum fn, JavaScript, Ruby do/end
+
+def make_adder(n)
+    fn add(x):
+        return x + n
+    return add
+end
+fn apply_twice(f, x):
+    return f(f(x))
+for (auto& k : [7, 3, 19]) {
+    f = make_adder(k)
+    console.log(`add ${k}: ${f(10)}, twice: ${apply_twice(f, 10)}`)
+}

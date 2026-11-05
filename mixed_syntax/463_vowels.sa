@@ -1,0 +1,27 @@
+// Mixed-syntax example 463: vowel and consonant counts
+# Syntax used: arrow functions, brace blocks, C++, Quantum fn, Python blocks, Ruby do/end
+
+let is_vowel = (ch) => {
+    for v in ["a", "e", "i", "o", "u"] {
+        if ch == v
+            return 1
+        end
+    }
+    return 0;
+}
+fn count_vowels(s) {
+    int n = 0;
+    for i in range(0, len(s)) {
+        n += is_vowel(s[i]);
+    }
+    return n;
+}
+(["island timber apple meadow harbor ember", "frost harbor jungle", "pepper quiver ember"]).each do |s|
+    v = count_vowels(s)
+    letters = 0
+    for i in range(0, len(s)):
+        if s[i] != " "
+            letters += 1
+        end
+    print(str(s) + ": " + str(v) + " vowels, " + str(letters - v) + " consonants")
+end

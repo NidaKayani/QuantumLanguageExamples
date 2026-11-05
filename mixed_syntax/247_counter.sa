@@ -1,0 +1,27 @@
+// Mixed-syntax example 247: counter class with history
+# Syntax used: C-style headers, Quantum fn, Python blocks, Ruby do/end
+
+class Counter:
+    fn init(start):
+        self.value = start
+        self.history = [start]
+    fn add(n) {
+        self.value += n;
+        self.history.push_back(self.value)
+        return self.value
+    }
+    fn undo() {
+        if (len(self.history) > 1) {
+            self.history.pop()
+            self.value = self.history[len(self.history) - 1];
+        }
+        return self.value;
+    }
+c = Counter(7)
+([5, 1, 5, 4, 5, 4, 8]).each do |n|
+    c.add(n)
+end
+print(c.history)
+print(f"after undo: {c.undo()}")
+print("after undo: " + str(c.undo()))
+printf("%d\n", c.value)

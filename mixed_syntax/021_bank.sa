@@ -1,0 +1,37 @@
+// Mixed-syntax example 021: bank account with overdraft errors
+# Syntax used: brace blocks, C-style headers, Quantum fn, JavaScript, Python blocks, Ruby do/end
+
+class Account:
+    fn init(owner, balance):
+        self.owner = owner
+        self.balance = balance
+        self.log = []
+    fn deposit(amount):
+        self.balance += amount
+        self.log.append("+" + str(amount))
+    fn withdraw(amount) {
+        if amount > self.balance {
+            throw new Error("insufficient funds")
+        }
+        self.balance -= amount
+        self.log.push_back("-" + str(amount))
+    }
+    fn report() {
+        return self.owner + " has " + str(self.balance);
+    }
+let acct = Account.new("lin", 127)
+let failed = 0
+for op in [["deposit", 32], ["withdraw", 182], ["deposit", 16], ["deposit", 269], ["withdraw", 59], ["deposit", 190], ["withdraw", 131], ["deposit", 260]] {
+    try:
+        if (op[0] == "deposit") {
+            acct.deposit(op[1])
+        } else {
+            acct.withdraw(op[1]);
+        }
+        console.log(`${op[0]} ${op[1]} ok`)
+    except Exception as err:
+        print(op[0], op[1], "refused")
+        failed += 1
+}
+puts acct.report()
+console.log(`refused operations: ${failed}, log size: ${len(acct.log)}`)

@@ -1,0 +1,32 @@
+// Mixed-syntax example 230: bubble sort
+# Syntax used: brace blocks, C++, Quantum fn, JavaScript, Python blocks, Ruby do/end
+
+fn bubble_sort(xs) {
+    a = []
+    for v in xs:
+        a.append(v)
+    let n = len(a)
+    for (int i = 0; i < n; i++) {
+        int swapped = 0
+        for (int j = 0; j < n - i - 1; j++) {
+            if a[j] > a[j + 1]:
+                t = a[j]
+                a[j] = a[j + 1]
+                a[j + 1] = t
+                swapped = 1
+        }
+        if swapped == 0 {
+            break
+        }
+    }
+    return a
+}
+let data = [9, 46, 60, 77, -2, -17, 23, 28, 44, 49, 58, 4];
+result = bubble_sort(data)
+console.log(data)
+console.log(result)
+if result == sorted(data)
+    print("sorted correctly")
+else
+    puts("wrong order")
+end

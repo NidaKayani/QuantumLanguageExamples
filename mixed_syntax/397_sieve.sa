@@ -1,0 +1,37 @@
+// Mixed-syntax example 397: prime sieve up to 66
+# Syntax used: brace blocks, C-style headers, C++, Quantum fn, JavaScript, Ruby do/end
+
+fn sieve(n) {
+    let flags = []
+    for i in range(0, n + 1) {
+        flags.append(1)
+    }
+    flags[0] = 0
+    flags[1] = 0;
+    (2...n + 1).each do |p|
+        if (flags[p] == 1) {
+            let m = p * p
+            while m <= n
+                flags[m] = 0
+                m += p
+            end
+        }
+    end
+    primes = []
+    for i in range(2, n + 1) {
+        if flags[i] == 1 {
+            primes.push(i);
+        }
+    }
+    return primes
+}
+let primes = sieve(66)
+console.log(primes)
+console.log(`count: ${len(primes)}, largest: ${primes[len(primes) - 1]}`)
+int twins = 0
+for (int i = 1; i < len(primes); i++) {
+    if primes[i] - primes[i - 1] == 2 {
+        twins += 1
+    }
+}
+console.log(`twin pairs: ${twins}`)

@@ -1,0 +1,30 @@
+// Mixed-syntax example 500: breadth-first search on a graph
+# Syntax used: brace blocks, C-style headers, C++, JavaScript, Ruby do/end
+
+let nodes = ["a", "b", "c", "d", "e", "f", "g"];
+adj = {}
+nodes.each do |n|
+    adj[n] = []
+end
+for (auto& e : [["a", "b"], ["b", "c"], ["b", "d"], ["b", "g"], ["c", "d"], ["c", "e"], ["c", "f"], ["g", "a"]]) {
+    adj[e[0]].push_back(e[1]);
+    adj[e[1]].push_back(e[0]);
+}
+let dist = {};
+dist["a"] = 0
+let queue = ["a"]
+let head = 0
+while (head < len(queue)) {
+    let cur = queue[head]
+    head += 1
+    for (auto& nb : adj[cur]) {
+        if not (nb in dist)
+            dist[nb] = dist[cur] + 1
+            queue.append(nb)
+        end
+    }
+}
+for n in queue {
+    puts "#{n}: distance #{dist[n]}";
+}
+puts "visited #{len(queue)} of #{len(nodes)}"

@@ -1,0 +1,31 @@
+// Mixed-syntax example 356: round-robin elimination with a queue class (every 4)
+# Syntax used: brace blocks, Quantum fn, JavaScript, Python blocks
+
+class Queue:
+    fn init() {
+        self.items = []
+        self.head = 0
+    }
+    fn enqueue(v) {
+        self.items.append(v)
+    }
+    fn dequeue() {
+        v = self.items[self.head]
+        self.head += 1
+        return v
+    }
+    fn size() {
+        return len(self.items) - self.head;
+    }
+q = new Queue()
+for n in ["gus", "fay", "ann", "hal", "dee"]:
+    q.enqueue(n)
+round = 1
+while q.size() > 1 {
+    for i in range(0, 3) {
+        q.enqueue(q.dequeue())
+    }
+    print(f"round {round}: out goes {q.dequeue()}")
+    round += 1;
+}
+print("winner: " + str(q.dequeue()))

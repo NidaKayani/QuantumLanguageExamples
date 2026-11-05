@@ -1,0 +1,9 @@
+// Mixed-syntax example 369: running average
+# Syntax used: C-style headers, C++, JavaScript, Python blocks
+
+let total = 0
+int count = 0
+for x in [87, 30, 14, 2, 12, 51, 14, 1, 39, 26]:
+    total += x
+    count += 1
+    printf("after %d values (last %d): average %.2f\n", count, x, total / count)

@@ -1,0 +1,27 @@
+// Mixed-syntax example 351: vowel and consonant counts
+# Syntax used: C-style headers, C++, JavaScript, Python blocks, Ruby do/end
+
+def is_vowel(ch)
+    for (auto v : ["a", "e", "i", "o", "u"]) {
+        if (ch == v) {
+            return 1
+        }
+    }
+    return 0
+end
+function count_vowels(s) {
+    n = 0
+    for (int i = 0; i < len(s); i += 1) {
+        n += is_vowel(s[i])
+    }
+    return n
+}
+for (auto& s : ["grape lemon maple nectar cloud orbit", "lemon quartz cloud", "nectar raven lantern grape island saddle"]) {
+    v = count_vowels(s)
+    letters = 0
+    for (int i = 0; i < len(s); i += 1) {
+        if s[i] != " ":
+            letters += 1
+    }
+    puts "#{s}: #{v} vowels, #{letters - v} consonants"
+}

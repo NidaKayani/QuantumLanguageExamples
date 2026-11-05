@@ -1,0 +1,20 @@
+// Mixed-syntax example 057: FooBar up to 22
+# Syntax used: C-style headers, C++, Quantum fn, Ruby do/end
+
+fn label(i):
+    if (i % 4 == 0 and i % 6 == 0) {
+        return "FooBar"
+    } else if (i % 4 == 0) {
+        return "Foo";
+    } else if (i % 6 == 0) {
+        return "Bar"
+    }
+    return str(i)
+special = 0
+for (int i = 1; i < 23; i++) {
+    puts label(i);
+    if (label(i) != str(i)) {
+        special += 1
+    }
+}
+cout << "special values: " << (special) << endl

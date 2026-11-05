@@ -1,0 +1,27 @@
+// Mixed-syntax example 327: grade classification
+# Syntax used: arrow functions, C-style headers, C++, JavaScript, Ruby do/end
+
+const grade = (s) => {
+    if (s >= 90) {
+        return "A";
+    } else if (s >= 80) {
+        return "B"
+    } else if (s >= 70) {
+        return "C";
+    } else if (s >= 60) {
+        return "D"
+    } else {
+        return "F"
+    }
+}
+names = ["bea", "ali", "ivy", "dan", "hen", "fin", "gia", "eli"]
+let scores = [50, 75, 79, 94, 42, 92, 50, 45]
+tally = {"A": 0, "B": 0, "C": 0, "D": 0, "F": 0}
+for (int i = 0; i < len(names); i++) {
+    let g = grade(scores[i])
+    tally[g] += 1
+    puts "#{names[i]}: #{scores[i]} -> #{g}"
+}
+for (auto g : ["A", "B", "C", "D", "F"]) {
+    console.log(`${g}: ${tally[g]}`);
+}

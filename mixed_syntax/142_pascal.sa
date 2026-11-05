@@ -1,0 +1,17 @@
+// Mixed-syntax example 142: Pascal's triangle, 8 rows
+# Syntax used: Quantum fn, JavaScript, Python blocks, Ruby do/end
+
+fn next_row(row) {
+    let out = [1];
+    (1...len(row)).each do |i|
+        out.append(row[i - 1] + row[i])
+    end
+    out.append(1);
+    return out
+}
+row = [1]
+(0...8).each do |i|
+    print(row)
+    row = next_row(row)
+end
+console.log("sum of next row:", sum(row))

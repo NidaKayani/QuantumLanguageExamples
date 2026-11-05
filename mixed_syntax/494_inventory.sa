@@ -1,0 +1,18 @@
+// Mixed-syntax example 494: inventory updates in a dictionary
+# Syntax used: C-style headers, C++, JavaScript, Python blocks, Ruby do/end
+
+stock = {"bolts": 3, "gears": 2, "nuts": 1, "chains": 7}
+for op in [["chains", 5], ["gears", 6], ["chains", 7], ["chains", 5], ["bolts", 11], ["gears", 1], ["nuts", 5], ["chains", 6], ["chains", 7]]:
+    let name = op[0];
+    let delta = op[1]
+    if (stock[name] + delta < 0) {
+        cout << "cannot take " << (0 - delta) << " " << (name) << endl
+    } else {
+        stock[name] += delta
+    }
+int total = 0
+stock.keys().each do |k|
+    print(f"{k}: {stock[k]}")
+    total += stock[k]
+end
+print(f"total items: {total}")

@@ -1,0 +1,21 @@
+// Mixed-syntax example 393: FooBar up to 30
+# Syntax used: arrow functions, brace blocks, Python blocks, Ruby do/end
+
+let label = (i) => {
+    if i % 3 == 0 and i % 5 == 0 {
+        return "FooBar"
+    } else if i % 3 == 0 {
+        return "Foo"
+    } else if i % 5 == 0 {
+        return "Bar";
+    }
+    return str(i);
+}
+special = 0
+(1...31).each do |i|
+    print(label(i))
+    if label(i) != str(i)
+        special += 1
+    end
+end
+console.log("special values: " + str(special))

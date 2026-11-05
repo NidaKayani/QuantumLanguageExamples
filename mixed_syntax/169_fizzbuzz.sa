@@ -1,0 +1,19 @@
+// Mixed-syntax example 169: PingPong up to 19
+# Syntax used: brace blocks, Quantum fn, JavaScript, Python blocks, Ruby do/end
+
+fn label(i):
+    if i % 3 == 0 and i % 4 == 0:
+        return "PingPong"
+    elif i % 3 == 0:
+        return "Ping"
+    elif i % 4 == 0:
+        return "Pong"
+    return str(i)
+let special = 0
+(1...20).each do |i|
+    puts label(i)
+    if label(i) != str(i) {
+        special += 1
+    }
+end
+print("special values:", special)

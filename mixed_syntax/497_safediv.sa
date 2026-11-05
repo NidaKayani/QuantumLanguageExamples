@@ -1,0 +1,18 @@
+// Mixed-syntax example 497: exceptions from a safe division helper
+# Syntax used: arrow functions, brace blocks, C-style headers, C++, JavaScript, Python blocks
+
+const safe_div = (a, b) => {
+    if (b == 0) {
+        throw new Error("division by zero");
+    }
+    return floor(a / b);
+}
+errors = 0
+for p in [[93, 9], [63, 0], [92, 5], [30, 4], [71, 7], [33, 4]] {
+    try:
+        cout << (p[0]) << " / " << (p[1]) << " = " << (safe_div(p[0], p[1])) << endl
+    except:
+        console.log(`${p[0]} / ${p[1]} failed`)
+        errors += 1
+}
+console.log("errors: " + str(errors))

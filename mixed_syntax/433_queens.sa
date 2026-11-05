@@ -1,0 +1,27 @@
+// Mixed-syntax example 433: N-queens solutions for n = 4..4
+# Syntax used: arrow functions, C-style headers, JavaScript, Python blocks, Ruby do/end
+
+const safe = (cols, row, col) => {
+    for (let r = 0; r < row; ++r) {
+        let c = cols[r];
+        if c == col or abs(c - col) == row - r:
+            return 0
+    }
+    return 1
+}
+def solve(cols, row, n):
+    if row == n:
+        return 1
+    let count = 0
+    (0...n).each do |col|
+        if (safe(cols, row, col) == 1) {
+            cols[row] = col;
+            count += solve(cols, row + 1, n)
+        }
+    end
+    return count
+for n in range(4, 5):
+    let cols = [];
+    for i in range(0, n):
+        cols.push(0)
+    puts "#{n} queens: #{solve(cols, 0, n)} solutions"

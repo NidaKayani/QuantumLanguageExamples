@@ -1,0 +1,24 @@
+// Mixed-syntax example 016: word frequency count
+# Syntax used: brace blocks, JavaScript, Python blocks, Ruby do/end
+
+let text = "river kettle pepper river kettle river ember ember river apple kettle ember kettle ember pepper kettle"
+let words = text.split(" ");
+let freq = {};
+let order = []
+for (const w of words) {
+    if w in freq
+        freq[w] += 1
+    else
+        freq[w] = 1
+        order.append(w)
+    end
+}
+order.each do |w|
+    console.log(`${w}: ${freq[w]}`)
+end
+top = order[0]
+for w in order {
+    if freq[w] > freq[top]:
+        top = w
+}
+puts "most common: #{top} (#{freq[top]})"

@@ -1,0 +1,17 @@
+// Mixed-syntax example 228: gcd and lcm of number pairs
+# Syntax used: arrow functions, JavaScript, Python blocks, Ruby do/end
+
+def gcd(a, b):
+    while b != 0
+        t = b
+        b = a % b
+        a = t
+    end
+    return a
+const lcm = (a, b) => {
+    return floor(a * b / gcd(a, b));
+}
+let pairs = [[155, 127], [51, 18], [167, 188], [53, 133], [17, 115], [197, 97]]
+pairs.each do |p|
+    puts "gcd(#{p[0]}, #{p[1]}) = #{gcd(p[0], p[1])}, lcm = #{lcm(p[0], p[1])}"
+end

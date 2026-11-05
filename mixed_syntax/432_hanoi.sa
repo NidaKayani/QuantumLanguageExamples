@@ -1,0 +1,17 @@
+// Mixed-syntax example 432: Towers of Hanoi with 2 disks
+# Syntax used: C++, Quantum fn, JavaScript, Ruby do/end
+
+fn hanoi(n, src, dst, via, moves) {
+    if n == 0
+        return
+    end
+    hanoi(n - 1, src, via, dst, moves);
+    moves.push(src + "->" + dst);
+    hanoi(n - 1, via, dst, src, moves);
+}
+moves = []
+hanoi(2, "A", "C", "B", moves)
+console.log(`moves: ${len(moves)}`)
+for (let m of moves) {
+    cout << m << endl
+}

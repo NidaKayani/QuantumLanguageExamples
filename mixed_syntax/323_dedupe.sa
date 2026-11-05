@@ -1,0 +1,17 @@
+// Mixed-syntax example 323: removing duplicates while keeping order
+# Syntax used: C++, Quantum fn, Python blocks, Ruby do/end
+
+fn dedupe(xs) {
+    seen = {}
+    out = []
+    for (auto& x : xs) {
+        if not (x in seen):
+            seen[x] = 1
+            out.push(x)
+    }
+    return out;
+}
+data = [8, 11, 6, 1, 2, 12, 8, 6, 6, 3, 9, 1, 3, 9]
+unique = dedupe(data)
+print(unique)
+puts "removed #{len(data) - len(unique)} duplicates"

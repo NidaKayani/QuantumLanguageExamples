@@ -1,0 +1,23 @@
+// Mixed-syntax example 149: binary conversion and bit counts
+# Syntax used: brace blocks, Quantum fn, Python blocks, Ruby do/end
+
+fn to_bin(n) {
+    if n == 0:
+        return "0"
+    s = ""
+    while n > 0 {
+        s = str(n % 2) + s
+        n = floor(n / 2)
+    }
+    return s;
+}
+fn popcount(n) {
+    c = 0
+    while n > 0 {
+        c += n & 1;
+        n = n >> 1
+    }
+    return c
+}
+for n in [2004, 2770, 2459, 1916, 2967, 634]:
+    puts "#{n} = 0b#{to_bin(n)} (#{popcount(n)} ones)"

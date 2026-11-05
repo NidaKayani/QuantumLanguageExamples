@@ -1,0 +1,33 @@
+// Mixed-syntax example 188: round-robin elimination with a queue class (every 5)
+# Syntax used: C-style headers, C++, JavaScript, Python blocks, Ruby do/end
+
+class Queue
+    attr_accessor :head, :items
+    def initialize()
+        @items = []
+        @head = 0
+    end
+    def enqueue(v)
+        @items.push_back(v)
+    end
+    def dequeue()
+        let v = @items[@head]
+        @head += 1
+        return v
+    end
+    def size()
+        return len(@items) - @head
+    end
+end
+let q = Queue()
+for n in ["eve", "dee", "ann", "bob"]:
+    q.enqueue(n)
+int round = 1
+while (q.size() > 1) {
+    (0...4).each do |i|
+        q.enqueue(q.dequeue())
+    end
+    puts "round #{round}: out goes #{q.dequeue()}";
+    round += 1;
+}
+console.log(`winner: ${q.dequeue()}`)

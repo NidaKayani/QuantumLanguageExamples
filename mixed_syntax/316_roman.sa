@@ -1,0 +1,17 @@
+// Mixed-syntax example 316: Roman numerals
+# Syntax used: C-style headers, JavaScript, Python blocks, Ruby do/end
+
+def to_roman(n)
+    let vals = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1];
+    let syms = ["M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"]
+    let out = ""
+    for (let i = 0; i < len(vals); i++) {
+        while (n >= vals[i]) {
+            out = out + syms[i]
+            n -= vals[i]
+        }
+    }
+    return out
+end
+for n in [1493, 3907, 2935, 1213, 2421, 2979]:
+    print(f"{n} = {to_roman(n)}")

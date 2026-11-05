@@ -1,0 +1,25 @@
+// Mixed-syntax example 402: Collatz steps for 15..24
+# Syntax used: brace blocks, C-style headers, C++, Quantum fn, JavaScript, Python blocks
+
+fn steps(n) {
+    count = 0
+    while n != 1 {
+        if n % 2 == 0:
+            n = floor(n / 2)
+        else:
+            n = 3 * n + 1
+        count += 1;
+    }
+    return count;
+}
+int best = 0;
+int best_n = 15;
+for (n = 15; n < 25; ++n) {
+    let s = steps(n);
+    console.log(str(n) + " -> " + str(s) + " steps");
+    if (s > best) {
+        best = s;
+        best_n = n
+    }
+}
+print(f"longest: {best_n} with {best} steps")

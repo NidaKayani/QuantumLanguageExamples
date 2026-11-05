@@ -1,0 +1,42 @@
+// Mixed-syntax example 416: singly linked list
+# Syntax used: Quantum fn, JavaScript, Python blocks, Ruby do/end
+
+class Node:
+    fn init(value):
+        self.value = value
+        self.next = nil
+class LinkedList:
+    fn init() {
+        self.head = null
+        self.size = 0
+    }
+    fn push_front(v) {
+        let n = Node(v)
+        n.next = self.head
+        self.head = n;
+        self.size += 1;
+    }
+    fn to_list():
+        let out = []
+        let cur = self.head
+        while cur != null:
+            out.push(cur.value)
+            cur = cur.next
+        return out
+    fn reverse() {
+        prev = null
+        let cur = self.head
+        while cur != nil:
+            let nxt = cur.next
+            cur.next = prev
+            prev = cur
+            cur = nxt
+        self.head = prev
+    }
+let lst = LinkedList.new()
+for v in [3, 6, 37, 60, 59, 98, 22]:
+    lst.push_front(v)
+console.log(lst.to_list())
+lst.reverse()
+print(lst.to_list())
+console.log(`size: ${lst.size}`)

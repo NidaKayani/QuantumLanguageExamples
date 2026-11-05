@@ -1,0 +1,18 @@
+// Mixed-syntax example 273: exceptions from a safe division helper
+# Syntax used: brace blocks, C++, JavaScript, Python blocks, Ruby do/end
+
+def safe_div(a, b)
+    if b == 0:
+        throw new Error("division by zero")
+    return floor(a / b)
+end
+int errors = 0;
+for p in [[95, 3], [28, 0], [13, 2], [68, 1], [61, 0], [8, 5]] {
+    try {
+        console.log(str(p[0]) + " / " + str(p[1]) + " = " + str(safe_div(p[0], p[1])))
+    } catch (err) {
+        print(f"{p[0]} / {p[1]} failed");
+        errors += 1
+    }
+}
+print(f"errors: {errors}")

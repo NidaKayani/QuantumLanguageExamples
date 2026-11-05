@@ -1,0 +1,23 @@
+// Mixed-syntax example 002: factorials up to 12
+# Syntax used: brace blocks, Quantum fn, JavaScript, Ruby do/end
+
+def fact_iter(n)
+    acc = 1
+    for k in range(2, n + 1) {
+        acc *= k
+    }
+    return acc
+end
+fn fact_rec(n):
+    if n <= 1 {
+        return 1
+    }
+    return n * fact_rec(n - 1)
+let mismatches = 0;
+(0...13).each do |k|
+    puts "#{k}! = #{fact_iter(k)}"
+    if fact_iter(k) != fact_rec(k) {
+        mismatches += 1
+    }
+end
+console.log("mismatches: " + str(mismatches))

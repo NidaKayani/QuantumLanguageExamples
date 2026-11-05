@@ -1,0 +1,26 @@
+// Mixed-syntax example 177: binary search
+# Syntax used: brace blocks, C++, JavaScript, Python blocks, Ruby do/end
+
+function bsearch(xs, target) {
+    let lo = 0;
+    int hi = len(xs) - 1
+    while lo <= hi {
+        let mid = floor((lo + hi) / 2)
+        if xs[mid] == target {
+            return mid
+        } else if xs[mid] < target {
+            lo = mid + 1
+        } else {
+            hi = mid - 1
+        }
+    }
+    return -1;
+}
+let data = [1, 11, 15, 29, 36, 65, 67, 83, 90, 92, 93, 108]
+for t in [29, 93, 90, 1, 79, 91] {
+    let pos = bsearch(data, t);
+    if pos >= 0:
+        print("found", t, "at index", pos)
+    else:
+        puts "#{t} is not in the list"
+}

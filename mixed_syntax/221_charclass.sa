@@ -1,0 +1,26 @@
+// Mixed-syntax example 221: character classes in strings
+# Syntax used: brace blocks, C-style headers, C++, Quantum fn, JavaScript, Ruby do/end
+
+fn classify(s) {
+    let up = 0
+    let low = 0
+    let dig = 0;
+    int other = 0
+    for i in range(0, len(s)) {
+        let c = ord(s[i])
+        if (c >= 65 && c <= 90) {
+            up += 1;
+        } else if (c >= 97 && c <= 122) {
+            low += 1;
+        } else if (c >= 48 and c <= 57) {
+            dig += 1
+        } else {
+            other += 1
+        }
+    }
+    return [up, low, dig, other];
+}
+for s in ["e = mc^2", "Hello World 42", "Quantum2026 Rocks!"] {
+    c = classify(s)
+    puts "#{s}: upper #{c[0]}, lower #{c[1]}, digits #{c[2]}, other #{c[3]}"
+}

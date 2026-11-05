@@ -1,0 +1,37 @@
+// Mixed-syntax example 357: bank account with overdraft errors
+# Syntax used: brace blocks, C-style headers, C++, Quantum fn, JavaScript, Python blocks
+
+class Account:
+    fn init(owner, balance):
+        self.owner = owner
+        self.balance = balance
+        self.log = []
+    fn deposit(amount) {
+        self.balance += amount
+        self.log.push_back("+" + str(amount));
+    }
+    fn withdraw(amount):
+        if amount > self.balance {
+            throw new Error("insufficient funds");
+        }
+        self.balance -= amount
+        self.log.push("-" + str(amount))
+    fn report() {
+        return self.owner + " has " + str(self.balance)
+    }
+acct = new Account("lin", 197)
+int failed = 0
+for (let op of [["deposit", 37], ["deposit", 202], ["withdraw", 143], ["withdraw", 37], ["withdraw", 127], ["withdraw", 164], ["deposit", 139], ["deposit", 70]]) {
+    try:
+        if op[0] == "deposit" {
+            acct.deposit(op[1])
+        } else {
+            acct.withdraw(op[1]);
+        }
+        console.log(op[0], op[1], "ok")
+    except Exception as err:
+        print(f"{op[0]} {op[1]} refused")
+        failed += 1
+}
+printf("%s\n", acct.report())
+cout << "refused operations: " << (failed) << ", log size: " << (len(acct.log)) << endl

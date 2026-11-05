@@ -1,0 +1,31 @@
+// Mixed-syntax example 213: run-length encoding
+# Syntax used: brace blocks, C-style headers, C++, Quantum fn, JavaScript, Ruby do/end
+
+fn rle(s):
+    out = ""
+    int i = 0;
+    while (i < len(s)) {
+        let j = i
+        while j < len(s) && s[j] == s[i] {
+            j += 1
+        }
+        out = out + s[i] + str(j - i)
+        i = j;
+    }
+    return out
+def unrle(s)
+    string out = ""
+    for (int k = 0; k < floor(len(s) / 2); k++) {
+        (0...int(s[2 * k + 1])).each do |t|
+            out = out + s[2 * k]
+        end
+    }
+    return out
+end
+for (let s of ["bbaaaabbbbb", "bbbbbbbbb", "aabbbbcccaa", "aaaaaab"]) {
+    enc = rle(s)
+    console.log(`${s} -> ${enc}`)
+    if unrle(enc) != s {
+        console.log("decode mismatch")
+    }
+}

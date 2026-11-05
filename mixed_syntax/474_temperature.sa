@@ -1,0 +1,19 @@
+// Mixed-syntax example 474: temperature conversion table
+# Syntax used: C++, Quantum fn, JavaScript, Python blocks, Ruby do/end
+
+fn to_f(c) {
+    return c * 9 / 5 + 32
+}
+function to_k(c) {
+    return c + 273.15;
+}
+for (const c of [31, -22, -13, -21, -8, 19]) {
+    print("%4d C = %7.2f F = %7.2f K" % (c, to_f(c), to_k(c)))
+}
+hot = 0
+for (auto c : [31, -22, -13, -21, -8, 19]) {
+    if to_f(c) > 80
+        hot += 1
+    end
+}
+print("hot days: " + str(hot))

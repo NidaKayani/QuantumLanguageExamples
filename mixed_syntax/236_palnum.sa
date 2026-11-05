@@ -1,0 +1,20 @@
+// Mixed-syntax example 236: palindromic numbers in [485, 563)
+# Syntax used: arrow functions, brace blocks, C++, JavaScript, Python blocks, Ruby do/end
+
+const reverse_num = (n) => {
+    int rev = 0
+    while n > 0
+        rev = rev * 10 + n % 10
+        n = floor(n / 10)
+    end
+    return rev
+}
+let found = []
+(485...563).each do |n|
+    if reverse_num(n) == n {
+        found.push_back(n)
+    }
+end
+print(found)
+console.log("how many: " + str(len(found)))
+print("reverse of", 485, "is", reverse_num(485))

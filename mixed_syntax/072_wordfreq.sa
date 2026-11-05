@@ -1,0 +1,23 @@
+// Mixed-syntax example 072: word frequency count
+# Syntax used: C++, JavaScript, Python blocks, Ruby do/end
+
+string text = "maple comet maple kettle island timber comet timber comet kettle island island maple maple comet";
+words = text.split(" ")
+freq = {}
+order = []
+for (let w of words) {
+    if w in freq:
+        freq[w] += 1
+    else:
+        freq[w] = 1
+        order.append(w)
+}
+for w in order:
+    console.log(`${w}: ${freq[w]}`)
+top = order[0]
+for (let w of order) {
+    if freq[w] > freq[top]
+        top = w
+    end
+}
+print("most common: " + str(top) + " (" + str(freq[top]) + ")")

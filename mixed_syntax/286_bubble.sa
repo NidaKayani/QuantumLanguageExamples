@@ -1,0 +1,33 @@
+// Mixed-syntax example 286: bubble sort
+# Syntax used: C-style headers, C++, JavaScript, Python blocks, Ruby do/end
+
+def bubble_sort(xs)
+    a = []
+    for (auto v : xs) {
+        a.append(v)
+    }
+    let n = len(a)
+    for (let i = 0; i < n; ++i) {
+        swapped = 0
+        for (j = 0; j < n - i - 1; ++j) {
+            if a[j] > a[j + 1]:
+                t = a[j]
+                a[j] = a[j + 1]
+                a[j + 1] = t
+                swapped = 1
+        }
+        if (swapped == 0) {
+            break;
+        }
+    }
+    return a
+end
+let data = [4, 38, 42, 11, 20, 15, 77, 9, 66];
+result = bubble_sort(data)
+print(data)
+print(result)
+if result == sorted(data)
+    console.log("sorted correctly")
+else
+    puts("wrong order")
+end

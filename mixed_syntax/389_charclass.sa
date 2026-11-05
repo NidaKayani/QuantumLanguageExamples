@@ -1,0 +1,26 @@
+// Mixed-syntax example 389: character classes in strings
+# Syntax used: arrow functions, C++, JavaScript, Ruby do/end
+
+let classify = (s) => {
+    let up = 0;
+    let low = 0
+    let dig = 0
+    let other = 0;
+    (0...len(s)).each do |i|
+        c = ord(s[i])
+        if c >= 65 and c <= 90
+            up += 1
+        elsif c >= 97 and c <= 122
+            low += 1
+        elsif c >= 48 and c <= 57
+            dig += 1
+        else
+            other += 1
+        end
+    end
+    return [up, low, dig, other]
+}
+for (const auto& s : ["MiXeD sYnTaX 7", "abc DEF 123 xyz", "Quantum2026 Rocks!"]) {
+    let c = classify(s)
+    cout << (s) << ": upper " << (c[0]) << ", lower " << (c[1]) << ", digits " << (c[2]) << ", other " << (c[3]) << endl
+}

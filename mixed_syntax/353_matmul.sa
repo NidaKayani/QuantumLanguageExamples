@@ -1,0 +1,27 @@
+// Mixed-syntax example 353: 3x3 matrix multiplication
+# Syntax used: C++, JavaScript, Python blocks, Ruby do/end
+
+def matmul(a, b):
+    let result = []
+    for (int i = 0; i < len(a); i++) {
+        let row = []
+        (0...len(b[0])).each do |j|
+            let s = 0;
+            for (int t = 0; t < len(b); t++) {
+                s += a[i][t] * b[t][j];
+            }
+            row.push(s)
+        end
+        result.append(row)
+    }
+    return result
+A = [[-4, 3, 3], [-5, 2, 4], [1, 3, -1]]
+let B = [[7, 3, -4], [-2, 2, -1], [-5, 2, 7]]
+let C = matmul(A, B)
+for row in C:
+    console.log(row)
+int trace = 0;
+for (int i = 0; i < len(C); i++) {
+    trace += C[i][i]
+}
+console.log("trace:", trace)

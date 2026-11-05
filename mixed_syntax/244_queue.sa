@@ -1,0 +1,31 @@
+// Mixed-syntax example 244: round-robin elimination with a queue class (every 5)
+# Syntax used: C++, JavaScript, Python blocks, Ruby do/end
+
+class Queue {
+    constructor() {
+        this.items = []
+        this.head = 0
+    }
+    enqueue(v) {
+        this.items.push(v);
+    }
+    dequeue() {
+        v = this.items[this.head]
+        this.head += 1;
+        return v
+    }
+    size() {
+        return len(this.items) - this.head
+    }
+}
+q = Queue()
+for (const n of ["fay", "cid", "eve", "gus", "hal"]) {
+    q.enqueue(n);
+}
+int round = 1;
+while q.size() > 1:
+    for i in range(0, 4):
+        q.enqueue(q.dequeue())
+    puts "round #{round}: out goes #{q.dequeue()}"
+    round += 1
+puts "winner: #{q.dequeue()}"

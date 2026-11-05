@@ -1,0 +1,35 @@
+// Mixed-syntax example 189: bank account with overdraft errors
+# Syntax used: brace blocks, C++, JavaScript, Python blocks, Ruby do/end
+
+class Account:
+    def __init__(self, owner, balance):
+        self.owner = owner
+        self.balance = balance
+        self.log = []
+    def deposit(self, amount):
+        self.balance += amount
+        self.log.push_back("+" + str(amount))
+    def withdraw(self, amount):
+        if amount > self.balance {
+            throw "insufficient funds";
+        }
+        self.balance -= amount
+        self.log.push("-" + str(amount))
+    def report(self):
+        return self.owner + " has " + str(self.balance)
+let acct = new Account("zoe", 156)
+int failed = 0;
+for (auto op : [["deposit", 81], ["deposit", 206], ["deposit", 79], ["deposit", 205], ["deposit", 71]]) {
+    try {
+        if op[0] == "deposit":
+            acct.deposit(op[1])
+        else:
+            acct.withdraw(op[1])
+        console.log(`${op[0]} ${op[1]} ok`)
+    } catch (err) {
+        puts "#{op[0]} #{op[1]} refused"
+        failed += 1;
+    }
+}
+print(acct.report())
+puts "refused operations: #{failed}, log size: #{len(acct.log)}"

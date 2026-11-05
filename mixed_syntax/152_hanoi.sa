@@ -1,0 +1,16 @@
+// Mixed-syntax example 152: Towers of Hanoi with 4 disks
+# Syntax used: brace blocks, C++, JavaScript, Python blocks
+
+def hanoi(n, src, dst, via, moves):
+    if n == 0 {
+        return;
+    }
+    hanoi(n - 1, src, via, dst, moves)
+    moves.push_back(src + "->" + dst)
+    hanoi(n - 1, via, dst, src, moves)
+moves = []
+hanoi(4, "A", "C", "B", moves)
+console.log(`moves: ${len(moves)}`)
+for (let m of moves) {
+    std::cout << m << std::endl;
+}

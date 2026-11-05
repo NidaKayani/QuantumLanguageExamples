@@ -1,0 +1,42 @@
+// Mixed-syntax example 081: binary search tree
+# Syntax used: brace blocks, Quantum fn, JavaScript, Python blocks, Ruby do/end
+
+class TreeNode
+    attr_accessor :key, :left, :right
+    def initialize(key)
+        @key = key
+        @left = nil
+        @right = None
+    end
+end
+fn insert(node, key) {
+    if node == None
+        return TreeNode(key)
+    end
+    if key < node.key {
+        node.left = insert(node.left, key);
+    } else {
+        node.right = insert(node.right, key);
+    }
+    return node
+}
+fn inorder(node, out) {
+    if node != None:
+        inorder(node.left, out)
+        out.append(node.key)
+        inorder(node.right, out)
+}
+def height(node)
+    if node == null {
+        return 0
+    }
+    return 1 + max(height(node.left), height(node.right))
+end
+let root = null;
+([95, 8, 63, 32, 14, 93]).each do |k|
+    root = insert(root, k)
+end
+keys = []
+inorder(root, keys)
+print(keys)
+puts "height: #{height(root)}, root: #{root.key}"

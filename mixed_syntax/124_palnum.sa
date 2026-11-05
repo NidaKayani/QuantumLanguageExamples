@@ -1,0 +1,18 @@
+// Mixed-syntax example 124: palindromic numbers in [855, 1001)
+# Syntax used: C++, Quantum fn, JavaScript, Python blocks, Ruby do/end
+
+fn reverse_num(n) {
+    int rev = 0;
+    while n > 0:
+        rev = rev * 10 + n % 10
+        n = floor(n / 10)
+    return rev
+}
+let found = []
+for n in range(855, 1001):
+    if reverse_num(n) == n
+        found.push_back(n)
+    end
+console.log(found)
+console.log(`how many: ${len(found)}`)
+puts "reverse of #{855} is #{reverse_num(855)}"

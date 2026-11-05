@@ -1,0 +1,17 @@
+// Mixed-syntax example 043: removing duplicates while keeping order
+# Syntax used: brace blocks, Quantum fn, JavaScript, Python blocks
+
+fn dedupe(xs):
+    let seen = {};
+    let out = [];
+    for (const x of xs) {
+        if !(x in seen) {
+            seen[x] = 1;
+            out.push(x);
+        }
+    }
+    return out
+data = [5, 9, 12, 2, 11, 4, 3, 7, 4, 6, 12, 12, 8, 5, 4, 9, 11, 6]
+let unique = dedupe(data)
+console.log(unique)
+print("removed", len(data) - len(unique), "duplicates")

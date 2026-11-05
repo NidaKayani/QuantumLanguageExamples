@@ -1,0 +1,16 @@
+// Mixed-syntax example 387: functions returning functions
+# Syntax used: arrow functions, C++, Python blocks, Ruby do/end
+
+const make_adder = (n) => {
+    def add(x)
+        return x + n
+    end
+    return add
+}
+const apply_twice = (f, x) => {
+    return f(f(x))
+}
+for (const auto& k : [20, 5, 18]) {
+    f = make_adder(k)
+    print(f"add {k}: {f(10)}, twice: {apply_twice(f, 10)}");
+}

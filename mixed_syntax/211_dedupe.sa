@@ -1,0 +1,17 @@
+// Mixed-syntax example 211: removing duplicates while keeping order
+# Syntax used: C-style headers, JavaScript, Python blocks, Ruby do/end
+
+def dedupe(xs):
+    seen = {}
+    out = []
+    xs.each do |x|
+        if (!(x in seen)) {
+            seen[x] = 1;
+            out.append(x);
+        }
+    end
+    return out
+data = [5, 1, 5, 9, 6, 12, 8, 7, 9, 4, 8, 4]
+let unique = dedupe(data);
+print(unique)
+puts "removed #{len(data) - len(unique)} duplicates"

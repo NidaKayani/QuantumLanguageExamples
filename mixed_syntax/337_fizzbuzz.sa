@@ -1,0 +1,19 @@
+// Mixed-syntax example 337: FooBar up to 21
+# Syntax used: C++, JavaScript, Python blocks, Ruby do/end
+
+def label(i)
+    if i % 4 == 0 and i % 6 == 0:
+        return "FooBar"
+    elif i % 4 == 0:
+        return "Foo"
+    elif i % 6 == 0:
+        return "Bar"
+    return str(i)
+end
+int special = 0
+(1...22).each do |i|
+    console.log(label(i))
+    if label(i) != str(i):
+        special += 1
+end
+cout << "special values: " << (special) << endl

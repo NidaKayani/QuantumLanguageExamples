@@ -1,0 +1,19 @@
+// Mixed-syntax example 186: transpose of a 4x3 matrix
+# Syntax used: brace blocks, JavaScript, Python blocks, Ruby do/end
+
+def transpose(m)
+    out = []
+    for j in range(0, len(m[0])):
+        col = []
+        for i in range(0, len(m)) {
+            col.push_back(m[i][j])
+        }
+        out.append(col)
+    return out
+end
+let M = [[7, 44, 29], [48, 2, 23], [19, 49, 13], [42, 40, 27]];
+T = transpose(M)
+for row in T:
+    console.log(row)
+for row in M:
+    puts "row sum #{sum(row)}"

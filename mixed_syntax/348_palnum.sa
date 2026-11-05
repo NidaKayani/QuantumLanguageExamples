@@ -1,0 +1,19 @@
+// Mixed-syntax example 348: palindromic numbers in [462, 646)
+# Syntax used: C-style headers, C++, Quantum fn, JavaScript, Python blocks, Ruby do/end
+
+fn reverse_num(n):
+    rev = 0
+    while (n > 0) {
+        rev = rev * 10 + n % 10;
+        n = floor(n / 10)
+    }
+    return rev
+let found = [];
+for (n = 462; n < 646; n++) {
+    if reverse_num(n) == n
+        found.append(n)
+    end
+}
+print(found)
+print(f"how many: {len(found)}")
+cout << "reverse of " << (462) << " is " << (reverse_num(462)) << endl

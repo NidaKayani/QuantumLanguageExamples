@@ -1,0 +1,22 @@
+// Mixed-syntax example 354: transpose of a 2x4 matrix
+# Syntax used: C-style headers, C++, JavaScript, Python blocks, Ruby do/end
+
+def transpose(m)
+    let out = [];
+    for (int j = 0; j < len(m[0]); j++) {
+        let col = [];
+        for (i = 0; i < len(m); i += 1) {
+            col.push_back(m[i][j]);
+        }
+        out.push_back(col);
+    }
+    return out
+end
+let M = [[45, 12, 17, 46], [21, 37, 38, 23]]
+let T = transpose(M);
+for (auto& row : T) {
+    print(row)
+}
+for (const row of M) {
+    print(f"row sum {sum(row)}")
+}

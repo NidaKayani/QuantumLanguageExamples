@@ -1,0 +1,13 @@
+// Mixed-syntax example 154: basic statistics
+# Syntax used: brace blocks, C-style headers, JavaScript, Python blocks
+
+let data = [30, 78, 33, 83, 40, 4, 43, 79, 1]
+let s = sorted(data)
+print(f"min {min(data)}, max {max(data)}, sum {sum(data)}")
+console.log("median " + str(s[floor(len(s) / 2)]))
+printf("mean %.2f\n", sum(data) / len(data))
+let var = 0
+for x in data {
+    var += (x - sum(data) / len(data)) ** 2
+}
+printf("variance %.2f, std dev %.2f\n", var / len(data), sqrt(var / len(data)))

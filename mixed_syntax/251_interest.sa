@@ -1,0 +1,9 @@
+// Mixed-syntax example 251: compound interest at 3% over 4 years
+# Syntax used: C-style headers, JavaScript, Python blocks, Ruby do/end
+
+let balance = 484;
+(1...5).each do |y|
+    balance = balance * (100 + 3) / 100
+    print("year %d: %.2f" % (y, balance))
+end
+printf("growth: %.2f\n", balance - 484)

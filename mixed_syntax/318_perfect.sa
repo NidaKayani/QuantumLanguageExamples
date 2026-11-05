@@ -1,0 +1,26 @@
+// Mixed-syntax example 318: perfect, abundant and deficient numbers below 212
+# Syntax used: C++, JavaScript, Python blocks, Ruby do/end
+
+int divisor_sum(int n) {
+    let s = 0
+    for d in range(1, n):
+        if n % d == 0
+            s += d
+        end
+    return s
+}
+let perfect = []
+let abundant = 0;
+let deficient = 0;
+(2...212).each do |n|
+    let s = divisor_sum(n);
+    if s == n
+        perfect.push_back(n)
+    elsif s > n
+        abundant += 1
+    else
+        deficient += 1
+    end
+end
+console.log(perfect)
+console.log(`abundant: ${abundant}, deficient: ${deficient}`)

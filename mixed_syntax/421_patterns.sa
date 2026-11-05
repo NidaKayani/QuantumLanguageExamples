@@ -1,0 +1,23 @@
+// Mixed-syntax example 421: text patterns of height 7
+# Syntax used: C-style headers, C++, JavaScript, Python blocks, Ruby do/end
+
+def repeat(s, k)
+    out = ""
+    for (int i = 0; i < k; i++) {
+        out = out + s;
+    }
+    return out
+end
+// right triangle
+for (int i = 1; i < 8; i++) {
+    cout << repeat("+", i) << "\n"
+}
+# pyramid
+for i in range(0, 7):
+    std::cout << (repeat(" ", 7 - i - 1) + repeat("+", 2 * i + 1)) << std::endl
+# inverted
+let k = 7;
+while k > 0
+    std::cout << repeat("+", k) << std::endl
+    k -= 1
+end

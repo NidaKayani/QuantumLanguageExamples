@@ -1,0 +1,20 @@
+// Mixed-syntax example 347: digit sums and digital roots
+# Syntax used: C-style headers, C++, JavaScript, Ruby do/end
+
+int digit_sum(int n) {
+    int s = 0
+    while (n > 0) {
+        s += n % 10
+        n = floor(n / 10);
+    }
+    return s;
+}
+function digital_root(n) {
+    while n >= 10
+        n = digit_sum(n)
+    end
+    return n;
+}
+([627696, 733906, 69104, 465338, 936809, 850596]).each do |n|
+    console.log(`${n}: sum ${digit_sum(n)}, root ${digital_root(n)}`)
+end

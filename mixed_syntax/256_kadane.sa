@@ -1,0 +1,31 @@
+// Mixed-syntax example 256: maximum subarray (Kadane)
+# Syntax used: C-style headers, C++, JavaScript, Python blocks, Ruby do/end
+
+def max_subarray(xs)
+    let best = xs[0];
+    let cur = 0
+    int start = 0
+    best_lo = 0
+    best_hi = 0
+    (0...len(xs)).each do |i|
+        if cur <= 0:
+            cur = xs[i]
+            start = i
+        else:
+            cur += xs[i]
+        if cur > best
+            best = cur
+            best_lo = start
+            best_hi = i
+        end
+    end
+    return [best, best_lo, best_hi]
+end
+let data = [-2, 11, -12, -12, -4, -8, -15, 3, 9, 0, 12, -15, -5, 6]
+let res = max_subarray(data)
+console.log(`best sum ${res[0]} from index ${res[1]} to ${res[2]}`)
+part = []
+for (int i = res[1]; i < res[2] + 1; ++i) {
+    part.push(data[i]);
+}
+print(part)

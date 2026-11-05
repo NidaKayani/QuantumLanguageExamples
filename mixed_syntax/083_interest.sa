@@ -1,0 +1,9 @@
+// Mixed-syntax example 083: compound interest at 6% over 8 years
+# Syntax used: C-style headers, C++, JavaScript, Python blocks
+
+let balance = 2568;
+for (int y = 1; y < 9; y++) {
+    balance = balance * (100 + 6) / 100;
+    print("year %d: %.2f" % (y, balance))
+}
+printf("growth: %.2f\n", balance - 2568)

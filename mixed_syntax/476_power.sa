@@ -1,0 +1,16 @@
+// Mixed-syntax example 476: fast modular exponentiation
+# Syntax used: C++, Quantum fn, Python blocks, Ruby do/end
+
+fn power_mod(b, e, m):
+    result = 1
+    b = b % m
+    while e > 0
+        if e % 2 == 1
+            result = result * b % m
+        end
+        b = b * b % m
+        e = floor(e / 2)
+    end
+    return result
+for c in [[9, 11, 13], [6, 21, 13], [4, 15, 13], [9, 13, 1000], [3, 4, 1000]]:
+    cout << (c[0]) << "^" << (c[1]) << " mod " << (c[2]) << " = " << (power_mod(c[0], c[1], c[2])) << endl

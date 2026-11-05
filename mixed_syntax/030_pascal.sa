@@ -1,0 +1,16 @@
+// Mixed-syntax example 030: Pascal's triangle, 6 rows
+# Syntax used: C-style headers, JavaScript, Python blocks, Ruby do/end
+
+def next_row(row)
+    let out = [1]
+    for (int i = 1; i < len(row); ++i) {
+        out.push(row[i - 1] + row[i])
+    }
+    out.append(1)
+    return out
+end
+let row = [1]
+for i in range(0, 6):
+    console.log(row)
+    row = next_row(row)
+print(f"sum of next row: {sum(row)}")

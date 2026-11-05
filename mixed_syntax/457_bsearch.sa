@@ -1,0 +1,27 @@
+// Mixed-syntax example 457: binary search
+# Syntax used: arrow functions, brace blocks, C-style headers, C++, JavaScript, Ruby do/end
+
+let bsearch = (xs, target) => {
+    int lo = 0
+    int hi = len(xs) - 1
+    while lo <= hi
+        let mid = floor((lo + hi) / 2);
+        if (xs[mid] == target) {
+            return mid;
+        } else if (xs[mid] < target) {
+            lo = mid + 1
+        } else {
+            hi = mid - 1
+        }
+    end
+    return -1
+}
+data = [6, 13, 14, 38, 42, 57, 66, 70, 81, 87, 102, 108]
+for t in [108, 70, 13, 40, 10, 95] {
+    pos = bsearch(data, t)
+    if (pos >= 0) {
+        console.log(`found ${t} at index ${pos}`)
+    } else {
+        console.log(`${t} is not in the list`)
+    }
+}

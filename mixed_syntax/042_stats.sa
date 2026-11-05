@@ -1,0 +1,13 @@
+// Mixed-syntax example 042: basic statistics
+# Syntax used: brace blocks, C++, JavaScript, Python blocks
+
+let data = [36, 2, 86, 36, 64, 97, 96, 9, 29, 96, 37];
+s = sorted(data)
+print("min " + str(min(data)) + ", max " + str(max(data)) + ", sum " + str(sum(data)))
+cout << "median " << (s[floor(len(s) / 2)]) << endl
+print("mean %.2f" % (sum(data) / len(data)))
+var = 0
+for x in data {
+    var += (x - sum(data) / len(data)) ** 2
+}
+console.log(sprintf("variance %.2f, std dev %.2f", var / len(data), sqrt(var / len(data))))

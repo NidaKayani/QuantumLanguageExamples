@@ -1,0 +1,13 @@
+// Mixed-syntax example 106: map and filter in many styles
+# Syntax used: arrow functions, Quantum fn, JavaScript, Python blocks
+
+data = [26, 21, 9, 25, 26, 18, 9, 9]
+scaled = data.map(x => x * 3)
+odd = data.filter(x => x % 2 == 1)
+squares = [v * v for v in odd]
+big = scaled.filter(fn(y) { return y > 20 && y < 100 })
+console.log(scaled)
+print(odd)
+print(squares)
+print(big)
+print(f"sum of squares: {sum(squares)}")

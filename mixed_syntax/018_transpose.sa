@@ -1,0 +1,22 @@
+// Mixed-syntax example 018: transpose of a 3x5 matrix
+# Syntax used: C-style headers, C++, JavaScript, Python blocks, Ruby do/end
+
+def transpose(m)
+    let out = [];
+    for (int j = 0; j < len(m[0]); j += 1) {
+        let col = []
+        for (int i = 0; i < len(m); i++) {
+            col.push(m[i][j]);
+        }
+        out.push_back(col);
+    }
+    return out
+end
+let M = [[15, 28, 28, 30, 43], [36, 7, 1, 5, 14], [20, 26, 22, 13, 5]]
+let T = transpose(M);
+for (let row of T) {
+    print(row)
+}
+for (const row of M) {
+    print("row sum " + str(sum(row)));
+}

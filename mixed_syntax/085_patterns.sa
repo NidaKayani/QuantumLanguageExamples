@@ -1,0 +1,22 @@
+// Mixed-syntax example 085: text patterns of height 7
+# Syntax used: C++, Quantum fn, JavaScript, Python blocks, Ruby do/end
+
+fn repeat(s, k) {
+    out = ""
+    for i in range(0, k):
+        out = out + s
+    return out
+}
+// right triangle
+(1...8).each do |i|
+    cout << repeat("+", i) << endl
+end
+# pyramid
+(0...7).each do |i|
+    console.log(repeat(" ", 7 - i - 1) + repeat("+", 2 * i + 1))
+end
+# inverted
+let k = 7;
+while k > 0:
+    print(repeat("+", k))
+    k -= 1

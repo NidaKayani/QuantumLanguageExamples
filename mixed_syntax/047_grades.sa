@@ -1,0 +1,26 @@
+// Mixed-syntax example 047: grade classification
+# Syntax used: brace blocks, C-style headers, Quantum fn, JavaScript, Ruby do/end
+
+fn grade(s):
+    if (s >= 90) {
+        return "A"
+    } else if (s >= 80) {
+        return "B"
+    } else if (s >= 70) {
+        return "C"
+    } else if (s >= 60) {
+        return "D";
+    } else {
+        return "F";
+    }
+let names = ["cam", "hen", "eli", "ali", "bea", "dan", "fin", "ivy"]
+scores = [46, 68, 80, 96, 41, 67, 93, 76]
+tally = {"A": 0, "B": 0, "C": 0, "D": 0, "F": 0}
+for i in range(0, len(names)) {
+    g = grade(scores[i])
+    tally[g] += 1
+    console.log(`${names[i]}: ${scores[i]} -> ${g}`)
+}
+(["A", "B", "C", "D", "F"]).each do |g|
+    console.log(str(g) + ": " + str(tally[g]))
+end

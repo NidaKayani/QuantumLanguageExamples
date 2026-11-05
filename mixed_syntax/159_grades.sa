@@ -1,0 +1,26 @@
+// Mixed-syntax example 159: grade classification
+# Syntax used: C-style headers, C++, Quantum fn, JavaScript, Ruby do/end
+
+fn grade(s):
+    if s >= 90
+        return "A"
+    elsif s >= 80
+        return "B"
+    elsif s >= 70
+        return "C"
+    elsif s >= 60
+        return "D"
+    else
+        return "F"
+    end
+let names = ["fin", "ivy", "ali", "gia", "hen"]
+scores = [90, 97, 40, 73, 60]
+tally = {"A": 0, "B": 0, "C": 0, "D": 0, "F": 0}
+for (i = 0; i < len(names); i += 1) {
+    g = grade(scores[i])
+    tally[g] += 1;
+    puts "#{names[i]}: #{scores[i]} -> #{g}";
+}
+for (const g of ["A", "B", "C", "D", "F"]) {
+    cout << (g) << ": " << (tally[g]) << endl
+}

@@ -1,0 +1,23 @@
+// Mixed-syntax example 031: two-sum with a dictionary
+# Syntax used: brace blocks, C-style headers, JavaScript, Ruby do/end
+
+def two_sum(nums, target)
+    let seen = {}
+    for (i = 0; i < len(nums); i += 1) {
+        let need = target - nums[i]
+        if need in seen {
+            return [seen[need], i]
+        }
+        seen[nums[i]] = i
+    }
+    return [-1, -1]
+end
+nums = [9, 5, 39, 24, 13, 33, 3, 20]
+([29, 44, 999, 13]).each do |t|
+    let ans = two_sum(nums, t)
+    if (ans[0] >= 0) {
+        print("target " + str(t) + ": " + str(nums[ans[0]]) + " + " + str(nums[ans[1]]))
+    } else {
+        console.log(`target ${t}: no pair`);
+    }
+end

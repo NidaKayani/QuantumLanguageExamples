@@ -1,0 +1,16 @@
+// Mixed-syntax example 051: functions returning functions
+# Syntax used: arrow functions, C++, Quantum fn, JavaScript
+
+const make_adder = (n) => {
+    fn add(x) {
+        return x + n;
+    }
+    return add;
+}
+const apply_twice = (f, x) => {
+    return f(f(x));
+}
+for (auto k : [2, 11, 16]) {
+    f = make_adder(k)
+    console.log(`add ${k}: ${f(10)}, twice: ${apply_twice(f, 10)}`)
+}

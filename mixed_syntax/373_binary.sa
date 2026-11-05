@@ -1,0 +1,24 @@
+// Mixed-syntax example 373: binary conversion and bit counts
+# Syntax used: brace blocks, C++, JavaScript, Python blocks, Ruby do/end
+
+function to_bin(n) {
+    if n == 0 {
+        return "0"
+    }
+    s = ""
+    while n > 0:
+        s = str(n % 2) + s
+        n = floor(n / 2)
+    return s
+}
+int popcount(int n) {
+    c = 0
+    while n > 0
+        c += n & 1
+        n = n >> 1
+    end
+    return c
+}
+for (const n of [2595, 2370, 924, 1184, 1017, 2212]) {
+    print(str(n) + " = 0b" + str(to_bin(n)) + " (" + str(popcount(n)) + " ones)")
+}

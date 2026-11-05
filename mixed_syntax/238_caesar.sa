@@ -1,0 +1,27 @@
+// Mixed-syntax example 238: Caesar cipher with shift 6
+# Syntax used: brace blocks, C++, JavaScript, Python blocks, Ruby do/end
+
+function shift(text, k) {
+    out = ""
+    for (int i = 0; i < len(text); i++) {
+        ch = text[i]
+        let code = ord(ch)
+        if code >= 97 and code <= 122:
+            out = out + chr((code - 97 + k) % 26 + 97)
+        elif code >= 65 and code <= 90:
+            out = out + chr((code - 65 + k) % 26 + 65)
+        else:
+            out = out + ch
+    }
+    return out
+}
+(["maple apple grape", "maple saddle cloud", "HARBOR maple"]).each do |m|
+    enc = shift(m, 6)
+    let dec = shift(enc, 20);
+    print(f"{m} -> {enc}")
+    if dec == m {
+        console.log("round trip ok")
+    } else {
+        cout << ("round trip FAILED") << "\n"
+    }
+end

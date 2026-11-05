@@ -1,0 +1,35 @@
+// Mixed-syntax example 336: students and courses (classes holding lists)
+# Syntax used: brace blocks, C++, JavaScript, Python blocks, Ruby do/end
+
+class Student {
+    constructor(name) {
+        this.name = name
+        this.marks = [];
+    }
+    add_mark(m) {
+        this.marks.push_back(m);
+    }
+    average() {
+        if len(this.marks) == 0:
+            return 0
+        return floor(sum(this.marks) / len(this.marks))
+    }
+    best() {
+        return max(this.marks)
+    }
+}
+let roster = [];
+for n in ["Dev", "Cleo", "Faro", "Ayla"]:
+    let s = Student(n);
+    (0...5).each do |k|
+        s.add_mark((len(n) * 7 + k * 16) % 41 + 60)
+    end
+    roster.push_back(s)
+top = roster[0]
+for (auto s : roster) {
+    print(str(s.name) + ": average " + str(s.average()) + ", best " + str(s.best()))
+    if s.average() > top.average() {
+        top = s
+    }
+}
+print("top student:", top.name)

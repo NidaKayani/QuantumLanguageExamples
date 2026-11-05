@@ -1,0 +1,14 @@
+// Mixed-syntax example 163: functions returning functions
+# Syntax used: C++, Quantum fn, JavaScript, Python blocks
+
+fn make_adder(n):
+    def add(x):
+        return x + n
+    return add
+function apply_twice(f, x) {
+    return f(f(x))
+}
+for (let k of [13, 19, 6]) {
+    f = make_adder(k)
+    cout << "add " << (k) << ": " << (f(10)) << ", twice: " << (apply_twice(f, 10)) << endl;
+}

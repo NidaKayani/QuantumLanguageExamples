@@ -1,0 +1,22 @@
+// Mixed-syntax example 119: insertion sort
+# Syntax used: brace blocks, Quantum fn, JavaScript, Ruby do/end
+
+fn insertion_sort(xs) {
+    let a = [];
+    for (const v of xs) {
+        a.append(v)
+    }
+    (1...len(a)).each do |i|
+        let key = a[i];
+        j = i - 1
+        while j >= 0 and a[j] > key {
+            a[j + 1] = a[j]
+            j -= 1;
+        }
+        a[j + 1] = key
+    end
+    return a
+}
+let result = insertion_sort([59, 164, 357, 287, 452, 433, 401])
+console.log(result)
+console.log(`min ${result[0]} max ${result[len(result) - 1]}`)

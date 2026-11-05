@@ -1,0 +1,9 @@
+// Mixed-syntax example 307: compound interest at 4% over 4 years
+# Syntax used: brace blocks, C-style headers, JavaScript
+
+let balance = 4835
+for y in range(1, 5) {
+    balance = balance * (100 + 4) / 100
+    printf("year %d: %.2f\n", y, balance)
+}
+console.log(sprintf("growth: %.2f", balance - 4835))

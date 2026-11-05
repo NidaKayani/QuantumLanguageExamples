@@ -1,0 +1,29 @@
+// Mixed-syntax example 246: shape classes with inheritance across syntaxes
+# Syntax used: Quantum fn, JavaScript, Python blocks, Ruby do/end
+
+class Shape:
+    fn init(name, w, h) {
+        self.name = name
+        self.w = w;
+        self.h = h
+    }
+    fn area():
+        return 0
+    fn describe() {
+        return self.name + " " + str(self.w) + "x" + str(self.h) + " area " + str(self.area())
+    }
+class Rect < Shape
+    def area()
+        return @w * @h
+    end
+end
+class Tri extends Shape:
+    fn area():
+        return floor(self.w * self.h / 2)
+let shapes = [Tri("tri", 10, 3), Tri("tri", 6, 12), Tri.new("tri", 5, 8), Rect.new("rect", 8, 4)];
+total = 0
+for (let s of shapes) {
+    console.log(s.describe());
+    total += s.area();
+}
+print(f"total area: {total}")

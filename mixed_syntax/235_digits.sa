@@ -1,0 +1,19 @@
+// Mixed-syntax example 235: digit sums and digital roots
+# Syntax used: brace blocks, JavaScript, Python blocks, Ruby do/end
+
+def digit_sum(n)
+    let s = 0
+    while n > 0 {
+        s += n % 10;
+        n = floor(n / 10)
+    }
+    return s
+end
+function digital_root(n) {
+    while n >= 10 {
+        n = digit_sum(n)
+    }
+    return n
+}
+for n in [620907, 720132, 195651, 280883, 489018, 847616, 304878, 115168]:
+    print(str(n) + ": sum " + str(digit_sum(n)) + ", root " + str(digital_root(n)))

@@ -1,0 +1,20 @@
+// Mixed-syntax example 143: two-sum with a dictionary
+# Syntax used: brace blocks, C-style headers, Quantum fn, JavaScript, Python blocks
+
+fn two_sum(nums, target):
+    let seen = {};
+    for i in range(0, len(nums)) {
+        need = target - nums[i]
+        if (need in seen) {
+            return [seen[need], i];
+        }
+        seen[nums[i]] = i;
+    }
+    return [-1, -1]
+let nums = [36, 31, 21, 38, 37, 32, 10, 24, 6];
+for t in [42, 52, 999, 43]:
+    ans = two_sum(nums, t)
+    if ans[0] >= 0:
+        print(f"target {t}: {nums[ans[0]]} + {nums[ans[1]]}")
+    else:
+        print("target " + str(t) + ": no pair")

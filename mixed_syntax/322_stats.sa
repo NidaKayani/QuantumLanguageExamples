@@ -1,0 +1,13 @@
+// Mixed-syntax example 322: basic statistics
+# Syntax used: C++, JavaScript, Python blocks, Ruby do/end
+
+let data = [72, 37, 19, 43, 16]
+let s = sorted(data)
+print(f"min {min(data)}, max {max(data)}, sum {sum(data)}")
+cout << "median " << (s[floor(len(s) / 2)]) << endl
+print(format("mean %.2f", sum(data) / len(data)))
+var = 0
+data.each do |x|
+    var += (x - sum(data) / len(data)) ** 2
+end
+print(format("variance %.2f, std dev %.2f", var / len(data), sqrt(var / len(data))))

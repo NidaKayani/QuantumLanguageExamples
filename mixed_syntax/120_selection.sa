@@ -1,0 +1,22 @@
+// Mixed-syntax example 120: selection sort (descending)
+# Syntax used: C-style headers, JavaScript, Python blocks, Ruby do/end
+
+def selection_sort_desc(xs)
+    let a = []
+    for v in xs:
+        a.push(v)
+    for i in range(0, len(a)):
+        best = i
+        for j in range(i + 1, len(a)):
+            if a[j] > a[best]:
+                best = j
+        if (best != i) {
+            let t = a[i]
+            a[i] = a[best];
+            a[best] = t
+        }
+    return a
+end
+let result = selection_sort_desc([52, 7, 27, 17, 5, 46, 6, 19, 55])
+print(result)
+print(f"top three: {result[0]}, {result[1]}, {result[2]}")

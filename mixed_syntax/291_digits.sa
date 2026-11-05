@@ -1,0 +1,19 @@
+// Mixed-syntax example 291: digit sums and digital roots
+# Syntax used: C-style headers, C++, Python blocks, Ruby do/end
+
+int digit_sum(int n) {
+    int s = 0;
+    while (n > 0) {
+        s += n % 10
+        n = floor(n / 10)
+    }
+    return s;
+}
+def digital_root(n):
+    while n >= 10
+        n = digit_sum(n)
+    end
+    return n
+for (auto& n : [724165, 374623, 840125, 983653, 814810, 311882, 520568, 158657]) {
+    console.log(str(n) + ": sum " + str(digit_sum(n)) + ", root " + str(digital_root(n)));
+}

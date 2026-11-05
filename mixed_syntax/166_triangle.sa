@@ -1,0 +1,16 @@
+// Mixed-syntax example 166: triangle classification
+# Syntax used: C++, JavaScript, Python blocks, Ruby do/end
+
+def kind(a, b, c):
+    if a + b <= c or a + c <= b or b + c <= a
+        return "not a triangle"
+    elsif a == b and b == c
+        return "equilateral"
+    elsif a == b or b == c or a == c
+        return "isosceles"
+    else
+        return "scalene"
+    end
+for (const t of [[1, 4, 3], [4, 9, 12], [10, 10, 5], [6, 12, 6], [12, 8, 2], [5, 6, 10]]) {
+    cout << (t[0]) << ", " << (t[1]) << ", " << (t[2]) << ": " << (kind(t[0], t[1], t[2])) << endl
+}

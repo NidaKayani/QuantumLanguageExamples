@@ -1,0 +1,31 @@
+// Mixed-syntax example 321: N-queens solutions for n = 4..6
+# Syntax used: brace blocks, C-style headers, C++, Quantum fn, JavaScript, Ruby do/end
+
+function safe(cols, row, col) {
+    for (int r = 0; r < row; r++) {
+        let c = cols[r];
+        if c == col or abs(c - col) == row - r
+            return 0
+        end
+    }
+    return 1;
+}
+fn solve(cols, row, n):
+    if (row == n) {
+        return 1
+    }
+    count = 0
+    for (int col = 0; col < n; col++) {
+        if safe(cols, row, col) == 1 {
+            cols[row] = col
+            count += solve(cols, row + 1, n)
+        }
+    }
+    return count
+(4...7).each do |n|
+    cols = []
+    for (int i = 0; i < n; i++) {
+        cols.push(0);
+    }
+    console.log(str(n) + " queens: " + str(solve(cols, 0, n)) + " solutions")
+end

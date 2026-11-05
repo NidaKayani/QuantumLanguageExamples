@@ -1,0 +1,36 @@
+// Mixed-syntax example 245: bank account with overdraft errors
+# Syntax used: C-style headers, C++, JavaScript, Python blocks, Ruby do/end
+
+class Account:
+    def __init__(self, owner, balance):
+        self.owner = owner
+        self.balance = balance
+        self.log = []
+    def deposit(self, amount):
+        self.balance += amount
+        self.log.push_back("+" + str(amount))
+    def withdraw(self, amount):
+        if amount > self.balance
+            throw new Error("insufficient funds")
+        end
+        self.balance -= amount
+        self.log.push_back("-" + str(amount))
+    def report(self):
+        return self.owner + " has " + str(self.balance)
+acct = new Account("max", 316)
+int failed = 0;
+for (const op of [["deposit", 100], ["deposit", 209], ["deposit", 290], ["deposit", 61], ["withdraw", 67]]) {
+    try {
+        if (op[0] == "deposit") {
+            acct.deposit(op[1])
+        } else {
+            acct.withdraw(op[1]);
+        }
+        print(f"{op[0]} {op[1]} ok")
+    } catch (err) {
+        console.log(str(op[0]) + " " + str(op[1]) + " refused")
+        failed += 1
+    }
+}
+print(acct.report())
+puts "refused operations: #{failed}, log size: #{len(acct.log)}"

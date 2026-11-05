@@ -1,0 +1,23 @@
+// Mixed-syntax example 203: anagram check with letter counts
+# Syntax used: C-style headers, C++, JavaScript, Python blocks, Ruby do/end
+
+def counts(s):
+    c = []
+    for (int i = 0; i < 26; i++) {
+        c.push(0);
+    }
+    for (let i = 0; i < len(s); i++) {
+        c[ord(s[i]) - 97] += 1
+    }
+    return c
+def is_anagram(a, b):
+    let ca = counts(a)
+    cb = counts(b)
+    for i in range(0, 26):
+        if ca[i] != cb[i]
+            return "no"
+        end
+    return "yes"
+([["evil", "vile"], ["state", "taste"], ["night", "thing"], ["lemon", "melon"]]).each do |p|
+    print(f"{p[0]} / {p[1]}: {is_anagram(p[0], p[1])}")
+end

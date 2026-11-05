@@ -1,0 +1,22 @@
+// Mixed-syntax example 227: Fibonacci sequence of 18 terms
+# Syntax used: C++, Quantum fn, JavaScript, Python blocks, Ruby do/end
+
+def fib_list(n):
+    seq = [0, 1]
+    while len(seq) < n:
+        seq.push_back(seq[len(seq) - 1] + seq[len(seq) - 2])
+    return seq
+fn fib_rec(n) {
+    if n < 2:
+        return n
+    return fib_rec(n - 1) + fib_rec(n - 2)
+}
+let seq = fib_list(18)
+print(seq)
+console.log("fib_rec(" + str(11) + ") = " + str(fib_rec(11)))
+let evens = 0
+seq.each do |v|
+    if v % 2 == 0:
+        evens += 1
+end
+cout << "even terms: " << (evens) << endl

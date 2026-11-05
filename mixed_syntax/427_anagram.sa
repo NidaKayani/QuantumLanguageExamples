@@ -1,0 +1,23 @@
+// Mixed-syntax example 427: anagram check with letter counts
+# Syntax used: brace blocks, C-style headers, JavaScript, Python blocks
+
+def counts(s):
+    let c = []
+    for i in range(0, 26):
+        c.push(0)
+    for i in range(0, len(s)) {
+        c[ord(s[i]) - 97] += 1
+    }
+    return c
+function is_anagram(a, b) {
+    ca = counts(a)
+    cb = counts(b)
+    for (i = 0; i < 26; ++i) {
+        if ca[i] != cb[i] {
+            return "no"
+        }
+    }
+    return "yes"
+}
+for p in [["listen", "silent"], ["night", "thing"], ["evil", "vile"], ["dusty", "study"]]:
+    print(f"{p[0]} / {p[1]}: {is_anagram(p[0], p[1])}")

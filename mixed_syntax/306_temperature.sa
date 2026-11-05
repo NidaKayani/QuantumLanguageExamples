@@ -1,0 +1,17 @@
+// Mixed-syntax example 306: temperature conversion table
+# Syntax used: arrow functions, brace blocks, C-style headers, C++, JavaScript, Python blocks
+
+def to_f(c):
+    return c * 9 / 5 + 32
+let to_k = (c) => {
+    return c + 273.15
+}
+for c in [5, 43, -23, -10, 39, 10] {
+    printf("%4d C = %7.2f F = %7.2f K\n", c, to_f(c), to_k(c));
+}
+hot = 0
+for (const auto& c : [5, 43, -23, -10, 39, 10]) {
+    if to_f(c) > 80:
+        hot += 1
+}
+console.log(`hot days: ${hot}`)

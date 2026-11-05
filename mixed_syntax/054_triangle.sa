@@ -1,0 +1,15 @@
+// Mixed-syntax example 054: triangle classification
+# Syntax used: brace blocks, C++, Quantum fn, Python blocks
+
+fn kind(a, b, c):
+    if a + b <= c || a + c <= b || b + c <= a {
+        return "not a triangle"
+    } else if a == b && b == c {
+        return "equilateral"
+    } else if a == b || b == c || a == c {
+        return "isosceles"
+    } else {
+        return "scalene"
+    }
+for t in [[10, 9, 5], [9, 5, 5], [1, 4, 11], [2, 10, 4], [3, 4, 3], [10, 11, 2]]:
+    cout << (t[0]) << ", " << (t[1]) << ", " << (t[2]) << ": " << (kind(t[0], t[1], t[2])) << endl

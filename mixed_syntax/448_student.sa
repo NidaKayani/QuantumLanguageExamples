@@ -1,0 +1,32 @@
+// Mixed-syntax example 448: students and courses (classes holding lists)
+# Syntax used: brace blocks, C++, JavaScript, Python blocks, Ruby do/end
+
+class Student:
+    def __init__(self, name):
+        self.name = name
+        self.marks = []
+    def add_mark(self, m):
+        self.marks.push_back(m)
+    def average(self):
+        if len(self.marks) == 0 {
+            return 0
+        }
+        return floor(sum(self.marks) / len(self.marks))
+    def best(self):
+        return max(self.marks)
+let roster = [];
+(["Gwen", "Bram", "Faro", "Cleo"]).each do |n|
+    s = Student(n)
+    for k in range(0, 3) {
+        s.add_mark((len(n) * 7 + k * 13) % 41 + 60);
+    }
+    roster.push(s)
+end
+top = roster[0]
+for (auto& s : roster) {
+    print(str(s.name) + ": average " + str(s.average()) + ", best " + str(s.best()))
+    if s.average() > top.average()
+        top = s
+    end
+}
+console.log(`top student: ${top.name}`)

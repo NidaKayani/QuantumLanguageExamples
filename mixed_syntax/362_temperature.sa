@@ -1,0 +1,19 @@
+// Mixed-syntax example 362: temperature conversion table
+# Syntax used: arrow functions, brace blocks, Quantum fn, JavaScript, Ruby do/end
+
+fn to_f(c) {
+    return c * 9 / 5 + 32;
+}
+const to_k = (c) => {
+    return c + 273.15
+}
+([-14, -11, -18, 11, 37, 40, 38]).each do |c|
+    console.log(sprintf("%4d C = %7.2f F = %7.2f K", c, to_f(c), to_k(c)))
+end
+let hot = 0;
+for (const c of [-14, -11, -18, 11, 37, 40, 38]) {
+    if to_f(c) > 80 {
+        hot += 1;
+    }
+}
+console.log("hot days: " + str(hot))

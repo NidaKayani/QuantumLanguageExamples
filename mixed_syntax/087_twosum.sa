@@ -1,0 +1,22 @@
+// Mixed-syntax example 087: two-sum with a dictionary
+# Syntax used: C-style headers, C++, JavaScript, Python blocks, Ruby do/end
+
+def two_sum(nums, target)
+    let seen = {}
+    for i in range(0, len(nums)):
+        need = target - nums[i]
+        if (need in seen) {
+            return [seen[need], i]
+        }
+        seen[nums[i]] = i
+    return [-1, -1]
+end
+nums = [29, 16, 35, 22, 14, 13, 5, 36]
+for (const t of [65, 51, 999, 48]) {
+    ans = two_sum(nums, t)
+    if ans[0] >= 0
+        cout << "target " << (t) << ": " << (nums[ans[0]]) << " + " << (nums[ans[1]]) << endl
+    else
+        console.log(`target ${t}: no pair`)
+    end
+}

@@ -1,0 +1,17 @@
+// Mixed-syntax example 204: Roman numerals
+# Syntax used: brace blocks, C-style headers, Python blocks, Ruby do/end
+
+def to_roman(n):
+    vals = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
+    syms = ["M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"]
+    out = ""
+    for (let i = 0; i < len(vals); i++) {
+        while n >= vals[i]
+            out = out + syms[i]
+            n -= vals[i]
+        end
+    }
+    return out
+for n in [2258, 320, 3954, 2994, 3062, 2537] {
+    print(f"{n} = {to_roman(n)}")
+}

@@ -1,0 +1,21 @@
+// Mixed-syntax example 225: TickTock up to 12
+# Syntax used: C-style headers, C++, JavaScript, Ruby do/end
+
+function label(i) {
+    if (i % 2 == 0 and i % 7 == 0) {
+        return "TickTock"
+    } else if (i % 2 == 0) {
+        return "Tick"
+    } else if (i % 7 == 0) {
+        return "Tock"
+    }
+    return str(i)
+}
+let special = 0;
+for (int i = 1; i < 13; i++) {
+    cout << label(i) << "\n"
+    if label(i) != str(i)
+        special += 1
+    end
+}
+console.log(`special values: ${special}`)

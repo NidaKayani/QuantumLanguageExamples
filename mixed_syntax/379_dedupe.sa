@@ -1,0 +1,18 @@
+// Mixed-syntax example 379: removing duplicates while keeping order
+# Syntax used: arrow functions, brace blocks, JavaScript, Ruby do/end
+
+let dedupe = (xs) => {
+    seen = {}
+    out = []
+    for x in xs {
+        if not (x in seen)
+            seen[x] = 1
+            out.push(x)
+        end
+    }
+    return out
+}
+data = [1, 7, 6, 9, 7, 2, 12, 2, 6, 4, 3, 3, 7, 1, 5]
+let unique = dedupe(data);
+console.log(unique)
+console.log(`removed ${len(data) - len(unique)} duplicates`)

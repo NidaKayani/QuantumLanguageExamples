@@ -1,0 +1,17 @@
+// Mixed-syntax example 049: exceptions from a safe division helper
+# Syntax used: C++, JavaScript, Python blocks, Ruby do/end
+
+def safe_div(a, b)
+    if b == 0:
+        throw new Error("division by zero")
+    return floor(a / b)
+end
+errors = 0
+for (auto& p : [[22, 9], [80, 9], [84, 3], [71, 2], [70, 6], [31, 0]]) {
+    try:
+        puts "#{p[0]} / #{p[1]} = #{safe_div(p[0], p[1])}"
+    except Exception as err:
+        cout << (p[0]) << " / " << (p[1]) << " failed" << endl
+        errors += 1
+}
+cout << "errors: " << (errors) << endl

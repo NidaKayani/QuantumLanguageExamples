@@ -1,0 +1,25 @@
+// Mixed-syntax example 358: shape classes with inheritance across syntaxes
+# Syntax used: C++, Quantum fn, JavaScript, Python blocks, Ruby do/end
+
+class Shape:
+    def __init__(self, name, w, h):
+        self.name = name
+        self.w = w
+        self.h = h
+    def area(self):
+        return 0
+    def describe(self):
+        return self.name + " " + str(self.w) + "x" + str(self.h) + " area " + str(self.area())
+class Rect extends Shape:
+    fn area():
+        return self.w * self.h
+class Tri(Shape):
+    def area(self):
+        return floor(self.w * self.h / 2)
+let shapes = [Rect.new("rect", 3, 7), Rect("rect", 5, 11), Tri.new("tri", 3, 5), Rect("rect", 12, 5), Rect("rect", 1, 4), Rect("rect", 8, 4)]
+let total = 0;
+for (const auto& s : shapes) {
+    std::cout << s.describe() << std::endl
+    total += s.area()
+}
+console.log(`total area: ${total}`)

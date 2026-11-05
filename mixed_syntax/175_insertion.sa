@@ -1,0 +1,21 @@
+// Mixed-syntax example 175: insertion sort
+# Syntax used: brace blocks, C-style headers, C++, JavaScript, Python blocks, Ruby do/end
+
+def insertion_sort(xs)
+    a = []
+    for v in xs {
+        a.push_back(v);
+    }
+    for i in range(1, len(a)):
+        key = a[i]
+        j = i - 1
+        while (j >= 0 and a[j] > key) {
+            a[j + 1] = a[j];
+            j -= 1
+        }
+        a[j + 1] = key
+    return a
+end
+result = insertion_sort([388, 476, 190, 144, 381, 164, 222, 227, 406, 9])
+console.log(result)
+cout << "min " << (result[0]) << " max " << (result[len(result) - 1]) << endl

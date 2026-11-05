@@ -1,0 +1,28 @@
+// Mixed-syntax example 132: round-robin elimination with a queue class (every 2)
+# Syntax used: brace blocks, C-style headers, C++, JavaScript, Python blocks, Ruby do/end
+
+class Queue:
+    def __init__(self):
+        self.items = []
+        self.head = 0
+    def enqueue(self, v):
+        self.items.append(v)
+    def dequeue(self):
+        let v = self.items[self.head]
+        self.head += 1
+        return v
+    def size(self):
+        return len(self.items) - self.head
+let q = Queue.new()
+for n in ["cid", "fay", "dee", "eve", "gus"] {
+    q.enqueue(n)
+}
+round = 1
+while (q.size() > 1) {
+    for (int i = 0; i < 1; i++) {
+        q.enqueue(q.dequeue());
+    }
+    cout << "round " << (round) << ": out goes " << (q.dequeue()) << endl;
+    round += 1;
+}
+console.log(`winner: ${q.dequeue()}`)

@@ -1,0 +1,25 @@
+// Mixed-syntax example 135: counter class with history
+# Syntax used: brace blocks, C++, Python blocks, Ruby do/end
+
+class Counter:
+    def __init__(self, start):
+        self.value = start
+        self.history = [start]
+    def add(self, n):
+        self.value += n
+        self.history.append(self.value)
+        return self.value
+    def undo(self):
+        if len(self.history) > 1 {
+            self.history.pop();
+            self.value = self.history[len(self.history) - 1];
+        }
+        return self.value
+c = Counter(15)
+for (const auto& n : [6, 2, 3, 2, 2, 7, 1, 6, 1]) {
+    c.add(n);
+}
+print(c.history)
+console.log("after undo: " + str(c.undo()))
+cout << "after undo: " << (c.undo()) << endl
+puts c.value

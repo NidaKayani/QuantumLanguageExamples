@@ -1,0 +1,20 @@
+// Mixed-syntax example 404: palindromic numbers in [785, 866)
+# Syntax used: C++, JavaScript, Python blocks, Ruby do/end
+
+int reverse_num(int n) {
+    rev = 0
+    while n > 0
+        rev = rev * 10 + n % 10
+        n = floor(n / 10)
+    end
+    return rev
+}
+let found = []
+(785...866).each do |n|
+    if reverse_num(n) == n
+        found.push_back(n)
+    end
+end
+print(found)
+console.log("how many:", len(found))
+puts "reverse of #{785} is #{reverse_num(785)}"

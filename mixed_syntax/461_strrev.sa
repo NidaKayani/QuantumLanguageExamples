@@ -1,0 +1,22 @@
+// Mixed-syntax example 461: string reversal and palindromes
+# Syntax used: C-style headers, C++, JavaScript, Python blocks
+
+function reverse(s) {
+    out = ""
+    int i = len(s) - 1
+    while (i >= 0) {
+        out = out + s[i];
+        i -= 1;
+    }
+    return out;
+}
+count = 0
+for (auto w : ["tenet", "madam", "tiger", "level", "delta", "orbit", "quartz"]) {
+    rw = reverse(w)
+    if rw == w:
+        console.log(w, "is a palindrome")
+        count += 1
+    else:
+        console.log(`${w} reversed is ${rw}`)
+}
+console.log(`palindromes: ${count}`)

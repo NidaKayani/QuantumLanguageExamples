@@ -1,0 +1,18 @@
+// Mixed-syntax example 151: Armstrong numbers below 200
+# Syntax used: brace blocks, C++, JavaScript, Python blocks, Ruby do/end
+
+def is_armstrong(n):
+    let digits = len(str(n));
+    int s = 0;
+    let m = n
+    while m > 0:
+        s += (m % 10) ** digits
+        m = floor(m / 10)
+    return s == n
+found = []
+for n in range(1, 200) {
+    if is_armstrong(n)
+        found.append(n)
+    end
+}
+print(found)

@@ -1,0 +1,20 @@
+// Mixed-syntax example 255: two-sum with a dictionary
+# Syntax used: C-style headers, C++, Quantum fn, JavaScript, Python blocks
+
+fn two_sum(nums, target):
+    let seen = {};
+    for (i = 0; i < len(nums); ++i) {
+        need = target - nums[i]
+        if (need in seen) {
+            return [seen[need], i]
+        }
+        seen[nums[i]] = i
+    }
+    return [-1, -1]
+let nums = [17, 18, 32, 38, 16, 2, 27, 13]
+for t in [30, 50, 999, 53]:
+    let ans = two_sum(nums, t);
+    if ans[0] >= 0:
+        cout << "target " << (t) << ": " << (nums[ans[0]]) << " + " << (nums[ans[1]]) << endl
+    else:
+        cout << "target " << (t) << ": no pair" << endl

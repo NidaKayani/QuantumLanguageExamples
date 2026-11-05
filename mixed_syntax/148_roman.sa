@@ -1,0 +1,18 @@
+// Mixed-syntax example 148: Roman numerals
+# Syntax used: brace blocks, Quantum fn, JavaScript, Ruby do/end
+
+fn to_roman(n) {
+    vals = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
+    let syms = ["M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"]
+    let out = ""
+    for i in range(0, len(vals)) {
+        while n >= vals[i] {
+            out = out + syms[i];
+            n -= vals[i]
+        }
+    }
+    return out;
+}
+([2944, 1585, 1562, 3254, 3946, 3418]).each do |n|
+    console.log(str(n) + " = " + str(to_roman(n)))
+end

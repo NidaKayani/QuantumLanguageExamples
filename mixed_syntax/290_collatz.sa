@@ -1,0 +1,26 @@
+// Mixed-syntax example 290: Collatz steps for 26..33
+# Syntax used: C-style headers, C++, JavaScript, Ruby do/end
+
+def steps(n)
+    count = 0
+    while (n != 1) {
+        if n % 2 == 0
+            n = floor(n / 2)
+        else
+            n = 3 * n + 1
+        end
+        count += 1;
+    }
+    return count
+end
+let best = 0;
+int best_n = 26
+for (let n = 26; n < 34; n += 1) {
+    let s = steps(n)
+    console.log(str(n) + " -> " + str(s) + " steps");
+    if (s > best) {
+        best = s;
+        best_n = n;
+    }
+}
+print("longest: " + str(best_n) + " with " + str(best) + " steps")

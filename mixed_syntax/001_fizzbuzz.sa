@@ -1,0 +1,21 @@
+// Mixed-syntax example 001: FizzBuzz up to 24
+# Syntax used: arrow functions, brace blocks, C-style headers, C++, JavaScript, Ruby do/end
+
+let label = (i) => {
+    if (i % 5 == 0 and i % 7 == 0) {
+        return "FizzBuzz"
+    } else if (i % 5 == 0) {
+        return "Fizz";
+    } else if (i % 7 == 0) {
+        return "Buzz"
+    }
+    return str(i)
+}
+let special = 0;
+for (int i = 1; i < 25; i++) {
+    cout << label(i) << "\n"
+    if label(i) != str(i) {
+        special += 1
+    }
+}
+puts "special values: #{special}"

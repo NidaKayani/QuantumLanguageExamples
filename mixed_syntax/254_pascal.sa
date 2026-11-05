@@ -1,0 +1,16 @@
+// Mixed-syntax example 254: Pascal's triangle, 10 rows
+# Syntax used: brace blocks, Quantum fn, JavaScript, Python blocks, Ruby do/end
+
+fn next_row(row):
+    out = [1]
+    (1...len(row)).each do |i|
+        out.push(row[i - 1] + row[i])
+    end
+    out.push(1)
+    return out
+row = [1]
+for i in range(0, 10) {
+    console.log(row)
+    row = next_row(row)
+}
+console.log("sum of next row:", sum(row))

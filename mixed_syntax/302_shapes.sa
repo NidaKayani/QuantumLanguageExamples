@@ -1,0 +1,32 @@
+// Mixed-syntax example 302: shape classes with inheritance across syntaxes
+# Syntax used: C++, JavaScript, Python blocks, Ruby do/end
+
+class Shape
+    attr_accessor :h, :name, :w
+    def initialize(name, w, h)
+        @name = name
+        @w = w
+        @h = h
+    end
+    def area()
+        return 0
+    end
+    def describe()
+        return @name + " " + str(@w) + "x" + str(@h) + " area " + str(self.area())
+    end
+end
+class Rect(Shape):
+    def area(self):
+        return self.w * self.h
+class Tri extends Shape {
+    area() {
+        return floor(this.w * this.h / 2);
+    }
+}
+shapes = [new Tri("tri", 12, 9), new Tri("tri", 1, 11), new Tri("tri", 5, 8), new Rect("rect", 9, 10), new Rect("rect", 6, 4)]
+int total = 0
+shapes.each do |s|
+    print(s.describe())
+    total += s.area()
+end
+puts "total area: #{total}"

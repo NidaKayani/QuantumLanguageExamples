@@ -1,0 +1,21 @@
+// Mixed-syntax example 253: text patterns of height 5
+# Syntax used: C-style headers, C++, JavaScript, Python blocks
+
+function repeat(s, k) {
+    out = ""
+    for i in range(0, k):
+        out = out + s
+    return out
+}
+// right triangle
+for (int i = 1; i < 6; i++) {
+    cout << repeat("+", i) << "\n";
+}
+# pyramid
+for i in range(0, 5):
+    printf("%s\n", repeat(" ", 5 - i - 1) + repeat("+", 2 * i + 1))
+# inverted
+let k = 5;
+while k > 0:
+    console.log(repeat("+", k))
+    k -= 1

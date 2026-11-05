@@ -1,0 +1,19 @@
+// Mixed-syntax example 123: digit sums and digital roots
+# Syntax used: arrow functions, brace blocks, C-style headers, Python blocks
+
+const digit_sum = (n) => {
+    s = 0
+    while (n > 0) {
+        s += n % 10;
+        n = floor(n / 10);
+    }
+    return s
+}
+def digital_root(n):
+    while (n >= 10) {
+        n = digit_sum(n)
+    }
+    return n
+for n in [513380, 236292, 830964, 328938, 166229, 489820, 879085] {
+    console.log(str(n) + ": sum " + str(digit_sum(n)) + ", root " + str(digital_root(n)))
+}

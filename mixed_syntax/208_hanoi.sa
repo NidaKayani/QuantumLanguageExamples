@@ -1,0 +1,17 @@
+// Mixed-syntax example 208: Towers of Hanoi with 3 disks
+# Syntax used: arrow functions, brace blocks, C++, Ruby do/end
+
+let hanoi = (n, src, dst, via, moves) => {
+    if n == 0
+        return
+    end
+    hanoi(n - 1, src, via, dst, moves)
+    moves.append(src + "->" + dst);
+    hanoi(n - 1, via, dst, src, moves)
+}
+moves = []
+hanoi(3, "A", "C", "B", moves)
+puts "moves: #{len(moves)}"
+for m in moves {
+    cout << m << "\n"
+}

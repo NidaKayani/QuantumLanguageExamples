@@ -1,0 +1,10 @@
+// Mixed-syntax example 145: running average
+# Syntax used: C++, JavaScript, Python blocks, Ruby do/end
+
+let total = 0
+int count = 0
+([62, 67, 50, 32, 15, 10, 58, 48, 75]).each do |x|
+    total += x
+    count += 1
+    print("after %d values (last %d): average %.2f" % (count, x, total / count))
+end

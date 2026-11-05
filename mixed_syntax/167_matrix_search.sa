@@ -1,0 +1,27 @@
+// Mixed-syntax example 167: searching a 4x4 grid
+# Syntax used: brace blocks, C++, JavaScript, Python blocks, Ruby do/end
+
+grid = [[5, 5, 9, 9], [3, 4, 0, 8], [5, 6, 9, 3], [5, 3, 5, 9]]
+let best = -1;
+br = 0
+let bc = 0;
+int zeros = 0
+for i in range(0, len(grid)) {
+    for j in range(0, len(grid[i])) {
+        if grid[i][j] > best {
+            best = grid[i][j]
+            br = i
+            bc = j;
+        }
+        if grid[i][j] == 0 {
+            zeros += 1;
+        }
+    }
+}
+print(f"largest {best} at row {br}, column {bc}")
+print("zeros: " + str(zeros))
+let diag = 0
+for (int i = 0; i < len(grid); i++) {
+    diag += grid[i][i] + grid[i][len(grid) - 1 - i];
+}
+puts "diagonal sum: #{diag}"

@@ -1,0 +1,29 @@
+// Mixed-syntax example 436: merging two sorted lists
+# Syntax used: brace blocks, C-style headers, C++, JavaScript, Python blocks, Ruby do/end
+
+function merge(a, b) {
+    out = []
+    int i = 0
+    j = 0
+    while i < len(a) && j < len(b) {
+        if a[i] <= b[j] {
+            out.append(a[i])
+            i += 1
+        } else {
+            out.push_back(b[j])
+            j += 1
+        }
+    }
+    while (i < len(a)) {
+        out.push(a[i])
+        i += 1;
+    }
+    while (j < len(b)) {
+        out.append(b[j])
+        j += 1;
+    }
+    return out
+}
+let merged = merge([6, 21, 24, 29, 32, 46], [8, 14, 18, 34, 42, 43, 49])
+print(merged)
+puts "length #{len(merged)}"

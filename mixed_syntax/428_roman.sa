@@ -1,0 +1,16 @@
+// Mixed-syntax example 428: Roman numerals
+# Syntax used: C++, JavaScript, Python blocks, Ruby do/end
+
+function to_roman(n) {
+    vals = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
+    syms = ["M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"]
+    string out = "";
+    for i in range(0, len(vals)):
+        while n >= vals[i]:
+            out = out + syms[i]
+            n -= vals[i]
+    return out
+}
+([1603, 853, 3034, 2880, 3359, 1885]).each do |n|
+    console.log(str(n) + " = " + str(to_roman(n)))
+end

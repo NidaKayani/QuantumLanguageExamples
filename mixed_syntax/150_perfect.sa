@@ -1,0 +1,24 @@
+// Mixed-syntax example 150: perfect, abundant and deficient numbers below 233
+# Syntax used: arrow functions, C++, JavaScript, Python blocks, Ruby do/end
+
+const divisor_sum = (n) => {
+    s = 0
+    for d in range(1, n):
+        if n % d == 0:
+            s += d
+    return s
+}
+perfect = []
+let abundant = 0
+deficient = 0
+for (int n = 2; n < 233; n++) {
+    let s = divisor_sum(n)
+    if s == n:
+        perfect.append(n)
+    elif s > n:
+        abundant += 1
+    else:
+        deficient += 1
+}
+print(perfect)
+puts "abundant: #{abundant}, deficient: #{deficient}"

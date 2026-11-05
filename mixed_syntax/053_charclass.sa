@@ -1,0 +1,24 @@
+// Mixed-syntax example 053: character classes in strings
+# Syntax used: C++, JavaScript, Python blocks, Ruby do/end
+
+def classify(s)
+    int up = 0;
+    int low = 0
+    let dig = 0
+    int other = 0;
+    (0...len(s)).each do |i|
+        c = ord(s[i])
+        if c >= 65 and c <= 90:
+            up += 1
+        elif c >= 97 and c <= 122:
+            low += 1
+        elif c >= 48 and c <= 57:
+            dig += 1
+        else:
+            other += 1
+    end
+    return [up, low, dig, other]
+end
+for s in ["Quantum2026 Rocks!", "Hello World 42", "abc DEF 123 xyz"]:
+    let c = classify(s)
+    cout << (s) << ": upper " << (c[0]) << ", lower " << (c[1]) << ", digits " << (c[2]) << ", other " << (c[3]) << endl

@@ -1,0 +1,16 @@
+// Mixed-syntax example 096: Towers of Hanoi with 5 disks
+# Syntax used: brace blocks, C-style headers, JavaScript, Python blocks
+
+function hanoi(n, src, dst, via, moves) {
+    if n == 0:
+        return
+    hanoi(n - 1, src, via, dst, moves)
+    moves.push_back(src + "->" + dst);
+    hanoi(n - 1, via, dst, src, moves);
+}
+let moves = [];
+hanoi(5, "A", "C", "B", moves)
+console.log(`moves: ${len(moves)}`)
+for m in moves {
+    printf("%s\n", m)
+}

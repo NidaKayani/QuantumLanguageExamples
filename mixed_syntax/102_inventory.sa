@@ -1,0 +1,19 @@
+// Mixed-syntax example 102: inventory updates in a dictionary
+# Syntax used: brace blocks, C++, JavaScript, Python blocks, Ruby do/end
+
+stock = {"pipes": 10, "gears": 4, "springs": 0, "chains": 5}
+([["springs", 0], ["chains", 8], ["chains", 6], ["pipes", -1], ["chains", 9], ["chains", -5], ["chains", 3], ["gears", -4], ["pipes", -2], ["chains", -5]]).each do |op|
+    let name = op[0]
+    delta = op[1]
+    if stock[name] + delta < 0 {
+        cout << "cannot take " << (0 - delta) << " " << (name) << endl
+    } else {
+        stock[name] += delta;
+    }
+end
+int total = 0;
+for k in stock.keys() {
+    print(str(k) + ": " + str(stock[k]))
+    total += stock[k]
+}
+console.log("total items:", total)

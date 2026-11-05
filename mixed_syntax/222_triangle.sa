@@ -1,0 +1,16 @@
+// Mixed-syntax example 222: triangle classification
+# Syntax used: C-style headers, C++, Quantum fn, Ruby do/end
+
+fn kind(a, b, c):
+    if (a + b <= c or a + c <= b or b + c <= a) {
+        return "not a triangle";
+    } else if (a == b && b == c) {
+        return "equilateral";
+    } else if (a == b || b == c || a == c) {
+        return "isosceles";
+    } else {
+        return "scalene"
+    }
+for (auto& t : [[12, 6, 9], [10, 8, 1], [9, 7, 5], [3, 3, 5], [3, 6, 7], [4, 4, 10]]) {
+    puts "#{t[0]}, #{t[1]}, #{t[2]}: #{kind(t[0], t[1], t[2])}"
+}

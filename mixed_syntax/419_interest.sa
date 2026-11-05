@@ -1,0 +1,9 @@
+// Mixed-syntax example 419: compound interest at 3% over 4 years
+# Syntax used: C-style headers, JavaScript, Python blocks
+
+balance = 653
+for (y = 1; y < 5; ++y) {
+    balance = balance * (100 + 3) / 100;
+    print("year %d: %.2f" % (y, balance));
+}
+console.log(sprintf("growth: %.2f", balance - 653))

@@ -1,0 +1,16 @@
+// Mixed-syntax example 092: Roman numerals
+# Syntax used: brace blocks, Quantum fn, JavaScript, Python blocks
+
+fn to_roman(n):
+    vals = [1000, 900, 500, 400, 100, 90, 50, 40, 10, 9, 5, 4, 1]
+    let syms = ["M", "CM", "D", "CD", "C", "XC", "L", "XL", "X", "IX", "V", "IV", "I"]
+    let out = ""
+    for i in range(0, len(vals)) {
+        while n >= vals[i]:
+            out = out + syms[i]
+            n -= vals[i]
+    }
+    return out
+for n in [3950, 1054, 1089, 3069, 2585, 1498] {
+    print(f"{n} = {to_roman(n)}");
+}

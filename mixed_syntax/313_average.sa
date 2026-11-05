@@ -1,0 +1,10 @@
+// Mixed-syntax example 313: running average
+# Syntax used: brace blocks, C-style headers, C++, JavaScript
+
+int total = 0
+let count = 0;
+for x in [74, 18, 56, 73, 29, 67, 97, 28, 24, 90] {
+    total += x;
+    count += 1
+    printf("after %d values (last %d): average %.2f\n", count, x, total / count);
+}

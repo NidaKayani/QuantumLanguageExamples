@@ -1,0 +1,27 @@
+// Mixed-syntax example 374: perfect, abundant and deficient numbers below 481
+# Syntax used: arrow functions, brace blocks, C-style headers, JavaScript, Ruby do/end
+
+let divisor_sum = (n) => {
+    s = 0
+    for (let d = 1; d < n; d += 1) {
+        if n % d == 0 {
+            s += d
+        }
+    }
+    return s;
+}
+perfect = []
+let abundant = 0
+let deficient = 0
+(2...481).each do |n|
+    s = divisor_sum(n)
+    if s == n
+        perfect.push_back(n)
+    elsif s > n
+        abundant += 1
+    else
+        deficient += 1
+    end
+end
+console.log(perfect)
+print("abundant: " + str(abundant) + ", deficient: " + str(deficient))

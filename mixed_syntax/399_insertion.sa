@@ -1,0 +1,21 @@
+// Mixed-syntax example 399: insertion sort
+# Syntax used: arrow functions, brace blocks, C++, JavaScript, Python blocks
+
+const insertion_sort = (xs) => {
+    a = []
+    for v in xs:
+        a.push(v)
+    for (int i = 1; i < len(a); i++) {
+        key = a[i]
+        j = i - 1
+        while j >= 0 && a[j] > key {
+            a[j + 1] = a[j]
+            j -= 1
+        }
+        a[j + 1] = key;
+    }
+    return a;
+}
+let result = insertion_sort([277, 210, 364, 266, 410, 121, 404, 277])
+console.log(result)
+cout << "min " << (result[0]) << " max " << (result[len(result) - 1]) << endl

@@ -1,0 +1,17 @@
+// Mixed-syntax example 172: gcd and lcm of number pairs
+# Syntax used: brace blocks, Quantum fn, JavaScript, Python blocks
+
+function gcd(a, b) {
+    while b != 0 {
+        let t = b
+        b = a % b;
+        a = t
+    }
+    return a
+}
+fn lcm(a, b) {
+    return floor(a * b / gcd(a, b))
+}
+pairs = [[166, 147], [165, 118], [127, 106], [26, 72], [16, 42], [73, 32], [184, 74]]
+for p in pairs:
+    console.log("gcd(" + str(p[0]) + ", " + str(p[1]) + ") = " + str(gcd(p[0], p[1])) + ", lcm = " + str(lcm(p[0], p[1])))

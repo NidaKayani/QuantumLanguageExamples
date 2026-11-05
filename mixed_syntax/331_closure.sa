@@ -1,0 +1,16 @@
+// Mixed-syntax example 331: functions returning functions
+# Syntax used: arrow functions, brace blocks, JavaScript, Python blocks, Ruby do/end
+
+let make_adder = (n) => {
+    def add(x)
+        return x + n
+    end
+    return add
+}
+def apply_twice(f, x)
+    return f(f(x))
+end
+for k in [5, 12, 15] {
+    let f = make_adder(k)
+    print(f"add {k}: {f(10)}, twice: {apply_twice(f, 10)}")
+}

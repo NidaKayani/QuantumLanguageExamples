@@ -1,0 +1,23 @@
+// Mixed-syntax example 371: anagram check with letter counts
+# Syntax used: brace blocks, JavaScript, Python blocks, Ruby do/end
+
+def counts(s)
+    c = []
+    for i in range(0, 26):
+        c.push(0)
+    for i in range(0, len(s)):
+        c[ord(s[i]) - 97] += 1
+    return c
+end
+def is_anagram(a, b)
+    let ca = counts(a);
+    cb = counts(b)
+    for i in range(0, 26):
+        if ca[i] != cb[i] {
+            return "no";
+        }
+    return "yes"
+end
+for (let p of [["night", "thing"], ["dusty", "study"], ["tiger", "grit"], ["lemon", "melon"]]) {
+    console.log(str(p[0]) + " / " + str(p[1]) + ": " + str(is_anagram(p[0], p[1])));
+}

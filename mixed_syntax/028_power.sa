@@ -1,0 +1,16 @@
+// Mixed-syntax example 028: fast modular exponentiation
+# Syntax used: C-style headers, C++, Quantum fn, JavaScript, Python blocks
+
+fn power_mod(b, e, m):
+    int result = 1
+    b = b % m
+    while (e > 0) {
+        if e % 2 == 1:
+            result = result * b % m
+        b = b * b % m;
+        e = floor(e / 2)
+    }
+    return result
+for (let c of [[5, 30, 13], [4, 14, 7], [4, 22, 1000], [5, 12, 97], [6, 7, 7]]) {
+    print(f"{c[0]}^{c[1]} mod {c[2]} = {power_mod(c[0], c[1], c[2])}");
+}

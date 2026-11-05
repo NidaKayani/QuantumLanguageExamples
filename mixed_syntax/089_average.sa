@@ -1,0 +1,10 @@
+// Mixed-syntax example 089: running average
+# Syntax used: C-style headers, C++, JavaScript, Ruby do/end
+
+int total = 0
+let count = 0;
+([84, 20, 97, 95, 77, 97]).each do |x|
+    total += x
+    count += 1
+    printf("after %d values (last %d): average %.2f\n", count, x, total / count)
+end

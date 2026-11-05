@@ -1,0 +1,20 @@
+// Mixed-syntax example 450: factorials up to 10
+# Syntax used: arrow functions, C++, Quantum fn, JavaScript, Python blocks
+
+let fact_iter = (n) => {
+    acc = 1
+    for k in range(2, n + 1):
+        acc *= k
+    return acc
+}
+fn fact_rec(n) {
+    if n <= 1:
+        return 1
+    return n * fact_rec(n - 1)
+}
+int mismatches = 0;
+for k in range(0, 11):
+    console.log(`${k}! = ${fact_iter(k)}`)
+    if fact_iter(k) != fact_rec(k):
+        mismatches += 1
+cout << "mismatches: " << (mismatches) << endl

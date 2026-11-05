@@ -1,0 +1,15 @@
+// Mixed-syntax example 034: histogram of values in buckets of ten
+# Syntax used: C-style headers, C++, JavaScript, Ruby do/end
+
+let buckets = [0, 0, 0, 0, 0];
+([25, 31, 31, 22, 20, 17, 35, 14, 17, 7, 43]).each do |x|
+    buckets[floor(x / 10)] += 1
+end
+for (b = 0; b < 5; b += 1) {
+    bar = ""
+    (0...buckets[b]).each do |i|
+        bar = bar + "#"
+    end
+    cout << (b * 10) << "-" << (b * 10 + 9) << ": " << (bar) << endl
+}
+print("values: " + str(sum(buckets)))

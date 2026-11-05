@@ -1,0 +1,16 @@
+// Mixed-syntax example 446: triangle classification
+# Syntax used: C-style headers, JavaScript, Python blocks, Ruby do/end
+
+def kind(a, b, c)
+    if (a + b <= c || a + c <= b || b + c <= a) {
+        return "not a triangle"
+    } else if (a == b and b == c) {
+        return "equilateral";
+    } else if (a == b or b == c or a == c) {
+        return "isosceles";
+    } else {
+        return "scalene"
+    }
+end
+for t in [[6, 4, 9], [10, 12, 2], [7, 10, 2], [3, 7, 9], [2, 7, 1], [8, 9, 2]]:
+    console.log(`${t[0]}, ${t[1]}, ${t[2]}: ${kind(t[0], t[1], t[2])}`)

@@ -1,0 +1,21 @@
+// Mixed-syntax example 199: two-sum with a dictionary
+# Syntax used: arrow functions, brace blocks, C++, JavaScript, Python blocks, Ruby do/end
+
+const two_sum = (nums, target) => {
+    seen = {}
+    for i in range(0, len(nums)) {
+        need = target - nums[i]
+        if need in seen {
+            return [seen[need], i];
+        }
+        seen[nums[i]] = i
+    }
+    return [-1, -1]
+}
+let nums = [30, 18, 39, 20, 4, 13, 34]
+for t in [64, 57, 999, 22]:
+    let ans = two_sum(nums, t)
+    if ans[0] >= 0:
+        cout << "target " << (t) << ": " << (nums[ans[0]]) << " + " << (nums[ans[1]]) << endl
+    else:
+        puts "target #{t}: no pair"

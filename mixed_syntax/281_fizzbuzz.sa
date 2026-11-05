@@ -1,0 +1,19 @@
+// Mixed-syntax example 281: PingPong up to 23
+# Syntax used: brace blocks, C-style headers, Quantum fn, Python blocks, Ruby do/end
+
+fn label(i):
+    if i % 3 == 0 and i % 5 == 0
+        return "PingPong"
+    elsif i % 3 == 0
+        return "Ping"
+    elsif i % 5 == 0
+        return "Pong"
+    end
+    return str(i)
+special = 0
+for i in range(1, 24) {
+    printf("%s\n", label(i));
+    if label(i) != str(i):
+        special += 1
+}
+print(f"special values: {special}")

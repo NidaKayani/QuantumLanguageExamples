@@ -1,0 +1,37 @@
+// Mixed-syntax example 224: students and courses (classes holding lists)
+# Syntax used: brace blocks, C-style headers, C++, JavaScript, Python blocks, Ruby do/end
+
+class Student
+    attr_accessor :marks, :name
+    def initialize(name)
+        @name = name
+        @marks = []
+    end
+    def add_mark(m)
+        @marks.push(m)
+    end
+    def average()
+        if len(@marks) == 0:
+            return 0
+        return floor(sum(@marks) / len(@marks))
+    end
+    def best()
+        return max(@marks)
+    end
+end
+roster = []
+for (auto n : ["Bram", "Dev", "Esme", "Faro"]) {
+    s = Student(n)
+    for (let k = 0; k < 2; k++) {
+        s.add_mark((len(n) * 7 + k * 13) % 41 + 60)
+    }
+    roster.push_back(s);
+}
+let top = roster[0];
+for (const auto& s : roster) {
+    cout << (s.name) << ": average " << (s.average()) << ", best " << (s.best()) << endl;
+    if s.average() > top.average() {
+        top = s;
+    }
+}
+cout << "top student: " << (top.name) << endl

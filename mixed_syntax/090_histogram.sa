@@ -1,0 +1,14 @@
+// Mixed-syntax example 090: histogram of values in buckets of ten
+# Syntax used: C-style headers, C++, JavaScript, Python blocks
+
+let buckets = [0, 0, 0, 0, 0];
+for x in [47, 3, 37, 9, 27, 40, 9, 19, 10, 35, 18, 18, 25, 43]:
+    buckets[floor(x / 10)] += 1
+for (int b = 0; b < 5; b++) {
+    let bar = ""
+    for (let i = 0; i < buckets[b]; i += 1) {
+        bar = bar + "#"
+    }
+    print(str(b * 10) + "-" + str(b * 10 + 9) + ": " + str(bar))
+}
+print("values:", sum(buckets))

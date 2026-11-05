@@ -1,0 +1,27 @@
+// Mixed-syntax example 345: binary search
+# Syntax used: brace blocks, C-style headers, C++, Quantum fn, JavaScript, Python blocks
+
+fn bsearch(xs, target) {
+    let lo = 0;
+    int hi = len(xs) - 1;
+    while (lo <= hi) {
+        mid = floor((lo + hi) / 2)
+        if (xs[mid] == target) {
+            return mid;
+        } else if (xs[mid] < target) {
+            lo = mid + 1;
+        } else {
+            hi = mid - 1;
+        }
+    }
+    return -1;
+}
+let data = [25, 31, 33, 44, 53, 57, 80, 93, 107, 110, 112, 116, 119]
+for t in [110, 107, 44, 102, 29, 75] {
+    pos = bsearch(data, t)
+    if pos >= 0 {
+        console.log(`found ${t} at index ${pos}`)
+    } else {
+        print(f"{t} is not in the list")
+    }
+}

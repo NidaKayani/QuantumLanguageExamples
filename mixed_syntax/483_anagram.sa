@@ -1,0 +1,24 @@
+// Mixed-syntax example 483: anagram check with letter counts
+# Syntax used: brace blocks, C++, Quantum fn, JavaScript, Python blocks, Ruby do/end
+
+fn counts(s):
+    c = []
+    for i in range(0, 26) {
+        c.push(0)
+    }
+    for i in range(0, len(s)) {
+        c[ord(s[i]) - 97] += 1
+    }
+    return c
+def is_anagram(a, b)
+    ca = counts(a)
+    cb = counts(b)
+    for (int i = 0; i < 26; i++) {
+        if ca[i] != cb[i]:
+            return "no"
+    }
+    return "yes"
+end
+for (let p of [["evil", "vile"], ["tiger", "grit"], ["listen", "silent"], ["apple", "paper"]]) {
+    console.log(`${p[0]} / ${p[1]}: ${is_anagram(p[0], p[1])}`)
+}

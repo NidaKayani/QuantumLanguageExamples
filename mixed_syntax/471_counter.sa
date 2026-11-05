@@ -1,0 +1,29 @@
+// Mixed-syntax example 471: counter class with history
+# Syntax used: C++, JavaScript, Python blocks, Ruby do/end
+
+class Counter
+    attr_accessor :history, :value
+    def initialize(start)
+        @value = start
+        @history = [start]
+    end
+    def add(n)
+        @value += n
+        @history.append(@value)
+        return @value
+    end
+    def undo()
+        if len(@history) > 1:
+            @history.pop()
+            @value = @history[len(@history) - 1]
+        return @value
+    end
+end
+let c = Counter.new(7)
+for (const auto& n : [3, 1, 8, 8, 3, 8, 2, 2]) {
+    c.add(n)
+}
+console.log(c.history)
+console.log("after undo:", c.undo())
+print("after undo:", c.undo())
+print(c.value)

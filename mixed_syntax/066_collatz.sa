@@ -1,0 +1,25 @@
+// Mixed-syntax example 066: Collatz steps for 2..10
+# Syntax used: brace blocks, C-style headers, JavaScript, Python blocks, Ruby do/end
+
+def steps(n):
+    let count = 0;
+    while (n != 1) {
+        if n % 2 == 0 {
+            n = floor(n / 2);
+        } else {
+            n = 3 * n + 1;
+        }
+        count += 1;
+    }
+    return count
+best = 0
+let best_n = 2;
+for (n = 2; n < 11; n++) {
+    let s = steps(n)
+    console.log(`${n} -> ${s} steps`)
+    if s > best
+        best = s
+        best_n = n
+    end
+}
+console.log(`longest: ${best_n} with ${best} steps`)

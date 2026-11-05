@@ -1,0 +1,26 @@
+// Mixed-syntax example 215: grade classification
+# Syntax used: C-style headers, JavaScript, Python blocks, Ruby do/end
+
+def grade(s)
+    if s >= 90
+        return "A"
+    elsif s >= 80
+        return "B"
+    elsif s >= 70
+        return "C"
+    elsif s >= 60
+        return "D"
+    else
+        return "F"
+    end
+end
+let names = ["dan", "cam", "bea", "gia", "ali", "hen", "ivy", "fin", "eli"];
+let scores = [55, 39, 85, 94, 62, 37, 76, 56, 93]
+tally = {"A": 0, "B": 0, "C": 0, "D": 0, "F": 0}
+for (let i = 0; i < len(names); ++i) {
+    g = grade(scores[i])
+    tally[g] += 1
+    puts "#{names[i]}: #{scores[i]} -> #{g}"
+}
+for g in ["A", "B", "C", "D", "F"]:
+    console.log(str(g) + ": " + str(tally[g]))

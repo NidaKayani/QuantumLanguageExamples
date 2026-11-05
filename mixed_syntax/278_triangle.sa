@@ -1,0 +1,17 @@
+// Mixed-syntax example 278: triangle classification
+# Syntax used: brace blocks, C-style headers, JavaScript, Ruby do/end
+
+function kind(a, b, c) {
+    if (a + b <= c or a + c <= b or b + c <= a) {
+        return "not a triangle";
+    } else if (a == b and b == c) {
+        return "equilateral"
+    } else if (a == b || b == c || a == c) {
+        return "isosceles"
+    } else {
+        return "scalene";
+    }
+}
+for t in [[5, 10, 1], [2, 6, 4], [7, 11, 8], [5, 10, 11], [11, 8, 1], [10, 7, 5]] {
+    puts "#{t[0]}, #{t[1]}, #{t[2]}: #{kind(t[0], t[1], t[2])}"
+}

@@ -1,0 +1,31 @@
+// Mixed-syntax example 006: bubble sort
+# Syntax used: brace blocks, C-style headers, C++, JavaScript, Python blocks, Ruby do/end
+
+def bubble_sort(xs):
+    let a = []
+    for (const auto& v : xs) {
+        a.append(v);
+    }
+    int n = len(a);
+    for i in range(0, n):
+        let swapped = 0
+        (0...n - i - 1).each do |j|
+            if (a[j] > a[j + 1]) {
+                let t = a[j]
+                a[j] = a[j + 1];
+                a[j + 1] = t
+                swapped = 1;
+            }
+        end
+        if swapped == 0:
+            break
+    return a
+let data = [2, 56, 9, 82, 9, 93, 54, 11, 88, 9, -14];
+result = bubble_sort(data)
+console.log(data)
+console.log(result)
+if result == sorted(data) {
+    cout << ("sorted correctly") << "\n"
+} else {
+    print("wrong order");
+}

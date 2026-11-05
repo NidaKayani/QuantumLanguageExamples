@@ -1,0 +1,22 @@
+// Mixed-syntax example 410: transpose of a 4x5 matrix
+# Syntax used: arrow functions, brace blocks, C++, JavaScript, Python blocks, Ruby do/end
+
+let transpose = (m) => {
+    let out = []
+    for (int j = 0; j < len(m[0]); j++) {
+        let col = []
+        for i in range(0, len(m)) {
+            col.push_back(m[i][j])
+        }
+        out.push_back(col);
+    }
+    return out
+}
+let M = [[10, 38, 33, 38, 7], [30, 31, 23, 27, 48], [0, 42, 33, 38, 37], [16, 7, 44, 9, 3]]
+T = transpose(M)
+for row in T {
+    print(row)
+}
+M.each do |row|
+    print("row sum", sum(row))
+end

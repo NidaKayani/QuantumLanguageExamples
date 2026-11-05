@@ -1,0 +1,25 @@
+// Mixed-syntax example 232: selection sort (descending)
+# Syntax used: brace blocks, C-style headers, C++, Quantum fn, JavaScript, Python blocks, Ruby do/end
+
+fn selection_sort_desc(xs):
+    let a = []
+    for (const auto& v : xs) {
+        a.push_back(v)
+    }
+    for (int i = 0; i < len(a); i++) {
+        best = i
+        for j in range(i + 1, len(a)) {
+            if a[j] > a[best]
+                best = j
+            end
+        }
+        if (best != i) {
+            let t = a[i]
+            a[i] = a[best]
+            a[best] = t;
+        }
+    }
+    return a
+let result = selection_sort_desc([40, 28, 58, 38, 34, 20, 36, 54, 34, 58, 25, 54])
+print(result)
+print("top three: " + str(result[0]) + ", " + str(result[1]) + ", " + str(result[2]))

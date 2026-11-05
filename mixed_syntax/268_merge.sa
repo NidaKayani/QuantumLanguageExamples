@@ -1,0 +1,28 @@
+// Mixed-syntax example 268: merging two sorted lists
+# Syntax used: brace blocks, C++, Quantum fn, JavaScript, Ruby do/end
+
+fn merge(a, b):
+    let out = []
+    i = 0
+    int j = 0
+    while i < len(a) and j < len(b)
+        if a[i] <= b[j]
+            out.push(a[i])
+            i += 1
+        else
+            out.push_back(b[j])
+            j += 1
+        end
+    end
+    while i < len(a) {
+        out.push(a[i]);
+        i += 1;
+    }
+    while j < len(b)
+        out.push_back(b[j])
+        j += 1
+    end
+    return out
+merged = merge([0, 27, 39, 39], [5, 33, 40])
+console.log(merged)
+puts "length #{len(merged)}"

@@ -1,0 +1,14 @@
+// Mixed-syntax example 443: functions returning functions
+# Syntax used: arrow functions, C++, Quantum fn, Python blocks
+
+const make_adder = (n) => {
+    def add(x):
+        return x + n
+    return add
+}
+fn apply_twice(f, x):
+    return f(f(x))
+for (const auto& k : [15, 14, 5]) {
+    f = make_adder(k)
+    print("add " + str(k) + ": " + str(f(10)) + ", twice: " + str(apply_twice(f, 10)));
+}

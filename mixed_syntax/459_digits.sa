@@ -1,0 +1,20 @@
+// Mixed-syntax example 459: digit sums and digital roots
+# Syntax used: brace blocks, C-style headers, Quantum fn, JavaScript
+
+fn digit_sum(n) {
+    let s = 0;
+    while (n > 0) {
+        s += n % 10
+        n = floor(n / 10)
+    }
+    return s
+}
+fn digital_root(n) {
+    while (n >= 10) {
+        n = digit_sum(n)
+    }
+    return n
+}
+for n in [578405, 467480, 116569, 96885, 401642, 248689, 942452] {
+    console.log(`${n}: sum ${digit_sum(n)}, root ${digital_root(n)}`)
+}

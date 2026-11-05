@@ -1,0 +1,22 @@
+// Mixed-syntax example 293: string reversal and palindromes
+# Syntax used: C++, JavaScript, Python blocks, Ruby do/end
+
+def reverse(s)
+    let out = ""
+    i = len(s) - 1
+    while i >= 0:
+        out = out + s[i]
+        i -= 1
+    return out
+end
+let count = 0;
+(["pepper", "tenet", "cloud", "velvet", "quiver", "kayak", "level"]).each do |w|
+    rw = reverse(w)
+    if rw == w
+        console.log(w, "is a palindrome")
+        count += 1
+    else
+        console.log(str(w) + " reversed is " + str(rw))
+    end
+end
+cout << "palindromes: " << (count) << endl

@@ -1,0 +1,16 @@
+// Mixed-syntax example 252: fast modular exponentiation
+# Syntax used: brace blocks, C-style headers, C++, Quantum fn, Python blocks, Ruby do/end
+
+fn power_mod(b, e, m):
+    int result = 1
+    b = b % m
+    while e > 0:
+        if (e % 2 == 1) {
+            result = result * b % m
+        }
+        b = b * b % m
+        e = floor(e / 2)
+    return result
+for c in [[7, 24, 97], [4, 3, 1000], [7, 8, 7], [9, 8, 7], [4, 21, 13]] {
+    puts "#{c[0]}^#{c[1]} mod #{c[2]} = #{power_mod(c[0], c[1], c[2])}"
+}

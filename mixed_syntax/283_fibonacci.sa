@@ -1,0 +1,22 @@
+// Mixed-syntax example 283: Fibonacci sequence of 20 terms
+# Syntax used: arrow functions, brace blocks, JavaScript, Python blocks, Ruby do/end
+
+let fib_list = (n) => {
+    let seq = [0, 1]
+    while len(seq) < n:
+        seq.push(seq[len(seq) - 1] + seq[len(seq) - 2])
+    return seq
+}
+def fib_rec(n):
+    if n < 2 {
+        return n
+    }
+    return fib_rec(n - 1) + fib_rec(n - 2)
+seq = fib_list(20)
+print(seq)
+puts "fib_rec(#{13}) = #{fib_rec(13)}"
+let evens = 0
+for v in seq:
+    if v % 2 == 0:
+        evens += 1
+console.log(`even terms: ${evens}`)

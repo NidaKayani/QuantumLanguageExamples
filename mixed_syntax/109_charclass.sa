@@ -1,0 +1,25 @@
+// Mixed-syntax example 109: character classes in strings
+# Syntax used: Quantum fn, JavaScript, Python blocks, Ruby do/end
+
+fn classify(s) {
+    let up = 0;
+    low = 0
+    let dig = 0
+    let other = 0
+    for i in range(0, len(s)):
+        let c = ord(s[i])
+        if c >= 65 and c <= 90
+            up += 1
+        elsif c >= 97 and c <= 122
+            low += 1
+        elsif c >= 48 and c <= 57
+            dig += 1
+        else
+            other += 1
+        end
+    return [up, low, dig, other];
+}
+(["Hello World 42", "Quantum2026 Rocks!", "abc DEF 123 xyz"]).each do |s|
+    let c = classify(s)
+    puts "#{s}: upper #{c[0]}, lower #{c[1]}, digits #{c[2]}, other #{c[3]}"
+end

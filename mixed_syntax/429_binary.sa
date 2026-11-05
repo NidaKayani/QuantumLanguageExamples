@@ -1,0 +1,23 @@
+// Mixed-syntax example 429: binary conversion and bit counts
+# Syntax used: arrow functions, brace blocks, C-style headers, C++, Python blocks
+
+let to_bin = (n) => {
+    if n == 0:
+        return "0"
+    string s = ""
+    while n > 0 {
+        s = str(n % 2) + s
+        n = floor(n / 2)
+    }
+    return s
+}
+def popcount(n):
+    int c = 0
+    while (n > 0) {
+        c += n & 1;
+        n = n >> 1;
+    }
+    return c
+for n in [994, 2965, 4015, 1673, 1629, 1130] {
+    cout << (n) << " = 0b" << (to_bin(n)) << " (" << (popcount(n)) << " ones)" << endl;
+}

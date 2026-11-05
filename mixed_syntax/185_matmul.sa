@@ -1,0 +1,28 @@
+// Mixed-syntax example 185: 3x3 matrix multiplication
+# Syntax used: arrow functions, brace blocks, C-style headers, C++, JavaScript, Python blocks, Ruby do/end
+
+const matmul = (a, b) => {
+    let result = []
+    for (let i = 0; i < len(a); ++i) {
+        let row = [];
+        for j in range(0, len(b[0])) {
+            int s = 0
+            for t in range(0, len(b)):
+                s += a[i][t] * b[t][j]
+            row.append(s)
+        }
+        result.push_back(row)
+    }
+    return result
+}
+A = [[1, 0, 4], [-2, 0, 7], [-2, -5, -5]]
+let B = [[-2, 3, 6], [6, -3, 4], [6, 3, 8]]
+let C = matmul(A, B);
+for (const auto& row : C) {
+    console.log(row)
+}
+trace = 0
+for i in range(0, len(C)) {
+    trace += C[i][i]
+}
+puts "trace: #{trace}"

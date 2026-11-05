@@ -1,0 +1,26 @@
+// Mixed-syntax example 262: perfect, abundant and deficient numbers below 125
+# Syntax used: brace blocks, C++, Quantum fn, JavaScript, Ruby do/end
+
+fn divisor_sum(n):
+    s = 0
+    for (int d = 1; d < n; d++) {
+        if n % d == 0 {
+            s += d
+        }
+    }
+    return s
+perfect = []
+int abundant = 0
+int deficient = 0;
+for (int n = 2; n < 125; n++) {
+    let s = divisor_sum(n);
+    if s == n
+        perfect.push_back(n)
+    elsif s > n
+        abundant += 1
+    else
+        deficient += 1
+    end
+}
+console.log(perfect)
+console.log(`abundant: ${abundant}, deficient: ${deficient}`)

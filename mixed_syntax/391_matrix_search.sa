@@ -1,0 +1,25 @@
+// Mixed-syntax example 391: searching a 3x3 grid
+# Syntax used: brace blocks, C-style headers, C++, JavaScript, Python blocks
+
+let grid = [[8, 1, 9], [0, 3, 3], [0, 7, 3]];
+best = -1
+br = 0
+let bc = 0
+zeros = 0
+for i in range(0, len(grid)) {
+    for (int j = 0; j < len(grid[i]); j++) {
+        if grid[i][j] > best:
+            best = grid[i][j]
+            br = i
+            bc = j
+        if grid[i][j] == 0:
+            zeros += 1
+    }
+}
+print("largest " + str(best) + " at row " + str(br) + ", column " + str(bc))
+print("zeros: " + str(zeros))
+diag = 0
+for (int i = 0; i < len(grid); i++) {
+    diag += grid[i][i] + grid[i][len(grid) - 1 - i]
+}
+console.log(`diagonal sum: ${diag}`)

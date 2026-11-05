@@ -1,0 +1,44 @@
+// Mixed-syntax example 136: singly linked list
+# Syntax used: C-style headers, JavaScript, Python blocks, Ruby do/end
+
+class Node {
+    constructor(value) {
+        this.value = value;
+        this.next = null
+    }
+}
+class LinkedList:
+    def __init__(self):
+        self.head = nil
+        self.size = 0
+    def push_front(self, v):
+        let n = Node(v)
+        n.next = self.head
+        self.head = n
+        self.size += 1
+    def to_list(self):
+        let out = [];
+        let cur = self.head
+        while (cur != None) {
+            out.append(cur.value)
+            cur = cur.next;
+        }
+        return out
+    def reverse(self):
+        prev = None
+        cur = self.head
+        while cur != None
+            nxt = cur.next
+            cur.next = prev
+            prev = cur
+            cur = nxt
+        end
+        self.head = prev
+let lst = LinkedList.new()
+([10, 56, 80, 8, 13, 3, 82, 10]).each do |v|
+    lst.push_front(v)
+end
+console.log(lst.to_list())
+lst.reverse()
+console.log(lst.to_list())
+console.log(`size: ${lst.size}`)

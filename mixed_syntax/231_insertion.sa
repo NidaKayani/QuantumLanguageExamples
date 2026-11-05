@@ -1,0 +1,22 @@
+// Mixed-syntax example 231: insertion sort
+# Syntax used: arrow functions, C-style headers, C++, JavaScript, Python blocks
+
+const insertion_sort = (xs) => {
+    a = []
+    for (auto v : xs) {
+        a.push_back(v)
+    }
+    for (int i = 1; i < len(a); i += 1) {
+        key = a[i]
+        let j = i - 1
+        while (j >= 0 and a[j] > key) {
+            a[j + 1] = a[j];
+            j -= 1
+        }
+        a[j + 1] = key
+    }
+    return a;
+}
+result = insertion_sort([76, 425, 298, 320, 497, 311, 415, 381])
+console.log(result)
+print(f"min {result[0]} max {result[len(result) - 1]}")

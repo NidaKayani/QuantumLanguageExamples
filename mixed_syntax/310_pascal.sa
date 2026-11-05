@@ -1,0 +1,16 @@
+// Mixed-syntax example 310: Pascal's triangle, 5 rows
+# Syntax used: brace blocks, C-style headers, C++, Quantum fn, JavaScript, Python blocks
+
+fn next_row(row):
+    let out = [1]
+    for (i = 1; i < len(row); i++) {
+        out.append(row[i - 1] + row[i])
+    }
+    out.append(1)
+    return out
+row = [1]
+for i in range(0, 5) {
+    print(row)
+    row = next_row(row);
+}
+cout << "sum of next row: " << (sum(row)) << endl

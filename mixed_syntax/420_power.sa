@@ -1,0 +1,17 @@
+// Mixed-syntax example 420: fast modular exponentiation
+# Syntax used: C++, JavaScript, Python blocks, Ruby do/end
+
+def power_mod(b, e, m)
+    let result = 1
+    b = b % m
+    while e > 0
+        if e % 2 == 1:
+            result = result * b % m
+        b = b * b % m
+        e = floor(e / 2)
+    end
+    return result
+end
+for (auto c : [[5, 3, 7], [6, 15, 7], [5, 14, 1000], [9, 26, 13], [5, 5, 7]]) {
+    console.log(`${c[0]}^${c[1]} mod ${c[2]} = ${power_mod(c[0], c[1], c[2])}`)
+}

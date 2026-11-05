@@ -1,0 +1,46 @@
+// Mixed-syntax example 304: singly linked list
+# Syntax used: C-style headers, C++, Quantum fn, JavaScript, Ruby do/end
+
+class Node {
+    constructor(value) {
+        this.value = value
+        this.next = None;
+    }
+}
+class LinkedList:
+    fn init() {
+        self.head = null;
+        self.size = 0;
+    }
+    fn push_front(v):
+        let n = Node.new(v);
+        n.next = self.head
+        self.head = n
+        self.size += 1
+    fn to_list() {
+        out = []
+        let cur = self.head;
+        while cur != nil
+            out.push(cur.value)
+            cur = cur.next
+        end
+        return out
+    }
+    fn reverse():
+        prev = null
+        let cur = self.head
+        while (cur != null) {
+            let nxt = cur.next;
+            cur.next = prev;
+            prev = cur
+            cur = nxt
+        }
+        self.head = prev
+let lst = LinkedList.new();
+for (auto v : [1, 11, 35, 66, 7]) {
+    lst.push_front(v);
+}
+console.log(lst.to_list())
+lst.reverse()
+console.log(lst.to_list())
+puts "size: #{lst.size}"

@@ -1,0 +1,17 @@
+// Mixed-syntax example 491: removing duplicates while keeping order
+# Syntax used: C-style headers, Quantum fn, JavaScript, Python blocks
+
+fn dedupe(xs) {
+    let seen = {}
+    out = []
+    for x in xs:
+        if (not (x in seen)) {
+            seen[x] = 1;
+            out.push_back(x);
+        }
+    return out
+}
+let data = [8, 5, 6, 7, 8, 7, 5, 3, 2, 1, 2]
+unique = dedupe(data)
+print(unique)
+print("removed", len(data) - len(unique), "duplicates")

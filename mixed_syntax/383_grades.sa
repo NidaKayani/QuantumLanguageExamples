@@ -1,0 +1,26 @@
+// Mixed-syntax example 383: grade classification
+# Syntax used: brace blocks, C++, Quantum fn, JavaScript, Python blocks, Ruby do/end
+
+fn grade(s) {
+    if s >= 90
+        return "A"
+    elsif s >= 80
+        return "B"
+    elsif s >= 70
+        return "C"
+    elsif s >= 60
+        return "D"
+    else
+        return "F"
+    end
+}
+names = ["cam", "ali", "dan", "eli", "bea", "fin", "gia"]
+scores = [86, 82, 49, 48, 100, 62, 77]
+let tally = {"A": 0, "B": 0, "C": 0, "D": 0, "F": 0};
+for i in range(0, len(names)):
+    let g = grade(scores[i])
+    tally[g] += 1
+    print(str(names[i]) + ": " + str(scores[i]) + " -> " + str(g))
+for g in ["A", "B", "C", "D", "F"] {
+    cout << (g) << ": " << (tally[g]) << endl;
+}

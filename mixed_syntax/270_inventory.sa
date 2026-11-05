@@ -1,0 +1,17 @@
+// Mixed-syntax example 270: inventory updates in a dictionary
+# Syntax used: C++, JavaScript, Python blocks, Ruby do/end
+
+let stock = {"valves": 6, "gears": 6, "nuts": 5, "chains": 1};
+for op in [["gears", 5], ["valves", 4], ["valves", 4], ["nuts", 11], ["valves", -3], ["nuts", 8], ["nuts", 0], ["chains", -3], ["valves", 1]]:
+    name = op[0]
+    let delta = op[1]
+    if stock[name] + delta < 0:
+        cout << "cannot take " << (0 - delta) << " " << (name) << endl
+    else:
+        stock[name] += delta
+let total = 0;
+stock.keys().each do |k|
+    console.log(`${k}: ${stock[k]}`)
+    total += stock[k]
+end
+console.log("total items: " + str(total))

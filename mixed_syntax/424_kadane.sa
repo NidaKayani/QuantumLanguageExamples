@@ -1,0 +1,30 @@
+// Mixed-syntax example 424: maximum subarray (Kadane)
+# Syntax used: brace blocks, C++, JavaScript, Python blocks, Ruby do/end
+
+def max_subarray(xs)
+    let best = xs[0]
+    int cur = 0
+    int start = 0
+    best_lo = 0
+    let best_hi = 0;
+    for i in range(0, len(xs)):
+        if cur <= 0:
+            cur = xs[i]
+            start = i
+        else:
+            cur += xs[i]
+        if cur > best
+            best = cur
+            best_lo = start
+            best_hi = i
+        end
+    return [best, best_lo, best_hi]
+end
+data = [-2, 11, 10, 15, -6, -10, -9, -8, 11, 1, -4, -7]
+let res = max_subarray(data)
+cout << "best sum " << (res[0]) << " from index " << (res[1]) << " to " << (res[2]) << endl
+part = []
+for i in range(res[1], res[2] + 1) {
+    part.append(data[i])
+}
+print(part)

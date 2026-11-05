@@ -1,0 +1,22 @@
+// Mixed-syntax example 069: string reversal and palindromes
+# Syntax used: arrow functions, C-style headers, C++, JavaScript, Python blocks, Ruby do/end
+
+const reverse = (s) => {
+    string out = "";
+    let i = len(s) - 1;
+    while i >= 0:
+        out = out + s[i]
+        i -= 1
+    return out
+}
+count = 0
+for (let w of ["rotor", "cloud", "apple", "madam", "harbor", "comet", "noon"]) {
+    let rw = reverse(w);
+    if (rw == w) {
+        cout << (w) << " is a palindrome" << endl
+        count += 1
+    } else {
+        puts "#{w} reversed is #{rw}"
+    }
+}
+print("palindromes: " + str(count))

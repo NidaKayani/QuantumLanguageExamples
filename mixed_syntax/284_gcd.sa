@@ -1,0 +1,18 @@
+// Mixed-syntax example 284: gcd and lcm of number pairs
+# Syntax used: arrow functions, C++, Quantum fn, JavaScript, Ruby do/end
+
+fn gcd(a, b) {
+    while b != 0
+        let t = b;
+        b = a % b
+        a = t
+    end
+    return a;
+}
+let lcm = (a, b) => {
+    return floor(a * b / gcd(a, b))
+}
+pairs = [[156, 106], [107, 170], [74, 24], [173, 51], [120, 170], [78, 123], [54, 76]]
+for (const p of pairs) {
+    cout << "gcd(" << (p[0]) << ", " << (p[1]) << ") = " << (gcd(p[0], p[1])) << ", lcm = " << (lcm(p[0], p[1])) << endl
+}

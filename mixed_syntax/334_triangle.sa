@@ -1,0 +1,17 @@
+// Mixed-syntax example 334: triangle classification
+# Syntax used: arrow functions, brace blocks, JavaScript, Python blocks
+
+const kind = (a, b, c) => {
+    if a + b <= c || a + c <= b || b + c <= a {
+        return "not a triangle";
+    } else if a == b && b == c {
+        return "equilateral"
+    } else if a == b || b == c || a == c {
+        return "isosceles"
+    } else {
+        return "scalene"
+    }
+}
+for (const t of [[2, 7, 6], [1, 12, 8], [2, 5, 9], [6, 3, 11], [10, 9, 3], [5, 7, 7]]) {
+    print(f"{t[0]}, {t[1]}, {t[2]}: {kind(t[0], t[1], t[2])}")
+}

@@ -1,0 +1,16 @@
+// Mixed-syntax example 422: Pascal's triangle, 9 rows
+# Syntax used: arrow functions, C++, JavaScript, Python blocks
+
+const next_row = (row) => {
+    out = [1]
+    for (int i = 1; i < len(row); i++) {
+        out.push(row[i - 1] + row[i])
+    }
+    out.push(1)
+    return out
+}
+row = [1]
+for i in range(0, 9):
+    console.log(row)
+    row = next_row(row)
+console.log("sum of next row:", sum(row))

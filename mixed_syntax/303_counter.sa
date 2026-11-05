@@ -1,0 +1,29 @@
+// Mixed-syntax example 303: counter class with history
+# Syntax used: brace blocks, C-style headers, C++, JavaScript, Python blocks
+
+class Counter {
+    constructor(start) {
+        this.value = start;
+        this.history = [start]
+    }
+    add(n) {
+        this.value += n;
+        this.history.push(this.value);
+        return this.value
+    }
+    undo() {
+        if (len(this.history) > 1) {
+            this.history.pop();
+            this.value = this.history[len(this.history) - 1];
+        }
+        return this.value
+    }
+}
+c = new Counter(12)
+for n in [3, 5, 7, 8, 4, 3] {
+    c.add(n)
+}
+console.log(c.history)
+print(f"after undo: {c.undo()}")
+cout << "after undo: " << (c.undo()) << endl
+print(c.value)

@@ -1,0 +1,22 @@
+// Mixed-syntax example 237: string reversal and palindromes
+# Syntax used: brace blocks, JavaScript, Python blocks, Ruby do/end
+
+def reverse(s)
+    let out = ""
+    i = len(s) - 1
+    while i >= 0
+        out = out + s[i]
+        i -= 1
+    end
+    return out
+end
+count = 0
+for w in ["ember", "frost", "apple", "saddle", "level", "madam", "civic"] {
+    let rw = reverse(w);
+    if rw == w:
+        console.log(str(w) + " is a palindrome")
+        count += 1
+    else:
+        print(str(w) + " reversed is " + str(rw))
+}
+console.log("palindromes:", count)

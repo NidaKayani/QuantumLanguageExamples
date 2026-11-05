@@ -1,0 +1,15 @@
+// Mixed-syntax example 426: histogram of values in buckets of ten
+# Syntax used: brace blocks, JavaScript, Python blocks, Ruby do/end
+
+let buckets = [0, 0, 0, 0, 0];
+for x in [40, 14, 22, 6, 44, 35, 45, 4, 10, 6, 22] {
+    buckets[floor(x / 10)] += 1;
+}
+(0...5).each do |b|
+    bar = ""
+    (0...buckets[b]).each do |i|
+        bar = bar + "#"
+    end
+    print(str(b * 10) + "-" + str(b * 10 + 9) + ": " + str(bar))
+end
+print(f"values: {sum(buckets)}")

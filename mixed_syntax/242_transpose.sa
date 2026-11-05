@@ -1,0 +1,19 @@
+// Mixed-syntax example 242: transpose of a 4x2 matrix
+# Syntax used: C++, Quantum fn, JavaScript, Python blocks, Ruby do/end
+
+fn transpose(m):
+    out = []
+    (0...len(m[0])).each do |j|
+        col = []
+        for i in range(0, len(m)):
+            col.push_back(m[i][j])
+        out.push(col)
+    end
+    return out
+let M = [[42, 7], [2, 31], [42, 8], [47, 1]]
+let T = transpose(M);
+for row in T:
+    print(row)
+for (auto& row : M) {
+    print("row sum", sum(row))
+}

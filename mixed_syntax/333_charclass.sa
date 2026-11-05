@@ -1,0 +1,26 @@
+// Mixed-syntax example 333: character classes in strings
+# Syntax used: brace blocks, C-style headers, C++, JavaScript, Ruby do/end
+
+def classify(s)
+    let up = 0
+    let low = 0
+    dig = 0
+    other = 0
+    for i in range(0, len(s)) {
+        let c = ord(s[i])
+        if (c >= 65 && c <= 90) {
+            up += 1
+        } else if (c >= 97 && c <= 122) {
+            low += 1
+        } else if (c >= 48 and c <= 57) {
+            dig += 1;
+        } else {
+            other += 1
+        }
+    }
+    return [up, low, dig, other]
+end
+for s in ["Quantum2026 Rocks!", "MiXeD sYnTaX 7", "Hello World 42"] {
+    c = classify(s)
+    cout << (s) << ": upper " << (c[0]) << ", lower " << (c[1]) << ", digits " << (c[2]) << ", other " << (c[3]) << endl
+}

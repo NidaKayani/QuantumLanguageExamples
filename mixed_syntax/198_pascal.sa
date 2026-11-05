@@ -1,0 +1,17 @@
+// Mixed-syntax example 198: Pascal's triangle, 7 rows
+# Syntax used: brace blocks, C-style headers, Quantum fn, JavaScript
+
+fn next_row(row) {
+    out = [1]
+    for i in range(1, len(row)) {
+        out.append(row[i - 1] + row[i]);
+    }
+    out.append(1)
+    return out
+}
+let row = [1];
+for (i = 0; i < 7; i += 1) {
+    console.log(row)
+    row = next_row(row)
+}
+console.log(`sum of next row: ${sum(row)}`)

@@ -1,0 +1,19 @@
+// Mixed-syntax example 180: palindromic numbers in [488, 597)
+# Syntax used: brace blocks, C++, JavaScript, Python blocks, Ruby do/end
+
+function reverse_num(n) {
+    let rev = 0
+    while n > 0:
+        rev = rev * 10 + n % 10
+        n = floor(n / 10)
+    return rev
+}
+found = []
+for n in range(488, 597) {
+    if reverse_num(n) == n
+        found.push(n)
+    end
+}
+print(found)
+console.log(`how many: ${len(found)}`)
+cout << "reverse of " << (488) << " is " << (reverse_num(488)) << endl

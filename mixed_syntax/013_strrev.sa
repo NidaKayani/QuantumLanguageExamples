@@ -1,0 +1,21 @@
+// Mixed-syntax example 013: string reversal and palindromes
+# Syntax used: brace blocks, C++, Quantum fn, Python blocks, Ruby do/end
+
+fn reverse(s):
+    string out = ""
+    i = len(s) - 1
+    while i >= 0
+        out = out + s[i]
+        i -= 1
+    end
+    return out
+count = 0
+for w in ["apple", "kayak", "frost", "jungle", "kettle", "level", "civic"] {
+    rw = reverse(w)
+    if rw == w:
+        print(f"{w} is a palindrome")
+        count += 1
+    else:
+        cout << (w) << " reversed is " << (rw) << endl
+}
+cout << "palindromes: " << (count) << endl

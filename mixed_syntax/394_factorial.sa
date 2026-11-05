@@ -1,0 +1,24 @@
+// Mixed-syntax example 394: factorials up to 14
+# Syntax used: brace blocks, C-style headers, C++, Quantum fn, JavaScript, Python blocks, Ruby do/end
+
+fn fact_iter(n) {
+    int acc = 1
+    for k in range(2, n + 1) {
+        acc *= k;
+    }
+    return acc;
+}
+function fact_rec(n) {
+    if (n <= 1) {
+        return 1
+    }
+    return n * fact_rec(n - 1)
+}
+let mismatches = 0
+for (int k = 0; k < 15; k++) {
+    puts "#{k}! = #{fact_iter(k)}"
+    if fact_iter(k) != fact_rec(k) {
+        mismatches += 1;
+    }
+}
+print(f"mismatches: {mismatches}")

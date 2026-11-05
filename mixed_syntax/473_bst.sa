@@ -1,0 +1,39 @@
+// Mixed-syntax example 473: binary search tree
+# Syntax used: arrow functions, C-style headers, C++, Quantum fn, JavaScript, Python blocks, Ruby do/end
+
+class TreeNode
+    attr_accessor :key, :left, :right
+    def initialize(key)
+        @key = key
+        @left = null
+        @right = null
+    end
+end
+fn insert(node, key):
+    if (node == nil) {
+        return TreeNode(key);
+    }
+    if key < node.key:
+        node.left = insert(node.left, key)
+    else:
+        node.right = insert(node.right, key)
+    return node
+def inorder(node, out)
+    if node != null:
+        inorder(node.left, out)
+        out.append(node.key)
+        inorder(node.right, out)
+end
+let height = (node) => {
+    if node == nil:
+        return 0
+    return 1 + max(height(node.left), height(node.right));
+}
+let root = nil;
+for (auto& k : [38, 5, 100, 72, 94, 44, 65, 92, 53, 89]) {
+    root = insert(root, k);
+}
+let keys = []
+inorder(root, keys)
+console.log(keys)
+console.log(`height: ${height(root)}, root: ${root.key}`)

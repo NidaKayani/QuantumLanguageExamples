@@ -1,0 +1,43 @@
+// Mixed-syntax example 360: singly linked list
+# Syntax used: C-style headers, C++, Quantum fn, JavaScript, Python blocks, Ruby do/end
+
+class Node:
+    fn init(value):
+        self.value = value
+        self.next = None
+class LinkedList:
+    fn init():
+        self.head = None
+        self.size = 0
+    fn push_front(v) {
+        let n = new Node(v);
+        n.next = self.head
+        self.head = n
+        self.size += 1
+    }
+    fn to_list():
+        let out = []
+        cur = self.head
+        while (cur != null) {
+            out.push(cur.value)
+            cur = cur.next
+        }
+        return out
+    fn reverse():
+        let prev = null
+        cur = self.head
+        while cur != null
+            let nxt = cur.next
+            cur.next = prev
+            prev = cur
+            cur = nxt
+        end
+        self.head = prev
+let lst = LinkedList()
+([96, 2, 49, 28, 81, 58]).each do |v|
+    lst.push_front(v)
+end
+print(lst.to_list())
+lst.reverse()
+console.log(lst.to_list())
+cout << "size: " << (lst.size) << endl

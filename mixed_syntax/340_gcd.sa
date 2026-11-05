@@ -1,0 +1,18 @@
+// Mixed-syntax example 340: gcd and lcm of number pairs
+# Syntax used: brace blocks, C++, Quantum fn, JavaScript, Ruby do/end
+
+function gcd(a, b) {
+    while b != 0
+        let t = b;
+        b = a % b
+        a = t
+    end
+    return a
+}
+fn lcm(a, b) {
+    return floor(a * b / gcd(a, b));
+}
+let pairs = [[137, 84], [100, 76], [133, 16], [55, 170]];
+for p in pairs {
+    cout << "gcd(" << (p[0]) << ", " << (p[1]) << ") = " << (gcd(p[0], p[1])) << ", lcm = " << (lcm(p[0], p[1])) << endl;
+}

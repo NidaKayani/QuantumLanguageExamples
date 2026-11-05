@@ -1,0 +1,35 @@
+// Mixed-syntax example 229: prime sieve up to 137
+# Syntax used: brace blocks, C-style headers, JavaScript, Python blocks, Ruby do/end
+
+def sieve(n)
+    let flags = []
+    (0...n + 1).each do |i|
+        flags.push(1)
+    end
+    flags[0] = 0
+    flags[1] = 0
+    for p in range(2, n + 1) {
+        if (flags[p] == 1) {
+            m = p * p
+            while m <= n:
+                flags[m] = 0
+                m += p
+        }
+    }
+    let primes = [];
+    for i in range(2, n + 1):
+        if flags[i] == 1 {
+            primes.push(i)
+        }
+    return primes
+end
+primes = sieve(137)
+console.log(primes)
+console.log("count: " + str(len(primes)) + ", largest: " + str(primes[len(primes) - 1]))
+twins = 0
+for (let i = 1; i < len(primes); i += 1) {
+    if (primes[i] - primes[i - 1] == 2) {
+        twins += 1;
+    }
+}
+puts "twin pairs: #{twins}"

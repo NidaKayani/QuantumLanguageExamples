@@ -1,0 +1,29 @@
+// Mixed-syntax example 454: bubble sort
+# Syntax used: C-style headers, Quantum fn, JavaScript, Python blocks, Ruby do/end
+
+fn bubble_sort(xs):
+    let a = [];
+    for v in xs:
+        a.push(v)
+    let n = len(a)
+    for (let i = 0; i < n; ++i) {
+        swapped = 0
+        for j in range(0, n - i - 1):
+            if a[j] > a[j + 1]:
+                t = a[j]
+                a[j] = a[j + 1]
+                a[j + 1] = t
+                swapped = 1
+        if swapped == 0
+            break
+        end
+    }
+    return a
+let data = [30, 26, -17, -4, 35, 65, 64, 13, 98, -11, -1, 32]
+let result = bubble_sort(data)
+print(data)
+print(result)
+if result == sorted(data):
+    printf("%s\n", "sorted correctly")
+else:
+    printf("%s\n", "wrong order")

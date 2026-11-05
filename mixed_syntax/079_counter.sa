@@ -1,0 +1,29 @@
+// Mixed-syntax example 079: counter class with history
+# Syntax used: C-style headers, C++, JavaScript, Python blocks, Ruby do/end
+
+class Counter {
+    constructor(start) {
+        this.value = start
+        this.history = [start];
+    }
+    add(n) {
+        this.value += n
+        this.history.push_back(this.value)
+        return this.value;
+    }
+    undo() {
+        if (len(this.history) > 1) {
+            this.history.pop();
+            this.value = this.history[len(this.history) - 1];
+        }
+        return this.value;
+    }
+}
+let c = Counter.new(11);
+for (const auto& n : [6, 9, 2, 7, 2, 8, 4, 1]) {
+    c.add(n)
+}
+console.log(c.history)
+cout << "after undo: " << (c.undo()) << endl
+print(f"after undo: {c.undo()}")
+print(c.value)

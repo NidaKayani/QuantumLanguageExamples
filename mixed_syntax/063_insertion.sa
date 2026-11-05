@@ -1,0 +1,21 @@
+// Mixed-syntax example 063: insertion sort
+# Syntax used: brace blocks, C++, Quantum fn, JavaScript
+
+fn insertion_sort(xs):
+    a = []
+    for (auto& v : xs) {
+        a.push_back(v);
+    }
+    for (int i = 1; i < len(a); i++) {
+        key = a[i]
+        j = i - 1
+        while j >= 0 and a[j] > key {
+            a[j + 1] = a[j];
+            j -= 1
+        }
+        a[j + 1] = key;
+    }
+    return a
+result = insertion_sort([437, 205, 42, 10, 365, 375, 45, 406, 432, 333, 132, 432])
+console.log(result)
+console.log(`min ${result[0]} max ${result[len(result) - 1]}`)

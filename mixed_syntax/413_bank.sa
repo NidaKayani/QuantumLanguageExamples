@@ -1,0 +1,39 @@
+// Mixed-syntax example 413: bank account with overdraft errors
+# Syntax used: C++, JavaScript, Python blocks, Ruby do/end
+
+class Account {
+    constructor(owner, balance) {
+        this.owner = owner
+        this.balance = balance;
+        this.log = [];
+    }
+    deposit(amount) {
+        this.balance += amount
+        this.log.push("+" + str(amount))
+    }
+    withdraw(amount) {
+        if amount > this.balance:
+            throw new Error("insufficient funds")
+        this.balance -= amount
+        this.log.append("-" + str(amount));
+    }
+    report() {
+        return this.owner + " has " + str(this.balance)
+    }
+}
+let acct = new Account("lin", 160)
+let failed = 0;
+([["deposit", 54], ["withdraw", 155], ["withdraw", 181], ["deposit", 262], ["withdraw", 103], ["deposit", 206], ["deposit", 278], ["deposit", 158]]).each do |op|
+    begin
+        if op[0] == "deposit":
+            acct.deposit(op[1])
+        else:
+            acct.withdraw(op[1])
+        console.log(`${op[0]} ${op[1]} ok`)
+    rescue StandardError => e
+        print(str(op[0]) + " " + str(op[1]) + " refused")
+        failed += 1
+    end
+end
+console.log(acct.report())
+cout << "refused operations: " << (failed) << ", log size: " << (len(acct.log)) << endl

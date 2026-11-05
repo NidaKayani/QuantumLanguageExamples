@@ -1,0 +1,13 @@
+// Mixed-syntax example 274: map and filter in many styles
+# Syntax used: arrow functions, JavaScript, Python blocks, Ruby do/end
+
+data = [8, 23, 15, 10, 18, 15]
+scaled = data.map(x => x * 4)
+odd = [x for x in data if x % 2 == 1]
+squares = odd.map(v => v * v)
+big = scaled.select { |y| y > 20 and y < 100 }
+print(scaled)
+print(odd)
+console.log(squares)
+print(big)
+print("sum of squares:", sum(squares))

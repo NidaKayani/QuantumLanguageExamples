@@ -1,0 +1,27 @@
+// Mixed-syntax example 156: merging two sorted lists
+# Syntax used: C-style headers, C++, JavaScript, Python blocks, Ruby do/end
+
+def merge(a, b):
+    let out = [];
+    i = 0
+    int j = 0
+    while (i < len(a) && j < len(b)) {
+        if a[i] <= b[j]:
+            out.push_back(a[i])
+            i += 1
+        else:
+            out.push_back(b[j])
+            j += 1
+    }
+    while i < len(a)
+        out.push(a[i])
+        i += 1
+    end
+    while j < len(b)
+        out.append(b[j])
+        j += 1
+    end
+    return out
+let merged = merge([8, 17, 22, 45], [3, 6, 18, 34])
+print(merged)
+print("length", len(merged))

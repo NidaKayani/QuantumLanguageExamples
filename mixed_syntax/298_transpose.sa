@@ -1,0 +1,22 @@
+// Mixed-syntax example 298: transpose of a 3x4 matrix
+# Syntax used: C-style headers, C++, Quantum fn, JavaScript, Python blocks, Ruby do/end
+
+fn transpose(m) {
+    let out = []
+    for (let j = 0; j < len(m[0]); ++j) {
+        col = []
+        for (let i = 0; i < len(m); ++i) {
+            col.push(m[i][j]);
+        }
+        out.append(col);
+    }
+    return out
+}
+M = [[42, 2, 1, 11], [21, 29, 47, 11], [23, 12, 1, 23]]
+let T = transpose(M)
+T.each do |row|
+    console.log(row)
+end
+for (const auto& row : M) {
+    print(f"row sum {sum(row)}");
+}

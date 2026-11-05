@@ -1,0 +1,24 @@
+// Mixed-syntax example 451: Fibonacci sequence of 19 terms
+# Syntax used: brace blocks, C-style headers, Quantum fn, JavaScript, Python blocks, Ruby do/end
+
+def fib_list(n):
+    seq = [0, 1]
+    while len(seq) < n
+        seq.push(seq[len(seq) - 1] + seq[len(seq) - 2])
+    end
+    return seq
+fn fib_rec(n):
+    if n < 2 {
+        return n;
+    }
+    return fib_rec(n - 1) + fib_rec(n - 2)
+let seq = fib_list(19)
+print(seq)
+print(f"fib_rec({13}) = {fib_rec(13)}")
+let evens = 0
+for (const v of seq) {
+    if (v % 2 == 0) {
+        evens += 1
+    }
+}
+print(f"even terms: {evens}")

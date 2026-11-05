@@ -1,0 +1,23 @@
+// Mixed-syntax example 338: factorials up to 11
+# Syntax used: C-style headers, Quantum fn, JavaScript, Python blocks, Ruby do/end
+
+fn fact_iter(n) {
+    let acc = 1
+    for (int k = 2; k < n + 1; k += 1) {
+        acc *= k
+    }
+    return acc;
+}
+fn fact_rec(n) {
+    if n <= 1
+        return 1
+    end
+    return n * fact_rec(n - 1)
+}
+let mismatches = 0;
+for (int k = 0; k < 12; k += 1) {
+    print(f"{k}! = {fact_iter(k)}")
+    if fact_iter(k) != fact_rec(k):
+        mismatches += 1
+}
+print("mismatches:", mismatches)

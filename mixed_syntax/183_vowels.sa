@@ -1,0 +1,25 @@
+// Mixed-syntax example 183: vowel and consonant counts
+# Syntax used: brace blocks, C++, JavaScript, Python blocks, Ruby do/end
+
+def is_vowel(ch):
+    for (const v of ["a", "e", "i", "o", "u"]) {
+        if ch == v:
+            return 1
+    }
+    return 0
+def count_vowels(s):
+    int n = 0;
+    (0...len(s)).each do |i|
+        n += is_vowel(s[i])
+    end
+    return n
+for (const s of ["meadow frost raven", "ember river grape", "stone frost ocean apple orbit quiver"]) {
+    let v = count_vowels(s)
+    letters = 0
+    for i in range(0, len(s)) {
+        if s[i] != " " {
+            letters += 1;
+        }
+    }
+    cout << (s) << ": " << (v) << " vowels, " << (letters - v) << " consonants" << endl
+}

@@ -1,0 +1,28 @@
+// Mixed-syntax example 297: 2x2 matrix multiplication
+# Syntax used: brace blocks, C++, JavaScript, Python blocks, Ruby do/end
+
+def matmul(a, b)
+    let result = [];
+    for i in range(0, len(a)):
+        let row = [];
+        (0...len(b[0])).each do |j|
+            int s = 0;
+            for t in range(0, len(b)) {
+                s += a[i][t] * b[t][j];
+            }
+            row.push(s)
+        end
+        result.append(row)
+    return result
+end
+let A = [[5, 0], [8, -1]]
+B = [[0, 6], [5, -3]]
+let C = matmul(A, B)
+for (const row of C) {
+    print(row)
+}
+int trace = 0
+for i in range(0, len(C)) {
+    trace += C[i][i]
+}
+print("trace: " + str(trace))

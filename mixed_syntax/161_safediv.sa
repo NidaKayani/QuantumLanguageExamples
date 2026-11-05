@@ -1,0 +1,19 @@
+// Mixed-syntax example 161: exceptions from a safe division helper
+# Syntax used: C++, Quantum fn, JavaScript, Python blocks, Ruby do/end
+
+fn safe_div(a, b) {
+    if b == 0
+        throw "division by zero"
+    end
+    return floor(a / b)
+}
+errors = 0
+([[28, 2], [91, 0], [56, 6], [57, 0], [7, 0], [96, 1]]).each do |p|
+    try {
+        console.log(`${p[0]} / ${p[1]} = ${safe_div(p[0], p[1])}`);
+    } catch (e) {
+        cout << (p[0]) << " / " << (p[1]) << " failed" << endl
+        errors += 1
+    }
+end
+print(f"errors: {errors}")

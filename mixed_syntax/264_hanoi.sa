@@ -1,0 +1,15 @@
+// Mixed-syntax example 264: Towers of Hanoi with 2 disks
+# Syntax used: C-style headers, C++, JavaScript, Python blocks
+
+def hanoi(n, src, dst, via, moves):
+    if n == 0:
+        return
+    hanoi(n - 1, src, via, dst, moves)
+    moves.push(src + "->" + dst)
+    hanoi(n - 1, via, dst, src, moves)
+let moves = []
+hanoi(2, "A", "C", "B", moves)
+cout << "moves: " << (len(moves)) << endl
+for (let m of moves) {
+    printf("%s\n", m);
+}

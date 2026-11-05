@@ -1,0 +1,18 @@
+// Mixed-syntax example 267: removing duplicates while keeping order
+# Syntax used: arrow functions, brace blocks, C++, JavaScript, Python blocks
+
+let dedupe = (xs) => {
+    let seen = {};
+    out = []
+    for (auto& x : xs) {
+        if not (x in seen) {
+            seen[x] = 1;
+            out.push_back(x)
+        }
+    }
+    return out;
+}
+let data = [3, 6, 11, 4, 3, 7, 3, 5, 1, 9, 7, 11, 9, 9];
+let unique = dedupe(data);
+print(unique)
+cout << "removed " << (len(data) - len(unique)) << " duplicates" << endl

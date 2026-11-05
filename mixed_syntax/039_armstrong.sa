@@ -1,0 +1,18 @@
+// Mixed-syntax example 039: Armstrong numbers below 200
+# Syntax used: C++, Quantum fn, JavaScript, Python blocks, Ruby do/end
+
+fn is_armstrong(n):
+    digits = len(str(n))
+    int s = 0
+    int m = n
+    while m > 0:
+        s += (m % 10) ** digits
+        m = floor(m / 10)
+    return s == n
+let found = []
+for (int n = 1; n < 200; n++) {
+    if is_armstrong(n)
+        found.append(n)
+    end
+}
+console.log(found)

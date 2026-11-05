@@ -1,0 +1,17 @@
+// Mixed-syntax example 194: temperature conversion table
+# Syntax used: brace blocks, Quantum fn, JavaScript, Python blocks, Ruby do/end
+
+function to_f(c) {
+    return c * 9 / 5 + 32
+}
+fn to_k(c):
+    return c + 273.15
+for c in [-5, -11, 39, 6, 39, 11, 4] {
+    print(format("%4d C = %7.2f F = %7.2f K", c, to_f(c), to_k(c)))
+}
+let hot = 0;
+([-5, -11, 39, 6, 39, 11, 4]).each do |c|
+    if to_f(c) > 80:
+        hot += 1
+end
+console.log("hot days:", hot)

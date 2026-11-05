@@ -1,0 +1,24 @@
+// Mixed-syntax example 261: binary conversion and bit counts
+# Syntax used: arrow functions, brace blocks, C-style headers, C++, Quantum fn, JavaScript
+
+fn to_bin(n):
+    if n == 0 {
+        return "0"
+    }
+    s = ""
+    while (n > 0) {
+        s = str(n % 2) + s
+        n = floor(n / 2)
+    }
+    return s
+const popcount = (n) => {
+    let c = 0
+    while n > 0 {
+        c += n & 1
+        n = n >> 1
+    }
+    return c
+}
+for (auto n : [854, 2923, 2467, 2635, 2169, 1119]) {
+    cout << (n) << " = 0b" << (to_bin(n)) << " (" << (popcount(n)) << " ones)" << endl
+}

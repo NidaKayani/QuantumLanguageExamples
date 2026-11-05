@@ -1,0 +1,24 @@
+// Mixed-syntax example 477: text patterns of height 4
+# Syntax used: arrow functions, brace blocks, C-style headers, C++, JavaScript, Python blocks, Ruby do/end
+
+let repeat = (s, k) => {
+    let out = "";
+    for (let i = 0; i < k; ++i) {
+        out = out + s
+    }
+    return out
+}
+// right triangle
+(1...5).each do |i|
+    print(repeat("*", i))
+end
+# pyramid
+for (int i = 0; i < 4; i++) {
+    print(repeat(" ", 4 - i - 1) + repeat("*", 2 * i + 1))
+}
+# inverted
+let k = 4
+while k > 0 {
+    puts repeat("*", k)
+    k -= 1;
+}

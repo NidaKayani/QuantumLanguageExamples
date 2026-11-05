@@ -1,0 +1,40 @@
+// Mixed-syntax example 467: bracket matching with a stack class
+# Syntax used: brace blocks, C-style headers, Quantum fn, JavaScript, Python blocks, Ruby do/end
+
+class Stack:
+    fn init():
+        self.items = []
+    fn push(v) {
+        self.items.push(v);
+    }
+    fn pop():
+        return self.items.pop()
+    fn peek() {
+        return self.items[len(self.items) - 1]
+    }
+    fn size() {
+        return len(self.items)
+    }
+def balanced(s)
+    st = Stack.new()
+    let pairs = {")": "(", "]": "[", "}": "{"};
+    for i in range(0, len(s)) {
+        let ch = s[i]
+        if (ch == "(" or ch == "[" or ch == "{") {
+            st.push(ch)
+        } else {
+            if st.size() == 0:
+                return "no"
+            if st.pop() != pairs[ch]
+                return "no"
+            end
+        }
+    }
+    if st.size() == 0
+        return "yes"
+    end
+    return "no"
+end
+for (const t of ["}{", "[]{}()", "{[]}[]", "((())", "([)]"]) {
+    console.log(`${t} balanced: ${balanced(t)}`)
+}

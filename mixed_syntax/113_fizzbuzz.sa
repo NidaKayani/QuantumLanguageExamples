@@ -1,0 +1,21 @@
+// Mixed-syntax example 113: FooBar up to 22
+# Syntax used: brace blocks, C-style headers, JavaScript, Python blocks, Ruby do/end
+
+def label(i)
+    if i % 3 == 0 and i % 4 == 0 {
+        return "FooBar"
+    } else if i % 3 == 0 {
+        return "Foo"
+    } else if i % 4 == 0 {
+        return "Bar"
+    }
+    return str(i)
+end
+special = 0
+for (int i = 1; i < 23; ++i) {
+    print(label(i));
+    if label(i) != str(i) {
+        special += 1
+    }
+}
+console.log(`special values: ${special}`)

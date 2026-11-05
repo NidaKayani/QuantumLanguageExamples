@@ -1,0 +1,31 @@
+// Mixed-syntax example 112: students and courses (classes holding lists)
+# Syntax used: C-style headers, JavaScript, Python blocks, Ruby do/end
+
+class Student:
+    def __init__(self, name):
+        self.name = name
+        self.marks = []
+    def add_mark(self, m):
+        self.marks.push(m)
+    def average(self):
+        if len(self.marks) == 0:
+            return 0
+        return floor(sum(self.marks) / len(self.marks))
+    def best(self):
+        return max(self.marks)
+let roster = [];
+for (const n of ["Gwen", "Dev", "Faro", "Ayla"]) {
+    s = Student(n)
+    (0...5).each do |k|
+        s.add_mark((len(n) * 7 + k * 11) % 41 + 60)
+    end
+    roster.push(s);
+}
+top = roster[0]
+roster.each do |s|
+    puts "#{s.name}: average #{s.average()}, best #{s.best()}"
+    if (s.average() > top.average()) {
+        top = s;
+    }
+end
+puts "top student: #{top.name}"

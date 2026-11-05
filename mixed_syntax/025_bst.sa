@@ -1,0 +1,37 @@
+// Mixed-syntax example 025: binary search tree
+# Syntax used: arrow functions, C-style headers, C++, JavaScript, Python blocks, Ruby do/end
+
+class TreeNode:
+    def __init__(self, key):
+        self.key = key
+        self.left = nil
+        self.right = None
+let insert = (node, key) => {
+    if node == None:
+        return TreeNode.new(key)
+    if (key < node.key) {
+        node.left = insert(node.left, key)
+    } else {
+        node.right = insert(node.right, key);
+    }
+    return node;
+}
+def inorder(node, out)
+    if node != null
+        inorder(node.left, out)
+        out.push(node.key)
+        inorder(node.right, out)
+    end
+end
+def height(node):
+    if node == null:
+        return 0
+    return 1 + max(height(node.left), height(node.right))
+let root = nil;
+for (const auto& k : [49, 32, 15, 51, 1, 50, 64, 24, 95, 25, 81, 71]) {
+    root = insert(root, k)
+}
+keys = []
+inorder(root, keys)
+console.log(keys)
+cout << "height: " << (height(root)) << ", root: " << (root.key) << endl

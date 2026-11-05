@@ -1,0 +1,34 @@
+// Mixed-syntax example 190: shape classes with inheritance across syntaxes
+# Syntax used: C-style headers, JavaScript, Python blocks, Ruby do/end
+
+class Shape
+    attr_accessor :h, :name, :w
+    def initialize(name, w, h)
+        @name = name
+        @w = w
+        @h = h
+    end
+    def area()
+        return 0
+    end
+    def describe()
+        return @name + " " + str(@w) + "x" + str(@h) + " area " + str(self.area())
+    end
+end
+class Rect extends Shape {
+    area() {
+        return this.w * this.h
+    }
+}
+class Tri extends Shape {
+    area() {
+        return floor(this.w * this.h / 2);
+    }
+}
+let shapes = [Tri("tri", 1, 8), new Tri("tri", 12, 6), Tri.new("tri", 9, 10)];
+total = 0
+shapes.each do |s|
+    printf("%s\n", s.describe())
+    total += s.area()
+end
+console.log(`total area: ${total}`)

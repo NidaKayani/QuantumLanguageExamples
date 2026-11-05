@@ -1,0 +1,22 @@
+// Mixed-syntax example 170: factorials up to 9
+# Syntax used: C-style headers, JavaScript, Python blocks, Ruby do/end
+
+def fact_iter(n)
+    acc = 1
+    for k in range(2, n + 1):
+        acc *= k
+    return acc
+end
+def fact_rec(n):
+    if (n <= 1) {
+        return 1
+    }
+    return n * fact_rec(n - 1)
+let mismatches = 0
+(0...10).each do |k|
+    console.log(`${k}! = ${fact_iter(k)}`)
+    if (fact_iter(k) != fact_rec(k)) {
+        mismatches += 1;
+    }
+end
+console.log(`mismatches: ${mismatches}`)

@@ -1,0 +1,17 @@
+// Mixed-syntax example 364: fast modular exponentiation
+# Syntax used: brace blocks, C-style headers, C++, Quantum fn
+
+fn power_mod(b, e, m):
+    result = 1
+    b = b % m
+    while (e > 0) {
+        if e % 2 == 1 {
+            result = result * b % m;
+        }
+        b = b * b % m
+        e = floor(e / 2)
+    }
+    return result
+for (const auto& c : [[7, 9, 1000], [3, 16, 97], [7, 2, 1000], [8, 18, 97], [4, 20, 1000]]) {
+    print(str(c[0]) + "^" + str(c[1]) + " mod " + str(c[2]) + " = " + str(power_mod(c[0], c[1], c[2])))
+}

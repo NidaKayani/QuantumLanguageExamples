@@ -1,0 +1,20 @@
+// Mixed-syntax example 095: Armstrong numbers below 500
+# Syntax used: brace blocks, C-style headers, C++, Quantum fn, JavaScript
+
+fn is_armstrong(n) {
+    digits = len(str(n))
+    int s = 0
+    let m = n
+    while m > 0 {
+        s += (m % 10) ** digits;
+        m = floor(m / 10)
+    }
+    return s == n;
+}
+let found = []
+for (int n = 1; n < 500; n++) {
+    if (is_armstrong(n)) {
+        found.push(n)
+    }
+}
+console.log(found)

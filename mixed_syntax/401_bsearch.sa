@@ -1,0 +1,26 @@
+// Mixed-syntax example 401: binary search
+# Syntax used: brace blocks, C-style headers, C++, JavaScript, Python blocks, Ruby do/end
+
+def bsearch(xs, target)
+    let lo = 0;
+    int hi = len(xs) - 1
+    while lo <= hi:
+        mid = floor((lo + hi) / 2)
+        if (xs[mid] == target) {
+            return mid
+        } else if (xs[mid] < target) {
+            lo = mid + 1
+        } else {
+            hi = mid - 1
+        }
+    return -1
+end
+data = [2, 7, 14, 24, 34, 39, 47, 48, 54, 64, 66, 80, 108, 119]
+([14, 47, 14, 6, 103, 38]).each do |t|
+    pos = bsearch(data, t)
+    if pos >= 0 {
+        print("found", t, "at index", pos)
+    } else {
+        console.log(`${t} is not in the list`)
+    }
+end

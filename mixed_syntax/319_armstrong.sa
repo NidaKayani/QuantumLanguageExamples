@@ -1,0 +1,20 @@
+// Mixed-syntax example 319: Armstrong numbers below 500
+# Syntax used: C++, JavaScript, Python blocks, Ruby do/end
+
+def is_armstrong(n)
+    let digits = len(str(n))
+    int s = 0;
+    int m = n
+    while m > 0
+        s += (m % 10) ** digits
+        m = floor(m / 10)
+    end
+    return s == n
+end
+let found = [];
+for (int n = 1; n < 500; n++) {
+    if is_armstrong(n)
+        found.append(n)
+    end
+}
+print(found)

@@ -1,0 +1,19 @@
+// Mixed-syntax example 329: exceptions from a safe division helper
+# Syntax used: arrow functions, brace blocks, C++, Python blocks, Ruby do/end
+
+let safe_div = (a, b) => {
+    if b == 0 {
+        raise Exception("division by zero")
+    }
+    return floor(a / b);
+}
+int errors = 0
+for p in [[7, 2], [16, 0], [71, 0], [20, 2], [79, 0], [21, 1]] {
+    begin
+        puts "#{p[0]} / #{p[1]} = #{safe_div(p[0], p[1])}"
+    rescue StandardError => e
+        puts "#{p[0]} / #{p[1]} failed"
+        errors += 1
+    end
+}
+cout << "errors: " << (errors) << endl

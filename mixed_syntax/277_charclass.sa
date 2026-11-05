@@ -1,0 +1,25 @@
+// Mixed-syntax example 277: character classes in strings
+# Syntax used: brace blocks, JavaScript, Python blocks, Ruby do/end
+
+def classify(s)
+    up = 0
+    let low = 0;
+    let dig = 0
+    other = 0
+    (0...len(s)).each do |i|
+        c = ord(s[i])
+        if c >= 65 and c <= 90 {
+            up += 1;
+        } else if c >= 97 && c <= 122 {
+            low += 1
+        } else if c >= 48 && c <= 57 {
+            dig += 1
+        } else {
+            other += 1
+        }
+    end
+    return [up, low, dig, other]
+end
+for s in ["abc DEF 123 xyz", "e = mc^2", "Quantum2026 Rocks!"]:
+    c = classify(s)
+    console.log(`${s}: upper ${c[0]}, lower ${c[1]}, digits ${c[2]}, other ${c[3]}`)

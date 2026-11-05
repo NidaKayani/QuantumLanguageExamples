@@ -1,0 +1,18 @@
+// Mixed-syntax example 138: temperature conversion table
+# Syntax used: arrow functions, C-style headers, Quantum fn, Python blocks, Ruby do/end
+
+let to_f = (c) => {
+    return c * 9 / 5 + 32
+}
+fn to_k(c) {
+    return c + 273.15
+}
+([-14, -28, 22, 36, 15]).each do |c|
+    printf("%4d C = %7.2f F = %7.2f K\n", c, to_f(c), to_k(c))
+end
+hot = 0
+for c in [-14, -28, 22, 36, 15]:
+    if to_f(c) > 80
+        hot += 1
+    end
+console.log("hot days:", hot)

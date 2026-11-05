@@ -1,0 +1,22 @@
+// Mixed-syntax example 058: factorials up to 10
+# Syntax used: brace blocks, C++, JavaScript, Python blocks, Ruby do/end
+
+def fact_iter(n):
+    acc = 1
+    for (int k = 2; k < n + 1; k++) {
+        acc *= k;
+    }
+    return acc
+function fact_rec(n) {
+    if n <= 1 {
+        return 1
+    }
+    return n * fact_rec(n - 1);
+}
+mismatches = 0
+for k in range(0, 11):
+    console.log(str(k) + "! = " + str(fact_iter(k)))
+    if fact_iter(k) != fact_rec(k)
+        mismatches += 1
+    end
+print(f"mismatches: {mismatches}")

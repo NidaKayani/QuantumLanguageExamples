@@ -1,0 +1,34 @@
+// Mixed-syntax example 392: students and courses (classes holding lists)
+# Syntax used: brace blocks, C-style headers, Quantum fn, JavaScript, Python blocks, Ruby do/end
+
+class Student:
+    fn init(name):
+        self.name = name
+        self.marks = []
+    fn add_mark(m) {
+        self.marks.push(m)
+    }
+    fn average() {
+        if (len(self.marks) == 0) {
+            return 0;
+        }
+        return floor(sum(self.marks) / len(self.marks));
+    }
+    fn best():
+        return max(self.marks)
+roster = []
+for (let n of ["Ayla", "Gwen", "Cleo", "Dev"]) {
+    let s = Student(n)
+    (0...3).each do |k|
+        s.add_mark((len(n) * 7 + k * 9) % 41 + 60)
+    end
+    roster.append(s)
+}
+let top = roster[0];
+for s in roster {
+    print(f"{s.name}: average {s.average()}, best {s.best()}")
+    if s.average() > top.average()
+        top = s
+    end
+}
+puts "top student: #{top.name}"

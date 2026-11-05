@@ -1,0 +1,30 @@
+// Mixed-syntax example 414: shape classes with inheritance across syntaxes
+# Syntax used: C++, JavaScript, Python blocks, Ruby do/end
+
+class Shape {
+    constructor(name, w, h) {
+        this.name = name
+        this.w = w
+        this.h = h
+    }
+    area() {
+        return 0
+    }
+    describe() {
+        return this.name + " " + str(this.w) + "x" + str(this.h) + " area " + str(this.area());
+    }
+}
+class Rect(Shape):
+    def area(self):
+        return self.w * self.h
+class Tri extends Shape {
+    area() {
+        return floor(this.w * this.h / 2);
+    }
+}
+let shapes = [Rect("rect", 6, 3), Rect("rect", 12, 9), Rect.new("rect", 6, 10), Rect.new("rect", 12, 12), Tri("tri", 7, 3)]
+int total = 0
+for s in shapes:
+    console.log(s.describe())
+    total += s.area()
+print(f"total area: {total}")
